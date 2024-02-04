@@ -1,5 +1,8 @@
 package com.fracta7.crafter.model
 
+import android.content.Context
+import com.fracta7.crafter.R
+
 /**
  * Registry class to hold all items
  * @property addItem adds a single item to the registry.
@@ -32,5 +35,9 @@ class ItemRegistry {
      */
     fun addAll(vararg items: Item){
         items.forEach { addItem(it) }
+    }
+
+    fun getAll(): Map<String, Item>{
+        return items
     }
 }
