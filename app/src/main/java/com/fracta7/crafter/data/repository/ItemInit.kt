@@ -1,10 +1,12 @@
-package com.fracta7.crafter.model
+package com.fracta7.crafter.data.repository
+
+import com.fracta7.crafter.domain.model.Item
 
 /**
  * Function to initiate all items.
  * @return List of Items
  */
-fun itemInit(): List<Item> {
+internal fun itemInit(): List<Item> {
     return listOf(
         Item(id = "stone", name = "Stone", stackSize = 64, raw = true),
         Item(id = "granite", name = "Granite", stackSize = 64, raw = true),

@@ -1,4 +1,4 @@
-package com.fracta7.crafter.ui
+package com.fracta7.crafter.ui.helper
 
 import com.fracta7.crafter.R
 

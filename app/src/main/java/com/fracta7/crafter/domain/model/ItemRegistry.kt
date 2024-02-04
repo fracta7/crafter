@@ -1,7 +1,4 @@
-package com.fracta7.crafter.model
-
-import android.content.Context
-import com.fracta7.crafter.R
+package com.fracta7.crafter.domain.model
 
 /**
  * Registry class to hold all items

@@ -1,4 +1,4 @@
-package com.fracta7.crafter.model
+package com.fracta7.crafter.domain.model
 
 /**
  * Data class to represent recipes

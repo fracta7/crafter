@@ -1,4 +1,4 @@
-package com.fracta7.crafter.model
+package com.fracta7.crafter.domain.model
 
 /**
  * Sealed class to represent different recipe types.
@@ -7,6 +7,8 @@ package com.fracta7.crafter.model
  * @property Stripping using an Axe to strip blocks.
  * @property Watering using Water Bucket.
  * @property Cutting using Stone Cutter.
+ * @property Oxidation exclusively for Copper oxidation.
+ * @property Waxing exclusively for Copper waxing.
  */
 sealed class RecipeType{
     object Crafting : RecipeType()
@@ -14,4 +16,6 @@ sealed class RecipeType{
     object Stripping : RecipeType()
     object Watering : RecipeType()
     object Cutting : RecipeType()
+    object Oxidation : RecipeType()
+    object Waxing : RecipeType()
 }

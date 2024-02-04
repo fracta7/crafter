@@ -1,4 +1,4 @@
-package com.fracta7.crafter
+package com.fracta7.crafter.ui.main_activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -37,14 +37,13 @@ import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.fracta7.crafter.model.ItemRegistry
-import com.fracta7.crafter.model.RecipeRegistry
-import com.fracta7.crafter.model.itemInit
-import com.fracta7.crafter.model.recipeInit
-import com.fracta7.crafter.ui.getItemIcon
+import androidx.hilt.navigation.compose.hiltViewModel
+import com.fracta7.crafter.ui.helper.getItemIcon
 import com.fracta7.crafter.ui.theme.CrafterTheme
+import dagger.hilt.android.AndroidEntryPoint
 
 @OptIn(ExperimentalMaterial3Api::class)
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,17 +54,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val itemRegistry = ItemRegistry()
-                    val recipeRegistry = RecipeRegistry()
-                    itemInit().forEach { item ->
-                        itemRegistry.addItem(item)
-                    }
-                    recipeInit(itemRegistry).forEach { recipe ->
-                        recipeRegistry.addRecipe(recipe)
-                    }
+                    val viewModel = hiltViewModel<MainActivityViewModel>()
                     var search by remember { mutableStateOf("") }
                     Column(modifier = Modifier.fillMaxWidth()) {
-                        val coroutineScope = rememberCoroutineScope()
                         OutlinedTextField(
                             value = search,
                             onValueChange = {
@@ -95,7 +86,7 @@ class MainActivity : ComponentActivity() {
                             }
                         )
                         LazyColumn(modifier = Modifier.fillMaxWidth()) {
-                            itemRegistry.getAll()
+                            viewModel.state.itemRegistry.getAll()
                                 .filter { it.value.name.contains(search, ignoreCase = true) }
                                 .forEach { (id, item) ->
                                     item {
