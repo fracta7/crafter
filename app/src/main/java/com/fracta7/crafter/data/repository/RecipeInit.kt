@@ -252,19 +252,19 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_exposed_copper_block")!!,
+            result = itemRegistry.getItem("waxed_exposed_copper")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("exposed_copper_block")!! to 1,
+                itemRegistry.getItem("exposed_copper")!! to 1,
                 itemRegistry.getItem("honeycomb")!! to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_weathered_copper_block")!!,
+            result = itemRegistry.getItem("waxed_weathered_copper")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("weathered_copper_block")!! to 1,
+                itemRegistry.getItem("weathered_copper")!! to 1,
                 itemRegistry.getItem("honeycomb")!! to 1
             ),
             recipeType = RecipeType.Waxing
