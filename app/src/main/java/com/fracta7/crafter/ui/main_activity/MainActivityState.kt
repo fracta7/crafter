@@ -5,5 +5,6 @@ import com.fracta7.crafter.domain.model.RecipeRegistry
 
 data class MainActivityState(
     val itemRegistry: ItemRegistry,
-    val recipeRegistry: RecipeRegistry
+    val recipeRegistry: RecipeRegistry,
+    val query: String = ""
 )

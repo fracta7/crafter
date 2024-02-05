@@ -28,6 +28,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -42,6 +43,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.fracta7.crafter.ui.helper.getItemIcon
 import com.fracta7.crafter.ui.theme.CrafterTheme
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @AndroidEntryPoint
@@ -58,6 +60,7 @@ class MainActivity : ComponentActivity() {
                     val viewModel = hiltViewModel<MainActivityViewModel>()
                     var search by remember { mutableStateOf("") }
                     Column(modifier = Modifier.fillMaxWidth()) {
+                        val coroutineScope = rememberCoroutineScope()
                         OutlinedTextField(
                             value = search,
                             onValueChange = {
@@ -87,10 +90,9 @@ class MainActivity : ComponentActivity() {
                             }
                         )
                         LazyColumn(modifier = Modifier.fillMaxWidth()) {
-                            viewModel.state.itemRegistry.getAll()
-                                .filter { it.value.name.contains(search, ignoreCase = true) }
+                            viewModel.state.itemRegistry.getAll().filter { it.value.name.contains(search, ignoreCase = true) }
                                 .forEach { (id, item) ->
-                                    item {
+                                    item(key = item.id) {
                                         val imageBitmap =
                                             ImageBitmap.imageResource(id = getItemIcon(id))
                                         val bitmapPainter = BitmapPainter(

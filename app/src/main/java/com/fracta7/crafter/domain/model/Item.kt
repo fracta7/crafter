@@ -1,5 +1,7 @@
 package com.fracta7.crafter.domain.model
 
+import androidx.compose.runtime.Immutable
+
 /**
  * Minecraft Item.
  * @property id string id of an item.
@@ -7,6 +9,7 @@ package com.fracta7.crafter.domain.model
  * @property stackSize stack size of an item.
  * @property raw indicates if it is craftable.
  */
+@Immutable
 data class Item(
     val id: String,
     val name: String,
