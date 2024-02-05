@@ -744,6 +744,54 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
                 itemRegistry.getItem("black_dye")!! to 1
             ),
             recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("moss_carpet")!!,
+            resultQuantity = 3,
+            requirements = mapOf(
+                itemRegistry.getItem("moss_block")!! to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("oak_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("spruce_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("spruce_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("birch_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("birch_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("jungle_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("jungle_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("acacia_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("acacia_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
         )
     )
 }
