@@ -1,17 +1,15 @@
 package com.fracta7.crafter.ui.main_activity
 
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.debounce
 import javax.inject.Inject
 
 @HiltViewModel
@@ -20,6 +18,7 @@ class MainActivityViewModel @Inject constructor(
 ) : ViewModel() {
     private val itemRegistry: ItemRegistry
     private val recipeRegistry: RecipeRegistry
+    val items = mutableStateMapOf<Item,Int>()
 
     init {
         itemRegistry = appRepository.itemRegistryProvider()
@@ -32,4 +31,16 @@ class MainActivityViewModel @Inject constructor(
             recipeRegistry = recipeRegistry
         )
     )
+
+    fun addItemToList(item: Item, amount: Int) {
+        if (items[item]!= null) {
+            items[item] = items[item]!! + amount
+        } else {
+            items[item] = amount
+        }
+    }
+
+    fun removeItem(item: Item) {
+        items.remove(item)
+    }
 }

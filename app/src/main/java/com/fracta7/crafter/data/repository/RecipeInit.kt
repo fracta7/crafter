@@ -565,7 +565,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("warped_hyphae")!!,
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("warped_log")!! to 4
+                itemRegistry.getItem("warped_stem")!! to 4
             ),
             recipeType = RecipeType.Crafting
         ),
@@ -790,6 +790,324 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             resultQuantity = 6,
             requirements = mapOf(
                 itemRegistry.getItem("acacia_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("dark_oak_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("dark_oak_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("crimson_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("crimson_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("warped_slab")!!,
+            resultQuantity = 6,
+            requirements = mapOf(
+                itemRegistry.getItem("warped_planks")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("stone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("stone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("smooth_stone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("smooth_stone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("sandstone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("sandstone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("cut_sandstone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("sandstone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("cobblestone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("cobblestone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("brick_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("bricks")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("stone_brick_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("stone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("nether_brick_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("nether_bricks")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("quartz_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("quartz_block")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("red_sandstone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("red_sandstone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("cut_red_sandstone_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("red_sandstone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("purpur_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("purpur_block")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("prismarine_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("prismarine")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("prismarine_brick_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("prismarine_bricks")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("dark_prismarine_slab")!!,
+            resultQuantity = 2,
+            requirements = mapOf(
+                itemRegistry.getItem("dark_prismarine")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("smooth_quartz")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("quartz_block")!! to 1
+            ),
+            recipeType = RecipeType.Smelting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("smooth_red_sandstone")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("red_sandstone")!! to 1
+            ),
+            recipeType = RecipeType.Smelting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("smooth_sandstone")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("sandstone")!! to 1
+            ),
+            recipeType = RecipeType.Smelting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("smooth_stone")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("stone")!! to 1
+            ),
+            recipeType = RecipeType.Smelting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("bricks")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("brick")!! to 4
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("bookshelf")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 6,
+                itemRegistry.getItem("book")!! to 3
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("mossy_cobblestone")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("cobblestone")!! to 1,
+                itemRegistry.getItem("vine")!! to 1
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("torch")!!,
+            resultQuantity = 4,
+            requirements = mapOf(
+                itemRegistry.getItem("stick")!! to 1,
+                itemRegistry.getItem("coal")!! to 1
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("end_rod")!!,
+            resultQuantity = 4,
+            requirements = mapOf(
+                itemRegistry.getItem("blaze_rod")!! to 1,
+                itemRegistry.getItem("popped_chorus_fruit")!! to 1
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("purpur_block")!!,
+            resultQuantity = 4,
+            requirements = mapOf(
+                itemRegistry.getItem("popped_chorus_fruit")!! to 4
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("purpur_pillar")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("purpur_block")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("purpur_stairs")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("purpur_block")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("oak_stairs")!!,
+            resultQuantity = 4,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 6
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("chest")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 8
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("crafting_table")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 4
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("furnace")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("cobblestone")!! to 8
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("ladder")!!,
+            resultQuantity = 3,
+            requirements = mapOf(
+                itemRegistry.getItem("stick")!! to 7
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("cobblestone_stairs")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("cobblestone")!! to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("snow_block")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("snowball")!! to 4
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("jukebox")!!,
+            resultQuantity = 1,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 8,
+                itemRegistry.getItem("diamond")!! to 1
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("oak_fence")!!,
+            resultQuantity = 3,
+            requirements = mapOf(
+                itemRegistry.getItem("oak_planks")!! to 4,
+                itemRegistry.getItem("stick")!! to 2
             ),
             recipeType = RecipeType.Crafting
         )
