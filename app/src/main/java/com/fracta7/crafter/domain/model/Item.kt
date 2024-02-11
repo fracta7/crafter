@@ -7,12 +7,12 @@ import androidx.compose.runtime.Immutable
  * @property id string id of an item.
  * @property name name of an item.
  * @property stackSize stack size of an item.
- * @property raw indicates if it is craftable.
+ * @property craftable indicates if it is craftable.
  */
 @Immutable
 data class Item(
     val id: String,
     val name: String,
     val stackSize: Int,
-    val raw: Boolean
+    val craftable: Boolean
 )

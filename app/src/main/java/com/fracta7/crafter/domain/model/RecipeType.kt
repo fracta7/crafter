@@ -9,6 +9,7 @@ package com.fracta7.crafter.domain.model
  * @property Cutting using Stone Cutter.
  * @property Oxidation exclusively for Copper oxidation.
  * @property Waxing exclusively for Copper waxing.
+ * @property Smithing using smithing table for upgrades.
  */
 sealed class RecipeType{
     object Crafting : RecipeType()
@@ -18,4 +19,5 @@ sealed class RecipeType{
     object Cutting : RecipeType()
     object Oxidation : RecipeType()
     object Waxing : RecipeType()
+    object Smithing : RecipeType()
 }

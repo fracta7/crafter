@@ -54,7 +54,7 @@ fun AddItemDialog(
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(320.dp)
+                .height(360.dp)
                 .padding(16.dp),
             shape = ShapeDefaults.ExtraLarge,
         ) {

@@ -23,29 +23,20 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fracta7.crafter.domain.model.Item
+import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.helper.getItemIcon
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun ItemElement(modifier: Modifier, item: Item, amount: Int = 64, preview: Boolean = true) {
-    val imageBitmap =
-        ImageBitmap.imageResource(id = getItemIcon(item.id))
-    val bitmapPainter = BitmapPainter(
-        image = imageBitmap,
-        filterQuality = FilterQuality.None
-    )
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier) {
-        Image(
-            painter = bitmapPainter,
-            contentDescription = "item icon",
-            modifier = Modifier
-                .size(64.dp)
-                .padding(4.dp),
-        )
+        DrawItem(itemID = item.id)
         Column {
             Text(
                 text = item.name,
-                modifier = Modifier.padding(4.dp).basicMarquee(),
+                modifier = Modifier
+                    .padding(4.dp)
+                    .basicMarquee(),
                 fontWeight = FontWeight.Bold,
                 maxLines = 1
             )
@@ -69,11 +60,12 @@ fun ItemElement(modifier: Modifier, item: Item, amount: Int = 64, preview: Boole
             Text(
                 text = text,
                 fontSize = 12.sp,
-                modifier = Modifier.padding(
-                    start = 4.dp,
-                    bottom = 4.dp,
-                    end = 4.dp
-                )
+                modifier = Modifier
+                    .padding(
+                        start = 4.dp,
+                        bottom = 4.dp,
+                        end = 4.dp
+                    )
                     .basicMarquee()
                 ,
                 maxLines = 1
