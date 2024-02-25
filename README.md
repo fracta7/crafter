@@ -53,9 +53,9 @@ Step-by-step instructions on how to build and set up the project.
 
 Simply search for items and them to you crafting list, then click `craft!`
 
-![](images/1.png)
-![](images/2.png)
-![](images/3.png)
+<img height="320" src="images/1.png" width="180"/>
+<img height="320" src="images/2.png" width="180"/>
+<img height="320" src="images/3.png" width="180"/>
 
 ## Contributing
 
