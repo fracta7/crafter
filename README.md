@@ -41,9 +41,9 @@ List of features to do:
 - Optimize the search function
 - Optimize the image renders
 
-## Installation
+## Building
 
-Step-by-step instructions on how to install and set up the project.
+Step-by-step instructions on how to build and set up the project.
 
 1. Clone the repository: `git clone https://github.com/fracta7/crafter.git`
 2. Navigate to the project directory: `cd crafter`
@@ -52,6 +52,10 @@ Step-by-step instructions on how to install and set up the project.
 ## Usage
 
 Simply search for items and them to you crafting list, then click `craft!`
+
+![](images/1.png)
+![](images/2.png)
+![](images/3.png)
 
 ## Contributing
 

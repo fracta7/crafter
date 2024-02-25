@@ -18,6 +18,7 @@ import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Screens
+import com.fracta7.crafter.util.resourceAmount
 
 @Composable
 fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
@@ -40,7 +41,7 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
         }
         viewModel.getRecipe(itemID = itemID).requirements.forEach { (item, amountRecipe) ->
             item {
-                val requiredAmount = amountRecipe * amount
+                val requiredAmount = amountRecipe * resourceAmount(result = amountRecipe, amountNeeded = amount)
                 ItemElement(modifier = Modifier.clickable {
                     if (item.craftable) {
                         navController.navigate(
