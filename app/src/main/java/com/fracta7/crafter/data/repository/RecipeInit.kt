@@ -1376,7 +1376,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("enchanting_table")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamonds")!! to 2,
+                itemRegistry.getItem("diamond")!! to 2,
                 itemRegistry.getItem("book")!! to 1,
                 itemRegistry.getItem("obsidian")!! to 4
             ),
@@ -2373,7 +2373,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_nether_wart_block")!!,
+            result = itemRegistry.getItem("nether_wart_block")!!,
             resultQuantity = 1,
             requirements = mapOf(
                 itemRegistry.getItem("nether_wart")!! to 9
@@ -3397,7 +3397,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             resultQuantity = 1,
             requirements = mapOf(
                 itemRegistry.getItem("redstone")!! to 4,
-                itemRegistry.getItem("hay_bale")!! to 1
+                itemRegistry.getItem("hay_block")!! to 1
             ),
             recipeType = RecipeType.Crafting
         ),
@@ -4185,7 +4185,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gold_pickaxe")!!,
+            result = itemRegistry.getItem("golden_pickaxe")!!,
             resultQuantity = 1,
             requirements = mapOf(
                 itemRegistry.getItem("gold_ingot")!! to 3,
@@ -4574,7 +4574,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("golden_apple")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("golden_ingot")!! to 8,
+                itemRegistry.getItem("gold_ingot")!! to 8,
                 itemRegistry.getItem("apple")!! to 1
             ),
             recipeType = RecipeType.Crafting
@@ -4679,7 +4679,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("paper")!!,
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("sugarcane")!! to 3
+                itemRegistry.getItem("sugar_cane")!! to 3
             ),
             recipeType = RecipeType.Crafting
         ),
@@ -4887,7 +4887,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("sugar")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sugarcane")!! to 1
+                itemRegistry.getItem("sugar_cane")!! to 1
             ),
             recipeType = RecipeType.Crafting
         ),
@@ -4906,7 +4906,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             resultQuantity = 1,
             requirements = mapOf(
                 itemRegistry.getItem("white_wool")!! to 3,
-                itemRegistry.getItem("oak_plank")!! to 3
+                itemRegistry.getItem("oak_planks")!! to 3
             ),
             recipeType = RecipeType.Crafting
         ),
@@ -5073,7 +5073,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("melon_seeds")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("melon_slices")!! to 1
+                itemRegistry.getItem("melon_slice")!! to 1
             ),
             recipeType = RecipeType.Crafting
         ),
@@ -5182,7 +5182,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("book_and_quill")!!,
+            result = itemRegistry.getItem("writable_book")!!,
             resultQuantity = 1,
             requirements = mapOf(
                 itemRegistry.getItem("book")!! to 1,
@@ -5226,7 +5226,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("empty_map")!!,
+            result = itemRegistry.getItem("map")!!,
             resultQuantity = 1,
             requirements = mapOf(
                 itemRegistry.getItem("paper")!! to 8,
@@ -6461,7 +6461,7 @@ fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
             result = itemRegistry.getItem("decorated_pot")!!,
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("danger_pottery_shard")!! to 4
+                itemRegistry.getItem("danger_pottery_sherd")!! to 4
             ),
             recipeType = RecipeType.Crafting
         ),
