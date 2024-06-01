@@ -9,6 +9,7 @@ import com.fracta7.crafter.domain.model.Item
 internal fun itemInit(): List<Item> {
     return listOf(
         Item(id = "stone", name = "Stone", stackSize = 64, craftable = false),
+        Item(id = "stone_bricks", name = "Stone Bricks", stackSize = 64, craftable = true),
         Item(id = "granite", name = "Granite", stackSize = 64, craftable = false),
         Item(id = "polished_granite", name = "Polished Granite", stackSize = 64, craftable = true),
         Item(id = "diorite", name = "Diorite", stackSize = 64, craftable = false),
@@ -829,6 +830,7 @@ internal fun itemInit(): List<Item> {
         Item(id = "yellow_bed", name = "Yellow Bed", stackSize = 1, craftable = true),
         Item(id = "lime_bed", name = "Lime Bed", stackSize = 1, craftable = true),
         Item(id = "pink_bed", name = "Pink Bed", stackSize = 1, craftable = true),
+        Item(id = "light_gray_bed", name = "Light Gray Bed", stackSize = 1, craftable = true),
         Item(id = "gray_bed", name = "Gray Bed", stackSize = 1, craftable = true),
         Item(id = "cyan_bed", name = "Cyan Bed", stackSize = 1, craftable = true),
         Item(id = "purple_bed", name = "Purple Bed", stackSize = 1, craftable = true),

@@ -1,6 +1,7 @@
 package com.fracta7.crafter.domain.model
 
 import androidx.compose.runtime.Immutable
+import kotlinx.serialization.Serializable
 
 /**
  * Data class to represent recipes
@@ -10,6 +11,7 @@ import androidx.compose.runtime.Immutable
  * @property recipeType defines the recipe type (crafting, smelting etc.).
  */
 @Immutable
+@Serializable
 data class Recipe(
     val result: Item,
     val resultQuantity: Int,

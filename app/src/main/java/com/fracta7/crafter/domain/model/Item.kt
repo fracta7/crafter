@@ -1,6 +1,7 @@
 package com.fracta7.crafter.domain.model
 
 import androidx.compose.runtime.Immutable
+import kotlinx.serialization.Serializable
 
 /**
  * Minecraft Item.
@@ -10,6 +11,7 @@ import androidx.compose.runtime.Immutable
  * @property craftable indicates if it is craftable.
  */
 @Immutable
+@Serializable
 data class Item(
     val id: String,
     val name: String,
