@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Divider
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -17,6 +18,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
+import com.fracta7.crafter.ui.navigation.RouteCrafting
 import com.fracta7.crafter.ui.navigation.Screens
 import com.fracta7.crafter.util.resourceAmount
 
@@ -39,20 +41,17 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
             }
 
         }
-        viewModel.getRecipe(itemID = itemID).requirements.forEach { (item, amountRecipe) ->
+        val recipe = viewModel.getRecipe(itemID)
+        recipe.requirements.forEach { (item, amountRecipeRequirement) ->
             item {
-                val requiredAmount = amountRecipe * resourceAmount(result = amountRecipe, amountNeeded = amount)
-                ItemElement(modifier = Modifier.clickable {
+                val requiredAmount = amountRecipeRequirement * resourceAmount(result = recipe.resultQuantity, amountNeeded = amount)
+                ItemElement(modifier = Modifier.fillMaxWidth().clickable {
                     if (item.craftable) {
-                        navController.navigate(
-                            Screens.CraftingScreen.withArgs(
-                                item.id,
-                                requiredAmount.toString()
-                            )
-                        )
+                        //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
+                        navController.navigate(RouteCrafting(item = item.id, amount = requiredAmount))
                     }
-                }, item = item, amount = requiredAmount)
-                Divider()
+                }, item = item, amount = requiredAmount, preview = false)
+                HorizontalDivider()
             }
         }
     }

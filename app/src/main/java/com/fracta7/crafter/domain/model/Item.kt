@@ -11,7 +11,6 @@ import kotlinx.serialization.Serializable
  * @property craftable indicates if it is craftable.
  */
 @Immutable
-@Serializable
 data class Item(
     val id: String,
     val name: String,

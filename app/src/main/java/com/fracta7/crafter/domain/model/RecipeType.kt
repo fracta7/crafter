@@ -13,7 +13,6 @@ import kotlinx.serialization.Serializable
  * @property Waxing exclusively for Copper waxing.
  * @property Smithing using smithing table for upgrades.
  */
-@Serializable
 sealed class RecipeType{
     object Crafting : RecipeType()
     object Smelting : RecipeType()

@@ -28,6 +28,7 @@ import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -52,6 +53,7 @@ import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.AddItemDialog
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.navigation.Navigation
+import com.fracta7.crafter.ui.navigation.RouteRootCrafting
 import com.fracta7.crafter.ui.theme.CrafterTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -75,7 +77,7 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun MainScreen(navController: NavController){
+fun MainScreen(navController: NavController) {
     val viewModel = hiltViewModel<MainActivityViewModel>()
     var search by remember { mutableStateOf("") }
     var showDrawer by remember { mutableStateOf(false) }
@@ -92,7 +94,14 @@ fun MainScreen(navController: NavController){
                     }
                 },
                 floatingActionButton = {
-                    FloatingActionButton(onClick = { /*TODO*/ }) {
+                    FloatingActionButton(onClick = {
+                        navController.navigate(
+                            RouteRootCrafting(
+                                items = viewModel.items.keys.map { it.id }.toList(),
+                                amounts = viewModel.items.values.toList()
+                            )
+                        )
+                    }) {
                         Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
                     }
                 },
@@ -149,9 +158,14 @@ fun MainScreen(navController: NavController){
                                 modifier = Modifier.fillMaxWidth()
                             ) {
                                 val spacing = if (viewModel.items.contains(item)) 0.9f else 1f
-                                Row(verticalAlignment = Alignment.CenterVertically,
-                                    modifier = Modifier.fillMaxWidth(0.85f)) {
-                                    ItemElement(modifier = Modifier.fillMaxWidth(spacing), item = item)
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    modifier = Modifier.fillMaxWidth(0.85f)
+                                ) {
+                                    ItemElement(
+                                        modifier = Modifier.fillMaxWidth(spacing),
+                                        item = item
+                                    )
                                     AnimatedVisibility(
                                         visible = viewModel.items.contains(item),
                                         enter = scaleIn(),
@@ -175,7 +189,7 @@ fun MainScreen(navController: NavController){
                                     )
                                 }
                             }
-                            Divider()
+                            HorizontalDivider()
                         }
                     }
             }

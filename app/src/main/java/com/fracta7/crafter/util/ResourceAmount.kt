@@ -8,15 +8,14 @@ package com.fracta7.crafter.util
  * following the recipe.
  */
 fun resourceAmount(result: Int, amountNeeded: Int): Int {
-    val multiplication =
-        if (amountNeeded < result || amountNeeded == result) {
-            1
+
+    return if (amountNeeded < result) {
+        1
+    } else {
+        if (amountNeeded % result == 0) {
+            amountNeeded / result
         } else {
-            if (amountNeeded % result == 0) {
-                amountNeeded / result
-            } else {
-                (amountNeeded / result) + 1
-            }
+            (amountNeeded / result) + 1
         }
-    return multiplication
+    }
 }

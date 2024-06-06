@@ -18,15 +18,16 @@ sealed class Screens(val route: String) {
 }
 
 @Serializable
-object ScreenMain
+object RouteMain
 
 @Serializable
-data class ScreenRootCrafting(
-    val items: Map<Item, Int>
+data class RouteRootCrafting(
+    val items: List<String>,
+    val amounts: List<Int>
 )
 
 @Serializable
-data class ScreenCrafting(
-    val item: Item,
+data class RouteCrafting(
+    val item: String,
     val amount: Int
 )

@@ -6,10 +6,34 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import androidx.navigation.toRoute
 import com.fracta7.crafter.ui.crafting_screen.CraftingScreen
 import com.fracta7.crafter.ui.main_activity.MainScreen
 import com.fracta7.crafter.ui.root_crafting_screen.RootCraftingScreen
 
+@Composable
+fun Navigation() {
+    val navController = rememberNavController()
+    NavHost(navController = navController, startDestination = RouteMain) {
+        composable<RouteMain> {
+            MainScreen(navController = navController)
+        }
+        composable<RouteRootCrafting> {
+            val args = it.toRoute<RouteRootCrafting>()
+            RootCraftingScreen(navController = navController, items = args.items, amounts = args.amounts)
+        }
+        composable<RouteCrafting> {
+            val args = it.toRoute<RouteCrafting>()
+            CraftingScreen(
+                navController = navController,
+                itemID = args.item,
+                amount = args.amount
+            )
+        }
+    }
+}
+
+/* //old navigation
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
@@ -60,3 +84,5 @@ fun Navigation() {
         }
     }
 }
+
+ */

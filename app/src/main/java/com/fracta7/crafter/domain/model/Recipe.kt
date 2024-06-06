@@ -11,7 +11,6 @@ import kotlinx.serialization.Serializable
  * @property recipeType defines the recipe type (crafting, smelting etc.).
  */
 @Immutable
-@Serializable
 data class Recipe(
     val result: Item,
     val resultQuantity: Int,
