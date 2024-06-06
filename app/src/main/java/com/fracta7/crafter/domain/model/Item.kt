@@ -1,7 +1,6 @@
 package com.fracta7.crafter.domain.model
 
 import androidx.compose.runtime.Immutable
-import kotlinx.serialization.Serializable
 
 /**
  * Minecraft Item.

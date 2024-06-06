@@ -1,6 +1,5 @@
 package com.fracta7.crafter.domain.model
 
-import kotlinx.serialization.Serializable
 
 /**
  * Sealed class to represent different recipe types.
@@ -13,7 +12,7 @@ import kotlinx.serialization.Serializable
  * @property Waxing exclusively for Copper waxing.
  * @property Smithing using smithing table for upgrades.
  */
-sealed class RecipeType{
+sealed class RecipeType {
     object Crafting : RecipeType()
     object Smelting : RecipeType()
     object Stripping : RecipeType()

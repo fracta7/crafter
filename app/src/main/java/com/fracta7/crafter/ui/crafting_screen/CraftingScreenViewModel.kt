@@ -1,7 +1,5 @@
 package com.fracta7.crafter.ui.crafting_screen
 
-import androidx.compose.runtime.mutableStateMapOf
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.Recipe

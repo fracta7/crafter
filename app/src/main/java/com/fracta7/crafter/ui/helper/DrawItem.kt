@@ -10,7 +10,6 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.graphics.painter.BitmapPainter
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.unit.dp
-import com.fracta7.crafter.domain.model.Item
 
 @Composable
 fun DrawItem(modifier: Modifier = Modifier, itemID: String) {

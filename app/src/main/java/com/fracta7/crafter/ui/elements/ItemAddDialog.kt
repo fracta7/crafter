@@ -1,6 +1,5 @@
 package com.fracta7.crafter.ui.elements
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Arrangement
@@ -37,7 +36,6 @@ import androidx.core.text.isDigitsOnly
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.ui.helper.getItemIcon
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun AddItemDialog(
     onDismissRequest: () -> Unit,

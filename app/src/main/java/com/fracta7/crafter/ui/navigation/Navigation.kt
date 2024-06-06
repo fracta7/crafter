@@ -1,11 +1,9 @@
 package com.fracta7.crafter.ui.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
 import androidx.navigation.toRoute
 import com.fracta7.crafter.ui.crafting_screen.CraftingScreen
 import com.fracta7.crafter.ui.main_activity.MainScreen
@@ -14,75 +12,21 @@ import com.fracta7.crafter.ui.root_crafting_screen.RootCraftingScreen
 @Composable
 fun Navigation() {
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = RouteMain) {
-        composable<RouteMain> {
+    NavHost(navController = navController, startDestination = Route.Main) {
+        composable<Route.Main> {
             MainScreen(navController = navController)
         }
-        composable<RouteRootCrafting> {
-            val args = it.toRoute<RouteRootCrafting>()
-            RootCraftingScreen(navController = navController, items = args.items, amounts = args.amounts)
-        }
-        composable<RouteCrafting> {
-            val args = it.toRoute<RouteCrafting>()
-            CraftingScreen(
-                navController = navController,
-                itemID = args.item,
-                amount = args.amount
-            )
-        }
-    }
-}
-
-/* //old navigation
-@Composable
-fun Navigation() {
-    val navController = rememberNavController()
-    NavHost(
-        navController = navController,
-        startDestination = Screens.MainScreen.route
-    ) {
-        composable(route = Screens.MainScreen.route) {
-            MainScreen(navController = navController)
-        }
-        composable(
-            route = Screens.CraftingScreen.route + "/{item_id}/{amount}",
-            arguments = listOf(
-                navArgument("item_id") {
-                    type = NavType.StringType
-                    nullable = false
-                },
-                navArgument("amount"){
-                    type = NavType.IntType
-                    nullable = false
-                }
-            )
-        ) { entry ->
-            CraftingScreen(
-                navController = navController,
-                itemID = entry.arguments!!.getString("item_id")!!,
-                amount = entry.arguments!!.getInt("amount")!!
-            )
-        }
-        composable(
-            route = Screens.RootCraftingScreen.route + "/{ids}/{amounts}",
-            arguments = listOf(
-                navArgument("ids"){
-                    type = NavType.StringType
-                    nullable = false
-                },
-                navArgument("amounts"){
-                    type = NavType.StringType
-                    nullable = false
-                }
-            )
-        ){entry ->
+        composable<Route.RootCrafting> {
+            val args = it.toRoute<Route.RootCrafting>()
             RootCraftingScreen(
-                navController = navController,
-                ids = entry.arguments!!.getString("ids")!!,
-                amounts = entry.arguments!!.getString("amounts")!!
+                navController = navController, items = args.items, amounts = args.amounts
+            )
+        }
+        composable<Route.Crafting> {
+            val args = it.toRoute<Route.Crafting>()
+            CraftingScreen(
+                navController = navController, itemID = args.item, amount = args.amount
             )
         }
     }
 }
-
- */
