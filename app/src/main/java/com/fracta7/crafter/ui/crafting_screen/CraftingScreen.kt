@@ -26,7 +26,7 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
     LazyColumn(modifier = Modifier.fillMaxWidth()) {
         item {
             val recipe = viewModel.getRecipe(itemID = itemID)
-            val recipeItemIcon = viewModel.getBlockForRecipe(recipe.recipeType)
+            //val recipeItemIcon = viewModel.getBlockForRecipe(recipe.recipeType)
             val recipeName = viewModel.getRecipeName(recipe.recipeType)
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
                 DrawItem(itemID = itemID)

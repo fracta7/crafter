@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RootCraftingScreenViewModel @Inject constructor(
-    private val appRepository: AppRepository
+    appRepository: AppRepository
 ) : ViewModel() {
     private val itemRegistry = appRepository.itemRegistryProvider()
 

@@ -11,17 +11,16 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.List
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Done
-import androidx.compose.material.icons.rounded.List
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.BottomSheetDefaults
-import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
@@ -36,7 +35,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -61,7 +59,7 @@ fun MainScreen(navController: NavController) {
     Scaffold(bottomBar = {
         BottomAppBar(actions = {
             IconButton(onClick = { showDrawer = !showDrawer }) {
-                Icon(Icons.Rounded.List, contentDescription = "Icon List")
+                Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
             }
         }, floatingActionButton = {
             FloatingActionButton(onClick = {
@@ -82,7 +80,6 @@ fun MainScreen(navController: NavController) {
                 .fillMaxWidth()
                 .padding(paddingValues)
         ) {
-            val coroutineScope = rememberCoroutineScope()
             OutlinedTextField(value = search, onValueChange = {
                 search = it
             }, shape = ShapeDefaults.ExtraLarge, label = {
@@ -182,7 +179,7 @@ fun MainScreen(navController: NavController) {
                                             )
                                         }
                                     }
-                                    Divider()
+                                    HorizontalDivider()
                                 }
                             }
                         } else {
