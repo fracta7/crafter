@@ -13,12 +13,12 @@ package com.fracta7.crafter.domain.model
  * @property Smithing using smithing table for upgrades.
  */
 sealed class RecipeType(val name: String, val item: String) {
-    object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
-    object Smelting : RecipeType(name = "Smelting", item = "furnace")
-    object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
-    object Watering : RecipeType(name = "Watering", item = "water_bucket")
-    object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
-    object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
-    object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
-    object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
+    data object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
+    data object Smelting : RecipeType(name = "Smelting", item = "furnace")
+    data object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
+    data object Watering : RecipeType(name = "Watering", item = "water_bucket")
+    data object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
+    data object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
+    data object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
+    data object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
 }

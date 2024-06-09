@@ -6,7 +6,7 @@ import com.fracta7.crafter.domain.model.Item
  * Function to initiate all items.
  * @return List of Items
  */
-internal fun itemInit(): List<Item> {
+fun itemInit(): List<Item> {
     return listOf(
         Item(id = "stone", name = "Stone", stackSize = 64, craftable = false),
         Item(id = "stone_bricks", name = "Stone Bricks", stackSize = 64, craftable = true),

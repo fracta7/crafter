@@ -71,48 +71,57 @@ In order to add new item and recipes, follow these steps:
 
 Item data class is structured following way:
 
-`data class Item(
+```kotlin
+data class Item(
     val id: String,
     val name: String,
     val stackSize: Int,
     val craftable: Boolean
-)`
+)
+```
 
 Recipe is structured following way:
 
-`data class Recipe(
+```kotlin
+data class Recipe(
     val result: Item,
     val resultQuantity: Int,
     val requirements: Map<Item, Int>,
     val recipeType: RecipeType
-)`
+)
+```
 
 Recipe Types:
 
-`sealed class RecipeType {
-    object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
-    object Smelting : RecipeType(name = "Smelting", item = "furnace")
-    object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
-    object Watering : RecipeType(name = "Watering", item = "water_bucket")
-    object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
-    object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
-    object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
-    object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
-}`
+```kotlin
+sealed class RecipeType {
+  data object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
+  data object Smelting : RecipeType(name = "Smelting", item = "furnace")
+  data object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
+  data object Watering : RecipeType(name = "Watering", item = "water_bucket")
+  data object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
+  data object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
+  data object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
+  data object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
+}
+```
 
 To add new item to the registry, add a new line in `ItemInit.kt` with item properties in the function body inside the list:
 
-`internal fun itemInit(): List<Item> {
+```kotlin
+fun itemInit(): List<Item> {
     return listOf(
         Item(id = "stone", name = "Stone", stackSize = 64, craftable = false),
-        Item(id = "diamond", name = "Diamond, stackSize = 64, craftable = false),
-        ...
-    )
-}`
+        Item(id = "diamond", name = "Diamond", stackSize = 64, craftable = false),
+        //... add new items here
+        )
+}
+```
 
 To add new recipe to the registry, add a new line in `RecipeInit.kt` with recipe properties in the function body inside the list:
 
-`fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
+```kotlin
+fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
     return listOf(
         Recipe(
             result = itemRegistry.getItem("polished_granite")!!,
@@ -126,9 +135,10 @@ To add new recipe to the registry, add a new line in `RecipeInit.kt` with recipe
             requirements = mapOf(itemRegistry.getItem("diorite")!! to 1),
             recipeType = RecipeType.Cutting
         ),
-        ...
+        //... add new recipes here
     )
-}`       
+}
+```       
 
 ## License
 MIT License
