@@ -27,19 +27,16 @@ Projects aims to assist with crafting long list of items for Minecraft. There ar
 
 List of key features and functionalities of the project.
 
-- _In development_
+- UI for recipe steps
 
 ## TODOs
 
 List of features to do:
 
 - Recipe tree building logic
-- Proper UI for crafting, for everything :)
 - Tracking left-overs
 - Using existing items from inventory
 - Recipe tree visualization
-- Optimize the search function
-- Optimize the image renders
 
 ## Building
 
@@ -48,6 +45,7 @@ Step-by-step instructions on how to build and set up the project.
 1. Clone the repository: `git clone https://github.com/fracta7/crafter.git`
 2. Navigate to the project directory: `cd crafter`
 3. Open with Android Studio.
+4. Build and Run
 
 ## Usage
 
