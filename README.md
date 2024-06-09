@@ -37,6 +37,8 @@ List of features to do:
 - Tracking left-overs
 - Using existing items from inventory
 - Recipe tree visualization
+- add multiple recipes for single item
+- add recipe switch between multiple recipes
 
 ## Building
 
