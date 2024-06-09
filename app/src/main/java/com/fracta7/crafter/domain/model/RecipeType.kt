@@ -12,13 +12,13 @@ package com.fracta7.crafter.domain.model
  * @property Waxing exclusively for Copper waxing.
  * @property Smithing using smithing table for upgrades.
  */
-sealed class RecipeType {
-    object Crafting : RecipeType()
-    object Smelting : RecipeType()
-    object Stripping : RecipeType()
-    object Watering : RecipeType()
-    object Cutting : RecipeType()
-    object Oxidation : RecipeType()
-    object Waxing : RecipeType()
-    object Smithing : RecipeType()
+sealed class RecipeType(val name: String, val item: String) {
+    object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
+    object Smelting : RecipeType(name = "Smelting", item = "furnace")
+    object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
+    object Watering : RecipeType(name = "Watering", item = "water_bucket")
+    object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
+    object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
+    object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
+    object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
 }

@@ -16,6 +16,7 @@ Crafter is companion app for Minecraft. It helps with crafting recipes, builds a
     - [Building](#installation)
     - [Usage](#usage)
     - [Contributing](#contributing)
+    - [Adding new recipes and items](#adding-new-recipes-and-items)
     - [License](#license)
     - [Contact](#contact)
 
@@ -60,6 +61,74 @@ Simply search for items and them to you crafting list, then click `craft!`
 ## Contributing
 
 If you wish to contribute, feel free. Fork the project and do Pull Request, I will check the code and if everything is good, it will be merged. :)
+
+## Adding new recipes and items
+
+In order to add new item and recipes, follow these steps:
+
+- add entry in `com.fracta7.crafter.data.repository.ItemInit.kt` for items
+- add entry in `com.fracta7.crafter.data.repository.RecipeInit.kt` for recipes
+
+Item data class is structured following way:
+
+`data class Item(
+    val id: String,
+    val name: String,
+    val stackSize: Int,
+    val craftable: Boolean
+)`
+
+Recipe is structured following way:
+
+`data class Recipe(
+    val result: Item,
+    val resultQuantity: Int,
+    val requirements: Map<Item, Int>,
+    val recipeType: RecipeType
+)`
+
+Recipe Types:
+
+`sealed class RecipeType {
+    object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
+    object Smelting : RecipeType(name = "Smelting", item = "furnace")
+    object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
+    object Watering : RecipeType(name = "Watering", item = "water_bucket")
+    object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
+    object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
+    object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
+    object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
+}`
+
+To add new item to the registry, add a new line in `ItemInit.kt` with item properties in the function body inside the list:
+
+`internal fun itemInit(): List<Item> {
+    return listOf(
+        Item(id = "stone", name = "Stone", stackSize = 64, craftable = false),
+        Item(id = "diamond", name = "Diamond, stackSize = 64, craftable = false),
+        ...
+    )
+}`
+
+To add new recipe to the registry, add a new line in `RecipeInit.kt` with recipe properties in the function body inside the list:
+
+`fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
+    return listOf(
+        Recipe(
+            result = itemRegistry.getItem("polished_granite")!!,
+            resultQuantity = 1,
+            requirements = mapOf(itemRegistry.getItem("granite")!! to 1),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = itemRegistry.getItem("polished_diorite")!!,
+            resultQuantity = 1,
+            requirements = mapOf(itemRegistry.getItem("diorite")!! to 1),
+            recipeType = RecipeType.Cutting
+        ),
+        ...
+    )
+}`       
 
 ## License
 MIT License

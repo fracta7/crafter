@@ -46,7 +46,6 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
     val viewModel = hiltViewModel<CraftingScreenViewModel>()
     val recipe = viewModel.getRecipe(itemID = itemID)
     val item = viewModel.getItemById(itemId = itemID)
-    val recipeName = viewModel.getRecipeName(recipe.recipeType)
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Scaffold(topBar = {
@@ -69,9 +68,9 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                             .padding(horizontal = 10.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        val recipeIcon = viewModel.getBlockForRecipe(recipe.recipeType)
-                        DrawItem(itemID = recipeIcon.id, iconSize = 48.dp)
-                        Text(text = recipeName)
+                        val recipeIcon = recipe.recipeType.item
+                        DrawItem(itemID = recipeIcon, iconSize = 48.dp)
+                        Text(text = recipe.recipeType.name)
                     }
                     OutlinedCard(
                         modifier = Modifier
