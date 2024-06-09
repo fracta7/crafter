@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.defaultMinSize
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -30,6 +31,7 @@ import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.ShapeDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -45,6 +47,7 @@ import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.AddItemDialog
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.navigation.Route
+import com.fracta7.crafter.ui.theme.CrafterTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -56,160 +59,170 @@ fun MainScreen(navController: NavController) {
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableStateOf(0) }
 
-    Scaffold(bottomBar = {
-        BottomAppBar(actions = {
-            IconButton(onClick = { showDrawer = !showDrawer }) {
-                Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
-            }
-        }, floatingActionButton = {
-            FloatingActionButton(onClick = {
-                navController.navigate(
-                    Route.RootCrafting(
-                        items = viewModel.items.keys.map { it.id }.toList(),
-                        amounts = viewModel.items.values.toList()
-                    )
-                )
-            }) {
-                Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
-            }
-        }, windowInsets = BottomAppBarDefaults.windowInsets
-        )
-    }) { paddingValues ->
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(paddingValues)
-        ) {
-            OutlinedTextField(value = search, onValueChange = {
-                search = it
-            }, shape = ShapeDefaults.ExtraLarge, label = {
-                Text(
-                    text = "Item name"
-                )
-            }, modifier = Modifier
-                .padding(4.dp)
-                .fillMaxWidth(), leadingIcon = {
-                Icon(Icons.Rounded.Search, contentDescription = "Search icon")
-            }, trailingIcon = {
-                IconButton(onClick = {
-                    search = ""
-                }) {
-                    Icon(
-                        Icons.Rounded.Clear, contentDescription = "Clear search query"
-                    )
-                }
-            })
-
-            LazyColumn(
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                viewModel.state.itemRegistry.getAll()
-                    .filter { it.value.name.contains(search, ignoreCase = true) }
-                    .forEach { (_, item) ->
-                        item(key = item.id) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                val spacing = if (viewModel.items.contains(item)) 0.9f else 1f
-                                Row(
-                                    verticalAlignment = Alignment.CenterVertically,
-                                    modifier = Modifier.fillMaxWidth(0.85f)
-                                ) {
-                                    ItemElement(
-                                        modifier = Modifier.fillMaxWidth(spacing), item = item
-                                    )
-                                    AnimatedVisibility(
-                                        visible = viewModel.items.contains(item),
-                                        enter = scaleIn(),
-                                        exit = scaleOut()
-                                    ) {
-                                        Badge(modifier = Modifier.padding(start = 4.dp)) {
-                                            Text(text = viewModel.items[item].toString())
-                                        }
-                                    }
-                                }
-                                IconButton(
-                                    onClick = {
-                                        currentItemId = item.id
-                                        showAddDialog = !showAddDialog
-                                    }, modifier = Modifier.padding(4.dp)
-                                ) {
-                                    Icon(
-                                        Icons.Rounded.Add, contentDescription = "Add the item"
-                                    )
-                                }
-                            }
-                            HorizontalDivider()
+    CrafterTheme(dynamicColor = true) {
+        Surface(modifier = Modifier.fillMaxSize()) {
+            Scaffold(bottomBar = {
+                BottomAppBar(actions = {
+                    IconButton(onClick = { showDrawer = !showDrawer }) {
+                        Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
+                    }
+                    Text(text = "Crafter")
+                }, floatingActionButton = {
+                    AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
+                        FloatingActionButton(onClick = {
+                            navController.navigate(
+                                Route.RootCrafting(
+                                    items = viewModel.items.keys.map { it.id }.toList(),
+                                    amounts = viewModel.items.values.toList()
+                                )
+                            )
+                        }) {
+                            Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
                         }
                     }
-            }
-
-            if (showDrawer) {
-                ModalBottomSheet(
-                    onDismissRequest = { showDrawer = !showDrawer },
-                    windowInsets = BottomSheetDefaults.windowInsets
+                }, windowInsets = BottomAppBarDefaults.windowInsets
+                )
+            }) { paddingValues ->
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(paddingValues)
                 ) {
+                    OutlinedTextField(value = search, onValueChange = {
+                        search = it
+                    }, shape = ShapeDefaults.ExtraLarge, label = {
+                        Text(
+                            text = "Item name"
+                        )
+                    }, modifier = Modifier
+                        .padding(4.dp)
+                        .fillMaxWidth(), leadingIcon = {
+                        Icon(Icons.Rounded.Search, contentDescription = "Search icon")
+                    }, trailingIcon = {
+                        IconButton(onClick = {
+                            search = ""
+                        }) {
+                            Icon(
+                                Icons.Rounded.Clear, contentDescription = "Clear search query"
+                            )
+                        }
+                    })
+
                     LazyColumn(
-                        modifier = Modifier
-                            .defaultMinSize(minHeight = 120.dp)
-                            .padding(paddingValues)
+                        modifier = Modifier.fillMaxWidth()
                     ) {
-                        if (viewModel.items.isNotEmpty()) {
-                            viewModel.items.forEach { (item, amount) ->
-                                item {
+                        viewModel.state.itemRegistry.getAll()
+                            .filter { it.value.name.contains(search, ignoreCase = true) }
+                            .forEach { (_, item) ->
+                                item(key = item.id) {
                                     Row(
                                         verticalAlignment = Alignment.CenterVertically,
                                         horizontalArrangement = Arrangement.SpaceBetween,
                                         modifier = Modifier.fillMaxWidth()
                                     ) {
-                                        ItemElement(
-                                            modifier = Modifier.fillMaxWidth(0.85f),
-                                            item = item,
-                                            amount = amount,
-                                            preview = false
-                                        )
-                                        IconButton(onClick = {
-                                            viewModel.removeItem(item)
-                                        }) {
+                                        val spacing =
+                                            if (viewModel.items.contains(item)) 0.9f else 1f
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            modifier = Modifier.fillMaxWidth(0.85f)
+                                        ) {
+                                            ItemElement(
+                                                modifier = Modifier.fillMaxWidth(spacing),
+                                                item = item
+                                            )
+                                            AnimatedVisibility(
+                                                visible = viewModel.items.contains(item),
+                                                enter = scaleIn(),
+                                                exit = scaleOut()
+                                            ) {
+                                                Badge(modifier = Modifier.padding(start = 4.dp)) {
+                                                    Text(text = viewModel.items[item].toString())
+                                                }
+                                            }
+                                        }
+                                        IconButton(
+                                            onClick = {
+                                                currentItemId = item.id
+                                                showAddDialog = !showAddDialog
+                                            }, modifier = Modifier.padding(4.dp)
+                                        ) {
                                             Icon(
-                                                Icons.Rounded.Delete,
-                                                contentDescription = "Remove the item"
+                                                Icons.Rounded.Add,
+                                                contentDescription = "Add the item"
                                             )
                                         }
                                     }
                                     HorizontalDivider()
                                 }
                             }
-                        } else {
-                            item {
-                                Text(
-                                    text = "There are no items in the list.",
-                                    fontWeight = FontWeight.Bold,
-                                    modifier = Modifier.padding(24.dp)
-                                )
+                    }
+
+                    if (showDrawer) {
+                        ModalBottomSheet(
+                            onDismissRequest = { showDrawer = !showDrawer },
+                            windowInsets = BottomSheetDefaults.windowInsets
+                        ) {
+                            LazyColumn(
+                                modifier = Modifier
+                                    .defaultMinSize(minHeight = 120.dp)
+                                    .padding(paddingValues)
+                            ) {
+                                if (viewModel.items.isNotEmpty()) {
+                                    viewModel.items.forEach { (item, amount) ->
+                                        item {
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.SpaceBetween,
+                                                modifier = Modifier.fillMaxWidth()
+                                            ) {
+                                                ItemElement(
+                                                    modifier = Modifier.fillMaxWidth(0.85f),
+                                                    item = item,
+                                                    amount = amount,
+                                                    preview = false
+                                                )
+                                                IconButton(onClick = {
+                                                    viewModel.removeItem(item)
+                                                }) {
+                                                    Icon(
+                                                        Icons.Rounded.Delete,
+                                                        contentDescription = "Remove the item"
+                                                    )
+                                                }
+                                            }
+                                            HorizontalDivider()
+                                        }
+                                    }
+                                } else {
+                                    item {
+                                        Text(
+                                            text = "There are no items in the list.",
+                                            fontWeight = FontWeight.Bold,
+                                            modifier = Modifier.padding(24.dp)
+                                        )
+                                    }
+                                }
                             }
                         }
                     }
+                    AnimatedVisibility(showAddDialog) {
+                        AddItemDialog(onDismissRequest = {
+                            showAddDialog = !showAddDialog
+                            currentItemAmount = 0
+                        },
+                            onConfirmation = {
+                                viewModel.addItemToList(
+                                    item = viewModel.state.itemRegistry.getItem(
+                                        currentItemId
+                                    )!!, amount = currentItemAmount
+                                )
+                                currentItemAmount = 0
+                                showAddDialog = !showAddDialog
+                            },
+                            item = viewModel.state.itemRegistry.getItem(currentItemId)!!,
+                            onGetInput = { currentItemAmount = it })
+                    }
                 }
-            }
-            AnimatedVisibility(showAddDialog) {
-                AddItemDialog(onDismissRequest = {
-                    showAddDialog = !showAddDialog
-                    currentItemAmount = 0
-                },
-                    onConfirmation = {
-                        viewModel.addItemToList(
-                            item = viewModel.state.itemRegistry.getItem(
-                                currentItemId
-                            )!!, amount = currentItemAmount
-                        )
-                        currentItemAmount = 0
-                        showAddDialog = !showAddDialog
-                    },
-                    item = viewModel.state.itemRegistry.getItem(currentItemId)!!,
-                    onGetInput = { currentItemAmount = it })
             }
         }
     }

@@ -12,13 +12,23 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.ui.helper.DrawItem
+import com.fracta7.crafter.util.getStackAmount
+import com.fracta7.crafter.util.getStackText
 
 @Composable
-fun ItemElement(modifier: Modifier, item: Item, amount: Int = 64, preview: Boolean = true) {
+fun ItemElement(
+    modifier: Modifier,
+    item: Item,
+    amount: Int = 64,
+    stackSize: Int = 64,
+    preview: Boolean = true,
+    iconSize: Dp = 64.dp
+) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier) {
         DrawItem(itemID = item.id)
         Column {
@@ -39,12 +49,7 @@ fun ItemElement(modifier: Modifier, item: Item, amount: Int = 64, preview: Boole
                         }
                     }
                 } else {
-                    buildAnnotatedString {
-                        append("Amount: ")
-                        withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
-                            append(amount.toString())
-                        }
-                    }
+                    getStackText(amount = amount, stackSize = stackSize)
                 }
 
             Text(

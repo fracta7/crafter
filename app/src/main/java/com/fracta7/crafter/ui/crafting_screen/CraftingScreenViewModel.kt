@@ -42,4 +42,7 @@ class CraftingScreenViewModel @Inject constructor(
             RecipeType.Smithing -> "Smithing"
         }
     }
+    fun getItemById(itemId: String): Item{
+        return itemRegistry.getItem(id = itemId)!!
+    }
 }
