@@ -16,8 +16,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CrafterTheme {
-                // A surface container using the 'background' color from the theme
+            CrafterTheme(dynamicColor = true) {
                 Surface(
                     modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background
                 ) {

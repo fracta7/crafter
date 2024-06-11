@@ -36,6 +36,7 @@ import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
+import com.fracta7.crafter.util.decomposeItems
 import com.fracta7.crafter.util.getStackAmount
 import com.fracta7.crafter.util.getStackText
 import com.fracta7.crafter.util.resourceAmount

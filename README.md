@@ -29,12 +29,12 @@ Projects aims to assist with crafting long list of items for Minecraft. There ar
 List of key features and functionalities of the project.
 
 - UI for recipe steps
+- List of raw materials for recipe list
 
 ## TODOs
 
 List of features to do:
 
-- Recipe tree building logic
 - Tracking left-overs
 - Using existing items from inventory
 - Recipe tree visualization
@@ -54,9 +54,10 @@ Step-by-step instructions on how to build and set up the project.
 
 Simply search for items and them to you crafting list, then click `craft!`
 
-<img height="320" src="images/1.png" width="180"/>
-<img height="320" src="images/2.png" width="180"/>
-<img height="320" src="images/3.png" width="180"/>
+Screenshots:
+
+<img height="540" src="images/1.png" width="972"/>
+<img height="540" src="images/2.png" width="972"/>
 
 ## Contributing
 

@@ -16,24 +16,34 @@ import com.fracta7.crafter.ui.theme.CrafterTheme
 
 @Composable
 fun Navigation() {
-    CrafterTheme(dynamicColor = true) {
+    CrafterTheme(dynamicColor = false) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = Route.Main) {
                 composable<Route.Main> {
+
                     MainScreen(navController = navController)
+
                 }
                 composable<Route.RootCrafting> {
+
                     val args = it.toRoute<Route.RootCrafting>()
                     RootCraftingScreen(
-                        navController = navController, items = args.items, amounts = args.amounts
+                        navController = navController,
+                        items = args.items,
+                        amounts = args.amounts
                     )
+
                 }
                 composable<Route.Crafting> {
+
                     val args = it.toRoute<Route.Crafting>()
                     CraftingScreen(
-                        navController = navController, itemID = args.item, amount = args.amount
+                        navController = navController,
+                        itemID = args.item,
+                        amount = args.amount
                     )
+
                 }
             }
         }

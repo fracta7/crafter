@@ -27,6 +27,7 @@ import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
@@ -60,7 +61,7 @@ fun MainScreen(navController: NavController) {
     var currentItemAmount by remember { mutableStateOf(0) }
 
     CrafterTheme(dynamicColor = true) {
-        Surface(modifier = Modifier.fillMaxSize()) {
+        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Scaffold(bottomBar = {
                 BottomAppBar(actions = {
                     IconButton(onClick = { showDrawer = !showDrawer }) {
