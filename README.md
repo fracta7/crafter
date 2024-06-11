@@ -13,7 +13,7 @@ Crafter is companion app for Minecraft. It helps with crafting recipes, builds a
     - [Introduction](#introduction)
     - [Features](#features)
     - [TODOs](#todos)
-    - [Building](#installation)
+    - [Building](#building)
     - [Usage](#usage)
     - [Contributing](#contributing)
     - [Adding new recipes and items](#adding-new-recipes-and-items)
@@ -30,12 +30,12 @@ List of key features and functionalities of the project.
 
 - UI for recipe steps
 - List of raw materials for recipe list
+- Tracking leftovers
 
 ## TODOs
 
 List of features to do:
 
-- Tracking left-overs
 - Using existing items from inventory
 - Recipe tree visualization
 - add multiple recipes for single item
@@ -56,8 +56,8 @@ Simply search for items and them to you crafting list, then click `craft!`
 
 Screenshots:
 
-<img src="images/main_menu.png"/>
-<img src="images/crafting_menu.png"/>
+<img src="images/main_menu.png" alt="Main Menu"/>
+<img src="images/crafting_menu.png" alt="Crafting Menu"/>
 
 ## Contributing
 

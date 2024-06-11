@@ -6,6 +6,12 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.withStyle
 
+/**
+ * Builds annotated text for stack amount and item amount for composable text.
+ * @param amount amount of items to display in text.
+ * @param stackSize stack size of item.
+ * @return annotated string to be used in text composable.
+ */
 fun getStackText(amount: Int, stackSize: Int): AnnotatedString{
     return buildAnnotatedString {
         val stack = getStackAmount(amount = amount, stackSize = stackSize)

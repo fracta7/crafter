@@ -43,7 +43,10 @@ import kotlinx.coroutines.launch
 fun RootCraftingScreen(navController: NavController, items: List<String>, amounts: List<Int>) {
     val viewModel = hiltViewModel<RootCraftingScreenViewModel>()
     val itemsMap = items.zip(amounts).toMap()
-    val couritineScope = rememberCoroutineScope()
+    var rawItems by remember { mutableStateOf(mapOf<Item, Int>()) }
+    var leftOvers by remember { mutableStateOf(mapOf<Item, Int>()) }
+    var itemsConverted by remember { mutableStateOf(mapOf<Item, Int>()) }
+    val coroutineScope = rememberCoroutineScope()
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Scaffold(topBar = {
@@ -55,14 +58,13 @@ fun RootCraftingScreen(navController: NavController, items: List<String>, amount
                     })
             }
             ) { padding ->
+
                 Column(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(padding)
                 ) {
                     Text(text = "Raw Items", modifier = Modifier.padding(10.dp))
-                    var rawItems by remember { mutableStateOf(mapOf<Item, Int>()) }
-                    var itemsConverted by remember { mutableStateOf(mapOf<Item, Int>()) }
                     OutlinedCard(
                         modifier = Modifier
                             .padding(horizontal = 10.dp, vertical = 4.dp)
@@ -72,20 +74,39 @@ fun RootCraftingScreen(navController: NavController, items: List<String>, amount
                         LazyColumn(
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(10.dp,4.dp)
+                                .padding(10.dp, 4.dp)
                         ) {
-                            couritineScope.launch {
+                            coroutineScope.launch {
                                 itemsConverted = convertIdMapToItemMap(
-                                    idToAmountMap = itemsMap,
+                                    itemsId = itemsMap,
                                     itemRegistry = viewModel.getItemRegistry()
                                 )
-                                rawItems = decomposeItems(
-                                    itemsToAmounts = itemsConverted,
+                                val result = decomposeItems(
+                                    itemsToDecompose = itemsConverted,
                                     recipeRegistry = viewModel.getRecipeRegistry()
                                 )
+                                rawItems = result.first
+                                leftOvers = result.second
+
                             }
                             rawItems.forEach { (item, amount) ->
                                 item {
+                                    ItemElement(
+                                        modifier = Modifier.fillMaxWidth(),
+                                        item = item,
+                                        amount = amount,
+                                        preview = false,
+                                        stackSize = item.stackSize
+                                    )
+                                    HorizontalDivider(modifier = Modifier.padding(horizontal = 4.dp))
+                                }
+                            }
+                            item {
+                                Spacer(modifier = Modifier.padding(10.dp))
+                                Text(text = "Left-overs", modifier = Modifier.padding(10.dp))
+                            }
+                            leftOvers.forEach { (item, amount) ->
+                                item{
                                     ItemElement(
                                         modifier = Modifier.fillMaxWidth(),
                                         item = item,
