@@ -27,6 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
@@ -64,7 +65,7 @@ fun RootCraftingScreen(navController: NavController, items: List<String>, amount
                         .fillMaxWidth()
                         .padding(padding)
                 ) {
-                    Text(text = "Raw Items", modifier = Modifier.padding(10.dp))
+                    Text(text = "Raw Items", modifier = Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
                     OutlinedCard(
                         modifier = Modifier
                             .padding(horizontal = 10.dp, vertical = 4.dp)
@@ -101,27 +102,29 @@ fun RootCraftingScreen(navController: NavController, items: List<String>, amount
                                     HorizontalDivider(modifier = Modifier.padding(horizontal = 4.dp))
                                 }
                             }
-                            item {
-                                Spacer(modifier = Modifier.padding(10.dp))
-                                Text(text = "Left-overs", modifier = Modifier.padding(10.dp))
-                            }
-                            leftOvers.forEach { (item, amount) ->
-                                item{
-                                    ItemElement(
-                                        modifier = Modifier.fillMaxWidth(),
-                                        item = item,
-                                        amount = amount,
-                                        preview = false,
-                                        stackSize = item.stackSize
-                                    )
-                                    HorizontalDivider(modifier = Modifier.padding(horizontal = 4.dp))
+                            if (leftOvers.isNotEmpty()) {
+                                item {
+                                    Spacer(modifier = Modifier.padding(10.dp))
+                                    Text(text = "Left-overs", modifier = Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
+                                }
+                                leftOvers.forEach { (item, amount) ->
+                                    item {
+                                        ItemElement(
+                                            modifier = Modifier.fillMaxWidth(),
+                                            item = item,
+                                            amount = amount,
+                                            preview = false,
+                                            stackSize = item.stackSize
+                                        )
+                                        HorizontalDivider(modifier = Modifier.padding(horizontal = 4.dp))
+                                    }
                                 }
                             }
                         }
                     }
 
                     Spacer(modifier = Modifier.padding(10.dp))
-                    Text(text = "Crafting List", modifier = Modifier.padding(10.dp))
+                    Text(text = "Crafting List", modifier = Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
                     OutlinedCard(
                         modifier = Modifier
                             .padding(horizontal = 10.dp, vertical = 4.dp)

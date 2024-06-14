@@ -17,6 +17,7 @@ fun decomposeItems(
     val rawMaterials = mutableMapOf<Item, Int>() //main raw material list
     val leftOvers = mutableMapOf<Item, Int>() //internal list of leftovers
     val rawMaterialsLeftOvers = mutableMapOf<Item, Int>() //processed list of leftovers
+    val itemsToRemove = mutableMapOf<Item, Int>()
 
     fun addRawMaterial(item: Item, amount: Int) {
         rawMaterials[item] = rawMaterials.getOrDefault(item, 0) + amount
@@ -87,10 +88,16 @@ fun decomposeItems(
     for ((item, amount) in rawMaterialsLeftOvers){
         if (!item.craftable && rawMaterials.containsKey(item)){
             rawMaterials[item] = rawMaterials[item]!! - amount
-            rawMaterialsLeftOvers.remove(item)
+            //rawMaterialsLeftOvers.remove(item)
+            itemsToRemove[item] = itemsToRemove.getOrDefault(item,0) + amount
         }
     }
 
+    //remove leftovers that has been decomposed
+    for ((item, _) in itemsToRemove){
+        rawMaterialsLeftOvers.remove(item)
+    }
+// https://stackoverflow.com/questions/50032000/how-to-avoid-concurrentmodificationexception-kotlin
     return rawMaterials to rawMaterialsLeftOvers
 }
 

@@ -71,7 +71,7 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                     ) {
                         val recipeIcon = recipe.recipeType.item
                         DrawItem(itemID = recipeIcon, iconSize = 48.dp)
-                        Text(text = recipe.recipeType.name)
+                        Text(text = recipe.recipeType.name, fontWeight = FontWeight.Bold)
                     }
                     OutlinedCard(
                         modifier = Modifier
@@ -102,7 +102,7 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         }
                     }
                     Spacer(modifier = Modifier.padding(10.dp))
-                    Text(text = "Steps", modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp))
+                    Text(text = "Steps", modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp), fontWeight = FontWeight.Bold)
                     LazyColumn(
                         modifier = Modifier
                             .fillMaxWidth()
