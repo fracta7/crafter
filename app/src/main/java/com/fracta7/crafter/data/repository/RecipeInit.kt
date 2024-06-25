@@ -9,6579 +9,6993 @@ import com.fracta7.crafter.domain.model.RecipeType
  * @param itemRegistry ItemRegistry instance to get all items.
  * @return List of Recipes.
  */
-fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
+fun recipeInit(): List<Recipe> {
     return listOf(
         Recipe(
-            result = itemRegistry.getItem("polished_granite")!!,
+            result = "polished_granite",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("granite")!! to 1),
+            requirements = mapOf("granite" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_diorite")!!,
+            result = "polished_diorite",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("diorite")!! to 1),
+            requirements = mapOf("diorite" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_andesite")!!,
+            result = "polished_andesite",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("andesite")!! to 1),
+            requirements = mapOf("andesite" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_deepslate")!!,
+            result = "polished_deepslate",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cobbled_deepslate")!! to 1),
+            requirements = mapOf("cobbled_deepslate" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("coarse_dirt")!!,
+            result = "coarse_dirt",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("gravel")!! to 2,
-                itemRegistry.getItem("sand")!! to 2
+                "gravel" to 2,
+                "sand" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_planks")!!,
+            result = "oak_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("oak_log")!! to 1),
+            requirements = mapOf("oak_log" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_planks")!!,
+            result = "spruce_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("spruce_log")!! to 1),
+            requirements = mapOf("spruce_log" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_planks")!!,
+            result = "birch_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("birch_log")!! to 1),
+            requirements = mapOf("birch_log" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_planks")!!,
+            result = "jungle_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("jungle_log")!! to 1),
+            requirements = mapOf("jungle_log" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_planks")!!,
+            result = "acacia_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("acacia_log")!! to 1),
+            requirements = mapOf("acacia_log" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_planks")!!,
+            result = "dark_oak_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("dark_oak_log")!! to 1),
+            requirements = mapOf("dark_oak_log" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_planks")!!,
+            result = "crimson_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("crimson_stem")!! to 1),
+            requirements = mapOf("crimson_stem" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_planks")!!,
+            result = "warped_planks",
             resultQuantity = 4,
-            requirements = mapOf(itemRegistry.getItem("warped_stem")!! to 1),
+            requirements = mapOf("warped_stem" to 1),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("coal_block")!!,
+            result = "coal_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("coal")!! to 9),
+            requirements = mapOf("coal" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("raw_iron_block")!!,
+            result = "raw_iron_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("raw_iron")!! to 9),
+            requirements = mapOf("raw_iron" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("raw_copper_block")!!,
+            result = "raw_copper_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("raw_copper")!! to 9),
+            requirements = mapOf("raw_copper" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("raw_gold_block")!!,
+            result = "raw_gold_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("raw_gold")!! to 9),
+            requirements = mapOf("raw_gold" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("amethyst_block")!!,
+            result = "amethyst_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("amethyst_shard")!! to 4),
+            requirements = mapOf("amethyst_shard" to 4),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_block")!!,
+            result = "iron_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("iron_ingot")!! to 9),
+            requirements = mapOf("iron_ingot" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("copper_block")!!,
+            result = "copper_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("copper_ingot")!! to 9),
+            requirements = mapOf("copper_ingot" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gold_block")!!,
+            result = "gold_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("gold_ingot")!! to 9),
+            requirements = mapOf("gold_ingot" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_block")!!,
+            result = "diamond_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("diamond")!! to 9),
+            requirements = mapOf("diamond" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_block")!!,
+            result = "netherite_block",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("netherite_ingot")!! to 9),
+            requirements = mapOf("netherite_ingot" to 9),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("exposed_copper")!!,
+            result = "exposed_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("copper_block")!! to 1),
+            requirements = mapOf("copper_block" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("weathered_copper")!!,
+            result = "weathered_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("copper_block")!! to 1),
+            requirements = mapOf("copper_block" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("oxidized_copper")!!,
+            result = "oxidized_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("copper_block")!! to 1),
+            requirements = mapOf("copper_block" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_copper")!!,
+            result = "cut_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("copper_block")!! to 1),
+            requirements = mapOf("copper_block" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("exposed_cut_copper")!!,
+            result = "exposed_cut_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper")!! to 1),
+            requirements = mapOf("cut_copper" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("weathered_cut_copper")!!,
+            result = "weathered_cut_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper")!! to 1),
+            requirements = mapOf("cut_copper" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("oxidized_cut_copper")!!,
+            result = "oxidized_cut_copper",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper")!! to 1),
+            requirements = mapOf("cut_copper" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_copper_stairs")!!,
+            result = "cut_copper_stairs",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("copper_block")!! to 1),
+            requirements = mapOf("copper_block" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("exposed_cut_copper_stairs")!!,
+            result = "exposed_cut_copper_stairs",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper_stairs")!! to 1),
+            requirements = mapOf("cut_copper_stairs" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("weathered_cut_copper_stairs")!!,
+            result = "weathered_cut_copper_stairs",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper_stairs")!! to 1),
+            requirements = mapOf("cut_copper_stairs" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("oxidized_cut_copper_stairs")!!,
+            result = "oxidized_cut_copper_stairs",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper_stairs")!! to 1),
+            requirements = mapOf("cut_copper_stairs" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_copper_slab")!!,
+            result = "cut_copper_slab",
             resultQuantity = 2,
-            requirements = mapOf(itemRegistry.getItem("copper_block")!! to 1),
+            requirements = mapOf("copper_block" to 1),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("exposed_cut_copper_slab")!!,
+            result = "exposed_cut_copper_slab",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper_slab")!! to 1),
+            requirements = mapOf("cut_copper_slab" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("weathered_cut_copper_slab")!!,
+            result = "weathered_cut_copper_slab",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper_slab")!! to 1),
+            requirements = mapOf("cut_copper_slab" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("oxidized_cut_copper_slab")!!,
+            result = "oxidized_cut_copper_slab",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("cut_copper_slab")!! to 1),
+            requirements = mapOf("cut_copper_slab" to 1),
             recipeType = RecipeType.Oxidation
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_copper_block")!!,
+            result = "waxed_copper_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("copper_block")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "copper_block" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_exposed_copper")!!,
+            result = "waxed_exposed_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("exposed_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "exposed_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_weathered_copper")!!,
+            result = "waxed_weathered_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("weathered_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "weathered_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_oxidized_copper")!!,
+            result = "waxed_oxidized_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oxidized_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "oxidized_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_cut_copper")!!,
+            result = "waxed_cut_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cut_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "cut_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_exposed_cut_copper")!!,
+            result = "waxed_exposed_cut_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("exposed_cut_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "exposed_cut_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_weathered_cut_copper")!!,
+            result = "waxed_weathered_cut_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("weathered_cut_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "weathered_cut_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_oxidized_cut_copper")!!,
+            result = "waxed_oxidized_cut_copper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oxidized_cut_copper")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "oxidized_cut_copper" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_cut_copper_stairs")!!,
+            result = "waxed_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cut_copper_stairs")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "cut_copper_stairs" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_exposed_cut_copper_stairs")!!,
+            result = "waxed_exposed_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("exposed_cut_copper_stairs")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "exposed_cut_copper_stairs" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_weathered_cut_copper_stairs")!!,
+            result = "waxed_weathered_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("weathered_cut_copper_stairs")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "weathered_cut_copper_stairs" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_oxidized_cut_copper_stairs")!!,
+            result = "waxed_oxidized_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oxidized_cut_copper_stairs")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "oxidized_cut_copper_stairs" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_exposed_cut_copper_slab")!!,
+            result = "waxed_exposed_cut_copper_slab",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("exposed_cut_copper_slab")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "exposed_cut_copper_slab" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_weathered_cut_copper_slab")!!,
+            result = "waxed_weathered_cut_copper_slab",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("weathered_cut_copper_slab")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "weathered_cut_copper_slab" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("waxed_oxidized_cut_copper_slab")!!,
+            result = "waxed_oxidized_cut_copper_slab",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oxidized_cut_copper_slab")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "oxidized_cut_copper_slab" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Waxing
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_oak_log")!!,
+            result = "stripped_oak_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_log")!! to 1
+                "oak_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_spruce_log")!!,
+            result = "stripped_spruce_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_log")!! to 1
+                "spruce_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_birch_log")!!,
+            result = "stripped_birch_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_log")!! to 1
+                "birch_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_jungle_log")!!,
+            result = "stripped_jungle_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_log")!! to 1
+                "jungle_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_acacia_log")!!,
+            result = "stripped_acacia_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_log")!! to 1
+                "acacia_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_dark_oak_log")!!,
+            result = "stripped_dark_oak_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_log")!! to 1
+                "dark_oak_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_crimson_stem")!!,
+            result = "stripped_crimson_stem",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_stem")!! to 1
+                "crimson_stem" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_warped_stem")!!,
+            result = "stripped_warped_stem",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("warped_stem")!! to 1
+                "warped_stem" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_oak_wood")!!,
+            result = "stripped_oak_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_wood")!! to 1
+                "oak_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_spruce_wood")!!,
+            result = "stripped_spruce_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_wood")!! to 1
+                "spruce_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_birch_wood")!!,
+            result = "stripped_birch_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_wood")!! to 1
+                "birch_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_jungle_wood")!!,
+            result = "stripped_jungle_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_wood")!! to 1
+                "jungle_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_acacia_wood")!!,
+            result = "stripped_acacia_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_wood")!! to 1
+                "acacia_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_dark_oak_wood")!!,
+            result = "stripped_dark_oak_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_wood")!! to 1
+                "dark_oak_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_crimson_hyphae")!!,
+            result = "stripped_crimson_hyphae",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_hyphae")!! to 1
+                "crimson_hyphae" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_warped_hyphae")!!,
+            result = "stripped_warped_hyphae",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("warped_hyphae")!! to 1
+                "warped_hyphae" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_wood")!!,
+            result = "oak_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("oak_log")!! to 4
+                "oak_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_wood")!!,
+            result = "spruce_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_log")!! to 4
+                "spruce_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_wood")!!,
+            result = "birch_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("birch_log")!! to 4
+                "birch_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_wood")!!,
+            result = "jungle_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_log")!! to 4
+                "jungle_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_wood")!!,
+            result = "acacia_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_log")!! to 4
+                "acacia_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_wood")!!,
+            result = "dark_oak_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_log")!! to 4
+                "dark_oak_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_hyphae")!!,
+            result = "crimson_hyphae",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_stem")!! to 4
+                "crimson_stem" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_hyphae")!!,
+            result = "warped_hyphae",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("warped_stem")!! to 4
+                "warped_stem" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("glass")!!,
+            result = "glass",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 1
+                "sand" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("tinted_glass")!!,
+            result = "tinted_glass",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 1,
-                itemRegistry.getItem("amethyst_shard")!! to 4
+                "glass" to 1,
+                "amethyst_shard" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lapis_block")!!,
+            result = "lapis_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("lapis_lazuli")!! to 9
+                "lapis_lazuli" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_sandstone")!!,
+            result = "chiseled_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_sandstone")!!,
+            result = "cut_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_wool")!!,
+            result = "orange_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "white_wool" to 1,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_wool")!!,
+            result = "magenta_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "white_wool" to 1,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_wool")!!,
+            result = "light_blue_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("light_blue_wool")!! to 1
+                "white_wool" to 1,
+                "light_blue_wool" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_wool")!!,
+            result = "yellow_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "white_wool" to 1,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_wool")!!,
+            result = "lime_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "white_wool" to 1,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_wool")!!,
+            result = "pink_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "white_wool" to 1,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_wool")!!,
+            result = "gray_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "white_wool" to 1,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_wool")!!,
+            result = "light_gray_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("light_gray_wool")!! to 1
+                "white_wool" to 1,
+                "light_gray_wool" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_wool")!!,
+            result = "cyan_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "white_wool" to 1,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_wool")!!,
+            result = "purple_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "white_wool" to 1,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_wool")!!,
+            result = "blue_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "white_wool" to 1,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_wool")!!,
+            result = "brown_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_dye")!! to 1,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "white_dye" to 1,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_wool")!!,
+            result = "green_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("green_dye")!! to 1
+                "white_wool" to 1,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_wool")!!,
+            result = "red_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("red_dye")!! to 1
+                "white_wool" to 1,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_wool")!!,
+            result = "black_wool",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 1,
-                itemRegistry.getItem("black_dye")!! to 1
+                "white_wool" to 1,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("moss_carpet")!!,
+            result = "moss_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("moss_block")!! to 2
+                "moss_block" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_slab")!!,
+            result = "oak_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 3
+                "oak_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_slab")!!,
+            result = "spruce_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 3
+                "spruce_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_slab")!!,
+            result = "birch_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 3
+                "birch_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_slab")!!,
+            result = "jungle_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 3
+                "jungle_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_slab")!!,
+            result = "acacia_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 3
+                "acacia_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_slab")!!,
+            result = "dark_oak_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 3
+                "dark_oak_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_slab")!!,
+            result = "crimson_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 3
+                "crimson_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_slab")!!,
+            result = "warped_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 3
+                "warped_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_slab")!!,
+            result = "stone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_stone_slab")!!,
+            result = "smooth_stone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_stone")!! to 1
+                "smooth_stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("sandstone_slab")!!,
+            result = "sandstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_sandstone_slab")!!,
+            result = "cut_sandstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cobblestone_slab")!!,
+            result = "cobblestone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 1
+                "cobblestone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("brick_slab")!!,
+            result = "brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("bricks")!! to 1
+                "bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_brick_slab")!!,
+            result = "stone_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_brick_slab")!!,
+            result = "nether_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("nether_bricks")!! to 1
+                "nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("quartz_slab")!!,
+            result = "quartz_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("quartz_block")!! to 1
+                "quartz_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_sandstone_slab")!!,
+            result = "red_sandstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_red_sandstone_slab")!!,
+            result = "cut_red_sandstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("purpur_slab")!!,
+            result = "purpur_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("purpur_block")!! to 1
+                "purpur_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine_slab")!!,
+            result = "prismarine_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine")!! to 1
+                "prismarine" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine_brick_slab")!!,
+            result = "prismarine_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine_bricks")!! to 1
+                "prismarine_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_prismarine_slab")!!,
+            result = "dark_prismarine_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("dark_prismarine")!! to 1
+                "dark_prismarine" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_quartz")!!,
+            result = "smooth_quartz",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("quartz_block")!! to 1
+                "quartz_block" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_red_sandstone")!!,
+            result = "smooth_red_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_sandstone")!!,
+            result = "smooth_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_stone")!!,
+            result = "smooth_stone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("bricks")!!,
+            result = "bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("brick")!! to 4
+                "brick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bookshelf")!!,
+            result = "bookshelf",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6,
-                itemRegistry.getItem("book")!! to 3
+                "oak_planks" to 6,
+                "book" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_cobblestone")!!,
+            result = "mossy_cobblestone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 1,
-                itemRegistry.getItem("vine")!! to 1
+                "cobblestone" to 1,
+                "vine" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("torch")!!,
+            result = "torch",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 1,
-                itemRegistry.getItem("coal")!! to 1
+                "stick" to 1,
+                "coal" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("end_rod")!!,
+            result = "end_rod",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("blaze_rod")!! to 1,
-                itemRegistry.getItem("popped_chorus_fruit")!! to 1
+                "blaze_rod" to 1,
+                "popped_chorus_fruit" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purpur_block")!!,
+            result = "purpur_block",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("popped_chorus_fruit")!! to 4
+                "popped_chorus_fruit" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purpur_pillar")!!,
+            result = "purpur_pillar",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("purpur_block")!! to 1
+                "purpur_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("purpur_stairs")!!,
+            result = "purpur_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("purpur_block")!! to 1
+                "purpur_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_stairs")!!,
+            result = "oak_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6
+                "oak_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chest")!!,
+            result = "chest",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 8
+                "oak_planks" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crafting_table")!!,
+            result = "crafting_table",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 4
+                "oak_planks" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("furnace")!!,
+            result = "furnace",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 8
+                "cobblestone" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("ladder")!!,
+            result = "ladder",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 7
+                "stick" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cobblestone_stairs")!!,
+            result = "cobblestone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 1
+                "cobblestone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("snow_block")!!,
+            result = "snow_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("snowball")!! to 4
+                "snowball" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jukebox")!!,
+            result = "jukebox",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 8,
-                itemRegistry.getItem("diamond")!! to 1
+                "oak_planks" to 8,
+                "diamond" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_fence")!!,
+            result = "oak_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "oak_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_fence")!!,
+            result = "spruce_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "spruce_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_fence")!!,
+            result = "birch_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "birch_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_fence")!!,
+            result = "jungle_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "jungle_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_fence")!!,
+            result = "acacia_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "acacia_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_fence")!!,
+            result = "dark_oak_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "dark_oak_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_fence")!!,
+            result = "crimson_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "crimson_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_fence")!!,
+            result = "warped_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "warped_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("carved_pumpkin")!!,
+            result = "carved_pumpkin",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("pumpkin")!! to 1
+                "pumpkin" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("jack_o_lantern")!!,
+            result = "jack_o_lantern",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("carved_pumpkin")!! to 1,
-                itemRegistry.getItem("torch")!! to 1
+                "carved_pumpkin" to 1,
+                "torch" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_basalt")!!,
+            result = "polished_basalt",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("basalt")!! to 1
+                "basalt" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("soul_torch")!!,
+            result = "soul_torch",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("coal")!! to 1,
-                itemRegistry.getItem("stick")!! to 1,
-                itemRegistry.getItem("soul_sand")!! to 1
+                "coal" to 1,
+                "stick" to 1,
+                "soul_sand" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("glowstone")!!,
+            result = "glowstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("glowstone_dust")!! to 4
+                "glowstone_dust" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_bricks")!!,
+            result = "stone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_stone_bricks")!!,
+            result = "mossy_stone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone_bricks")!! to 1,
-                itemRegistry.getItem("vine")!! to 1
+                "stone_bricks" to 1,
+                "vine" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cracked_stone_bricks")!!,
+            result = "cracked_stone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone_bricks")!! to 1
+                "stone_bricks" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_stone_bricks")!!,
+            result = "chiseled_stone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_bricks")!!,
+            result = "deepslate_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cracked_deepslate_bricks")!!,
+            result = "cracked_deepslate_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("deepslate_bricks")!! to 1
+                "deepslate_bricks" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_tiles")!!,
+            result = "deepslate_tiles",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cracked_deepslate_tiles")!!,
+            result = "cracked_deepslate_tiles",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("deepslate_tiles")!! to 1
+                "deepslate_tiles" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_deepslate")!!,
+            result = "chiseled_deepslate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_bars")!!,
+            result = "iron_bars",
             resultQuantity = 16,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 6
+                "iron_ingot" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chain")!!,
+            result = "chain",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 1,
-                itemRegistry.getItem("iron_nugget")!! to 2
+                "iron_ingot" to 1,
+                "iron_nugget" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("melon")!!,
+            result = "melon",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("melon_slice")!! to 9
+                "melon_slice" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brick_stairs")!!,
+            result = "brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bricks")!! to 1
+                "bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_brick_stairs")!!,
+            result = "stone_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone_bricks")!! to 1
+                "stone_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_bricks")!!,
+            result = "nether_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_brick")!! to 4
+                "nether_brick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cracked_nether_bricks")!!,
+            result = "cracked_nether_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_bricks")!! to 1
+                "nether_bricks" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_nether_bricks")!!,
+            result = "chiseled_nether_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_bricks")!! to 1
+                "nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_brick_fence")!!,
+            result = "nether_brick_fence",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("nether_bricks")!! to 4,
-                itemRegistry.getItem("nether_brick")!! to 2
+                "nether_bricks" to 4,
+                "nether_brick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_brick_stairs")!!,
+            result = "nether_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_bricks")!! to 1
+                "nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("enchanting_table")!!,
+            result = "enchanting_table",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 2,
-                itemRegistry.getItem("book")!! to 1,
-                itemRegistry.getItem("obsidian")!! to 4
+                "diamond" to 2,
+                "book" to 1,
+                "obsidian" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("end_stone_bricks")!!,
+            result = "end_stone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("end_stone")!! to 1
+                "end_stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("sandstone_stairs")!!,
+            result = "sandstone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("ender_chest")!!,
+            result = "ender_chest",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("obsidian")!! to 8,
-                itemRegistry.getItem("ender_eye")!! to 1
+                "obsidian" to 8,
+                "ender_eye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("emerald_block")!!,
+            result = "emerald_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("emerald")!! to 9
+                "emerald" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_stairs")!!,
+            result = "spruce_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 6
+                "spruce_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_stairs")!!,
+            result = "birch_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 6
+                "birch_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_stairs")!!,
+            result = "jungle_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 6
+                "jungle_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_stairs")!!,
+            result = "crimson_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 6
+                "crimson_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_stairs")!!,
+            result = "warped_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 6
+                "warped_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("beacon")!!,
+            result = "beacon",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 5,
-                itemRegistry.getItem("obsidian")!! to 3,
-                itemRegistry.getItem("nether_star")!! to 1
+                "glass" to 5,
+                "obsidian" to 3,
+                "nether_star" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cobblestone_wall")!!,
+            result = "cobblestone_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 1
+                "cobblestone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_cobblestone_wall")!!,
+            result = "mossy_cobblestone_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mossy_cobblestone")!! to 1
+                "mossy_cobblestone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("brick_wall")!!,
+            result = "brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bricks")!! to 1
+                "bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine_wall")!!,
+            result = "prismarine_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine")!! to 1
+                "prismarine" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_sandstone_wall")!!,
+            result = "red_sandstone_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_stone_brick_wall")!!,
+            result = "mossy_stone_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mossy_stone_bricks")!! to 1
+                "mossy_stone_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("granite_wall")!!,
+            result = "granite_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("granite")!! to 1
+                "granite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_brick_wall")!!,
+            result = "stone_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_brick_wall")!!,
+            result = "nether_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_bricks")!! to 1
+                "nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("andesite_wall")!!,
+            result = "andesite_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("andesite")!! to 1
+                "andesite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_nether_brick_wall")!!,
+            result = "red_nether_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_nether_bricks")!! to 1
+                "red_nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("sandstone_wall")!!,
+            result = "sandstone_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sandstone")!! to 1
+                "sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("end_stone_brick_wall")!!,
+            result = "end_stone_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("end_stone")!! to 1
+                "end_stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("diorite_wall")!!,
+            result = "diorite_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diorite")!! to 1
+                "diorite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("blackstone_wall")!!,
+            result = "blackstone_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_wall")!!,
+            result = "polished_blackstone_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_brick_wall")!!,
+            result = "polished_blackstone_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cobbled_deepslate_wall")!!,
+            result = "cobbled_deepslate_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_deepslate_wall")!!,
+            result = "polished_deepslate_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_brick_wall")!!,
+            result = "deepslate_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_tile_wall")!!,
+            result = "deepslate_tile_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("anvil")!!,
+            result = "anvil",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 4,
-                itemRegistry.getItem("iron_block")!! to 3
+                "iron_ingot" to 4,
+                "iron_block" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_quartz_block")!!,
+            result = "chiseled_quartz_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("quartz_block")!! to 1
+                "quartz_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("quartz_block")!!,
+            result = "quartz_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("quartz")!! to 4
+                "quartz" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("quartz_bricks")!!,
+            result = "quartz_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("quartz_block")!! to 1
+                "quartz_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("quartz_pillar")!!,
+            result = "quartz_pillar",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("quartz_block")!! to 1
+                "quartz_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("quartz_stairs")!!,
+            result = "quartz_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("quartz_block")!! to 1
+                "quartz_block" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_terracotta")!!,
+            result = "white_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("white_dye")!! to 1
+                "terracotta" to 8,
+                "white_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_terracotta")!!,
+            result = "orange_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "terracotta" to 8,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_terracotta")!!,
+            result = "magenta_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "terracotta" to 8,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_terracotta")!!,
+            result = "light_blue_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "terracotta" to 8,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_terracotta")!!,
+            result = "yellow_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "terracotta" to 8,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_terracotta")!!,
+            result = "lime_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "terracotta" to 8,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_terracotta")!!,
+            result = "pink_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "terracotta" to 8,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_terracotta")!!,
+            result = "gray_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "terracotta" to 8,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_terracotta")!!,
+            result = "light_gray_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "terracotta" to 8,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_terracotta")!!,
+            result = "cyan_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "terracotta" to 8,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_terracotta")!!,
+            result = "purple_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "terracotta" to 8,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_terracotta")!!,
+            result = "blue_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "terracotta" to 8,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_terracotta")!!,
+            result = "brown_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "terracotta" to 8,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_terracotta")!!,
+            result = "green_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("green_dye")!! to 1
+                "terracotta" to 8,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_terracotta")!!,
+            result = "red_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("red_dye")!! to 1
+                "terracotta" to 8,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_terracotta")!!,
+            result = "black_terracotta",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("terracotta")!! to 8,
-                itemRegistry.getItem("black_dye")!! to 1
+                "terracotta" to 8,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("hay_block")!!,
+            result = "hay_block",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("wheat")!! to 9
+                "wheat" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_carpet")!!,
+            result = "white_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 2
+                "white_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_carpet")!!,
+            result = "orange_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("orange_wool")!! to 2
+                "orange_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_carpet")!!,
+            result = "magenta_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("magenta_wool")!! to 2
+                "magenta_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_carpet")!!,
+            result = "light_blue_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("light_blue_wool")!! to 2
+                "light_blue_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_carpet")!!,
+            result = "yellow_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("yellow_wool")!! to 2
+                "yellow_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_carpet")!!,
+            result = "lime_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("lime_wool")!! to 2
+                "lime_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_carpet")!!,
+            result = "pink_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("pink_wool")!! to 2
+                "pink_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_carpet")!!,
+            result = "gray_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("gray_wool")!! to 2
+                "gray_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_carpet")!!,
+            result = "light_gray_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("light_gray_wool")!! to 2
+                "light_gray_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_carpet")!!,
+            result = "cyan_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("cyan_wool")!! to 2
+                "cyan_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_carpet")!!,
+            result = "purple_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("purple_wool")!! to 2
+                "purple_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_carpet")!!,
+            result = "blue_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("blue_wool")!! to 2
+                "blue_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_carpet")!!,
+            result = "brown_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("brown_wool")!! to 2
+                "brown_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_carpet")!!,
+            result = "green_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("green_wool")!! to 2
+                "green_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_carpet")!!,
+            result = "red_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("red_wool")!! to 2
+                "red_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_carpet")!!,
+            result = "black_carpet",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("black_wool")!! to 2
+                "black_wool" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("packed_ice")!!,
+            result = "packed_ice",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("ice")!! to 9
+                "ice" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_stairs")!!,
+            result = "acacia_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 6
+                "acacia_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_stairs")!!,
+            result = "dark_oak_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 6
+                "dark_oak_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_stained_glass")!!,
+            result = "white_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("white_dye")!! to 1
+                "glass" to 8,
+                "white_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_stained_glass")!!,
+            result = "orange_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "glass" to 8,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_stained_glass")!!,
+            result = "magenta_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "glass" to 8,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_stained_glass")!!,
+            result = "light_blue_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "glass" to 8,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_stained_glass")!!,
+            result = "yellow_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "glass" to 8,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_stained_glass")!!,
+            result = "lime_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "glass" to 8,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_stained_glass")!!,
+            result = "pink_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "glass" to 8,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_stained_glass")!!,
+            result = "gray_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "glass" to 8,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_stained_glass")!!,
+            result = "light_gray_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "glass" to 8,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_stained_glass")!!,
+            result = "cyan_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "glass" to 8,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_stained_glass")!!,
+            result = "purple_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "glass" to 8,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_stained_glass")!!,
+            result = "blue_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "glass" to 8,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_stained_glass")!!,
+            result = "brown_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "glass" to 8,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_stained_glass")!!,
+            result = "green_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("green_dye")!! to 1
+                "glass" to 8,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_stained_glass")!!,
+            result = "red_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("red_dye")!! to 1
+                "glass" to 8,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_stained_glass")!!,
+            result = "black_stained_glass",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 8,
-                itemRegistry.getItem("black_dye")!! to 1
+                "glass" to 8,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_stained_glass_pane")!!,
+            result = "white_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("white_dye")!! to 1
+                "glass_pane" to 8,
+                "white_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_stained_glass_pane")!!,
+            result = "orange_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "glass_pane" to 8,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_stained_glass_pane")!!,
+            result = "magenta_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "glass_pane" to 8,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_stained_glass_pane")!!,
+            result = "light_blue_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "glass_pane" to 8,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_stained_glass_pane")!!,
+            result = "yellow_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "glass_pane" to 8,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_stained_glass_pane")!!,
+            result = "lime_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "glass_pane" to 8,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_stained_glass_pane")!!,
+            result = "pink_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "glass_pane" to 8,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_stained_glass_pane")!!,
+            result = "gray_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "glass_pane" to 8,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_stained_glass_pane")!!,
+            result = "light_gray_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "glass_pane" to 8,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_stained_glass_pane")!!,
+            result = "cyan_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "glass_pane" to 8,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_stained_glass_pane")!!,
+            result = "purple_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "glass_pane" to 8,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_stained_glass_pane")!!,
+            result = "blue_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "glass_pane" to 8,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_stained_glass_pane")!!,
+            result = "brown_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "glass_pane" to 8,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_stained_glass_pane")!!,
+            result = "green_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("green_dye")!! to 1
+                "glass_pane" to 8,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_stained_glass_pane")!!,
+            result = "red_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("red_dye")!! to 1
+                "glass_pane" to 8,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_stained_glass_pane")!!,
+            result = "black_stained_glass_pane",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("glass_pane")!! to 8,
-                itemRegistry.getItem("black_dye")!! to 1
+                "glass_pane" to 8,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine")!!,
+            result = "prismarine",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine_shard")!! to 4
+                "prismarine_shard" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine_bricks")!!,
+            result = "prismarine_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine_shard")!! to 9
+                "prismarine_shard" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_prismarine")!!,
+            result = "dark_prismarine",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine_shard")!! to 8,
-                itemRegistry.getItem("black_dye")!! to 1
+                "prismarine_shard" to 8,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine_stairs")!!,
+            result = "prismarine_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine")!! to 1
+                "prismarine" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("prismarine_brick_stairs")!!,
+            result = "prismarine_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine_bricks")!! to 1
+                "prismarine_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_prismarine_stairs")!!,
+            result = "dark_prismarine_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_prismarine")!! to 1
+                "dark_prismarine" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("sea_lantern")!!,
+            result = "sea_lantern",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("prismarine_shard")!! to 4,
-                itemRegistry.getItem("prismarine_crystals")!! to 5
+                "prismarine_shard" to 4,
+                "prismarine_crystals" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_sandstone")!!,
+            result = "red_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_sand")!! to 4
+                "red_sand" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_red_sandstone")!!,
+            result = "chiseled_red_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cut_red_sandstone")!!,
+            result = "cut_red_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_sandstone_stairs")!!,
+            result = "red_sandstone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_sandstone")!! to 1
+                "red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("magma_block")!!,
+            result = "magma_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("magma_cream")!! to 4
+                "magma_cream" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_wart_block")!!,
+            result = "nether_wart_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_wart")!! to 9
+                "nether_wart" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_nether_bricks")!!,
+            result = "red_nether_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("nether_brick")!! to 2,
-                itemRegistry.getItem("nether_wart")!! to 2
+                "nether_brick" to 2,
+                "nether_wart" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bone_block")!!,
+            result = "bone_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bone_meal")!! to 9
+                "bone_meal" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("shulker_box")!!,
+            result = "shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_shell")!! to 2,
-                itemRegistry.getItem("chest")!! to 1
+                "shulker_shell" to 2,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_shulker_box")!!,
+            result = "white_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("white_dye")!! to 1
+                "shulker_box" to 1,
+                "white_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_shulker_box")!!,
+            result = "orange_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "shulker_box" to 1,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_shulker_box")!!,
+            result = "magenta_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "shulker_box" to 1,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_shulker_box")!!,
+            result = "light_blue_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "shulker_box" to 1,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_shulker_box")!!,
+            result = "yellow_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "shulker_box" to 1,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_shulker_box")!!,
+            result = "lime_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "shulker_box" to 1,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_shulker_box")!!,
+            result = "pink_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "shulker_box" to 1,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_shulker_box")!!,
+            result = "gray_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "shulker_box" to 1,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_shulker_box")!!,
+            result = "light_gray_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "shulker_box" to 1,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_shulker_box")!!,
+            result = "cyan_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "shulker_box" to 1,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_shulker_box")!!,
+            result = "purple_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "shulker_box" to 1,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_shulker_box")!!,
+            result = "blue_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "shulker_box" to 1,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_shulker_box")!!,
+            result = "brown_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "shulker_box" to 1,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_shulker_box")!!,
+            result = "green_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("green_dye")!! to 1
+                "shulker_box" to 1,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_shulker_box")!!,
+            result = "red_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("red_dye")!! to 1
+                "shulker_box" to 1,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_shulker_box")!!,
+            result = "black_shulker_box",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("shulker_box")!! to 1,
-                itemRegistry.getItem("black_dye")!! to 1
+                "shulker_box" to 1,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_glazed_terracotta")!!,
+            result = "white_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_terracotta")!! to 1
+                "white_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_glazed_terracotta")!!,
+            result = "orange_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("orange_terracotta")!! to 1
+                "orange_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_glazed_terracotta")!!,
+            result = "magenta_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("magenta_terracotta")!! to 1
+                "magenta_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_glazed_terracotta")!!,
+            result = "light_blue_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("light_blue_terracotta")!! to 1
+                "light_blue_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_glazed_terracotta")!!,
+            result = "yellow_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("yellow_terracotta")!! to 1
+                "yellow_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_glazed_terracotta")!!,
+            result = "lime_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("lime_terracotta")!! to 1
+                "lime_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_glazed_terracotta")!!,
+            result = "pink_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("pink_terracotta")!! to 1
+                "pink_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_glazed_terracotta")!!,
+            result = "gray_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gray_terracotta")!! to 1
+                "gray_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_glazed_terracotta")!!,
+            result = "light_gray_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("light_gray_terracotta")!! to 1
+                "light_gray_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_glazed_terracotta")!!,
+            result = "cyan_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cyan_terracotta")!! to 1
+                "cyan_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_glazed_terracotta")!!,
+            result = "purple_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("purple_terracotta")!! to 1
+                "purple_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_glazed_terracotta")!!,
+            result = "blue_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blue_terracotta")!! to 1
+                "blue_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_glazed_terracotta")!!,
+            result = "brown_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("brown_terracotta")!! to 1
+                "brown_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_glazed_terracotta")!!,
+            result = "green_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("green_terracotta")!! to 1
+                "green_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_glazed_terracotta")!!,
+            result = "red_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_terracotta")!! to 1
+                "red_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_glazed_terracotta")!!,
+            result = "black_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("black_terracotta")!! to 1
+                "black_terracotta" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_concrete")!!,
+            result = "white_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_concrete_powder")!! to 1
+                "white_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_concrete")!!,
+            result = "orange_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("orange_concrete_powder")!! to 1
+                "orange_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_concrete")!!,
+            result = "magenta_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("magenta_concrete_powder")!! to 1
+                "magenta_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_concrete")!!,
+            result = "light_blue_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("light_blue_concrete_powder")!! to 1
+                "light_blue_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_concrete")!!,
+            result = "yellow_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("yellow_concrete_powder")!! to 1
+                "yellow_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_concrete")!!,
+            result = "lime_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("lime_concrete_powder")!! to 1
+                "lime_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_concrete")!!,
+            result = "pink_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("pink_concrete_powder")!! to 1
+                "pink_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_concrete")!!,
+            result = "gray_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gray_concrete_powder")!! to 1
+                "gray_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_concrete")!!,
+            result = "light_gray_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("light_gray_concrete_powder")!! to 1
+                "light_gray_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_concrete")!!,
+            result = "cyan_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cyan_concrete_powder")!! to 1
+                "cyan_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_concrete")!!,
+            result = "purple_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("purple_concrete_powder")!! to 1
+                "purple_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_concrete")!!,
+            result = "blue_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blue_concrete_powder")!! to 1
+                "blue_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_concrete")!!,
+            result = "brown_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("brown_concrete_powder")!! to 1
+                "brown_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("green_concrete")!!,
+            result = "green_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("green_concrete_powder")!! to 1
+                "green_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("red_concrete")!!,
+            result = "red_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_concrete_powder")!! to 1
+                "red_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("black_concrete")!!,
+            result = "black_concrete",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("black_concrete_powder")!! to 1
+                "black_concrete_powder" to 1
             ),
             recipeType = RecipeType.Watering
         ),
         Recipe(
-            result = itemRegistry.getItem("white_concrete_powder")!!,
+            result = "white_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("white_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "white_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_concrete_powder")!!,
+            result = "orange_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_concrete_powder")!!,
+            result = "magenta_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_concrete_powder")!!,
+            result = "light_blue_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_concrete_powder")!!,
+            result = "yellow_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_concrete_powder")!!,
+            result = "lime_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_concrete_powder")!!,
+            result = "pink_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_concrete_powder")!!,
+            result = "gray_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_concrete_powder")!!,
+            result = "light_gray_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_concrete_powder")!!,
+            result = "cyan_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_concrete_powder")!!,
+            result = "purple_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_concrete_powder")!!,
+            result = "blue_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_concrete_powder")!!,
+            result = "brown_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_concrete_powder")!!,
+            result = "green_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("green_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_concrete_powder")!!,
+            result = "red_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("red_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_concrete_powder")!!,
+            result = "black_concrete_powder",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gravel")!! to 4,
-                itemRegistry.getItem("black_dye")!! to 1
+                "sand" to 4,
+                "gravel" to 4,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_ice")!!,
+            result = "blue_ice",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("packed_ice")!! to 9
+                "packed_ice" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("conduit")!!,
+            result = "conduit",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("heart_of_the_sea")!! to 1,
-                itemRegistry.getItem("nautilus_shell")!! to 8
+                "heart_of_the_sea" to 1,
+                "nautilus_shell" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_granite_stairs")!!,
+            result = "polished_granite_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("granite")!! to 1
+                "granite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_red_sandstone_stairs")!!,
+            result = "smooth_red_sandstone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_red_sandstone")!! to 1
+                "smooth_red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_stone_brick_stairs")!!,
+            result = "mossy_stone_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mossy_stone_bricks")!! to 1
+                "mossy_stone_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_diorite_stairs")!!,
+            result = "polished_diorite_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diorite")!! to 1
+                "diorite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_cobblestone_stairs")!!,
+            result = "mossy_cobblestone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mossy_cobblestone")!! to 1
+                "mossy_cobblestone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("end_stone_brick_stairs")!!,
+            result = "end_stone_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("end_stone")!! to 1
+                "end_stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_stairs")!!,
+            result = "stone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_sandstone_stairs")!!,
+            result = "smooth_sandstone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_sandstone")!! to 1
+                "smooth_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_quartz_stairs")!!,
+            result = "smooth_quartz_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_quartz")!! to 1
+                "smooth_quartz" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("granite_stairs")!!,
+            result = "granite_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("granite")!! to 1
+                "granite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("andesite_stairs")!!,
+            result = "andesite_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("andesite")!! to 1
+                "andesite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_nether_brick_stairs")!!,
+            result = "red_nether_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_nether_bricks")!! to 1
+                "red_nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_andesite_stairs")!!,
+            result = "polished_andesite_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("andesite")!! to 1
+                "andesite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("diorite_stairs")!!,
+            result = "diorite_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diorite")!! to 1
+                "diorite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cobbled_deepslate_stairs")!!,
+            result = "cobbled_deepslate_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_deepslate_stairs")!!,
+            result = "polished_deepslate_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_brick_stairs")!!,
+            result = "deepslate_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_tile_stairs")!!,
+            result = "deepslate_tile_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_granite_slab")!!,
+            result = "polished_granite_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("granite")!! to 1
+                "granite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_red_sandstone_slab")!!,
+            result = "smooth_red_sandstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_red_sandstone")!! to 1
+                "smooth_red_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_stone_brick_slab")!!,
+            result = "mossy_stone_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("mossy_stone_bricks")!! to 1
+                "mossy_stone_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_diorite_slab")!!,
+            result = "polished_diorite_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("diorite")!! to 1
+                "diorite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mossy_cobblestone_slab")!!,
+            result = "mossy_cobblestone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("mossy_cobblestone")!! to 1
+                "mossy_cobblestone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("end_stone_brick_slab")!!,
+            result = "end_stone_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("end_stone")!! to 1
+                "end_stone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_sandstone_slab")!!,
+            result = "smooth_sandstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_sandstone")!! to 1
+                "smooth_sandstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("smooth_quartz_slab")!!,
+            result = "smooth_quartz_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_quartz")!! to 1
+                "smooth_quartz" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("granite_slab")!!,
+            result = "granite_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("granite")!! to 1
+                "granite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("andesite_slab")!!,
+            result = "andesite_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("andesite")!! to 1
+                "andesite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_nether_brick_slab")!!,
+            result = "red_nether_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("red_nether_bricks")!! to 1
+                "red_nether_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_andesite_slab")!!,
+            result = "polished_andesite_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("andesite")!! to 1
+                "andesite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("diorite_slab")!!,
+            result = "diorite_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("diorite")!! to 1
+                "diorite" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("cobbled_deepslate_slab")!!,
+            result = "cobbled_deepslate_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_deepslate_slab")!!,
+            result = "polished_deepslate_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_brick_slab")!!,
+            result = "deepslate_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("deepslate_tile_slab")!!,
+            result = "deepslate_tile_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("cobbled_deepslate")!! to 1
+                "cobbled_deepslate" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("scaffolding")!!,
+            result = "scaffolding",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo")!! to 6,
-                itemRegistry.getItem("string")!! to 1
+                "bamboo" to 6,
+                "string" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("redstone_torch")!!,
+            result = "redstone_torch",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("redstone")!! to 1,
-                itemRegistry.getItem("stick")!! to 1
+                "redstone" to 1,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("redstone_block")!!,
+            result = "redstone_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("redstone")!! to 9
+                "redstone" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("repeater")!!,
+            result = "repeater",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("redstone_torch")!! to 2,
-                itemRegistry.getItem("redstone")!! to 1,
-                itemRegistry.getItem("stone")!! to 3
+                "redstone_torch" to 2,
+                "redstone" to 1,
+                "stone" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("comparator")!!,
+            result = "comparator",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("redstone_torch")!! to 3,
-                itemRegistry.getItem("quartz")!! to 1,
-                itemRegistry.getItem("stone")!! to 3
+                "redstone_torch" to 3,
+                "quartz" to 1,
+                "stone" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("piston")!!,
+            result = "piston",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 3,
-                itemRegistry.getItem("iron_ingot")!! to 1,
-                itemRegistry.getItem("cobblestone")!! to 4,
-                itemRegistry.getItem("redstone")!! to 1
+                "oak_planks" to 3,
+                "iron_ingot" to 1,
+                "cobblestone" to 4,
+                "redstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("sticky_piston")!!,
+            result = "sticky_piston",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("piston")!! to 1,
-                itemRegistry.getItem("slime_ball")!! to 1
+                "piston" to 1,
+                "slime_ball" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("slime_block")!!,
+            result = "slime_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("slime_ball")!! to 9
+                "slime_ball" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("honey_block")!!,
+            result = "honey_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("honey_bottle")!! to 4
+                "honey_bottle" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("observer")!!,
+            result = "observer",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 6,
-                itemRegistry.getItem("redstone")!! to 2,
-                itemRegistry.getItem("quartz")!! to 1
+                "cobblestone" to 6,
+                "redstone" to 2,
+                "quartz" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("hopper")!!,
+            result = "hopper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 5,
-                itemRegistry.getItem("chest")!! to 1
+                "iron_ingot" to 5,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dispenser")!!,
+            result = "dispenser",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 7,
-                itemRegistry.getItem("redstone")!! to 1,
-                itemRegistry.getItem("bow")!! to 1
+                "cobblestone" to 7,
+                "redstone" to 1,
+                "bow" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dropper")!!,
+            result = "dropper",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 7,
-                itemRegistry.getItem("redstone")!! to 1
+                "cobblestone" to 7,
+                "redstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lectern")!!,
+            result = "lectern",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_slab")!! to 4,
-                itemRegistry.getItem("bookshelf")!! to 1
+                "oak_slab" to 4,
+                "bookshelf" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("target")!!,
+            result = "target",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("redstone")!! to 4,
-                itemRegistry.getItem("hay_block")!! to 1
+                "redstone" to 4,
+                "hay_block" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lever")!!,
+            result = "lever",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 1,
-                itemRegistry.getItem("cobblestone")!! to 1
+                "stick" to 1,
+                "cobblestone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lightning_rod")!!,
+            result = "lightning_rod",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("copper_ingot")!! to 3
+                "copper_ingot" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("daylight_detector")!!,
+            result = "daylight_detector",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 3,
-                itemRegistry.getItem("quartz")!! to 3,
-                itemRegistry.getItem("oak_slab")!! to 3
+                "glass" to 3,
+                "quartz" to 3,
+                "oak_slab" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("tripwire_hook")!!,
+            result = "tripwire_hook",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 1,
-                itemRegistry.getItem("stick")!! to 1,
-                itemRegistry.getItem("oak_planks")!! to 1
+                "iron_ingot" to 1,
+                "stick" to 1,
+                "oak_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("trapped_chest")!!,
+            result = "trapped_chest",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("chest")!! to 1,
-                itemRegistry.getItem("tripwire_hook")!! to 1
+                "chest" to 1,
+                "tripwire_hook" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("tnt")!!,
+            result = "tnt",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sand")!! to 4,
-                itemRegistry.getItem("gunpowder")!! to 5
+                "sand" to 4,
+                "gunpowder" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("redstone_lamp")!!,
+            result = "redstone_lamp",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("glowstone")!! to 1,
-                itemRegistry.getItem("redstone")!! to 4
+                "glowstone" to 1,
+                "redstone" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("note_block")!!,
+            result = "note_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 8,
-                itemRegistry.getItem("redstone")!! to 1
+                "oak_planks" to 8,
+                "redstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_button")!!,
+            result = "stone_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 1
+                "stone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_button")!!,
+            result = "polished_blackstone_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("polished_blackstone")!! to 1
+                "polished_blackstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_button")!!,
+            result = "oak_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 1
+                "oak_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_button")!!,
+            result = "spruce_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 1
+                "spruce_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_button")!!,
+            result = "birch_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 1
+                "birch_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_button")!!,
+            result = "jungle_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 1
+                "jungle_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_button")!!,
+            result = "acacia_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 1
+                "acacia_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_button")!!,
+            result = "dark_oak_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 1
+                "dark_oak_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_button")!!,
+            result = "crimson_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 1
+                "crimson_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_button")!!,
+            result = "warped_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 1
+                "warped_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_pressure_plate")!!,
+            result = "stone_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 2
+                "stone" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_pressure_plate")!!,
+            result = "polished_blackstone_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("polished_blackstone")!! to 2
+                "polished_blackstone" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_weighted_pressure_plate")!!,
+            result = "light_weighted_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 2
+                "gold_ingot" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("heavy_weighted_pressure_plate")!!,
+            result = "heavy_weighted_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 2
+                "iron_ingot" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_pressure_plate")!!,
+            result = "oak_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 2
+                "oak_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_pressure_plate")!!,
+            result = "spruce_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 2
+                "spruce_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_pressure_plate")!!,
+            result = "birch_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 2
+                "birch_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_pressure_plate")!!,
+            result = "jungle_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 2
+                "jungle_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_pressure_plate")!!,
+            result = "acacia_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 2
+                "acacia_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_pressure_plate")!!,
+            result = "dark_oak_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 2
+                "dark_oak_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_pressure_plate")!!,
+            result = "crimson_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 2
+                "crimson_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_pressure_plate")!!,
+            result = "warped_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 2
+                "warped_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_door")!!,
+            result = "iron_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 6
+                "iron_ingot" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_door")!!,
+            result = "oak_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6
+                "oak_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_door")!!,
+            result = "spruce_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 6
+                "spruce_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_door")!!,
+            result = "birch_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 6
+                "birch_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_door")!!,
+            result = "jungle_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 6
+                "jungle_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_door")!!,
+            result = "acacia_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 6
+                "acacia_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_door")!!,
+            result = "dark_oak_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 6
+                "dark_oak_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_door")!!,
+            result = "crimson_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 6
+                "crimson_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_door")!!,
+            result = "warped_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 6
+                "warped_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_trapdoor")!!,
+            result = "iron_trapdoor",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 4
+                "iron_ingot" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_trapdoor")!!,
+            result = "oak_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6
+                "oak_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_trapdoor")!!,
+            result = "spruce_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 6
+                "spruce_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_trapdoor")!!,
+            result = "birch_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 6
+                "birch_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_trapdoor")!!,
+            result = "jungle_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 6
+                "jungle_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_trapdoor")!!,
+            result = "acacia_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 6
+                "acacia_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_trapdoor")!!,
+            result = "dark_oak_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 6
+                "dark_oak_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_trapdoor")!!,
+            result = "crimson_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 6
+                "crimson_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_trapdoor")!!,
+            result = "warped_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 6
+                "warped_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_fence_gate")!!,
+            result = "oak_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "oak_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_fence_gate")!!,
+            result = "spruce_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "spruce_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_fence_gate")!!,
+            result = "birch_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "birch_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_fence_gate")!!,
+            result = "jungle_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "jungle_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_fence_gate")!!,
+            result = "acacia_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "acacia_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_fence_gate")!!,
+            result = "dark_oak_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "dark_oak_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_fence_gate")!!,
+            result = "crimson_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "crimson_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_fence_gate")!!,
+            result = "warped_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "warped_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("powered_rail")!!,
+            result = "powered_rail",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 6,
-                itemRegistry.getItem("redstone")!! to 1,
-                itemRegistry.getItem("stick")!! to 1
+                "gold_ingot" to 6,
+                "redstone" to 1,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("detector_rail")!!,
+            result = "detector_rail",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 6,
-                itemRegistry.getItem("redstone")!! to 1,
-                itemRegistry.getItem("stone_pressure_plate")!! to 1
+                "iron_ingot" to 6,
+                "redstone" to 1,
+                "stone_pressure_plate" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("rail")!!,
+            result = "rail",
             resultQuantity = 16,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "iron_ingot" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("activator_rail")!!,
+            result = "activator_rail",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 6,
-                itemRegistry.getItem("stick")!! to 2,
-                itemRegistry.getItem("redstone_torch")!! to 1
+                "iron_ingot" to 6,
+                "stick" to 2,
+                "redstone_torch" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("minecart")!!,
+            result = "minecart",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 5
+                "iron_ingot" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chest_minecart")!!,
+            result = "chest_minecart",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("minecart")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "minecart" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("furnace_minecart")!!,
+            result = "furnace_minecart",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("minecart")!! to 1,
-                itemRegistry.getItem("furnace")!! to 1
+                "minecart" to 1,
+                "furnace" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("tnt_minecart")!!,
+            result = "tnt_minecart",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("minecart")!! to 1,
-                itemRegistry.getItem("tnt")!! to 1
+                "minecart" to 1,
+                "tnt" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("hopper_minecart")!!,
+            result = "hopper_minecart",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("minecart")!! to 1,
-                itemRegistry.getItem("hopper")!! to 1
+                "minecart" to 1,
+                "hopper" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("carrot_on_a_stick")!!,
+            result = "carrot_on_a_stick",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("carrot")!! to 1,
-                itemRegistry.getItem("fishing_rod")!! to 1
+                "carrot" to 1,
+                "fishing_rod" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_fungus_on_a_stick")!!,
+            result = "warped_fungus_on_a_stick",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("warped_fungus")!! to 1,
-                itemRegistry.getItem("fishing_rod")!! to 1
+                "warped_fungus" to 1,
+                "fishing_rod" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_boat")!!,
+            result = "oak_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 5
+                "oak_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_boat")!!,
+            result = "spruce_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 5
+                "spruce_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_boat")!!,
+            result = "birch_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 5
+                "birch_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_boat")!!,
+            result = "jungle_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 5
+                "jungle_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_boat")!!,
+            result = "acacia_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 5
+                "acacia_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_boat")!!,
+            result = "dark_oak_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 5
+                "dark_oak_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("turtle_helmet")!!,
+            result = "turtle_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("scute")!! to 5
+                "scute" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("flint_and_steel")!!,
+            result = "flint_and_steel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 1,
-                itemRegistry.getItem("flint")!! to 1
+                "iron_ingot" to 1,
+                "flint" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bow")!!,
+            result = "bow",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 3,
-                itemRegistry.getItem("string")!! to 3
+                "stick" to 3,
+                "string" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("arrow")!!,
+            result = "arrow",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 1,
-                itemRegistry.getItem("flint")!! to 1,
-                itemRegistry.getItem("feather")!! to 1
+                "stick" to 1,
+                "flint" to 1,
+                "feather" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("charcoal")!!,
+            result = "charcoal",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_log")!! to 1
+                "oak_log" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_ingot")!!,
+            result = "netherite_ingot",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 4,
-                itemRegistry.getItem("netherite_scrap")!! to 4
+                "gold_ingot" to 4,
+                "netherite_scrap" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_scrap")!!,
+            result = "netherite_scrap",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("ancient_debris")!! to 1
+                "ancient_debris" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("wooden_sword")!!,
+            result = "wooden_sword",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 1
+                "oak_planks" to 2,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("wooden_shovel")!!,
+            result = "wooden_shovel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 1,
-                itemRegistry.getItem("stick")!! to 2
+                "oak_planks" to 1,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("wooden_pickaxe")!!,
+            result = "wooden_pickaxe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "oak_planks" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("wooden_axe")!!,
+            result = "wooden_axe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "oak_planks" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("wooden_hoe")!!,
+            result = "wooden_hoe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 2
+                "oak_planks" to 2,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_sword")!!,
+            result = "stone_sword",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 2,
-                itemRegistry.getItem("stick")!! to 1
+                "cobblestone" to 2,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_shovel")!!,
+            result = "stone_shovel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 1,
-                itemRegistry.getItem("stick")!! to 2
+                "cobblestone" to 1,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_pickaxe")!!,
+            result = "stone_pickaxe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "cobblestone" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_axe")!!,
+            result = "stone_axe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "cobblestone" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stone_hoe")!!,
+            result = "stone_hoe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 2,
-                itemRegistry.getItem("stick")!! to 2
+                "cobblestone" to 2,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_sword")!!,
+            result = "golden_sword",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 2,
-                itemRegistry.getItem("stick")!! to 1
+                "gold_ingot" to 2,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_shovel")!!,
+            result = "golden_shovel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 1,
-                itemRegistry.getItem("stick")!! to 2
+                "gold_ingot" to 1,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_pickaxe")!!,
+            result = "golden_pickaxe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "gold_ingot" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_axe")!!,
+            result = "golden_axe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "gold_ingot" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_hoe")!!,
+            result = "golden_hoe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 2,
-                itemRegistry.getItem("stick")!! to 2
+                "gold_ingot" to 2,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_sword")!!,
+            result = "iron_sword",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 2,
-                itemRegistry.getItem("stick")!! to 1
+                "iron_ingot" to 2,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_shovel")!!,
+            result = "iron_shovel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 1,
-                itemRegistry.getItem("stick")!! to 2
+                "iron_ingot" to 1,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_pickaxe")!!,
+            result = "iron_pickaxe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "iron_ingot" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_axe")!!,
+            result = "iron_axe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "iron_ingot" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_hoe")!!,
+            result = "iron_hoe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 2,
-                itemRegistry.getItem("stick")!! to 2
+                "iron_ingot" to 2,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_sword")!!,
+            result = "diamond_sword",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 2,
-                itemRegistry.getItem("stick")!! to 1
+                "diamond" to 2,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_shovel")!!,
+            result = "diamond_shovel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 1,
-                itemRegistry.getItem("stick")!! to 2
+                "diamond" to 1,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_pickaxe")!!,
+            result = "diamond_pickaxe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "diamond" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_axe")!!,
+            result = "diamond_axe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 3,
-                itemRegistry.getItem("stick")!! to 2
+                "diamond" to 3,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_hoe")!!,
+            result = "diamond_hoe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 2,
-                itemRegistry.getItem("stick")!! to 2
+                "diamond" to 2,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_sword")!!,
+            result = "netherite_sword",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_sword")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_sword" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_shovel")!!,
+            result = "netherite_shovel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_shovel")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_shovel" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_pickaxe")!!,
+            result = "netherite_pickaxe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_pickaxe")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_pickaxe" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_axe")!!,
+            result = "netherite_axe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_axe")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_axe" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_hoe")!!,
+            result = "netherite_hoe",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_hoe")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_hoe" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("stick")!!,
+            result = "stick",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 2
+                "oak_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bowl")!!,
+            result = "bowl",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 3
+                "oak_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mushroom_stew")!!,
+            result = "mushroom_stew",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bowl")!! to 1,
-                itemRegistry.getItem("brown_mushroom")!! to 1,
-                itemRegistry.getItem("red_mushroom")!! to 1
+                "bowl" to 1,
+                "brown_mushroom" to 1,
+                "red_mushroom" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bread")!!,
+            result = "bread",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("wheat")!! to 3
+                "wheat" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("leather_helmet")!!,
+            result = "leather_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("leather")!! to 5
+                "leather" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("leather_chestplate")!!,
+            result = "leather_chestplate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("leather")!! to 8
+                "leather" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("leather_leggings")!!,
+            result = "leather_leggings",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("leather")!! to 7
+                "leather" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("leather_boots")!!,
+            result = "leather_boots",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("leather")!! to 4
+                "leather" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_helmet")!!,
+            result = "iron_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 5
+                "iron_ingot" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_chestplate")!!,
+            result = "iron_chestplate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 8
+                "iron_ingot" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_leggings")!!,
+            result = "iron_leggings",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 7
+                "iron_ingot" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_boots")!!,
+            result = "iron_boots",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 4
+                "iron_ingot" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_helmet")!!,
+            result = "golden_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 5
+                "gold_ingot" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_chestplate")!!,
+            result = "golden_chestplate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 8
+                "gold_ingot" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_leggings")!!,
+            result = "golden_leggings",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 7
+                "gold_ingot" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_boots")!!,
+            result = "golden_boots",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 4
+                "gold_ingot" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_helmet")!!,
+            result = "diamond_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 5
+                "diamond" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_chestplate")!!,
+            result = "diamond_chestplate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 8
+                "diamond" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_leggings")!!,
+            result = "diamond_leggings",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 7
+                "diamond" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("diamond_boots")!!,
+            result = "diamond_boots",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond")!! to 4
+                "diamond" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_helmet")!!,
+            result = "netherite_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_helmet")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_helmet" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_chestplate")!!,
+            result = "netherite_chestplate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_chestplate")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_chestplate" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_leggings")!!,
+            result = "netherite_leggings",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_leggings")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_leggings" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("netherite_boots")!!,
+            result = "netherite_boots",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("diamond_boots")!! to 1,
-                itemRegistry.getItem("netherite_upgrade_smithing_template")!! to 1,
-                itemRegistry.getItem("netherite_ingot")!! to 1
+                "diamond_boots" to 1,
+                "netherite_upgrade_smithing_template" to 1,
+                "netherite_ingot" to 1
             ),
             recipeType = RecipeType.Smithing
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_porkchop")!!,
+            result = "cooked_porkchop",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("porkchop")!! to 1
+                "porkchop" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("painting")!!,
+            result = "painting",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 8,
-                itemRegistry.getItem("white_wool")!! to 1
+                "stick" to 8,
+                "white_wool" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_apple")!!,
+            result = "golden_apple",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 8,
-                itemRegistry.getItem("apple")!! to 1
+                "gold_ingot" to 8,
+                "apple" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_sign")!!,
+            result = "oak_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "oak_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_sign")!!,
+            result = "spruce_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "spruce_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_sign")!!,
+            result = "birch_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("birch_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "birch_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_sign")!!,
+            result = "jungle_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "jungle_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_sign")!!,
+            result = "acacia_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "acacia_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_sign")!!,
+            result = "dark_oak_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "dark_oak_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_sign")!!,
+            result = "crimson_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("crimson_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "crimson_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_sign")!!,
+            result = "warped_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("warped_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "warped_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bucket")!!,
+            result = "bucket",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 3
+                "iron_ingot" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brick")!!,
+            result = "brick",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("clay_ball")!! to 1
+                "clay_ball" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("dried_kelp_block")!!,
+            result = "dried_kelp_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dried_kelp")!! to 9
+                "dried_kelp" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("paper")!!,
+            result = "paper",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("sugar_cane")!! to 3
+                "sugar_cane" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("book")!!,
+            result = "book",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("paper")!! to 3,
-                itemRegistry.getItem("leather")!! to 1
+                "paper" to 3,
+                "leather" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("compass")!!,
+            result = "compass",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 4,
-                itemRegistry.getItem("redstone")!! to 1
+                "iron_ingot" to 4,
+                "redstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("fishing_rod")!!,
+            result = "fishing_rod",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 3,
-                itemRegistry.getItem("string")!! to 2
+                "stick" to 3,
+                "string" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("clock")!!,
+            result = "clock",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 4,
-                itemRegistry.getItem("redstone")!! to 1
+                "gold_ingot" to 4,
+                "redstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spyglass")!!,
+            result = "spyglass",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("amethyst_shard")!! to 1,
-                itemRegistry.getItem("copper_ingot")!! to 1
+                "amethyst_shard" to 1,
+                "copper_ingot" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_cod")!!,
+            result = "cooked_cod",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cod")!! to 1
+                "cod" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_salmon")!!,
+            result = "cooked_salmon",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("salmon")!! to 1
+                "salmon" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_dye")!!,
+            result = "white_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bone_meal")!! to 1
+                "bone_meal" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_dye")!!,
+            result = "orange_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("orange_tulip")!! to 1
+                "orange_tulip" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_dye")!!,
+            result = "magenta_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("allium")!! to 1
+                "allium" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_dye")!!,
+            result = "light_blue_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blue_orchid")!! to 1
+                "blue_orchid" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_dye")!!,
+            result = "yellow_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dandelion")!! to 1
+                "dandelion" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_dye")!!,
+            result = "lime_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sea_pickle")!! to 1
+                "sea_pickle" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_dye")!!,
+            result = "pink_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("pink_tulip")!! to 1
+                "pink_tulip" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_dye")!!,
+            result = "gray_dye",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("white_dye")!! to 1,
-                itemRegistry.getItem("black_dye")!! to 1
+                "white_dye" to 1,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_dye")!!,
+            result = "light_gray_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("azure_bluet")!! to 1
+                "azure_bluet" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_dye")!!,
+            result = "cyan_dye",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("green_dye")!! to 1,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "green_dye" to 1,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_dye")!!,
+            result = "purple_dye",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("blue_dye")!! to 1,
-                itemRegistry.getItem("red_dye")!! to 1
+                "blue_dye" to 1,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_dye")!!,
+            result = "blue_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cornflower")!! to 1
+                "cornflower" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_dye")!!,
+            result = "brown_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cocoa_beans")!! to 1
+                "cocoa_beans" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_dye")!!,
+            result = "green_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cactus")!! to 1
+                "cactus" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_dye")!!,
+            result = "red_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("poppy")!! to 1
+                "poppy" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_dye")!!,
+            result = "black_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("ink_sac")!! to 1
+                "ink_sac" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bone_meal")!!,
+            result = "bone_meal",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bone")!! to 1
+                "bone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("sugar")!!,
+            result = "sugar",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("sugar_cane")!! to 1
+                "sugar_cane" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cake")!!,
+            result = "cake",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("wheat")!! to 3,
-                itemRegistry.getItem("sugar")!! to 2,
-                itemRegistry.getItem("milk_bucket")!! to 3
+                "wheat" to 3,
+                "sugar" to 2,
+                "milk_bucket" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_bed")!!,
+            result = "white_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 3,
-                itemRegistry.getItem("oak_planks")!! to 3
+                "white_wool" to 3,
+                "oak_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_bed")!!,
+            result = "orange_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "white_bed" to 1,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_bed")!!,
+            result = "magenta_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "white_bed" to 1,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_bed")!!,
+            result = "light_blue_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "white_bed" to 1,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_bed")!!,
+            result = "yellow_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "white_bed" to 1,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_bed")!!,
+            result = "lime_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "white_bed" to 1,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_bed")!!,
+            result = "gray_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "white_bed" to 1,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_bed")!!,
+            result = "light_gray_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "white_bed" to 1,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_bed")!!,
+            result = "cyan_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "white_bed" to 1,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_bed")!!,
+            result = "purple_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "white_bed" to 1,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_bed")!!,
+            result = "blue_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "white_bed" to 1,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_bed")!!,
+            result = "brown_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "white_bed" to 1,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_bed")!!,
+            result = "green_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("green_dye")!! to 1
+                "white_bed" to 1,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_bed")!!,
+            result = "red_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("red_dye")!! to 1
+                "white_bed" to 1,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_bed")!!,
+            result = "black_bed",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_bed")!! to 1,
-                itemRegistry.getItem("black_dye")!! to 1
+                "white_bed" to 1,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cookie")!!,
+            result = "cookie",
             resultQuantity = 8,
             requirements = mapOf(
-                itemRegistry.getItem("wheat")!! to 2,
-                itemRegistry.getItem("cocoa_beans")!! to 1
+                "wheat" to 2,
+                "cocoa_beans" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("shears")!!,
+            result = "shears",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 2
+                "iron_ingot" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dried_kelp")!!,
+            result = "dried_kelp",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("kelp")!! to 1
+                "kelp" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("pumpkin_seeds")!!,
+            result = "pumpkin_seeds",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("pumpkin")!! to 1
+                "pumpkin" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("melon_seeds")!!,
+            result = "melon_seeds",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("melon_slice")!! to 1
+                "melon_slice" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_beef")!!,
+            result = "cooked_beef",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("beef")!! to 1
+                "beef" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_chicken")!!,
+            result = "cooked_chicken",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("chicken")!! to 1
+                "chicken" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("gold_nugget")!!,
+            result = "gold_nugget",
             resultQuantity = 9,
             requirements = mapOf(
-                itemRegistry.getItem("gold_ingot")!! to 1
+                "gold_ingot" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("glass_bottle")!!,
+            result = "glass_bottle",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 3
+                "glass" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("fermented_spider_eye")!!,
+            result = "fermented_spider_eye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spider_eye")!! to 1,
-                itemRegistry.getItem("brown_mushroom")!! to 1,
-                itemRegistry.getItem("sugar")!! to 1
+                "spider_eye" to 1,
+                "brown_mushroom" to 1,
+                "sugar" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blaze_powder")!!,
+            result = "blaze_powder",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("blaze_rod")!! to 1
+                "blaze_rod" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magma_cream")!!,
+            result = "magma_cream",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blaze_powder")!! to 1,
-                itemRegistry.getItem("slime_ball")!! to 1
+                "blaze_powder" to 1,
+                "slime_ball" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brewing_stand")!!,
+            result = "brewing_stand",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cobblestone")!! to 3,
-                itemRegistry.getItem("blaze_rod")!! to 1
+                "cobblestone" to 3,
+                "blaze_rod" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cauldron")!!,
+            result = "cauldron",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 7
+                "iron_ingot" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("ender_eye")!!,
+            result = "ender_eye",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("ender_pearl")!! to 1,
-                itemRegistry.getItem("blaze_powder")!! to 1
+                "ender_pearl" to 1,
+                "blaze_powder" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("glistering_melon_slice")!!,
+            result = "glistering_melon_slice",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("melon_slice")!! to 1,
-                itemRegistry.getItem("gold_nugget")!! to 8
+                "melon_slice" to 1,
+                "gold_nugget" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("fire_charge")!!,
+            result = "fire_charge",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("coal")!! to 1,
-                itemRegistry.getItem("blaze_powder")!! to 1,
-                itemRegistry.getItem("gunpowder")!! to 1
+                "coal" to 1,
+                "blaze_powder" to 1,
+                "gunpowder" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("writable_book")!!,
+            result = "writable_book",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("book")!! to 1,
-                itemRegistry.getItem("feather")!! to 1,
-                itemRegistry.getItem("ink_sac")!! to 1
+                "book" to 1,
+                "feather" to 1,
+                "ink_sac" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("item_frame")!!,
+            result = "item_frame",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 8,
-                itemRegistry.getItem("leather")!! to 1
+                "stick" to 8,
+                "leather" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("glow_item_frame")!!,
+            result = "glow_item_frame",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("item_frame")!! to 1,
-                itemRegistry.getItem("glow_ink_sac")!! to 1
+                "item_frame" to 1,
+                "glow_ink_sac" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("flower_pot")!!,
+            result = "flower_pot",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("brick")!! to 3
+                "brick" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("baked_potato")!!,
+            result = "baked_potato",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("potato")!! to 1
+                "potato" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("map")!!,
+            result = "map",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("paper")!! to 8,
-                itemRegistry.getItem("compass")!! to 1
+                "paper" to 8,
+                "compass" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("golden_carrot")!!,
+            result = "golden_carrot",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("carrot")!! to 1,
-                itemRegistry.getItem("gold_nugget")!! to 8
+                "carrot" to 1,
+                "gold_nugget" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pumpkin_pie")!!,
+            result = "pumpkin_pie",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("pumpkin")!! to 1,
-                itemRegistry.getItem("sugar")!! to 1,
-                itemRegistry.getItem("egg")!! to 1
+                "pumpkin" to 1,
+                "sugar" to 1,
+                "egg" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("firework_rocket")!!,
+            result = "firework_rocket",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("gunpowder")!! to 1,
-                itemRegistry.getItem("paper")!! to 1
+                "gunpowder" to 1,
+                "paper" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("nether_brick")!!,
+            result = "nether_brick",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("netherrack")!! to 1
+                "netherrack" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_rabbit")!!,
+            result = "cooked_rabbit",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("rabbit")!! to 1
+                "rabbit" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("rabbit_stew")!!,
+            result = "rabbit_stew",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bowl")!! to 1,
-                itemRegistry.getItem("carrot")!! to 1,
-                itemRegistry.getItem("baked_potato")!! to 1,
-                itemRegistry.getItem("brown_mushroom")!! to 1,
-                itemRegistry.getItem("cooked_rabbit")!! to 1
+                "bowl" to 1,
+                "carrot" to 1,
+                "baked_potato" to 1,
+                "brown_mushroom" to 1,
+                "cooked_rabbit" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("armor_stand")!!,
+            result = "armor_stand",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 6,
-                itemRegistry.getItem("smooth_stone_slab")!! to 1
+                "stick" to 6,
+                "smooth_stone_slab" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lead")!!,
+            result = "lead",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("string")!! to 4,
-                itemRegistry.getItem("slime_ball")!! to 1
+                "string" to 4,
+                "slime_ball" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cooked_mutton")!!,
+            result = "cooked_mutton",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mutton")!! to 1
+                "mutton" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_banner")!!,
+            result = "white_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("white_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "white_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_banner")!!,
+            result = "orange_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("orange_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "orange_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_banner")!!,
+            result = "magenta_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("magenta_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "magenta_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_banner")!!,
+            result = "light_blue_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("light_blue_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "light_blue_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_banner")!!,
+            result = "yellow_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("yellow_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "yellow_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_banner")!!,
+            result = "lime_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("lime_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "lime_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_banner")!!,
+            result = "pink_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("pink_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "pink_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_banner")!!,
+            result = "gray_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("gray_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "gray_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_banner")!!,
+            result = "light_gray_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("light_gray_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "light_gray_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_banner")!!,
+            result = "cyan_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cyan_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "cyan_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_banner")!!,
+            result = "purple_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("purple_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "purple_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_banner")!!,
+            result = "blue_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blue_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "blue_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_banner")!!,
+            result = "brown_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("brown_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "brown_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_banner")!!,
+            result = "green_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("green_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "green_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_banner")!!,
+            result = "red_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("red_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "red_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_banner")!!,
+            result = "black_banner",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("black_wool")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "black_wool" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("end_crystal")!!,
+            result = "end_crystal",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("glass")!! to 7,
-                itemRegistry.getItem("ender_eye")!! to 1,
-                itemRegistry.getItem("ghast_tear")!! to 1
+                "glass" to 7,
+                "ender_eye" to 1,
+                "ghast_tear" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("popped_chorus_fruit")!!,
+            result = "popped_chorus_fruit",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("chorus_fruit")!! to 1
+                "chorus_fruit" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("beetroot_soup")!!,
+            result = "beetroot_soup",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("beetroot")!! to 6,
-                itemRegistry.getItem("bowl")!! to 1
+                "beetroot" to 6,
+                "bowl" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spectral_arrow")!!,
+            result = "spectral_arrow",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("glowstone_dust")!! to 4,
-                itemRegistry.getItem("arrow")!! to 1
+                "glowstone_dust" to 4,
+                "arrow" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("shield")!!,
+            result = "shield",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6,
-                itemRegistry.getItem("iron_ingot")!! to 1
+                "oak_planks" to 6,
+                "iron_ingot" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("iron_ingot")!!,
+            result = "iron_ingot",
             resultQuantity = 9,
             requirements = mapOf(
-                itemRegistry.getItem("iron_ingot")!! to 1
+                "iron_ingot" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crossbow")!!,
+            result = "crossbow",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 3,
-                itemRegistry.getItem("iron_ingot")!! to 1,
-                itemRegistry.getItem("string")!! to 2,
-                itemRegistry.getItem("tripwire_hook")!! to 1
+                "stick" to 3,
+                "iron_ingot" to 1,
+                "string" to 2,
+                "tripwire_hook" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("loom")!!,
+            result = "loom",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("string")!! to 2,
-                itemRegistry.getItem("oak_planks")!! to 2
+                "string" to 2,
+                "oak_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("composter")!!,
+            result = "composter",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_slab")!! to 7
+                "oak_slab" to 7
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("barrel")!!,
+            result = "barrel",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6,
-                itemRegistry.getItem("oak_slab")!! to 2
+                "oak_planks" to 6,
+                "oak_slab" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("smoker")!!,
+            result = "smoker",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_log")!! to 4,
-                itemRegistry.getItem("furnace")!! to 1
+                "oak_log" to 4,
+                "furnace" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blast_furnace")!!,
+            result = "blast_furnace",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("smooth_stone")!! to 3,
-                itemRegistry.getItem("iron_ingot")!! to 5,
-                itemRegistry.getItem("furnace")!! to 1
+                "smooth_stone" to 3,
+                "iron_ingot" to 5,
+                "furnace" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cartography_table")!!,
+            result = "cartography_table",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 4,
-                itemRegistry.getItem("paper")!! to 2
+                "oak_planks" to 4,
+                "paper" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("fletching_table")!!,
+            result = "fletching_table",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 4,
-                itemRegistry.getItem("flint")!! to 2
+                "oak_planks" to 4,
+                "flint" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("grindstone")!!,
+            result = "grindstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stick")!! to 2,
-                itemRegistry.getItem("oak_planks")!! to 2,
-                itemRegistry.getItem("stone_slab")!! to 1
+                "stick" to 2,
+                "oak_planks" to 2,
+                "stone_slab" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("smithing_table")!!,
+            result = "smithing_table",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 4,
-                itemRegistry.getItem("iron_ingot")!! to 2
+                "oak_planks" to 4,
+                "iron_ingot" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stonecutter")!!,
+            result = "stonecutter",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("stone")!! to 3,
-                itemRegistry.getItem("iron_ingot")!! to 1
+                "stone" to 3,
+                "iron_ingot" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lantern")!!,
+            result = "lantern",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_nugget")!! to 8,
-                itemRegistry.getItem("torch")!! to 1
+                "iron_nugget" to 8,
+                "torch" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("soul_lantern")!!,
+            result = "soul_lantern",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("iron_nugget")!! to 8,
-                itemRegistry.getItem("soul_torch")!! to 1
+                "iron_nugget" to 8,
+                "soul_torch" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("campfire")!!,
+            result = "campfire",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("coal")!! to 1,
-                itemRegistry.getItem("stick")!! to 3,
-                itemRegistry.getItem("oak_log")!! to 3
+                "coal" to 1,
+                "stick" to 3,
+                "oak_log" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("soul_campfire")!!,
+            result = "soul_campfire",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("soul_sand")!! to 1,
-                itemRegistry.getItem("stick")!! to 3,
-                itemRegistry.getItem("oak_log")!! to 1
+                "soul_sand" to 1,
+                "stick" to 3,
+                "oak_log" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("beehive")!!,
+            result = "beehive",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6,
-                itemRegistry.getItem("honeycomb")!! to 3
+                "oak_planks" to 6,
+                "honeycomb" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("honeycomb_block")!!,
+            result = "honeycomb_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("honeycomb")!! to 4
+                "honeycomb" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lodestone")!!,
+            result = "lodestone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("netherite_ingot")!! to 1,
-                itemRegistry.getItem("chiseled_stone_bricks")!! to 8
+                "netherite_ingot" to 1,
+                "chiseled_stone_bricks" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blackstone_slab")!!,
+            result = "blackstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("blackstone_stairs")!!,
+            result = "blackstone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone")!!,
+            result = "polished_blackstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_slab")!!,
+            result = "polished_blackstone_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_stairs")!!,
+            result = "polished_blackstone_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_polished_blackstone")!!,
+            result = "chiseled_polished_blackstone",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_bricks")!!,
+            result = "polished_blackstone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_brick_slab")!!,
+            result = "polished_blackstone_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_blackstone_brick_stairs")!!,
+            result = "polished_blackstone_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("blackstone")!! to 1
+                "blackstone" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cracked_polished_blackstone_bricks")!!,
+            result = "cracked_polished_blackstone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("polished_blackstone_bricks")!! to 1
+                "polished_blackstone_bricks" to 1
             ),
             recipeType = RecipeType.Smelting
         ),
         Recipe(
-            result = itemRegistry.getItem("respawn_anchor")!!,
+            result = "respawn_anchor",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("glowstone")!! to 3,
-                itemRegistry.getItem("crying_obsidian")!! to 6
+                "glowstone" to 3,
+                "crying_obsidian" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("candle")!!,
+            result = "candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("string")!! to 1,
-                itemRegistry.getItem("honeycomb")!! to 1
+                "string" to 1,
+                "honeycomb" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("white_candle")!!,
+            result = "white_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("white_dye")!! to 1
+                "candle" to 1,
+                "white_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("orange_candle")!!,
+            result = "orange_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("orange_dye")!! to 1
+                "candle" to 1,
+                "orange_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("magenta_candle")!!,
+            result = "magenta_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("magenta_dye")!! to 1
+                "candle" to 1,
+                "magenta_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_blue_candle")!!,
+            result = "light_blue_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("light_blue_dye")!! to 1
+                "candle" to 1,
+                "light_blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("yellow_candle")!!,
+            result = "yellow_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("yellow_dye")!! to 1
+                "candle" to 1,
+                "yellow_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("lime_candle")!!,
+            result = "lime_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("lime_dye")!! to 1
+                "candle" to 1,
+                "lime_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("pink_candle")!!,
+            result = "pink_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("pink_dye")!! to 1
+                "candle" to 1,
+                "pink_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("gray_candle")!!,
+            result = "gray_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("gray_dye")!! to 1
+                "candle" to 1,
+                "gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("light_gray_candle")!!,
+            result = "light_gray_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("light_gray_dye")!! to 1
+                "candle" to 1,
+                "light_gray_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cyan_candle")!!,
+            result = "cyan_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("cyan_dye")!! to 1
+                "candle" to 1,
+                "cyan_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("purple_candle")!!,
+            result = "purple_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("purple_dye")!! to 1
+                "candle" to 1,
+                "purple_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("blue_candle")!!,
+            result = "blue_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("blue_dye")!! to 1
+                "candle" to 1,
+                "blue_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brown_candle")!!,
+            result = "brown_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("brown_dye")!! to 1
+                "candle" to 1,
+                "brown_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("green_candle")!!,
+            result = "green_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("green_dye")!! to 1
+                "candle" to 1,
+                "green_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("red_candle")!!,
+            result = "red_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("red_dye")!! to 1
+                "candle" to 1,
+                "red_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("black_candle")!!,
+            result = "black_candle",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("candle")!! to 1,
-                itemRegistry.getItem("black_dye")!! to 1
+                "candle" to 1,
+                "black_dye" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_chest_boat")!!,
+            result = "acacia_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("acacia_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "acacia_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_chest_boat")!!,
+            result = "birch_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("birch_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "birch_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_chest_boat")!!,
+            result = "dark_oak_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("dark_oak_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "dark_oak_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_chest_boat")!!,
+            result = "jungle_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("jungle_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "jungle_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_boat")!!,
+            result = "mangrove_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 5
+                "mangrove_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_button")!!,
+            result = "mangrove_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 1
+                "mangrove_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_chest_boat")!!,
+            result = "mangrove_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "mangrove_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_door")!!,
+            result = "mangrove_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 6
+                "mangrove_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_fence")!!,
+            result = "mangrove_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "mangrove_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_fence_gate")!!,
+            result = "mangrove_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "mangrove_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_planks")!!,
+            result = "mangrove_planks",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_log")!! to 1
+                "mangrove_log" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_pressure_plate")!!,
+            result = "mangrove_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 2
+                "mangrove_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_sign")!!,
+            result = "mangrove_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "mangrove_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_slab")!!,
+            result = "mangrove_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 3
+                "mangrove_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_stairs")!!,
+            result = "mangrove_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 6
+                "mangrove_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_trapdoor")!!,
+            result = "mangrove_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_planks")!! to 6
+                "mangrove_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_wood")!!,
+            result = "mangrove_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_log")!! to 4
+                "mangrove_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mud_brick_slab")!!,
+            result = "mud_brick_slab",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("mud_bricks")!! to 1
+                "mud_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mud_brick_stairs")!!,
+            result = "mud_brick_stairs",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mud_bricks")!! to 1
+                "mud_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mud_brick_wall")!!,
+            result = "mud_brick_wall",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mud_bricks")!! to 1
+                "mud_bricks" to 1
             ),
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = itemRegistry.getItem("mud_bricks")!!,
+            result = "mud_bricks",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("packed_mud")!! to 4
+                "packed_mud" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("muddy_mangrove_roots")!!,
+            result = "muddy_mangrove_roots",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mud")!! to 1,
-                itemRegistry.getItem("mangrove_roots")!! to 1
+                "mud" to 1,
+                "mangrove_roots" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("music_disc_5")!!,
+            result = "music_disc_5",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("disc_fragment_5")!! to 9
+                "disc_fragment_5" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_chest_boat")!!,
+            result = "oak_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "oak_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("packed_mud")!!,
+            result = "packed_mud",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("wheat")!! to 1,
-                itemRegistry.getItem("mud")!! to 1
+                "wheat" to 1,
+                "mud" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("recovery_compass")!!,
+            result = "recovery_compass",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("compass")!! to 1,
-                itemRegistry.getItem("echo_shard")!! to 8
+                "compass" to 1,
+                "echo_shard" to 8
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_chest_boat")!!,
+            result = "spruce_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("spruce_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "spruce_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_mangrove_wood")!!,
+            result = "stripped_mangrove_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_wood")!! to 1
+                "mangrove_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_mangrove_log")!!,
+            result = "stripped_mangrove_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("mangrove_log")!! to 1
+                "mangrove_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("creeper_banner_pattern")!!,
+            result = "creeper_banner_pattern",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("paper")!! to 1,
-                itemRegistry.getItem("creeper_head")!! to 1
+                "paper" to 1,
+                "creeper_head" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_mosaic")!!,
+            result = "bamboo_mosaic",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_slab")!! to 2
+                "bamboo_slab" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_mosaic_stairs")!!,
+            result = "bamboo_mosaic_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_mosaic")!! to 6
+                "bamboo_mosaic" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_mosaic_slab")!!,
+            result = "bamboo_mosaic_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_mosaic")!! to 3
+                "bamboo_mosaic" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_planks")!!,
+            result = "bamboo_planks",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_block")!! to 1
+                "bamboo_block" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_block")!!,
+            result = "bamboo_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo")!! to 9
+                "bamboo" to 9
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_bamboo_block")!!,
+            result = "stripped_bamboo_block",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_block")!! to 1
+                "bamboo_block" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_button")!!,
+            result = "bamboo_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 1
+                "bamboo_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_door")!!,
+            result = "bamboo_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 6
+                "bamboo_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_fence")!!,
+            result = "bamboo_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 4,
-                itemRegistry.getItem("chest")!! to 2
+                "bamboo_planks" to 4,
+                "chest" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_fence_gate")!!,
+            result = "bamboo_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "bamboo_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_pressure_plate")!!,
+            result = "bamboo_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 2
+                "bamboo_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_sign")!!,
+            result = "bamboo_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "bamboo_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_slab")!!,
+            result = "bamboo_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 3
+                "bamboo_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_stairs")!!,
+            result = "bamboo_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 6
+                "bamboo_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_trapdoor")!!,
+            result = "bamboo_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 6
+                "bamboo_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_raft")!!,
+            result = "bamboo_raft",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_planks")!! to 5
+                "bamboo_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_chest_raft")!!,
+            result = "bamboo_chest_raft",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("bamboo_raft")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "bamboo_raft" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("calibrated_sculk_sensor")!!,
+            result = "calibrated_sculk_sensor",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("amethyst_shard")!! to 3,
-                itemRegistry.getItem("sculk_sensor")!! to 1
+                "amethyst_shard" to 3,
+                "sculk_sensor" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_cherry_log")!!,
+            result = "stripped_cherry_log",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_log")!! to 1
+                "cherry_log" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_wood")!!,
+            result = "cherry_wood",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_log")!! to 4
+                "cherry_log" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("stripped_cherry_wood")!!,
+            result = "stripped_cherry_wood",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_wood")!! to 1
+                "cherry_wood" to 1
             ),
             recipeType = RecipeType.Stripping
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_planks")!!,
+            result = "cherry_planks",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_log")!! to 1
+                "cherry_log" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_button")!!,
+            result = "cherry_button",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 1
+                "cherry_planks" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_door")!!,
+            result = "cherry_door",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 6
+                "cherry_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_fence")!!,
+            result = "cherry_fence",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 4,
-                itemRegistry.getItem("stick")!! to 2
+                "cherry_planks" to 4,
+                "stick" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_fence_gate")!!,
+            result = "cherry_fence_gate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 2,
-                itemRegistry.getItem("stick")!! to 4
+                "cherry_planks" to 2,
+                "stick" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_pressure_plate")!!,
+            result = "cherry_pressure_plate",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 2
+                "cherry_planks" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_sign")!!,
+            result = "cherry_sign",
             resultQuantity = 3,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 6,
-                itemRegistry.getItem("stick")!! to 1
+                "cherry_planks" to 6,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_slab")!!,
+            result = "cherry_slab",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 3
+                "cherry_planks" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_stairs")!!,
+            result = "cherry_stairs",
             resultQuantity = 4,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 6
+                "cherry_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_trapdoor")!!,
+            result = "cherry_trapdoor",
             resultQuantity = 2,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 6
+                "cherry_planks" to 6
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_boat")!!,
+            result = "cherry_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_planks")!! to 5
+                "cherry_planks" to 5
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_chest_boat")!!,
+            result = "cherry_chest_boat",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("cherry_boat")!! to 1,
-                itemRegistry.getItem("chest")!! to 1
+                "cherry_boat" to 1,
+                "chest" to 1
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("chiseled_bookshelf")!!,
+            result = "chiseled_bookshelf",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("oak_planks")!! to 6,
-                itemRegistry.getItem("oak_slab")!! to 3
+                "oak_planks" to 6,
+                "oak_slab" to 3
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("decorated_pot")!!,
+            result = "decorated_pot",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("danger_pottery_sherd")!! to 4
+                "danger_pottery_sherd" to 4
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_hanging_sign")!!,
+            result = "oak_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_oak_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_oak_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("oak_hanging_sign")!!,
+            result = "oak_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_oak_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_oak_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("spruce_hanging_sign")!!,
+            result = "spruce_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_spruce_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_spruce_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("birch_hanging_sign")!!,
+            result = "birch_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_birch_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_birch_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("jungle_hanging_sign")!!,
+            result = "jungle_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_jungle_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_jungle_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("acacia_hanging_sign")!!,
+            result = "acacia_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_acacia_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_acacia_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("dark_oak_hanging_sign")!!,
+            result = "dark_oak_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_dark_oak_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_dark_oak_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("mangrove_hanging_sign")!!,
+            result = "mangrove_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_mangrove_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_mangrove_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("crimson_hanging_sign")!!,
+            result = "crimson_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_crimson_stem")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_crimson_stem" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("warped_hanging_sign")!!,
+            result = "warped_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_warped_stem")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_warped_stem" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("bamboo_hanging_sign")!!,
+            result = "bamboo_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_bamboo_block")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_bamboo_block" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("cherry_hanging_sign")!!,
+            result = "cherry_hanging_sign",
             resultQuantity = 6,
             requirements = mapOf(
-                itemRegistry.getItem("stripped_cherry_log")!! to 6,
-                itemRegistry.getItem("chain")!! to 2
+                "stripped_cherry_log" to 6,
+                "chain" to 2
             ),
             recipeType = RecipeType.Crafting
         ),
         Recipe(
-            result = itemRegistry.getItem("brush")!!,
+            result = "brush",
             resultQuantity = 1,
             requirements = mapOf(
-                itemRegistry.getItem("feather")!! to 1,
-                itemRegistry.getItem("copper_ingot")!! to 1,
-                itemRegistry.getItem("stick")!! to 1
+                "feather" to 1,
+                "copper_ingot" to 1,
+                "stick" to 1
             ),
             recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "copper_bulb",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "copper_block" to 3,
+                "blaze_rod" to 1,
+                "redstone" to 1
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "exposed_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_bulb" to 1
+            ),
+            recipeType = RecipeType.Oxidation
+        ),
+        Recipe(
+            result = "weathered_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_bulb" to 1
+            ),
+            recipeType = RecipeType.Oxidation
+        ),
+        Recipe(
+            result = "oxidized_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_copper_bulb" to 1
+            ),
+            recipeType = RecipeType.Oxidation
+        ),
+        Recipe(
+            result = "waxed_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_bulb" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_exposed_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_bulb" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_weathered_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_copper_bulb" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_oxidized_copper_bulb",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "oxidized_copper_bulb" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "exposed_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "exposed_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "exposed_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "weathered_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "weathered_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "weathered_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "oxidized_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "oxidized_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "oxidized_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "oxidized_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "waxed_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "waxed_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "waxed_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "waxed_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "waxed_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "chiseled_copper" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_exposed_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "waxed_exposed_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "waxed_exposed_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "waxed_exposed_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "waxed_exposed_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_chiseled_copper" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_weathered_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "waxed_weathered_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "waxed_weathered_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "waxed_weathered_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "waxed_weathered_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_cut_copper_slab" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_oxidized_chiseled_copper",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "waxed_oxidized_copper_block" to 1
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "waxed_oxidized_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "waxed_oxidized_cut_copper_slab" to 2
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "waxed_oxidized_chiseled_copper",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "oxidized_cut_copper_slab" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "copper_trapdoor",
+            resultQuantity = 2,
+            requirements = mapOf(
+                "copper_ingot" to 6
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "exposed_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_trapdoor" to 1
+            ),
+            recipeType = RecipeType.Oxidation
+        ),
+        Recipe(
+            result = "weathered_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_trapdoor" to 1
+            ),
+            recipeType = RecipeType.Oxidation
+        ),
+        Recipe(
+            result = "oxidized_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_trapdoor" to 1
+            ),
+            recipeType = RecipeType.Oxidation
+        ),
+        Recipe(
+            result = "waxed_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_trapdoor" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_exposed_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_trapdoor" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_weathered_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_copper_trapdoor" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "waxed_oxidized_copper_trapdoor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "oxidized_copper_trapdoor" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = RecipeType.Waxing
+        ),
+        Recipe(
+            result = "tuff_stairs",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_stairs",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "tuff" to 6,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "tuff_slab",
+            resultQuantity = 2,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_slab",
+            resultQuantity = 6,
+            requirements = mapOf(
+                "tuff" to 3,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "tuff_wall",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_wall",
+            resultQuantity = 6,
+            requirements = mapOf(
+                "tuff" to 6,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "chiseled_tuff",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "chiseled_tuff",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff_slab" to 2,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "polished_tuff",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "polished_tuff",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "tuff" to 4,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "polished_tuff_stairs",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "polished_tuff_stairs",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "polished_tuff" to 6,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "polished_tuff_slab",
+            resultQuantity = 2,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_stairs",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
         ),
     )
 }

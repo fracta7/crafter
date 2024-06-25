@@ -21,7 +21,7 @@ class RecipeRegistry {
      * @param result item to be searched.
      * @return list of recipes.
      */
-    fun getRecipesByResult(result: Item): List<Recipe> {
+    fun getRecipesByResult(result: ItemID): List<Recipe> {
         return recipes.filter { it.result == result }
     }
 }

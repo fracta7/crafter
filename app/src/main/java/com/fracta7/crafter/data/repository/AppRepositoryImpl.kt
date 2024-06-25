@@ -21,7 +21,7 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
         itemInit().forEach { item ->
             itemRegistry.addItem(item)
         }
-        recipeInit(itemRegistry).forEach { recipe ->
+        recipeInit().forEach { recipe ->
             recipeRegistry.addRecipe(recipe)
         }
     }

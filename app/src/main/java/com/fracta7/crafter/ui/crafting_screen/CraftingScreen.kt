@@ -107,7 +107,8 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         modifier = Modifier
                             .fillMaxWidth()
                     ) {
-                        recipe.requirements.forEach { (item, amountRecipeRequirement) ->
+                        recipe.requirements.forEach { (itemId, amountRecipeRequirement) ->
+                            val itemRequirement = viewModel.getItemById(itemId)
                             item {
                                 val requiredAmount = amountRecipeRequirement * resourceAmount(
                                     result = recipe.resultQuantity,
@@ -117,16 +118,16 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .clickable {
-                                            if (item.craftable) {
+                                            if (itemRequirement.craftable) {
                                                 //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
                                                 navController.navigate(
                                                     Route.Crafting(
-                                                        item = item.id,
+                                                        item = itemRequirement.id,
                                                         amount = requiredAmount
                                                     )
                                                 )
                                             }
-                                        }, item = item, amount = requiredAmount, preview = false
+                                        }, item = itemRequirement, amount = requiredAmount, preview = false
                                 )
                                 HorizontalDivider(modifier = Modifier.padding(horizontal = 10.dp))
                             }

@@ -16,7 +16,7 @@ class CraftingScreenViewModel @Inject constructor(
     private val recipeRegistry = appRepository.recipeRegistryProvider()
 
     fun getRecipe(itemID: String): Recipe {
-        return recipeRegistry.getRecipesByResult(itemRegistry.getItem(itemID)!!)[0]
+        return recipeRegistry.getRecipesByResult(itemID)[0]
     }
     fun getItemById(itemId: String): Item{
         return itemRegistry.getItem(id = itemId)!!
