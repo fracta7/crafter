@@ -10,7 +10,7 @@ hiltCompiler = "1.2.0"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 lifecycleRuntimeKtx = "2.8.2"
-navigationCompose = "2.8.0-beta03"
+navigationCompose = "2.8.0-beta04"
 serialization = "1.6.3"
 daggerHilt = "2.51.1"
 
