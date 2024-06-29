@@ -6990,12 +6990,200 @@ fun recipeInit(): List<Recipe> {
             recipeType = RecipeType.Cutting
         ),
         Recipe(
-            result = "tuff_stairs",
+            result = "polished_tuff_wall",
             resultQuantity = 1,
             requirements = mapOf(
                 "tuff" to 1,
             ),
             recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "polished_tuff_wall",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "polished_tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "polished_tuff_wall",
+            resultQuantity = 6,
+            requirements = mapOf(
+                "polished_tuff" to 6,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "tuff_bricks",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "polished_tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_bricks",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "polished_tuff" to 4,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "tuff_brick_stairs",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_stairs",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "polished_tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_stairs",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff_bricks" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_stairs",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "tuff_bricks" to 6,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "tuff_brick_slab",
+            resultQuantity = 2,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_slab",
+            resultQuantity = 2,
+            requirements = mapOf(
+                "polished_tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_slab",
+            resultQuantity = 2,
+            requirements = mapOf(
+                "tuff_bricks" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_slab",
+            resultQuantity = 6,
+            requirements = mapOf(
+                "tuff_bricks" to 3,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "tuff_brick_wall",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_wall",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "polished_tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_wall",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff_bricks" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "tuff_brick_wall",
+            resultQuantity = 6,
+            requirements = mapOf(
+                "tuff_bricks" to 6,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "chiseled_tuff_bricks",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "chiseled_tuff_bricks",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "polished_tuff" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "chiseled_tuff_bricks",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff_bricks" to 1,
+            ),
+            recipeType = RecipeType.Cutting
+        ),
+        Recipe(
+            result = "chiseled_tuff_bricks",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "tuff_brick_wall" to 2,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "crafter",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "iron_ingot" to 5,
+                "crafting_table" to 1,
+                "redstone" to 2,
+                "dropper" to 1,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "mace",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "heavy_core" to 1,
+                "breeze_rod" to 1,
+            ),
+            recipeType = RecipeType.Crafting
+        ),
+        Recipe(
+            result = "wind_charge",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "breeze_rod" to 1,
+            ),
+            recipeType = RecipeType.Crafting
         ),
     )
 }

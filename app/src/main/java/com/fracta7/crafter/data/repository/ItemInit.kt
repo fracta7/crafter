@@ -1108,7 +1108,6 @@ fun itemInit(): List<Item> {
         Item(id = "torchflower", name = "Torchflower", stackSize = 64, craftable = false),
         Item(id = "brush", name = "Brush", stackSize = 1, craftable = true),
         Item(id = "netherite_upgrade_smithing_template", name = "Netherite Upgrade", stackSize = 64, craftable = false),
-        Item(id = "dune_armor_trim_smithing_template", name = "Armor Trim", stackSize = 64, craftable = false),
         Item(id = "torchflower_seeds", name = "Torchflower Seeds", stackSize = 64, craftable = false),
         Item(id = "copper_bulb", name = "Copper Bulb", stackSize = 64, craftable = true),
         Item(id = "exposed_copper_bulb", name = "Exposed Copper Bulb", stackSize = 64, craftable = true),

@@ -32,6 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.domain.model.Item
+import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
@@ -41,12 +42,12 @@ import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun RootCraftingScreen(navController: NavController, items: List<String>, amounts: List<Int>) {
+fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amounts: List<Int>) {
     val viewModel = hiltViewModel<RootCraftingScreenViewModel>()
     val itemsMap = items.zip(amounts).toMap()
-    var rawItems by remember { mutableStateOf(mapOf<Item, Int>()) }
-    var leftOvers by remember { mutableStateOf(mapOf<Item, Int>()) }
-    var itemsConverted by remember { mutableStateOf(mapOf<Item, Int>()) }
+    var rawItems by remember { mutableStateOf(mapOf<ItemID, Int>()) }
+    var leftOvers by remember { mutableStateOf(mapOf<ItemID, Int>()) }
+    //var itemsConverted by remember { mutableStateOf(mapOf<Item, Int>()) }
     val coroutineScope = rememberCoroutineScope()
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -78,19 +79,24 @@ fun RootCraftingScreen(navController: NavController, items: List<String>, amount
                                 .padding(10.dp, 4.dp)
                         ) {
                             coroutineScope.launch {
+                                /**
                                 itemsConverted = convertIdMapToItemMap(
                                     itemsId = itemsMap,
                                     itemRegistry = viewModel.getItemRegistry()
                                 )
+                                */
+
                                 val result = decomposeItems(
-                                    itemsToDecompose = itemsConverted,
-                                    recipeRegistry = viewModel.getRecipeRegistry()
+                                    itemsToDecompose = itemsMap,
+                                    recipeRegistry = viewModel.getRecipeRegistry(),
+                                    itemRegistry = viewModel.getItemRegistry()
                                 )
                                 rawItems = result.first
                                 leftOvers = result.second
 
                             }
-                            rawItems.forEach { (item, amount) ->
+                            rawItems.forEach { (itemID, amount) ->
+                                val item = viewModel.getItem(itemID)
                                 item {
                                     ItemElement(
                                         modifier = Modifier.fillMaxWidth(),
@@ -107,7 +113,8 @@ fun RootCraftingScreen(navController: NavController, items: List<String>, amount
                                     Spacer(modifier = Modifier.padding(10.dp))
                                     Text(text = "Left-overs", modifier = Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
                                 }
-                                leftOvers.forEach { (item, amount) ->
+                                leftOvers.forEach { (itemID, amount) ->
+                                    val item = viewModel.getItem(itemID)
                                     item {
                                         ItemElement(
                                             modifier = Modifier.fillMaxWidth(),

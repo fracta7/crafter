@@ -1,6 +1,7 @@
 package com.fracta7.crafter.util
 
 import com.fracta7.crafter.domain.model.Item
+import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 
@@ -11,23 +12,24 @@ import com.fracta7.crafter.domain.model.RecipeRegistry
  * @return returns a pair of raw materials mapped to left-overs. First - raw material Map<Item, Int>, second - left-overs Map<Item, Int>.
  */
 fun decomposeItems(
-    itemsToDecompose: Map<Item, Int>,
-    recipeRegistry: RecipeRegistry
-): Pair<Map<Item, Int>, Map<Item, Int>> {
-    val rawMaterials = mutableMapOf<Item, Int>() //main raw material list
-    val leftOvers = mutableMapOf<Item, Int>() //internal list of leftovers
-    val rawMaterialsLeftOvers = mutableMapOf<Item, Int>() //processed list of leftovers
-    val itemsToRemove = mutableMapOf<Item, Int>()
+    itemsToDecompose: Map<ItemID, Int>,
+    recipeRegistry: RecipeRegistry,
+    itemRegistry: ItemRegistry
+): Pair<Map<ItemID, Int>, Map<ItemID, Int>> {
+    val rawMaterials = mutableMapOf<ItemID, Int>() //main raw material list
+    val leftOvers = mutableMapOf<ItemID, Int>() //internal list of leftovers
+    val rawMaterialsLeftOvers = mutableMapOf<ItemID, Int>() //processed list of leftovers
+    val itemsToRemove = mutableMapOf<ItemID, Int>()
 
-    fun addRawMaterial(item: Item, amount: Int) {
+    fun addRawMaterial(item: ItemID, amount: Int) {
         rawMaterials[item] = rawMaterials.getOrDefault(item, 0) + amount
     }
 
-    fun addRawMaterialLeftOver(item: Item, amount: Int) {
+    fun addRawMaterialLeftOver(item: ItemID, amount: Int) {
         rawMaterialsLeftOvers[item] = rawMaterialsLeftOvers.getOrDefault(item, 0) + amount
     }
 
-    fun addLeftOver(item: Item, amount: Int) {
+    fun addLeftOver(item: ItemID, amount: Int) {
         leftOvers[item] = leftOvers.getOrDefault(item, 0) + amount
     }
 
@@ -38,8 +40,9 @@ fun decomposeItems(
      * @param isLeftOver boolean to indicated if certain functionality is used for decomposing leftovers
      * @param action a function that will keep track of decomposed items
      */
-    fun processItem(item: Item, amount: Int, isLeftOver: Boolean, action: (Item, Int) -> Unit) {
-        if (!item.craftable) {
+    fun processItem(item: ItemID, amount: Int, isLeftOver: Boolean, action: (ItemID, Int) -> Unit) {
+        val itemObject = itemRegistry.getItem(item)!!
+        if (!itemObject.craftable) {
             action(item, amount)
         } else {
             val recipes = recipeRegistry.getRecipesByResult(item)
@@ -64,7 +67,8 @@ fun decomposeItems(
 
     //second, decomposition of leftovers
     for ((item, amount) in leftOvers) {
-        if (!item.craftable) {
+        val itemObject = itemRegistry.getItem(item)!!
+        if (!itemObject.craftable) {
             addRawMaterialLeftOver(item, amount)
         } else {
             val recipe = recipeRegistry.getRecipesByResult(item)[0]
@@ -86,7 +90,8 @@ fun decomposeItems(
 
     //remove raw materials from main raw material list and from leftover raw materials, leaving true leftover items
     for ((item, amount) in rawMaterialsLeftOvers){
-        if (!item.craftable && rawMaterials.containsKey(item)){
+        val itemObject = itemRegistry.getItem(item)!!
+        if (!itemObject.craftable && rawMaterials.containsKey(item)){
             rawMaterials[item] = rawMaterials[item]!! - amount
             //rawMaterialsLeftOvers.remove(item)
             itemsToRemove[item] = itemsToRemove.getOrDefault(item,0) + amount
