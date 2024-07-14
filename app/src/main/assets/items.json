@@ -1,0 +1,873 @@
+{
+  "items": [
+    {
+      "id": "oak_log",
+      "name": "Oak Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "oak_wood",
+      "name": "Oak Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_oak_log",
+      "name": "Stripped Oak Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_oak_wood",
+      "name": "Stripped Oak Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "oak_planks",
+      "name": "Oak Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "oak_stairs",
+      "name": "Oak Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "oak_slab",
+      "name": "Oak Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "oak_fence",
+      "name": "Oak Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "oak_fence_gate",
+      "name": "Oak Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "oak_door",
+      "name": "Oak Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "oak_trapdoor",
+      "name": "Oak Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "oak_pressure_plate",
+      "name": "Oak Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "oak_button",
+      "name": "Oak Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "spruce_log",
+      "name": "Spruce Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "spruce_wood",
+      "name": "Spruce Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_spruce_log",
+      "name": "Stripped Spruce Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_spruce_wood",
+      "name": "Stripped Spruce Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "spruce_planks",
+      "name": "Spruce Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "spruce_stairs",
+      "name": "Spruce Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "spruce_slab",
+      "name": "Spruce Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "spruce_fence",
+      "name": "Spruce Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "spruce_fence_gate",
+      "name": "spruce Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "spruce_door",
+      "name": "Spruce Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "spruce_trapdoor",
+      "name": "Spruce Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "spruce_pressure_plate",
+      "name": "Spruce Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "spruce_button",
+      "name": "Spruce Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "birch_log",
+      "name": "Birch  Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "birch_wood",
+      "name": "Birch  Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_birch_log",
+      "name": "Stripped Birch  Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_birch_wood",
+      "name": "Stripped Birch  Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "birch_planks",
+      "name": "Birch  Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "birch_stairs",
+      "name": "Birch  Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "birch_slab",
+      "name": "Birch  Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "birch_fence",
+      "name": "Birch  Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "birch_fence_gate",
+      "name": "Birch  Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "birch_door",
+      "name": "Birch  Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "birch_trapdoor",
+      "name": "Birch  Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "birch_pressure_plate",
+      "name": "Birch  Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "birch_button",
+      "name": "Birch  Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "jungle_log",
+      "name": "Jungle Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "jungle_wood",
+      "name": "Jungle Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_jungle_log",
+      "name": "Stripped Jungle Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_jungle_wood",
+      "name": "Stripped Jungle Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "jungle_planks",
+      "name": "Jungle Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "jungle_stairs",
+      "name": "Jungle Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "jungle_slab",
+      "name": "Jungle Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "jungle_fence",
+      "name": "Jungle Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "jungle_fence_gate",
+      "name": "Jungle Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "jungle_door",
+      "name": "Jungle Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "jungle_trapdoor",
+      "name": "Jungle Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "jungle_pressure_plate",
+      "name": "Jungle Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "jungle_button",
+      "name": "Jungle Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "acacia_log",
+      "name": "Acacia Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "acacia_wood",
+      "name": "Acacia Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_acacia_log",
+      "name": "Stripped Acacia Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_acacia_wood",
+      "name": "Stripped Acacia Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "acacia_planks",
+      "name": "Acacia Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "acacia_stairs",
+      "name": "Acacia Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "acacia_slab",
+      "name": "Acacia Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "acacia_fence",
+      "name": "Acacia Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "acacia_fence_gate",
+      "name": "Acacia Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "acacia_door",
+      "name": "Acacia Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "acacia_trapdoor",
+      "name": "Acacia Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "acacia_pressure_plate",
+      "name": "Acacia Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "acacia_button",
+      "name": "Acacia Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "dark_oak_log",
+      "name": "Dark Oak Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "dark_oak_wood",
+      "name": "Dark Oak Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_dark_oak_log",
+      "name": "Stripped Dark Oak Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_dark_oak_wood",
+      "name": "Stripped Dark Oak Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "dark_oak_planks",
+      "name": "Dark Oak Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "dark_oak_stairs",
+      "name": "Dark Oak Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "dark_oak_slab",
+      "name": "Dark Oak Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "dark_oak_fence",
+      "name": "Dark Oak Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "dark_oak_fence_gate",
+      "name": "Dark Oak Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "dark_oak_door",
+      "name": "Dark Oak Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "dark_oak_trapdoor",
+      "name": "Dark Oak Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "dark_oak_pressure_plate",
+      "name": "Dark Oak Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "dark_oak_button",
+      "name": "Dark Oak Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "mangrove_log",
+      "name": "Mangrove Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "mangrove_wood",
+      "name": "Mangrove Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_mangrove_log",
+      "name": "Stripped Mangrove Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_mangrove_wood",
+      "name": "Stripped Mangrove Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "mangrove_planks",
+      "name": "Mangrove Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "mangrove_stairs",
+      "name": "Mangrove Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "mangrove_slab",
+      "name": "Mangrove Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "mangrove_fence",
+      "name": "Mangrove Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "mangrove_fence_gate",
+      "name": "Mangrove Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "mangrove_door",
+      "name": "Mangrove Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "mangrove_trapdoor",
+      "name": "Mangrove Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "mangrove_pressure_plate",
+      "name": "Mangrove Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "mangrove_button",
+      "name": "Mangrove Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+
+    {
+      "id": "cherry_log",
+      "name": "Cherry Log",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "cherry_wood",
+      "name": "Cherry Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_cherry_log",
+      "name": "Stripped Cherry Log",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_cherry_wood",
+      "name": "Stripped Cherry Wood",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "cherry_planks",
+      "name": "Cherry Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "cherry_stairs",
+      "name": "Cherry Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "cherry_slab",
+      "name": "Cherry Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "cherry_fence",
+      "name": "Cherry Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "cherry_fence_gate",
+      "name": "Cherry Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "cherry_door",
+      "name": "Cherry Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "cherry_trapdoor",
+      "name": "Cherry Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "cherry_pressure_plate",
+      "name": "Cherry Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "cherry_button",
+      "name": "Cherry Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "bamboo_block",
+      "name": "Block of Bamboo",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_bamboo_block",
+      "name": "Block of Stripped Bamboo",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "bamboo_planks",
+      "name": "Bamboo Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "bamboo_mosaic",
+      "name": "Bamboo Mosaic",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block"]
+    },
+    {
+      "id": "bamboo_stairs",
+      "name": "Bamboo Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "bamboo_mosaic_stairs",
+      "name": "Bamboo Mosaic Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "bamboo_slab",
+      "name": "Bamboo Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "bamboo_mosaic_slab",
+      "name": "Bamboo Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "bamboo_fence",
+      "name": "Bamboo Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "bamboo_fence_gate",
+      "name": "Bamboo Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate", "redstone_block"]
+    },
+    {
+      "id": "bamboo_door",
+      "name": "Bamboo Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door", "redstone_block"]
+    },
+    {
+      "id": "bamboo_trapdoor",
+      "name": "Bamboo Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor", "redstone_block"]
+    },
+    {
+      "id": "bamboo_pressure_plate",
+      "name": "Bamboo Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate", "redstone_block"]
+    },
+    {
+      "id": "bamboo_button",
+      "name": "Bamboo Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button", "redstone_block"]
+    },
+    {
+      "id": "crimson_stem",
+      "name": "Crimson Stem",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "crimson_hyphae",
+      "name": "Bamboo Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_crimson_stem",
+      "name": "Stripped Crimson Stem",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_crimson_hyphae",
+      "name": "Stripped Crimson Hyphae",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "crimson_planks",
+      "name": "Crimson Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "crimson_stairs",
+      "name": "Crimson Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    }
+  ]
+}
