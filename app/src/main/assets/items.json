@@ -868,6 +868,237 @@
       "stack_size": 64,
       "craftable": true,
       "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "crimson_slab",
+      "name": "Crimson Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "crimson_fence",
+      "name": "Crimson Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "crimson_fence_gate",
+      "name": "Crimson Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate"]
+    },
+    {
+      "id": "crimson_door",
+      "name": "Crimson Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door"]
+    },
+    {
+      "id": "crimson_trapdoor",
+      "name": "Crimson Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor"]
+    },
+    {
+      "id": "crimson_pressure_plate",
+      "name": "Crimson Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate"]
+    },
+    {
+      "id": "crimson_button",
+      "name": "Crimson Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button"]
+    },
+    {
+      "id": "warped_stem",
+      "name": "Warped Stem",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "warped_hyphae",
+      "name": "Warped Hyphae",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_warped_stem",
+      "name": "Stripped Warped Stem",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "stripped_warped_hyphae",
+      "name": "Stripped Warped Hyphae",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "log"]
+    },
+    {
+      "id": "warped_planks",
+      "name": "Warped Planks",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "planks"]
+    },
+    {
+      "id": "warped_stairs",
+      "name": "Warped Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "warped_slab",
+      "name": "Warped Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "warped_fence",
+      "name": "Warped Fence",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence"]
+    },
+    {
+      "id": "warped_fence_gate",
+      "name": "Warped Fence Gate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "fence_gate"]
+    },
+    {
+      "id": "warped_door",
+      "name": "Warped Door",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "door"]
+    },
+    {
+      "id": "warped_trapdoor",
+      "name": "Warped Trapdoor",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "trapdoor"]
+    },
+    {
+      "id": "warped_pressure_plate",
+      "name": "Warped Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate"]
+    },
+    {
+      "id": "warped_button",
+      "name": "Warped Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button"]
+    },
+    {
+      "id": "stone",
+      "name": "Stone",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block"]
+    },
+    {
+      "id": "stone_stairs",
+      "name": "Stone Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "stone_slab",
+      "name": "Stone Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "stone_pressure_plate",
+      "name": "Stone Pressure Plate",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "pressure_plate"]
+    },
+    {
+      "id": "stone_button",
+      "name": "Stone Button",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "button"]
+    },
+    {
+      "id": "cobblestone",
+      "name": "Cobblestone",
+      "stack_size": 64,
+      "craftable": false,
+      "tags": ["building_block"]
+    },
+    {
+      "id": "cobblestone_stairs",
+      "name": "Cobblestone Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "cobblstone_slab",
+      "name": "Cobblestone Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "cobblestone_wall",
+      "name": "Cobblestone Wall",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "wall"]
+    },
+    {
+      "id": "mossy_cobblestone",
+      "name": "Mossy Cobblestone",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block"]
+    },
+    {
+      "id": "mossy_cobblestone_stairs",
+      "name": "Mossy Cobblestone Stairs",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "stairs"]
+    },
+    {
+      "id": "mossy_cobblestone_slab",
+      "name": "Mossy Cobblestone Slab",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "slab"]
+    },
+    {
+      "id": "mossy_cobblestone_wall",
+      "name": "Mossy Cobblestone Wall",
+      "stack_size": 64,
+      "craftable": true,
+      "tags": ["building_block", "wall"]
     }
   ]
 }
