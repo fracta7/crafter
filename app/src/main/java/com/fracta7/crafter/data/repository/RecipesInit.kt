@@ -1,39 +1,36 @@
 package com.fracta7.crafter.data.repository
 
-import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.Recipe
-import com.fracta7.crafter.domain.model.RecipeType
 
 /**
  * Initiates all recipes
- * @param itemRegistry ItemRegistry instance to get all items.
  * @return List of Recipes.
  */
-fun recipeInit(): List<Recipe> {
+fun recipesInit(): List<Recipe> {
     return listOf(
         Recipe(
             result = "polished_granite",
             resultQuantity = 1,
             requirements = mapOf("granite" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_diorite",
             resultQuantity = 1,
             requirements = mapOf("diorite" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_andesite",
             resultQuantity = 1,
             requirements = mapOf("andesite" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_deepslate",
             resultQuantity = 1,
             requirements = mapOf("cobbled_deepslate" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "coarse_dirt",
@@ -42,205 +39,205 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 2,
                 "sand" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_planks",
             resultQuantity = 4,
             requirements = mapOf("oak_log" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_planks",
             resultQuantity = 4,
             requirements = mapOf("spruce_log" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_planks",
             resultQuantity = 4,
             requirements = mapOf("birch_log" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_planks",
             resultQuantity = 4,
             requirements = mapOf("jungle_log" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_planks",
             resultQuantity = 4,
             requirements = mapOf("acacia_log" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_planks",
             resultQuantity = 4,
             requirements = mapOf("dark_oak_log" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_planks",
             resultQuantity = 4,
             requirements = mapOf("crimson_stem" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_planks",
             resultQuantity = 4,
             requirements = mapOf("warped_stem" to 1),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "coal_block",
             resultQuantity = 1,
             requirements = mapOf("coal" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "raw_iron_block",
             resultQuantity = 1,
             requirements = mapOf("raw_iron" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "raw_copper_block",
             resultQuantity = 1,
             requirements = mapOf("raw_copper" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "raw_gold_block",
             resultQuantity = 1,
             requirements = mapOf("raw_gold" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "amethyst_block",
             resultQuantity = 1,
             requirements = mapOf("amethyst_shard" to 4),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_block",
             resultQuantity = 1,
             requirements = mapOf("iron_ingot" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "copper_block",
             resultQuantity = 1,
             requirements = mapOf("copper_ingot" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gold_block",
             resultQuantity = 1,
             requirements = mapOf("gold_ingot" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_block",
             resultQuantity = 1,
             requirements = mapOf("diamond" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "netherite_block",
             resultQuantity = 1,
             requirements = mapOf("netherite_ingot" to 9),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "exposed_copper",
             resultQuantity = 1,
             requirements = mapOf("copper_block" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "weathered_copper",
             resultQuantity = 1,
             requirements = mapOf("copper_block" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "oxidized_copper",
             resultQuantity = 1,
             requirements = mapOf("copper_block" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "cut_copper",
             resultQuantity = 1,
             requirements = mapOf("copper_block" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "exposed_cut_copper",
             resultQuantity = 1,
             requirements = mapOf("cut_copper" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "weathered_cut_copper",
             resultQuantity = 1,
             requirements = mapOf("cut_copper" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "oxidized_cut_copper",
             resultQuantity = 1,
             requirements = mapOf("cut_copper" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf("copper_block" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "exposed_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf("cut_copper_stairs" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "weathered_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf("cut_copper_stairs" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "oxidized_cut_copper_stairs",
             resultQuantity = 1,
             requirements = mapOf("cut_copper_stairs" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "cut_copper_slab",
             resultQuantity = 2,
             requirements = mapOf("copper_block" to 1),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "exposed_cut_copper_slab",
             resultQuantity = 1,
             requirements = mapOf("cut_copper_slab" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "weathered_cut_copper_slab",
             resultQuantity = 1,
             requirements = mapOf("cut_copper_slab" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "oxidized_cut_copper_slab",
             resultQuantity = 1,
             requirements = mapOf("cut_copper_slab" to 1),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "waxed_copper_block",
@@ -249,7 +246,7 @@ fun recipeInit(): List<Recipe> {
                 "copper_block" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_copper",
@@ -258,7 +255,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_copper",
@@ -267,7 +264,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_copper",
@@ -276,7 +273,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_cut_copper",
@@ -285,7 +282,7 @@ fun recipeInit(): List<Recipe> {
                 "cut_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_cut_copper",
@@ -294,7 +291,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_cut_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_cut_copper",
@@ -303,7 +300,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_cut_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_cut_copper",
@@ -312,7 +309,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_cut_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_cut_copper_stairs",
@@ -321,7 +318,7 @@ fun recipeInit(): List<Recipe> {
                 "cut_copper_stairs" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_cut_copper_stairs",
@@ -330,7 +327,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_cut_copper_stairs" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_cut_copper_stairs",
@@ -339,7 +336,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_cut_copper_stairs" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_cut_copper_stairs",
@@ -348,7 +345,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_cut_copper_stairs" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_cut_copper_slab",
@@ -357,7 +354,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_cut_copper_slab" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_cut_copper_slab",
@@ -366,7 +363,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_cut_copper_slab" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_cut_copper_slab",
@@ -375,7 +372,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_cut_copper_slab" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "stripped_oak_log",
@@ -383,7 +380,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_spruce_log",
@@ -391,7 +388,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_birch_log",
@@ -399,7 +396,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_jungle_log",
@@ -407,7 +404,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_acacia_log",
@@ -415,7 +412,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_dark_oak_log",
@@ -423,7 +420,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_crimson_stem",
@@ -431,7 +428,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_stem" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_warped_stem",
@@ -439,7 +436,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_stem" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_oak_wood",
@@ -447,7 +444,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_spruce_wood",
@@ -455,7 +452,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_birch_wood",
@@ -463,7 +460,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_jungle_wood",
@@ -471,7 +468,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_acacia_wood",
@@ -479,7 +476,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_dark_oak_wood",
@@ -487,7 +484,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_crimson_hyphae",
@@ -495,7 +492,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_hyphae" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_warped_hyphae",
@@ -503,7 +500,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_hyphae" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "oak_wood",
@@ -511,7 +508,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_wood",
@@ -519,7 +516,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_wood",
@@ -527,7 +524,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_wood",
@@ -535,7 +532,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_wood",
@@ -543,7 +540,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_wood",
@@ -551,7 +548,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_hyphae",
@@ -559,7 +556,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_stem" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_hyphae",
@@ -567,7 +564,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_stem" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "glass",
@@ -575,7 +572,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sand" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "tinted_glass",
@@ -584,7 +581,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 1,
                 "amethyst_shard" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lapis_block",
@@ -592,7 +589,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "lapis_lazuli" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chiseled_sandstone",
@@ -600,7 +597,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cut_sandstone",
@@ -608,7 +605,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "orange_wool",
@@ -617,7 +614,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_wool",
@@ -626,7 +623,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_wool",
@@ -635,7 +632,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "light_blue_wool" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_wool",
@@ -644,7 +641,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_wool",
@@ -653,7 +650,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_wool",
@@ -662,7 +659,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_wool",
@@ -671,7 +668,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_wool",
@@ -680,7 +677,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "light_gray_wool" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_wool",
@@ -689,7 +686,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_wool",
@@ -698,7 +695,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_wool",
@@ -707,7 +704,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_wool",
@@ -716,7 +713,7 @@ fun recipeInit(): List<Recipe> {
                 "white_dye" to 1,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_wool",
@@ -725,7 +722,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_wool",
@@ -734,7 +731,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_wool",
@@ -743,7 +740,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 1,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "moss_carpet",
@@ -751,7 +748,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "moss_block" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_slab",
@@ -759,7 +756,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_slab",
@@ -767,7 +764,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_slab",
@@ -775,7 +772,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_slab",
@@ -783,7 +780,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_slab",
@@ -791,7 +788,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_slab",
@@ -799,7 +796,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_slab",
@@ -807,7 +804,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_slab",
@@ -815,7 +812,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_slab",
@@ -823,7 +820,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_stone_slab",
@@ -831,7 +828,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "sandstone_slab",
@@ -839,7 +836,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cut_sandstone_slab",
@@ -847,7 +844,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cobblestone_slab",
@@ -855,7 +852,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobblestone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "brick_slab",
@@ -863,7 +860,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "stone_brick_slab",
@@ -871,7 +868,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "nether_brick_slab",
@@ -879,7 +876,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "quartz_slab",
@@ -887,7 +884,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "red_sandstone_slab",
@@ -895,7 +892,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cut_red_sandstone_slab",
@@ -903,7 +900,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "purpur_slab",
@@ -911,7 +908,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "purpur_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "prismarine_slab",
@@ -919,7 +916,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "prismarine_brick_slab",
@@ -927,7 +924,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "dark_prismarine_slab",
@@ -935,7 +932,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_prismarine" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_quartz",
@@ -943,7 +940,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz_block" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "smooth_red_sandstone",
@@ -951,7 +948,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "smooth_sandstone",
@@ -959,7 +956,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "smooth_stone",
@@ -967,7 +964,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "bricks",
@@ -975,7 +972,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "brick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bookshelf",
@@ -984,7 +981,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 6,
                 "book" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mossy_cobblestone",
@@ -993,7 +990,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 1,
                 "vine" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "torch",
@@ -1002,7 +999,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 1,
                 "coal" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "end_rod",
@@ -1011,7 +1008,7 @@ fun recipeInit(): List<Recipe> {
                 "blaze_rod" to 1,
                 "popped_chorus_fruit" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purpur_block",
@@ -1019,7 +1016,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "popped_chorus_fruit" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purpur_pillar",
@@ -1027,7 +1024,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "purpur_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "purpur_stairs",
@@ -1035,7 +1032,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "purpur_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "oak_stairs",
@@ -1043,7 +1040,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chest",
@@ -1051,7 +1048,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crafting_table",
@@ -1059,7 +1056,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "furnace",
@@ -1067,7 +1064,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobblestone" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "ladder",
@@ -1075,7 +1072,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stick" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cobblestone_stairs",
@@ -1083,7 +1080,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobblestone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "snow_block",
@@ -1091,7 +1088,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "snowball" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jukebox",
@@ -1100,7 +1097,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 8,
                 "diamond" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_fence",
@@ -1109,7 +1106,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_fence",
@@ -1118,7 +1115,7 @@ fun recipeInit(): List<Recipe> {
                 "spruce_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_fence",
@@ -1127,7 +1124,7 @@ fun recipeInit(): List<Recipe> {
                 "birch_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_fence",
@@ -1136,7 +1133,7 @@ fun recipeInit(): List<Recipe> {
                 "jungle_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_fence",
@@ -1145,7 +1142,7 @@ fun recipeInit(): List<Recipe> {
                 "acacia_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_fence",
@@ -1154,7 +1151,7 @@ fun recipeInit(): List<Recipe> {
                 "dark_oak_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_fence",
@@ -1163,7 +1160,7 @@ fun recipeInit(): List<Recipe> {
                 "crimson_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_fence",
@@ -1172,7 +1169,7 @@ fun recipeInit(): List<Recipe> {
                 "warped_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "carved_pumpkin",
@@ -1180,7 +1177,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "pumpkin" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "jack_o_lantern",
@@ -1189,7 +1186,7 @@ fun recipeInit(): List<Recipe> {
                 "carved_pumpkin" to 1,
                 "torch" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_basalt",
@@ -1197,7 +1194,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "basalt" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "soul_torch",
@@ -1207,7 +1204,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 1,
                 "soul_sand" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "glowstone",
@@ -1215,7 +1212,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "glowstone_dust" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_bricks",
@@ -1223,7 +1220,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_stone_bricks",
@@ -1232,7 +1229,7 @@ fun recipeInit(): List<Recipe> {
                 "stone_bricks" to 1,
                 "vine" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cracked_stone_bricks",
@@ -1240,7 +1237,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone_bricks" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "chiseled_stone_bricks",
@@ -1248,7 +1245,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "deepslate_bricks",
@@ -1256,7 +1253,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cracked_deepslate_bricks",
@@ -1264,7 +1261,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "deepslate_bricks" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "deepslate_tiles",
@@ -1272,7 +1269,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cracked_deepslate_tiles",
@@ -1280,7 +1277,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "deepslate_tiles" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "chiseled_deepslate",
@@ -1288,7 +1285,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "iron_bars",
@@ -1296,7 +1293,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chain",
@@ -1305,7 +1302,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 1,
                 "iron_nugget" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "melon",
@@ -1313,7 +1310,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "melon_slice" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brick_stairs",
@@ -1321,7 +1318,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "stone_brick_stairs",
@@ -1329,7 +1326,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "nether_bricks",
@@ -1337,7 +1334,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_brick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cracked_nether_bricks",
@@ -1345,7 +1342,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_bricks" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "chiseled_nether_bricks",
@@ -1353,7 +1350,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "nether_brick_fence",
@@ -1362,7 +1359,7 @@ fun recipeInit(): List<Recipe> {
                 "nether_bricks" to 4,
                 "nether_brick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "nether_brick_stairs",
@@ -1370,7 +1367,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "enchanting_table",
@@ -1380,7 +1377,7 @@ fun recipeInit(): List<Recipe> {
                 "book" to 1,
                 "obsidian" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "end_stone_bricks",
@@ -1388,7 +1385,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "end_stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "sandstone_stairs",
@@ -1396,7 +1393,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "ender_chest",
@@ -1405,7 +1402,7 @@ fun recipeInit(): List<Recipe> {
                 "obsidian" to 8,
                 "ender_eye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "emerald_block",
@@ -1413,7 +1410,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "emerald" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_stairs",
@@ -1421,7 +1418,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_stairs",
@@ -1429,7 +1426,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_stairs",
@@ -1437,7 +1434,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_stairs",
@@ -1445,7 +1442,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_stairs",
@@ -1453,7 +1450,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "beacon",
@@ -1463,7 +1460,7 @@ fun recipeInit(): List<Recipe> {
                 "obsidian" to 3,
                 "nether_star" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cobblestone_wall",
@@ -1471,7 +1468,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobblestone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_cobblestone_wall",
@@ -1479,7 +1476,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mossy_cobblestone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "brick_wall",
@@ -1487,7 +1484,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "prismarine_wall",
@@ -1495,7 +1492,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "red_sandstone_wall",
@@ -1503,7 +1500,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_stone_brick_wall",
@@ -1511,7 +1508,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mossy_stone_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "granite_wall",
@@ -1519,7 +1516,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "granite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "stone_brick_wall",
@@ -1527,7 +1524,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "nether_brick_wall",
@@ -1535,7 +1532,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "andesite_wall",
@@ -1543,7 +1540,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "andesite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "red_nether_brick_wall",
@@ -1551,7 +1548,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "sandstone_wall",
@@ -1559,7 +1556,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "end_stone_brick_wall",
@@ -1567,7 +1564,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "end_stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "diorite_wall",
@@ -1575,7 +1572,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diorite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "blackstone_wall",
@@ -1583,7 +1580,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_wall",
@@ -1591,7 +1588,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_brick_wall",
@@ -1599,7 +1596,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cobbled_deepslate_wall",
@@ -1607,7 +1604,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_deepslate_wall",
@@ -1615,7 +1612,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "deepslate_brick_wall",
@@ -1623,7 +1620,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "deepslate_tile_wall",
@@ -1631,7 +1628,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "anvil",
@@ -1640,7 +1637,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 4,
                 "iron_block" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chiseled_quartz_block",
@@ -1648,7 +1645,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "quartz_block",
@@ -1656,7 +1653,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "quartz_bricks",
@@ -1664,7 +1661,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "quartz_pillar",
@@ -1672,7 +1669,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "quartz_stairs",
@@ -1680,7 +1677,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "quartz_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "white_terracotta",
@@ -1689,7 +1686,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "white_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_terracotta",
@@ -1698,7 +1695,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_terracotta",
@@ -1707,7 +1704,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_terracotta",
@@ -1716,7 +1713,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_terracotta",
@@ -1725,7 +1722,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_terracotta",
@@ -1734,7 +1731,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_terracotta",
@@ -1743,7 +1740,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_terracotta",
@@ -1752,7 +1749,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_terracotta",
@@ -1761,7 +1758,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_terracotta",
@@ -1770,7 +1767,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_terracotta",
@@ -1779,7 +1776,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_terracotta",
@@ -1788,7 +1785,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_terracotta",
@@ -1797,7 +1794,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_terracotta",
@@ -1806,7 +1803,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_terracotta",
@@ -1815,7 +1812,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_terracotta",
@@ -1824,7 +1821,7 @@ fun recipeInit(): List<Recipe> {
                 "terracotta" to 8,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "hay_block",
@@ -1832,7 +1829,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "wheat" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_carpet",
@@ -1840,7 +1837,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "white_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_carpet",
@@ -1848,7 +1845,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "orange_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_carpet",
@@ -1856,7 +1853,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "magenta_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_carpet",
@@ -1864,7 +1861,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "light_blue_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_carpet",
@@ -1872,7 +1869,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "yellow_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_carpet",
@@ -1880,7 +1877,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "lime_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_carpet",
@@ -1888,7 +1885,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "pink_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_carpet",
@@ -1896,7 +1893,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gray_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_carpet",
@@ -1904,7 +1901,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "light_gray_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_carpet",
@@ -1912,7 +1909,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cyan_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_carpet",
@@ -1920,7 +1917,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "purple_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_carpet",
@@ -1928,7 +1925,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blue_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_carpet",
@@ -1936,7 +1933,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "brown_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_carpet",
@@ -1944,7 +1941,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "green_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_carpet",
@@ -1952,7 +1949,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_carpet",
@@ -1960,7 +1957,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "black_wool" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "packed_ice",
@@ -1968,7 +1965,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "ice" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_stairs",
@@ -1976,7 +1973,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_stairs",
@@ -1984,7 +1981,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_stained_glass",
@@ -1993,7 +1990,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "white_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_stained_glass",
@@ -2002,7 +1999,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_stained_glass",
@@ -2011,7 +2008,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_stained_glass",
@@ -2020,7 +2017,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_stained_glass",
@@ -2029,7 +2026,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_stained_glass",
@@ -2038,7 +2035,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_stained_glass",
@@ -2047,7 +2044,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_stained_glass",
@@ -2056,7 +2053,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_stained_glass",
@@ -2065,7 +2062,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_stained_glass",
@@ -2074,7 +2071,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_stained_glass",
@@ -2083,7 +2080,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_stained_glass",
@@ -2092,7 +2089,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_stained_glass",
@@ -2101,7 +2098,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_stained_glass",
@@ -2110,7 +2107,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_stained_glass",
@@ -2119,7 +2116,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_stained_glass",
@@ -2128,7 +2125,7 @@ fun recipeInit(): List<Recipe> {
                 "glass" to 8,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_stained_glass_pane",
@@ -2137,7 +2134,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "white_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_stained_glass_pane",
@@ -2146,7 +2143,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_stained_glass_pane",
@@ -2155,7 +2152,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_stained_glass_pane",
@@ -2164,7 +2161,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_stained_glass_pane",
@@ -2173,7 +2170,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_stained_glass_pane",
@@ -2182,7 +2179,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_stained_glass_pane",
@@ -2191,7 +2188,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_stained_glass_pane",
@@ -2200,7 +2197,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_stained_glass_pane",
@@ -2209,7 +2206,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_stained_glass_pane",
@@ -2218,7 +2215,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_stained_glass_pane",
@@ -2227,7 +2224,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_stained_glass_pane",
@@ -2236,7 +2233,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_stained_glass_pane",
@@ -2245,7 +2242,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_stained_glass_pane",
@@ -2254,7 +2251,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_stained_glass_pane",
@@ -2263,7 +2260,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_stained_glass_pane",
@@ -2272,7 +2269,7 @@ fun recipeInit(): List<Recipe> {
                 "glass_pane" to 8,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "prismarine",
@@ -2280,7 +2277,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine_shard" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "prismarine_bricks",
@@ -2288,7 +2285,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine_shard" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_prismarine",
@@ -2297,7 +2294,7 @@ fun recipeInit(): List<Recipe> {
                 "prismarine_shard" to 8,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "prismarine_stairs",
@@ -2305,7 +2302,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "prismarine_brick_stairs",
@@ -2313,7 +2310,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "prismarine_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "dark_prismarine_stairs",
@@ -2321,7 +2318,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_prismarine" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "sea_lantern",
@@ -2330,7 +2327,7 @@ fun recipeInit(): List<Recipe> {
                 "prismarine_shard" to 4,
                 "prismarine_crystals" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_sandstone",
@@ -2338,7 +2335,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sand" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chiseled_red_sandstone",
@@ -2346,7 +2343,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cut_red_sandstone",
@@ -2354,7 +2351,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "red_sandstone_stairs",
@@ -2362,7 +2359,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "magma_block",
@@ -2370,7 +2367,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "magma_cream" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "nether_wart_block",
@@ -2378,7 +2375,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "nether_wart" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_nether_bricks",
@@ -2387,7 +2384,7 @@ fun recipeInit(): List<Recipe> {
                 "nether_brick" to 2,
                 "nether_wart" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bone_block",
@@ -2395,7 +2392,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bone_meal" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "shulker_box",
@@ -2404,7 +2401,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_shell" to 2,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_shulker_box",
@@ -2413,7 +2410,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "white_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_shulker_box",
@@ -2422,7 +2419,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_shulker_box",
@@ -2431,7 +2428,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_shulker_box",
@@ -2440,7 +2437,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_shulker_box",
@@ -2449,7 +2446,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_shulker_box",
@@ -2458,7 +2455,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_shulker_box",
@@ -2467,7 +2464,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_shulker_box",
@@ -2476,7 +2473,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_shulker_box",
@@ -2485,7 +2482,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_shulker_box",
@@ -2494,7 +2491,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_shulker_box",
@@ -2503,7 +2500,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_shulker_box",
@@ -2512,7 +2509,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_shulker_box",
@@ -2521,7 +2518,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_shulker_box",
@@ -2530,7 +2527,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_shulker_box",
@@ -2539,7 +2536,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_shulker_box",
@@ -2548,7 +2545,7 @@ fun recipeInit(): List<Recipe> {
                 "shulker_box" to 1,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_glazed_terracotta",
@@ -2556,7 +2553,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "white_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "orange_glazed_terracotta",
@@ -2564,7 +2561,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "orange_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "magenta_glazed_terracotta",
@@ -2572,7 +2569,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "magenta_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "light_blue_glazed_terracotta",
@@ -2580,7 +2577,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "light_blue_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "yellow_glazed_terracotta",
@@ -2588,7 +2585,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "yellow_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "lime_glazed_terracotta",
@@ -2596,7 +2593,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "lime_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "pink_glazed_terracotta",
@@ -2604,7 +2601,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "pink_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "gray_glazed_terracotta",
@@ -2612,7 +2609,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gray_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "light_gray_glazed_terracotta",
@@ -2620,7 +2617,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "light_gray_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "cyan_glazed_terracotta",
@@ -2628,7 +2625,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cyan_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "purple_glazed_terracotta",
@@ -2636,7 +2633,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "purple_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "blue_glazed_terracotta",
@@ -2644,7 +2641,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blue_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "brown_glazed_terracotta",
@@ -2652,7 +2649,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "brown_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "green_glazed_terracotta",
@@ -2660,7 +2657,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "green_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "red_glazed_terracotta",
@@ -2668,7 +2665,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "black_glazed_terracotta",
@@ -2676,7 +2673,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "black_terracotta" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "white_concrete",
@@ -2684,7 +2681,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "white_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "orange_concrete",
@@ -2692,7 +2689,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "orange_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "magenta_concrete",
@@ -2700,7 +2697,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "magenta_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "light_blue_concrete",
@@ -2708,7 +2705,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "light_blue_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "yellow_concrete",
@@ -2716,7 +2713,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "yellow_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "lime_concrete",
@@ -2724,7 +2721,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "lime_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "pink_concrete",
@@ -2732,7 +2729,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "pink_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "gray_concrete",
@@ -2740,7 +2737,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gray_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "light_gray_concrete",
@@ -2748,7 +2745,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "light_gray_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "cyan_concrete",
@@ -2756,7 +2753,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cyan_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "purple_concrete",
@@ -2764,7 +2761,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "purple_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "blue_concrete",
@@ -2772,7 +2769,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blue_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "brown_concrete",
@@ -2780,7 +2777,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "brown_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "green_concrete",
@@ -2788,7 +2785,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "green_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "red_concrete",
@@ -2796,7 +2793,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "black_concrete",
@@ -2804,7 +2801,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "black_concrete_powder" to 1
             ),
-            recipeType = RecipeType.Watering
+            recipeType = "watering"
         ),
         Recipe(
             result = "white_concrete_powder",
@@ -2814,7 +2811,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "white_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_concrete_powder",
@@ -2824,7 +2821,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_concrete_powder",
@@ -2834,7 +2831,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_concrete_powder",
@@ -2844,7 +2841,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_concrete_powder",
@@ -2854,7 +2851,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_concrete_powder",
@@ -2864,7 +2861,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_concrete_powder",
@@ -2874,7 +2871,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_concrete_powder",
@@ -2884,7 +2881,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_concrete_powder",
@@ -2894,7 +2891,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_concrete_powder",
@@ -2904,7 +2901,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_concrete_powder",
@@ -2914,7 +2911,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_concrete_powder",
@@ -2924,7 +2921,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_concrete_powder",
@@ -2934,7 +2931,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_concrete_powder",
@@ -2944,7 +2941,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_concrete_powder",
@@ -2954,7 +2951,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_concrete_powder",
@@ -2964,7 +2961,7 @@ fun recipeInit(): List<Recipe> {
                 "gravel" to 4,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_ice",
@@ -2972,7 +2969,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "packed_ice" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "conduit",
@@ -2981,7 +2978,7 @@ fun recipeInit(): List<Recipe> {
                 "heart_of_the_sea" to 1,
                 "nautilus_shell" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_granite_stairs",
@@ -2989,7 +2986,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "granite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_red_sandstone_stairs",
@@ -2997,7 +2994,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_stone_brick_stairs",
@@ -3005,7 +3002,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mossy_stone_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_diorite_stairs",
@@ -3013,7 +3010,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diorite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_cobblestone_stairs",
@@ -3021,7 +3018,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mossy_cobblestone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "end_stone_brick_stairs",
@@ -3029,7 +3026,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "end_stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "stone_stairs",
@@ -3037,7 +3034,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_sandstone_stairs",
@@ -3045,7 +3042,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_quartz_stairs",
@@ -3053,7 +3050,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_quartz" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "granite_stairs",
@@ -3061,7 +3058,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "granite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "andesite_stairs",
@@ -3069,7 +3066,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "andesite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "red_nether_brick_stairs",
@@ -3077,7 +3074,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_andesite_stairs",
@@ -3085,7 +3082,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "andesite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "diorite_stairs",
@@ -3093,7 +3090,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diorite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cobbled_deepslate_stairs",
@@ -3101,7 +3098,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_deepslate_stairs",
@@ -3109,7 +3106,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "deepslate_brick_stairs",
@@ -3117,7 +3114,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "deepslate_tile_stairs",
@@ -3125,7 +3122,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_granite_slab",
@@ -3133,7 +3130,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "granite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_red_sandstone_slab",
@@ -3141,7 +3138,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_red_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_stone_brick_slab",
@@ -3149,7 +3146,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mossy_stone_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_diorite_slab",
@@ -3157,7 +3154,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diorite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mossy_cobblestone_slab",
@@ -3165,7 +3162,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mossy_cobblestone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "end_stone_brick_slab",
@@ -3173,7 +3170,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "end_stone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_sandstone_slab",
@@ -3181,7 +3178,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_sandstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "smooth_quartz_slab",
@@ -3189,7 +3186,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "smooth_quartz" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "granite_slab",
@@ -3197,7 +3194,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "granite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "andesite_slab",
@@ -3205,7 +3202,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "andesite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "red_nether_brick_slab",
@@ -3213,7 +3210,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "red_nether_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_andesite_slab",
@@ -3221,7 +3218,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "andesite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "diorite_slab",
@@ -3229,7 +3226,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diorite" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "cobbled_deepslate_slab",
@@ -3237,7 +3234,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_deepslate_slab",
@@ -3245,7 +3242,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "deepslate_brick_slab",
@@ -3253,7 +3250,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "deepslate_tile_slab",
@@ -3261,7 +3258,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cobbled_deepslate" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "scaffolding",
@@ -3270,7 +3267,7 @@ fun recipeInit(): List<Recipe> {
                 "bamboo" to 6,
                 "string" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "redstone_torch",
@@ -3279,7 +3276,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 1,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "redstone_block",
@@ -3287,7 +3284,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "redstone" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "repeater",
@@ -3297,7 +3294,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 1,
                 "stone" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "comparator",
@@ -3307,7 +3304,7 @@ fun recipeInit(): List<Recipe> {
                 "quartz" to 1,
                 "stone" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "piston",
@@ -3318,7 +3315,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 4,
                 "redstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "sticky_piston",
@@ -3327,7 +3324,7 @@ fun recipeInit(): List<Recipe> {
                 "piston" to 1,
                 "slime_ball" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "slime_block",
@@ -3335,7 +3332,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "slime_ball" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "honey_block",
@@ -3343,7 +3340,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "honey_bottle" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "observer",
@@ -3353,7 +3350,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 2,
                 "quartz" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "hopper",
@@ -3362,7 +3359,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 5,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dispenser",
@@ -3372,7 +3369,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 1,
                 "bow" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dropper",
@@ -3381,7 +3378,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 7,
                 "redstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lectern",
@@ -3390,7 +3387,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_slab" to 4,
                 "bookshelf" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "target",
@@ -3399,7 +3396,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 4,
                 "hay_block" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lever",
@@ -3408,7 +3405,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 1,
                 "cobblestone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lightning_rod",
@@ -3416,7 +3413,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "copper_ingot" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "daylight_detector",
@@ -3426,7 +3423,7 @@ fun recipeInit(): List<Recipe> {
                 "quartz" to 3,
                 "oak_slab" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tripwire_hook",
@@ -3436,7 +3433,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 1,
                 "oak_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "trapped_chest",
@@ -3445,7 +3442,7 @@ fun recipeInit(): List<Recipe> {
                 "chest" to 1,
                 "tripwire_hook" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tnt",
@@ -3454,7 +3451,7 @@ fun recipeInit(): List<Recipe> {
                 "sand" to 4,
                 "gunpowder" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "redstone_lamp",
@@ -3463,7 +3460,7 @@ fun recipeInit(): List<Recipe> {
                 "glowstone" to 1,
                 "redstone" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "note_block",
@@ -3472,7 +3469,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 8,
                 "redstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_button",
@@ -3480,7 +3477,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_blackstone_button",
@@ -3488,7 +3485,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_blackstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_button",
@@ -3496,7 +3493,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_button",
@@ -3504,7 +3501,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_button",
@@ -3512,7 +3509,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_button",
@@ -3520,7 +3517,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_button",
@@ -3528,7 +3525,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_button",
@@ -3536,7 +3533,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_button",
@@ -3544,7 +3541,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_button",
@@ -3552,7 +3549,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_pressure_plate",
@@ -3560,7 +3557,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "stone" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_blackstone_pressure_plate",
@@ -3568,7 +3565,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_blackstone" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_weighted_pressure_plate",
@@ -3576,7 +3573,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gold_ingot" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "heavy_weighted_pressure_plate",
@@ -3584,7 +3581,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_pressure_plate",
@@ -3592,7 +3589,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_pressure_plate",
@@ -3600,7 +3597,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_pressure_plate",
@@ -3608,7 +3605,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_pressure_plate",
@@ -3616,7 +3613,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_pressure_plate",
@@ -3624,7 +3621,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_pressure_plate",
@@ -3632,7 +3629,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_pressure_plate",
@@ -3640,7 +3637,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_pressure_plate",
@@ -3648,7 +3645,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_door",
@@ -3656,7 +3653,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_door",
@@ -3664,7 +3661,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_door",
@@ -3672,7 +3669,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_door",
@@ -3680,7 +3677,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_door",
@@ -3688,7 +3685,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_door",
@@ -3696,7 +3693,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_door",
@@ -3704,7 +3701,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_door",
@@ -3712,7 +3709,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_door",
@@ -3720,7 +3717,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_trapdoor",
@@ -3728,7 +3725,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_trapdoor",
@@ -3736,7 +3733,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_trapdoor",
@@ -3744,7 +3741,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_trapdoor",
@@ -3752,7 +3749,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_trapdoor",
@@ -3760,7 +3757,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_trapdoor",
@@ -3768,7 +3765,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_trapdoor",
@@ -3776,7 +3773,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_trapdoor",
@@ -3784,7 +3781,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "crimson_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_trapdoor",
@@ -3792,7 +3789,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "warped_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_fence_gate",
@@ -3801,7 +3798,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_fence_gate",
@@ -3810,7 +3807,7 @@ fun recipeInit(): List<Recipe> {
                 "spruce_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_fence_gate",
@@ -3819,7 +3816,7 @@ fun recipeInit(): List<Recipe> {
                 "birch_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_fence_gate",
@@ -3828,7 +3825,7 @@ fun recipeInit(): List<Recipe> {
                 "jungle_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_fence_gate",
@@ -3837,7 +3834,7 @@ fun recipeInit(): List<Recipe> {
                 "acacia_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_fence_gate",
@@ -3846,7 +3843,7 @@ fun recipeInit(): List<Recipe> {
                 "dark_oak_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_fence_gate",
@@ -3855,7 +3852,7 @@ fun recipeInit(): List<Recipe> {
                 "crimson_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_fence_gate",
@@ -3864,7 +3861,7 @@ fun recipeInit(): List<Recipe> {
                 "warped_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "powered_rail",
@@ -3874,7 +3871,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 1,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "detector_rail",
@@ -3884,7 +3881,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 1,
                 "stone_pressure_plate" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "rail",
@@ -3893,7 +3890,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "activator_rail",
@@ -3903,7 +3900,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 2,
                 "redstone_torch" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "minecart",
@@ -3911,7 +3908,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chest_minecart",
@@ -3920,7 +3917,7 @@ fun recipeInit(): List<Recipe> {
                 "minecart" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "furnace_minecart",
@@ -3929,7 +3926,7 @@ fun recipeInit(): List<Recipe> {
                 "minecart" to 1,
                 "furnace" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tnt_minecart",
@@ -3938,7 +3935,7 @@ fun recipeInit(): List<Recipe> {
                 "minecart" to 1,
                 "tnt" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "hopper_minecart",
@@ -3947,7 +3944,7 @@ fun recipeInit(): List<Recipe> {
                 "minecart" to 1,
                 "hopper" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "carrot_on_a_stick",
@@ -3956,7 +3953,7 @@ fun recipeInit(): List<Recipe> {
                 "carrot" to 1,
                 "fishing_rod" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_fungus_on_a_stick",
@@ -3965,7 +3962,7 @@ fun recipeInit(): List<Recipe> {
                 "warped_fungus" to 1,
                 "fishing_rod" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_boat",
@@ -3973,7 +3970,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_boat",
@@ -3981,7 +3978,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "spruce_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_boat",
@@ -3989,7 +3986,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "birch_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_boat",
@@ -3997,7 +3994,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "jungle_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_boat",
@@ -4005,7 +4002,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "acacia_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_boat",
@@ -4013,7 +4010,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dark_oak_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "turtle_helmet",
@@ -4021,7 +4018,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "scute" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "flint_and_steel",
@@ -4030,7 +4027,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 1,
                 "flint" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bow",
@@ -4039,7 +4036,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 3,
                 "string" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "arrow",
@@ -4049,7 +4046,7 @@ fun recipeInit(): List<Recipe> {
                 "flint" to 1,
                 "feather" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "charcoal",
@@ -4057,7 +4054,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_log" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "netherite_ingot",
@@ -4066,7 +4063,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 4,
                 "netherite_scrap" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "netherite_scrap",
@@ -4074,7 +4071,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "ancient_debris" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "wooden_sword",
@@ -4083,7 +4080,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 2,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "wooden_shovel",
@@ -4092,7 +4089,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 1,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "wooden_pickaxe",
@@ -4101,7 +4098,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "wooden_axe",
@@ -4110,7 +4107,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "wooden_hoe",
@@ -4119,7 +4116,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 2,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_sword",
@@ -4128,7 +4125,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 2,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_shovel",
@@ -4137,7 +4134,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 1,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_pickaxe",
@@ -4146,7 +4143,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_axe",
@@ -4155,7 +4152,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stone_hoe",
@@ -4164,7 +4161,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 2,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_sword",
@@ -4173,7 +4170,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 2,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_shovel",
@@ -4182,7 +4179,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 1,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_pickaxe",
@@ -4191,7 +4188,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_axe",
@@ -4200,7 +4197,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_hoe",
@@ -4209,7 +4206,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 2,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_sword",
@@ -4218,7 +4215,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 2,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_shovel",
@@ -4227,7 +4224,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 1,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_pickaxe",
@@ -4236,7 +4233,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_axe",
@@ -4245,7 +4242,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_hoe",
@@ -4254,7 +4251,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 2,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_sword",
@@ -4263,7 +4260,7 @@ fun recipeInit(): List<Recipe> {
                 "diamond" to 2,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_shovel",
@@ -4272,7 +4269,7 @@ fun recipeInit(): List<Recipe> {
                 "diamond" to 1,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_pickaxe",
@@ -4281,7 +4278,7 @@ fun recipeInit(): List<Recipe> {
                 "diamond" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_axe",
@@ -4290,7 +4287,7 @@ fun recipeInit(): List<Recipe> {
                 "diamond" to 3,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_hoe",
@@ -4299,7 +4296,7 @@ fun recipeInit(): List<Recipe> {
                 "diamond" to 2,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "netherite_sword",
@@ -4309,7 +4306,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_shovel",
@@ -4319,7 +4316,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_pickaxe",
@@ -4329,7 +4326,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_axe",
@@ -4339,7 +4336,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_hoe",
@@ -4349,7 +4346,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "stick",
@@ -4357,7 +4354,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bowl",
@@ -4365,7 +4362,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mushroom_stew",
@@ -4375,7 +4372,7 @@ fun recipeInit(): List<Recipe> {
                 "brown_mushroom" to 1,
                 "red_mushroom" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bread",
@@ -4383,7 +4380,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "wheat" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "leather_helmet",
@@ -4391,7 +4388,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "leather" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "leather_chestplate",
@@ -4399,7 +4396,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "leather" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "leather_leggings",
@@ -4407,7 +4404,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "leather" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "leather_boots",
@@ -4415,7 +4412,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "leather" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_helmet",
@@ -4423,7 +4420,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_chestplate",
@@ -4431,7 +4428,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_leggings",
@@ -4439,7 +4436,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_boots",
@@ -4447,7 +4444,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_helmet",
@@ -4455,7 +4452,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gold_ingot" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_chestplate",
@@ -4463,7 +4460,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gold_ingot" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_leggings",
@@ -4471,7 +4468,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gold_ingot" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_boots",
@@ -4479,7 +4476,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gold_ingot" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_helmet",
@@ -4487,7 +4484,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diamond" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_chestplate",
@@ -4495,7 +4492,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diamond" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_leggings",
@@ -4503,7 +4500,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diamond" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "diamond_boots",
@@ -4511,7 +4508,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "diamond" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "netherite_helmet",
@@ -4521,7 +4518,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_chestplate",
@@ -4531,7 +4528,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_leggings",
@@ -4541,7 +4538,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "netherite_boots",
@@ -4551,7 +4548,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_upgrade_smithing_template" to 1,
                 "netherite_ingot" to 1
             ),
-            recipeType = RecipeType.Smithing
+            recipeType = "smithing"
         ),
         Recipe(
             result = "cooked_porkchop",
@@ -4559,7 +4556,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "porkchop" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "painting",
@@ -4568,7 +4565,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 8,
                 "white_wool" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_apple",
@@ -4577,7 +4574,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 8,
                 "apple" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_sign",
@@ -4586,7 +4583,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_sign",
@@ -4595,7 +4592,7 @@ fun recipeInit(): List<Recipe> {
                 "spruce_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_sign",
@@ -4604,7 +4601,7 @@ fun recipeInit(): List<Recipe> {
                 "birch_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_sign",
@@ -4613,7 +4610,7 @@ fun recipeInit(): List<Recipe> {
                 "jungle_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_sign",
@@ -4622,7 +4619,7 @@ fun recipeInit(): List<Recipe> {
                 "acacia_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_sign",
@@ -4631,7 +4628,7 @@ fun recipeInit(): List<Recipe> {
                 "dark_oak_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_sign",
@@ -4640,7 +4637,7 @@ fun recipeInit(): List<Recipe> {
                 "crimson_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_sign",
@@ -4649,7 +4646,7 @@ fun recipeInit(): List<Recipe> {
                 "warped_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bucket",
@@ -4657,7 +4654,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brick",
@@ -4665,7 +4662,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "clay_ball" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "dried_kelp_block",
@@ -4673,7 +4670,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dried_kelp" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "paper",
@@ -4681,7 +4678,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sugar_cane" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "book",
@@ -4690,7 +4687,7 @@ fun recipeInit(): List<Recipe> {
                 "paper" to 3,
                 "leather" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "compass",
@@ -4699,7 +4696,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 4,
                 "redstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "fishing_rod",
@@ -4708,7 +4705,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 3,
                 "string" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "clock",
@@ -4717,7 +4714,7 @@ fun recipeInit(): List<Recipe> {
                 "gold_ingot" to 4,
                 "redstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spyglass",
@@ -4726,7 +4723,7 @@ fun recipeInit(): List<Recipe> {
                 "amethyst_shard" to 1,
                 "copper_ingot" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cooked_cod",
@@ -4734,7 +4731,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cod" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "cooked_salmon",
@@ -4742,7 +4739,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "salmon" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "white_dye",
@@ -4750,7 +4747,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bone_meal" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_dye",
@@ -4758,7 +4755,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "orange_tulip" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_dye",
@@ -4766,7 +4763,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "allium" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_dye",
@@ -4774,7 +4771,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blue_orchid" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_dye",
@@ -4782,7 +4779,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "dandelion" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_dye",
@@ -4790,7 +4787,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sea_pickle" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "pink_dye",
@@ -4798,7 +4795,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "pink_tulip" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_dye",
@@ -4807,7 +4804,7 @@ fun recipeInit(): List<Recipe> {
                 "white_dye" to 1,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_dye",
@@ -4815,7 +4812,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "azure_bluet" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_dye",
@@ -4824,7 +4821,7 @@ fun recipeInit(): List<Recipe> {
                 "green_dye" to 1,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_dye",
@@ -4833,7 +4830,7 @@ fun recipeInit(): List<Recipe> {
                 "blue_dye" to 1,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_dye",
@@ -4841,7 +4838,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cornflower" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_dye",
@@ -4849,7 +4846,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cocoa_beans" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_dye",
@@ -4857,7 +4854,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cactus" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "red_dye",
@@ -4865,7 +4862,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "poppy" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_dye",
@@ -4873,7 +4870,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "ink_sac" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bone_meal",
@@ -4881,7 +4878,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "sugar",
@@ -4889,7 +4886,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "sugar_cane" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cake",
@@ -4899,7 +4896,7 @@ fun recipeInit(): List<Recipe> {
                 "sugar" to 2,
                 "milk_bucket" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_bed",
@@ -4908,7 +4905,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 3,
                 "oak_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_bed",
@@ -4917,7 +4914,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_bed",
@@ -4926,7 +4923,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_bed",
@@ -4935,7 +4932,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_bed",
@@ -4944,7 +4941,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_bed",
@@ -4953,7 +4950,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_bed",
@@ -4962,7 +4959,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_bed",
@@ -4971,7 +4968,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_bed",
@@ -4980,7 +4977,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_bed",
@@ -4989,7 +4986,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_bed",
@@ -4998,7 +4995,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_bed",
@@ -5007,7 +5004,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_bed",
@@ -5016,7 +5013,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_bed",
@@ -5025,7 +5022,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_bed",
@@ -5034,7 +5031,7 @@ fun recipeInit(): List<Recipe> {
                 "white_bed" to 1,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cookie",
@@ -5043,7 +5040,7 @@ fun recipeInit(): List<Recipe> {
                 "wheat" to 2,
                 "cocoa_beans" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "shears",
@@ -5051,7 +5048,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dried_kelp",
@@ -5059,7 +5056,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "kelp" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "pumpkin_seeds",
@@ -5067,7 +5064,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "pumpkin" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "melon_seeds",
@@ -5075,7 +5072,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "melon_slice" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cooked_beef",
@@ -5083,7 +5080,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "beef" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "cooked_chicken",
@@ -5091,7 +5088,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "chicken" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "gold_nugget",
@@ -5099,7 +5096,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "gold_ingot" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "glass_bottle",
@@ -5107,7 +5104,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "glass" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "fermented_spider_eye",
@@ -5117,7 +5114,7 @@ fun recipeInit(): List<Recipe> {
                 "brown_mushroom" to 1,
                 "sugar" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blaze_powder",
@@ -5125,7 +5122,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blaze_rod" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magma_cream",
@@ -5134,7 +5131,7 @@ fun recipeInit(): List<Recipe> {
                 "blaze_powder" to 1,
                 "slime_ball" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brewing_stand",
@@ -5143,7 +5140,7 @@ fun recipeInit(): List<Recipe> {
                 "cobblestone" to 3,
                 "blaze_rod" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cauldron",
@@ -5151,7 +5148,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "ender_eye",
@@ -5160,7 +5157,7 @@ fun recipeInit(): List<Recipe> {
                 "ender_pearl" to 1,
                 "blaze_powder" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "glistering_melon_slice",
@@ -5169,7 +5166,7 @@ fun recipeInit(): List<Recipe> {
                 "melon_slice" to 1,
                 "gold_nugget" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "fire_charge",
@@ -5179,7 +5176,7 @@ fun recipeInit(): List<Recipe> {
                 "blaze_powder" to 1,
                 "gunpowder" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "writable_book",
@@ -5189,7 +5186,7 @@ fun recipeInit(): List<Recipe> {
                 "feather" to 1,
                 "ink_sac" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "item_frame",
@@ -5198,7 +5195,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 8,
                 "leather" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "glow_item_frame",
@@ -5207,7 +5204,7 @@ fun recipeInit(): List<Recipe> {
                 "item_frame" to 1,
                 "glow_ink_sac" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "flower_pot",
@@ -5215,7 +5212,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "brick" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "baked_potato",
@@ -5223,7 +5220,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "potato" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "map",
@@ -5232,7 +5229,7 @@ fun recipeInit(): List<Recipe> {
                 "paper" to 8,
                 "compass" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "golden_carrot",
@@ -5241,7 +5238,7 @@ fun recipeInit(): List<Recipe> {
                 "carrot" to 1,
                 "gold_nugget" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pumpkin_pie",
@@ -5251,7 +5248,7 @@ fun recipeInit(): List<Recipe> {
                 "sugar" to 1,
                 "egg" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "firework_rocket",
@@ -5260,7 +5257,7 @@ fun recipeInit(): List<Recipe> {
                 "gunpowder" to 1,
                 "paper" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "nether_brick",
@@ -5268,7 +5265,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "netherrack" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "cooked_rabbit",
@@ -5276,7 +5273,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "rabbit" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "rabbit_stew",
@@ -5288,7 +5285,7 @@ fun recipeInit(): List<Recipe> {
                 "brown_mushroom" to 1,
                 "cooked_rabbit" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "armor_stand",
@@ -5297,7 +5294,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 6,
                 "smooth_stone_slab" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lead",
@@ -5306,7 +5303,7 @@ fun recipeInit(): List<Recipe> {
                 "string" to 4,
                 "slime_ball" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cooked_mutton",
@@ -5314,7 +5311,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mutton" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_banner",
@@ -5323,7 +5320,7 @@ fun recipeInit(): List<Recipe> {
                 "white_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_banner",
@@ -5332,7 +5329,7 @@ fun recipeInit(): List<Recipe> {
                 "orange_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_banner",
@@ -5341,7 +5338,7 @@ fun recipeInit(): List<Recipe> {
                 "magenta_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_banner",
@@ -5350,7 +5347,7 @@ fun recipeInit(): List<Recipe> {
                 "light_blue_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_banner",
@@ -5359,7 +5356,7 @@ fun recipeInit(): List<Recipe> {
                 "yellow_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_banner",
@@ -5368,7 +5365,7 @@ fun recipeInit(): List<Recipe> {
                 "lime_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_banner",
@@ -5377,7 +5374,7 @@ fun recipeInit(): List<Recipe> {
                 "pink_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_banner",
@@ -5386,7 +5383,7 @@ fun recipeInit(): List<Recipe> {
                 "gray_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_banner",
@@ -5395,7 +5392,7 @@ fun recipeInit(): List<Recipe> {
                 "light_gray_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_banner",
@@ -5404,7 +5401,7 @@ fun recipeInit(): List<Recipe> {
                 "cyan_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_banner",
@@ -5413,7 +5410,7 @@ fun recipeInit(): List<Recipe> {
                 "purple_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_banner",
@@ -5422,7 +5419,7 @@ fun recipeInit(): List<Recipe> {
                 "blue_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_banner",
@@ -5431,7 +5428,7 @@ fun recipeInit(): List<Recipe> {
                 "brown_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_banner",
@@ -5440,7 +5437,7 @@ fun recipeInit(): List<Recipe> {
                 "green_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_banner",
@@ -5449,7 +5446,7 @@ fun recipeInit(): List<Recipe> {
                 "red_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_banner",
@@ -5458,7 +5455,7 @@ fun recipeInit(): List<Recipe> {
                 "black_wool" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "end_crystal",
@@ -5468,7 +5465,7 @@ fun recipeInit(): List<Recipe> {
                 "ender_eye" to 1,
                 "ghast_tear" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "popped_chorus_fruit",
@@ -5476,7 +5473,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "chorus_fruit" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "beetroot_soup",
@@ -5485,7 +5482,7 @@ fun recipeInit(): List<Recipe> {
                 "beetroot" to 6,
                 "bowl" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spectral_arrow",
@@ -5494,7 +5491,7 @@ fun recipeInit(): List<Recipe> {
                 "glowstone_dust" to 4,
                 "arrow" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "shield",
@@ -5503,7 +5500,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 6,
                 "iron_ingot" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "iron_ingot",
@@ -5511,7 +5508,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "iron_ingot" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crossbow",
@@ -5522,7 +5519,7 @@ fun recipeInit(): List<Recipe> {
                 "string" to 2,
                 "tripwire_hook" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "loom",
@@ -5531,7 +5528,7 @@ fun recipeInit(): List<Recipe> {
                 "string" to 2,
                 "oak_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "composter",
@@ -5539,7 +5536,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oak_slab" to 7
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "barrel",
@@ -5548,7 +5545,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 6,
                 "oak_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "smoker",
@@ -5557,7 +5554,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_log" to 4,
                 "furnace" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blast_furnace",
@@ -5567,7 +5564,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_ingot" to 5,
                 "furnace" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cartography_table",
@@ -5576,7 +5573,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 4,
                 "paper" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "fletching_table",
@@ -5585,7 +5582,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 4,
                 "flint" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "grindstone",
@@ -5595,7 +5592,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 2,
                 "stone_slab" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "smithing_table",
@@ -5604,7 +5601,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 4,
                 "iron_ingot" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stonecutter",
@@ -5613,7 +5610,7 @@ fun recipeInit(): List<Recipe> {
                 "stone" to 3,
                 "iron_ingot" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lantern",
@@ -5622,7 +5619,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_nugget" to 8,
                 "torch" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "soul_lantern",
@@ -5631,7 +5628,7 @@ fun recipeInit(): List<Recipe> {
                 "iron_nugget" to 8,
                 "soul_torch" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "campfire",
@@ -5641,7 +5638,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 3,
                 "oak_log" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "soul_campfire",
@@ -5651,7 +5648,7 @@ fun recipeInit(): List<Recipe> {
                 "stick" to 3,
                 "oak_log" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "beehive",
@@ -5660,7 +5657,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 6,
                 "honeycomb" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "honeycomb_block",
@@ -5668,7 +5665,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "honeycomb" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lodestone",
@@ -5677,7 +5674,7 @@ fun recipeInit(): List<Recipe> {
                 "netherite_ingot" to 1,
                 "chiseled_stone_bricks" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blackstone_slab",
@@ -5685,7 +5682,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "blackstone_stairs",
@@ -5693,7 +5690,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone",
@@ -5701,7 +5698,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_slab",
@@ -5709,7 +5706,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_stairs",
@@ -5717,7 +5714,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "chiseled_polished_blackstone",
@@ -5725,7 +5722,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_bricks",
@@ -5733,7 +5730,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_brick_slab",
@@ -5741,7 +5738,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_blackstone_brick_stairs",
@@ -5749,7 +5746,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "blackstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cracked_polished_blackstone_bricks",
@@ -5757,7 +5754,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_blackstone_bricks" to 1
             ),
-            recipeType = RecipeType.Smelting
+            recipeType = "smelting"
         ),
         Recipe(
             result = "respawn_anchor",
@@ -5766,7 +5763,7 @@ fun recipeInit(): List<Recipe> {
                 "glowstone" to 3,
                 "crying_obsidian" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "candle",
@@ -5775,7 +5772,7 @@ fun recipeInit(): List<Recipe> {
                 "string" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "white_candle",
@@ -5784,7 +5781,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "white_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "orange_candle",
@@ -5793,7 +5790,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "orange_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "magenta_candle",
@@ -5802,7 +5799,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "magenta_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_blue_candle",
@@ -5811,7 +5808,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "light_blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "yellow_candle",
@@ -5820,7 +5817,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "yellow_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "lime_candle",
@@ -5829,7 +5826,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "lime_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "pink_candle",
@@ -5838,7 +5835,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "pink_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "gray_candle",
@@ -5847,7 +5844,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "light_gray_candle",
@@ -5856,7 +5853,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "light_gray_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cyan_candle",
@@ -5865,7 +5862,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "cyan_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "purple_candle",
@@ -5874,7 +5871,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "purple_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "blue_candle",
@@ -5883,7 +5880,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "blue_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brown_candle",
@@ -5892,7 +5889,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "brown_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "green_candle",
@@ -5901,7 +5898,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "green_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "red_candle",
@@ -5910,7 +5907,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "red_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "black_candle",
@@ -5919,7 +5916,7 @@ fun recipeInit(): List<Recipe> {
                 "candle" to 1,
                 "black_dye" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_chest_boat",
@@ -5928,7 +5925,7 @@ fun recipeInit(): List<Recipe> {
                 "acacia_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_chest_boat",
@@ -5937,7 +5934,7 @@ fun recipeInit(): List<Recipe> {
                 "birch_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_chest_boat",
@@ -5946,7 +5943,7 @@ fun recipeInit(): List<Recipe> {
                 "dark_oak_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_chest_boat",
@@ -5955,7 +5952,7 @@ fun recipeInit(): List<Recipe> {
                 "jungle_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_boat",
@@ -5963,7 +5960,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_button",
@@ -5971,7 +5968,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_chest_boat",
@@ -5980,7 +5977,7 @@ fun recipeInit(): List<Recipe> {
                 "mangrove_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_door",
@@ -5988,7 +5985,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_fence",
@@ -5997,7 +5994,7 @@ fun recipeInit(): List<Recipe> {
                 "mangrove_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_fence_gate",
@@ -6006,7 +6003,7 @@ fun recipeInit(): List<Recipe> {
                 "mangrove_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_planks",
@@ -6014,7 +6011,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_log" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_pressure_plate",
@@ -6022,7 +6019,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_sign",
@@ -6031,7 +6028,7 @@ fun recipeInit(): List<Recipe> {
                 "mangrove_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_slab",
@@ -6039,7 +6036,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_stairs",
@@ -6047,7 +6044,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_trapdoor",
@@ -6055,7 +6052,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_wood",
@@ -6063,7 +6060,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mud_brick_slab",
@@ -6071,7 +6068,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mud_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mud_brick_stairs",
@@ -6079,7 +6076,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mud_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mud_brick_wall",
@@ -6087,7 +6084,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mud_bricks" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "mud_bricks",
@@ -6095,7 +6092,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "packed_mud" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "muddy_mangrove_roots",
@@ -6104,7 +6101,7 @@ fun recipeInit(): List<Recipe> {
                 "mud" to 1,
                 "mangrove_roots" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "music_disc_5",
@@ -6112,7 +6109,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "disc_fragment_5" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_chest_boat",
@@ -6121,7 +6118,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "packed_mud",
@@ -6130,7 +6127,7 @@ fun recipeInit(): List<Recipe> {
                 "wheat" to 1,
                 "mud" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "recovery_compass",
@@ -6139,7 +6136,7 @@ fun recipeInit(): List<Recipe> {
                 "compass" to 1,
                 "echo_shard" to 8
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_chest_boat",
@@ -6148,7 +6145,7 @@ fun recipeInit(): List<Recipe> {
                 "spruce_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stripped_mangrove_wood",
@@ -6156,7 +6153,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "stripped_mangrove_log",
@@ -6164,7 +6161,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "mangrove_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "creeper_banner_pattern",
@@ -6173,7 +6170,7 @@ fun recipeInit(): List<Recipe> {
                 "paper" to 1,
                 "creeper_head" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_mosaic",
@@ -6181,7 +6178,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_mosaic_stairs",
@@ -6189,7 +6186,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_mosaic" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_mosaic_slab",
@@ -6197,7 +6194,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_mosaic" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_planks",
@@ -6205,7 +6202,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_block" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_block",
@@ -6213,7 +6210,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo" to 9
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stripped_bamboo_block",
@@ -6221,7 +6218,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_block" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_button",
@@ -6229,7 +6226,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_door",
@@ -6237,7 +6234,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_fence",
@@ -6246,7 +6243,7 @@ fun recipeInit(): List<Recipe> {
                 "bamboo_planks" to 4,
                 "chest" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_fence_gate",
@@ -6255,7 +6252,7 @@ fun recipeInit(): List<Recipe> {
                 "bamboo_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_pressure_plate",
@@ -6263,7 +6260,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_sign",
@@ -6272,7 +6269,7 @@ fun recipeInit(): List<Recipe> {
                 "bamboo_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_slab",
@@ -6280,7 +6277,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_stairs",
@@ -6288,7 +6285,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_trapdoor",
@@ -6296,7 +6293,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_raft",
@@ -6304,7 +6301,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "bamboo_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_chest_raft",
@@ -6313,7 +6310,7 @@ fun recipeInit(): List<Recipe> {
                 "bamboo_raft" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "calibrated_sculk_sensor",
@@ -6322,7 +6319,7 @@ fun recipeInit(): List<Recipe> {
                 "amethyst_shard" to 3,
                 "sculk_sensor" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stripped_cherry_log",
@@ -6330,7 +6327,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_log" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "cherry_wood",
@@ -6338,7 +6335,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_log" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "stripped_cherry_wood",
@@ -6346,7 +6343,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_wood" to 1
             ),
-            recipeType = RecipeType.Stripping
+            recipeType = "stripping"
         ),
         Recipe(
             result = "cherry_planks",
@@ -6354,7 +6351,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_log" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_button",
@@ -6362,7 +6359,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_door",
@@ -6370,7 +6367,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_fence",
@@ -6379,7 +6376,7 @@ fun recipeInit(): List<Recipe> {
                 "cherry_planks" to 4,
                 "stick" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_fence_gate",
@@ -6388,7 +6385,7 @@ fun recipeInit(): List<Recipe> {
                 "cherry_planks" to 2,
                 "stick" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_pressure_plate",
@@ -6396,7 +6393,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_sign",
@@ -6405,7 +6402,7 @@ fun recipeInit(): List<Recipe> {
                 "cherry_planks" to 6,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_slab",
@@ -6413,7 +6410,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_stairs",
@@ -6421,7 +6418,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_trapdoor",
@@ -6429,7 +6426,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_boat",
@@ -6437,7 +6434,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cherry_planks" to 5
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_chest_boat",
@@ -6446,7 +6443,7 @@ fun recipeInit(): List<Recipe> {
                 "cherry_boat" to 1,
                 "chest" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chiseled_bookshelf",
@@ -6455,7 +6452,7 @@ fun recipeInit(): List<Recipe> {
                 "oak_planks" to 6,
                 "oak_slab" to 3
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "decorated_pot",
@@ -6463,7 +6460,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "danger_pottery_sherd" to 4
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_hanging_sign",
@@ -6472,7 +6469,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_oak_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oak_hanging_sign",
@@ -6481,7 +6478,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_oak_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "spruce_hanging_sign",
@@ -6490,7 +6487,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_spruce_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "birch_hanging_sign",
@@ -6499,7 +6496,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_birch_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "jungle_hanging_sign",
@@ -6508,7 +6505,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_jungle_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "acacia_hanging_sign",
@@ -6517,7 +6514,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_acacia_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "dark_oak_hanging_sign",
@@ -6526,7 +6523,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_dark_oak_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mangrove_hanging_sign",
@@ -6535,7 +6532,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_mangrove_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crimson_hanging_sign",
@@ -6544,7 +6541,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_crimson_stem" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "warped_hanging_sign",
@@ -6553,7 +6550,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_warped_stem" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "bamboo_hanging_sign",
@@ -6562,7 +6559,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_bamboo_block" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "cherry_hanging_sign",
@@ -6571,7 +6568,7 @@ fun recipeInit(): List<Recipe> {
                 "stripped_cherry_log" to 6,
                 "chain" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "brush",
@@ -6581,7 +6578,7 @@ fun recipeInit(): List<Recipe> {
                 "copper_ingot" to 1,
                 "stick" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "copper_bulb",
@@ -6591,7 +6588,7 @@ fun recipeInit(): List<Recipe> {
                 "blaze_rod" to 1,
                 "redstone" to 1
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "exposed_copper_bulb",
@@ -6599,7 +6596,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "copper_bulb" to 1
             ),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "weathered_copper_bulb",
@@ -6607,7 +6604,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "exposed_copper_bulb" to 1
             ),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "oxidized_copper_bulb",
@@ -6615,7 +6612,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "weathered_copper_bulb" to 1
             ),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "waxed_copper_bulb",
@@ -6624,7 +6621,7 @@ fun recipeInit(): List<Recipe> {
                 "copper_bulb" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_copper_bulb",
@@ -6633,7 +6630,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_copper_bulb" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_copper_bulb",
@@ -6642,7 +6639,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_copper_bulb" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_copper_bulb",
@@ -6651,7 +6648,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_copper_bulb" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "chiseled_copper",
@@ -6659,7 +6656,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "chiseled_copper",
@@ -6667,7 +6664,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "exposed_chiseled_copper",
@@ -6675,7 +6672,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "exposed_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "exposed_chiseled_copper",
@@ -6683,7 +6680,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "exposed_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "weathered_chiseled_copper",
@@ -6691,7 +6688,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "weathered_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "weathered_chiseled_copper",
@@ -6699,7 +6696,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "weathered_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "oxidized_chiseled_copper",
@@ -6707,7 +6704,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oxidized_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "oxidized_chiseled_copper",
@@ -6715,7 +6712,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "oxidized_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "waxed_chiseled_copper",
@@ -6723,7 +6720,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "waxed_chiseled_copper",
@@ -6731,7 +6728,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "waxed_chiseled_copper",
@@ -6740,7 +6737,7 @@ fun recipeInit(): List<Recipe> {
                 "chiseled_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_chiseled_copper",
@@ -6748,7 +6745,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_exposed_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "waxed_exposed_chiseled_copper",
@@ -6756,7 +6753,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_exposed_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "waxed_exposed_chiseled_copper",
@@ -6765,7 +6762,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_chiseled_copper" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_chiseled_copper",
@@ -6773,7 +6770,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_weathered_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "waxed_weathered_chiseled_copper",
@@ -6781,7 +6778,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_weathered_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "waxed_weathered_chiseled_copper",
@@ -6790,7 +6787,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_cut_copper_slab" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_chiseled_copper",
@@ -6798,7 +6795,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_oxidized_copper_block" to 1
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "waxed_oxidized_chiseled_copper",
@@ -6806,7 +6803,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "waxed_oxidized_cut_copper_slab" to 2
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "waxed_oxidized_chiseled_copper",
@@ -6815,7 +6812,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_cut_copper_slab" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "copper_trapdoor",
@@ -6823,7 +6820,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "copper_ingot" to 6
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "exposed_copper_trapdoor",
@@ -6831,7 +6828,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "copper_trapdoor" to 1
             ),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "weathered_copper_trapdoor",
@@ -6839,7 +6836,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "exposed_trapdoor" to 1
             ),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "oxidized_copper_trapdoor",
@@ -6847,7 +6844,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "weathered_trapdoor" to 1
             ),
-            recipeType = RecipeType.Oxidation
+            recipeType = "oxidation"
         ),
         Recipe(
             result = "waxed_copper_trapdoor",
@@ -6856,7 +6853,7 @@ fun recipeInit(): List<Recipe> {
                 "copper_trapdoor" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_exposed_copper_trapdoor",
@@ -6865,7 +6862,7 @@ fun recipeInit(): List<Recipe> {
                 "exposed_copper_trapdoor" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_weathered_copper_trapdoor",
@@ -6874,7 +6871,7 @@ fun recipeInit(): List<Recipe> {
                 "weathered_copper_trapdoor" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "waxed_oxidized_copper_trapdoor",
@@ -6883,7 +6880,7 @@ fun recipeInit(): List<Recipe> {
                 "oxidized_copper_trapdoor" to 1,
                 "honeycomb" to 1
             ),
-            recipeType = RecipeType.Waxing
+            recipeType = "waxing"
         ),
         Recipe(
             result = "tuff_stairs",
@@ -6891,7 +6888,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_stairs",
@@ -6899,7 +6896,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 6,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tuff_slab",
@@ -6907,7 +6904,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_slab",
@@ -6915,7 +6912,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 3,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tuff_wall",
@@ -6923,7 +6920,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_wall",
@@ -6931,7 +6928,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 6,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chiseled_tuff",
@@ -6939,7 +6936,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "chiseled_tuff",
@@ -6947,7 +6944,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_slab" to 2,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_tuff",
@@ -6955,7 +6952,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_tuff",
@@ -6963,7 +6960,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 4,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_tuff_stairs",
@@ -6971,7 +6968,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_tuff_stairs",
@@ -6979,7 +6976,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 6,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "polished_tuff_slab",
@@ -6987,7 +6984,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_tuff_wall",
@@ -6995,7 +6992,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_tuff_wall",
@@ -7003,7 +7000,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "polished_tuff_wall",
@@ -7011,7 +7008,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 6,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tuff_bricks",
@@ -7019,7 +7016,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_bricks",
@@ -7027,7 +7024,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 4,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tuff_brick_stairs",
@@ -7035,7 +7032,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_stairs",
@@ -7043,7 +7040,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_stairs",
@@ -7051,7 +7048,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_stairs",
@@ -7059,7 +7056,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 6,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tuff_brick_slab",
@@ -7067,7 +7064,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_slab",
@@ -7075,7 +7072,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_slab",
@@ -7083,7 +7080,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_slab",
@@ -7091,7 +7088,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 3,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "tuff_brick_wall",
@@ -7099,7 +7096,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_wall",
@@ -7107,7 +7104,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_wall",
@@ -7115,7 +7112,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "tuff_brick_wall",
@@ -7123,7 +7120,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 6,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "chiseled_tuff_bricks",
@@ -7131,7 +7128,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "chiseled_tuff_bricks",
@@ -7139,7 +7136,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "polished_tuff" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "chiseled_tuff_bricks",
@@ -7147,7 +7144,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_bricks" to 1,
             ),
-            recipeType = RecipeType.Cutting
+            recipeType = "cutting"
         ),
         Recipe(
             result = "chiseled_tuff_bricks",
@@ -7155,7 +7152,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "tuff_brick_wall" to 2,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "crafter",
@@ -7166,7 +7163,7 @@ fun recipeInit(): List<Recipe> {
                 "redstone" to 2,
                 "dropper" to 1,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "mace",
@@ -7175,7 +7172,7 @@ fun recipeInit(): List<Recipe> {
                 "heavy_core" to 1,
                 "breeze_rod" to 1,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
         Recipe(
             result = "wind_charge",
@@ -7183,7 +7180,7 @@ fun recipeInit(): List<Recipe> {
             requirements = mapOf(
                 "breeze_rod" to 1,
             ),
-            recipeType = RecipeType.Crafting
+            recipeType = "crafting"
         ),
     )
 }

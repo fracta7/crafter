@@ -18,10 +18,10 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
      * recipes.
      */
     init {
-        itemInit().forEach { item ->
+        itemsInit().forEach { item ->
             itemRegistry.addItem(item)
         }
-        recipeInit().forEach { recipe ->
+        recipesInit().forEach { recipe ->
             recipeRegistry.addRecipe(recipe)
         }
     }

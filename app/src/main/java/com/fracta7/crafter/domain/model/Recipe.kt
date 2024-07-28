@@ -3,6 +3,7 @@ package com.fracta7.crafter.domain.model
 import androidx.compose.runtime.Immutable
 
 typealias ItemID = String
+typealias RecipeID = String
 
 /**
  * Data class to represent recipes
@@ -16,5 +17,5 @@ data class Recipe(
     val result: ItemID,
     val resultQuantity: Int,
     val requirements: Map<ItemID, Int>,
-    val recipeType: RecipeType
+    val recipeType: RecipeID
 )
