@@ -16,5 +16,5 @@ data class Recipe(
     val result: ItemID,
     val resultQuantity: Int,
     val requirements: Map<ItemID, Int>,
-    val recipeType: RecipeType
+    val recipeType: RecipeTypeID
 )

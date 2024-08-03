@@ -2,6 +2,10 @@ package com.fracta7.crafter.data.repository
 
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
+import com.fracta7.crafter.domain.model.RecipeType
+import com.fracta7.crafter.domain.model.RecipeTypeID
+import com.fracta7.crafter.domain.model.TagID
+import com.fracta7.crafter.domain.model.TagName
 import com.fracta7.crafter.domain.repository.AppRepository
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -10,6 +14,8 @@ import javax.inject.Singleton
 class AppRepositoryImpl @Inject constructor() : AppRepository {
     private val itemRegistry = ItemRegistry()
     private val recipeRegistry = RecipeRegistry()
+    private val recipeTypes = recipeTypesInit()
+    private val tags = tagsInit()
 
     /**
      * first we need to initialize all items and recipes
@@ -18,13 +24,18 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
      * recipes.
      */
     init {
-        itemInit().forEach { item ->
-            itemRegistry.addItem(item)
+        itemsInit().forEach {
+            itemRegistry.addItem(it)
         }
-        recipeInit().forEach { recipe ->
-            recipeRegistry.addRecipe(recipe)
+        recipesInit().forEach {
+            recipeRegistry.addRecipe(it)
         }
     }
+
+    override fun getTagName(tagID: TagID): TagName {
+        return tags[tagID]!!
+    }
+
 
     override fun itemRegistryProvider(): ItemRegistry {
         return itemRegistry
@@ -32,5 +43,9 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
 
     override fun recipeRegistryProvider(): RecipeRegistry {
         return recipeRegistry
+    }
+
+    override fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType {
+        return recipeTypes.first { it.id == recipeTypeID }
     }
 }

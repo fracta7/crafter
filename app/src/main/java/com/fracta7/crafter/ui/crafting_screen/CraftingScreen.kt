@@ -24,10 +24,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.SpanStyle
-import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -36,8 +33,6 @@ import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
-import com.fracta7.crafter.util.decomposeItems
-import com.fracta7.crafter.util.getStackAmount
 import com.fracta7.crafter.util.getStackText
 import com.fracta7.crafter.util.resourceAmount
 
@@ -69,9 +64,9 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                             .padding(horizontal = 10.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        val recipeIcon = recipe.recipeType.item
+                        val recipeIcon = viewModel.getRecipeType(recipe.recipeType).item
                         DrawItem(itemID = recipeIcon, iconSize = 48.dp)
-                        Text(text = recipe.recipeType.name, fontWeight = FontWeight.Bold)
+                        Text(text = viewModel.getRecipeType(recipe.recipeType).name, fontWeight = FontWeight.Bold)
                     }
                     OutlinedCard(
                         modifier = Modifier

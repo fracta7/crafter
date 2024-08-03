@@ -16,14 +16,9 @@ import javax.inject.Inject
 class MainActivityViewModel @Inject constructor(
     appRepository: AppRepository
 ) : ViewModel() {
-    private val itemRegistry: ItemRegistry
-    private val recipeRegistry: RecipeRegistry
+    private val itemRegistry: ItemRegistry = appRepository.itemRegistryProvider()
+    private val recipeRegistry: RecipeRegistry = appRepository.recipeRegistryProvider()
     val items = mutableStateMapOf<Item,Int>()
-
-    init {
-        itemRegistry = appRepository.itemRegistryProvider()
-        recipeRegistry = appRepository.recipeRegistryProvider()
-    }
 
     var state by mutableStateOf(
         MainActivityState(

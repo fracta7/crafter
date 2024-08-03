@@ -7,7 +7,7 @@ package com.fracta7.crafter.domain.model
  * @property addAll adds several items to the registry.
  */
 class ItemRegistry {
-    private val items: MutableMap<String, Item> = mutableMapOf()
+    private val items: MutableMap<ItemID, Item> = mutableMapOf()
 
     /**
      * Adds single item to the registry.
@@ -22,7 +22,7 @@ class ItemRegistry {
      * @param id id of an item.
      * @return nullable Item.
      */
-    fun getItem(id: String): Item? {
+    fun getItem(id: ItemID): Item? {
         return items[id]
     }
 
@@ -34,7 +34,7 @@ class ItemRegistry {
         items.forEach { addItem(it) }
     }
 
-    fun getAll(): Map<String, Item>{
+    fun getAll(): Map<ItemID, Item>{
         return items
     }
 }
