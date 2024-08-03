@@ -85,7 +85,7 @@ dependencies {
     //retrofit
     implementation(libs.retrofit2)
     implementation(libs.converter.gson)
-    implementation(libs.okhttp)
+//    implementation(libs.okhttp)
 }
 kapt {
     correctErrorTypes = true
