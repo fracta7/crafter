@@ -7,8 +7,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
 }
 
-apply(from = "fix-profm.gradle")
-
 android {
     namespace = "com.fracta7.crafter"
     compileSdk = 34
@@ -91,4 +89,9 @@ dependencies {
 }
 kapt {
     correctErrorTypes = true
+}
+tasks.whenTaskAdded {
+    if (name.contains("ArtProfile")) {
+        enabled = false
+    }
 }
