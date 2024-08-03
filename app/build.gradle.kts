@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.tasks.CompileArtProfileTask
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -86,6 +88,9 @@ dependencies {
     implementation(libs.retrofit2)
     implementation(libs.converter.gson)
 //    implementation(libs.okhttp)
+}
+tasks.withType<CompileArtProfileTask>() {
+    enabled = false
 }
 kapt {
     correctErrorTypes = true
