@@ -10,16 +10,14 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.KeyboardArrowUp
-import androidx.compose.material3.Card
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -40,12 +38,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
-import com.fracta7.crafter.util.convertIdMapToItemMap
 import com.fracta7.crafter.util.decomposeItems
 import kotlinx.coroutines.launch
 
@@ -139,7 +135,7 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                                             preview = false,
                                             stackSize = item.stackSize
                                         )
-                                        HorizontalDivider(modifier = Modifier.padding(horizontal = 4.dp))
+                                        Divider(modifier = Modifier.padding(horizontal = 4.dp))
                                     }
                                 }
                             }
@@ -189,7 +185,7 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                                                 preview = false,
                                                 stackSize = item.stackSize
                                             )
-                                            HorizontalDivider(
+                                            Divider(
                                                 modifier = Modifier.padding(
                                                     horizontal = 4.dp
                                                 )
@@ -256,7 +252,7 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                                             preview = false,
                                             stackSize = item.stackSize
                                         )
-                                        HorizontalDivider(
+                                        Divider(
                                             modifier = Modifier.padding(
                                                 horizontal = 4.dp
                                             )

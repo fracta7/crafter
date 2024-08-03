@@ -24,7 +24,7 @@ import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.BottomSheetDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -153,7 +153,7 @@ fun MainScreen(navController: NavController) {
                                             )
                                         }
                                     }
-                                    HorizontalDivider()
+                                    Divider()
                                 }
                             }
                     }
@@ -191,7 +191,7 @@ fun MainScreen(navController: NavController) {
                                                     )
                                                 }
                                             }
-                                            HorizontalDivider()
+                                            Divider()
                                         }
                                     }
                                 } else {
