@@ -11,7 +11,7 @@ import androidx.compose.runtime.Immutable
  */
 @Immutable
 data class Item(
-    val id: String,
+    val id: ItemID,
     val name: String,
     val stackSize: Int,
     val craftable: Boolean

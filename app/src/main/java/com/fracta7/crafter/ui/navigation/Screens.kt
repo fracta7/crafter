@@ -5,7 +5,7 @@ import kotlinx.serialization.Serializable
 @Serializable
 sealed class Route{
     @Serializable
-    object Main : Route()
+    data object Main : Route()
 
     @Serializable
     data class RootCrafting(

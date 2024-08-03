@@ -1,5 +1,8 @@
 package com.fracta7.crafter.domain.model
 
+typealias RecipeTypeID = String
+typealias RecipeTypeItemID = String
+
 /**
  * data class to represent different recipe types.
  * @property id represents the ID of recipe.
@@ -7,7 +10,7 @@ package com.fracta7.crafter.domain.model
  * @property item is the itemID of recipe representation
  */
 data class RecipeType(
-    val id: String,
+    val id: RecipeTypeID,
     val name: String,
-    val item: String
+    val item: RecipeTypeItemID
 )

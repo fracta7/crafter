@@ -69,9 +69,9 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                             .padding(horizontal = 10.dp, vertical = 4.dp),
                         verticalAlignment = Alignment.CenterVertically
                     ) {
-                        val recipeIcon = recipe.recipeType.item
+                        val recipeIcon = viewModel.getRecipeType(recipe.recipeType).item
                         DrawItem(itemID = recipeIcon, iconSize = 48.dp)
-                        Text(text = recipe.recipeType.name, fontWeight = FontWeight.Bold)
+                        Text(text = viewModel.getRecipeType(recipe.recipeType).name, fontWeight = FontWeight.Bold)
                     }
                     OutlinedCard(
                         modifier = Modifier

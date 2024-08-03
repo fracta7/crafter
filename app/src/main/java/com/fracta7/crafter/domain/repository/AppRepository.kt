@@ -2,6 +2,8 @@ package com.fracta7.crafter.domain.repository
 
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
+import com.fracta7.crafter.domain.model.RecipeType
+import com.fracta7.crafter.domain.model.RecipeTypeID
 
 interface AppRepository {
     /**
@@ -15,4 +17,6 @@ interface AppRepository {
      * @return RecipeRegistry instance.
      */
     fun recipeRegistryProvider(): RecipeRegistry
+
+    fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType
 }

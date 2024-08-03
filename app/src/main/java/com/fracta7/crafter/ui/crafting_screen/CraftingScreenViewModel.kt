@@ -4,13 +4,14 @@ import androidx.lifecycle.ViewModel
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.Recipe
 import com.fracta7.crafter.domain.model.RecipeType
+import com.fracta7.crafter.domain.model.RecipeTypeID
 import com.fracta7.crafter.domain.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
 class CraftingScreenViewModel @Inject constructor(
-    appRepository: AppRepository
+    val appRepository: AppRepository
 ) : ViewModel() {
     private val itemRegistry = appRepository.itemRegistryProvider()
     private val recipeRegistry = appRepository.recipeRegistryProvider()
@@ -20,5 +21,8 @@ class CraftingScreenViewModel @Inject constructor(
     }
     fun getItemById(itemId: String): Item{
         return itemRegistry.getItem(id = itemId)!!
+    }
+    fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType {
+        return appRepository.getRecipeType(recipeTypeID)
     }
 }
