@@ -15,8 +15,8 @@ android {
         applicationId = "com.fracta7.crafter"
         minSdk = 24
         targetSdk = 34
-        versionCode = 7
-        versionName = "1.7"
+        versionCode = 5
+        versionName = "1.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -89,9 +89,4 @@ dependencies {
 }
 kapt {
     correctErrorTypes = true
-}
-tasks.whenTaskAdded {
-    if (name.contains("ArtProfile")) {
-        enabled = false
-    }
 }
