@@ -1,5 +1,3 @@
-import com.android.build.gradle.internal.tasks.CompileArtProfileTask
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
@@ -8,6 +6,8 @@ plugins {
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.compose.compiler)
 }
+
+apply(from = "fix-profm.gradle")
 
 android {
     namespace = "com.fracta7.crafter"
@@ -18,7 +18,7 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 6
-        versionName = "1.5"
+        versionName = "1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -88,9 +88,6 @@ dependencies {
     implementation(libs.retrofit2)
     implementation(libs.converter.gson)
 //    implementation(libs.okhttp)
-}
-tasks.withType<CompileArtProfileTask>() {
-    enabled = false
 }
 kapt {
     correctErrorTypes = true
