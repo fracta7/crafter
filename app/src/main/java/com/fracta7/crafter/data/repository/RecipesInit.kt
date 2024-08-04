@@ -7198,5 +7198,12 @@ fun recipesInit(): List<Recipe> {
             ),
             recipeType = "crafting"
         ),
+        Recipe(
+            result = "wolf_armor",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "armadillo_scute" to 6
+            )
         )
+    )
 }
