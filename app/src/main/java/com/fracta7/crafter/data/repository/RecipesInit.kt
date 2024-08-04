@@ -6710,7 +6710,7 @@ fun recipesInit(): List<Recipe> {
             result = "exposed_chiseled_copper",
             resultQuantity = 4,
             requirements = mapOf(
-                "exposed_copper_block" to 1
+                "exposed_copper" to 1
             ),
             recipeType = "cutting"
         ),
@@ -6726,7 +6726,7 @@ fun recipesInit(): List<Recipe> {
             result = "weathered_chiseled_copper",
             resultQuantity = 4,
             requirements = mapOf(
-                "weathered_copper_block" to 1
+                "weathered_copper" to 1
             ),
             recipeType = "cutting"
         ),
@@ -6742,7 +6742,7 @@ fun recipesInit(): List<Recipe> {
             result = "oxidized_chiseled_copper",
             resultQuantity = 4,
             requirements = mapOf(
-                "oxidized_copper_block" to 1
+                "oxidized_copper" to 1
             ),
             recipeType = "cutting"
         ),
@@ -6783,7 +6783,7 @@ fun recipesInit(): List<Recipe> {
             result = "waxed_exposed_chiseled_copper",
             resultQuantity = 4,
             requirements = mapOf(
-                "waxed_exposed_copper_block" to 1
+                "waxed_exposed_copper" to 1
             ),
             recipeType = "cutting"
         ),
@@ -6808,7 +6808,7 @@ fun recipesInit(): List<Recipe> {
             result = "waxed_weathered_chiseled_copper",
             resultQuantity = 4,
             requirements = mapOf(
-                "waxed_weathered_copper_block" to 1
+                "waxed_weathered_copper" to 1
             ),
             recipeType = "cutting"
         ),
@@ -6833,7 +6833,7 @@ fun recipesInit(): List<Recipe> {
             result = "waxed_oxidized_chiseled_copper",
             resultQuantity = 4,
             requirements = mapOf(
-                "waxed_oxidized_copper_block" to 1
+                "waxed_oxidized_copper" to 1
             ),
             recipeType = "cutting"
         ),
@@ -6874,7 +6874,7 @@ fun recipesInit(): List<Recipe> {
             result = "weathered_copper_trapdoor",
             resultQuantity = 1,
             requirements = mapOf(
-                "exposed_trapdoor" to 1
+                "exposed_copper_trapdoor" to 1
             ),
             recipeType = "oxidation"
         ),
@@ -6882,7 +6882,7 @@ fun recipesInit(): List<Recipe> {
             result = "oxidized_copper_trapdoor",
             resultQuantity = 1,
             requirements = mapOf(
-                "weathered_trapdoor" to 1
+                "weathered_copper_trapdoor" to 1
             ),
             recipeType = "oxidation"
         ),
@@ -7340,6 +7340,267 @@ fun recipesInit(): List<Recipe> {
                 "lava_bucket" to 1
             ),
             recipeType = "fuel"
+        ),
+        Recipe(
+            result = "sandstone",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "sand" to 4
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "smooth_basalt",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "basalt" to 1,
+                "fuel" to 1
+            ),
+            recipeType = "smelting"
+        ),
+        Recipe(
+            result = "copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "copper_block" to 4
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "copper_block" to 1
+            ),
+            recipeType = "cutting"
+        ),
+        Recipe(
+            result = "copper_door",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "copper_ingot" to 6
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "exposed_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "exposed_copper" to 4
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "exposed_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "exposed_copper" to 1
+            ),
+            recipeType = "cutting"
+        ),
+        Recipe(
+            result = "exposed_copper_grate",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_grate" to 1
+            ),
+            recipeType = "oxidation"
+        ),
+        Recipe(
+            result = "exposed_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_door" to 1
+            ),
+            recipeType = "oxidation"
+        ),
+        Recipe(
+            result = "weathered_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "weathered_copper" to 4
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "weathered_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "weathered_copper" to 1
+            ),
+            recipeType = "cutting"
+        ),
+        Recipe(
+            result = "weathered_copper_grate",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_grate" to 1
+            ),
+            recipeType = "oxidation"
+        ),
+        Recipe(
+            result = "weathered_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_door" to 1
+            ),
+            recipeType = "oxidation"
+        ),
+        Recipe(
+            result = "oxidized_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "oxidized_copper" to 4
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "oxidized_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "oxidized_copper" to 1
+            ),
+            recipeType = "cutting"
+        ),
+        Recipe(
+            result = "oxidized_copper_grate",
+            resultQuantity = 4,
+            requirements = mapOf(
+                "weathered_copper" to 4
+            ),
+            recipeType = "oxidation"
+        ),
+        Recipe(
+            result = "oxidized_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_copper_door" to 1
+            ),
+            recipeType = "oxidation"
+        ),
+        Recipe(
+            result = "waxed_copper_grate",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_grate" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_exposed_copper_grate",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_grate" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_cut_copper_slab",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "cut_copper_slab" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "copper_door" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_exposed_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "exposed_copper_grate" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_weathered_copper_grate",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_copper_grate" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_weathered_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "weathered_copper_door" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_oxidized_copper_grate",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "oxidized_copper_grate" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "waxed_oxidized_copper_door",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "oxidized_copper_door" to 1,
+                "honeycomb" to 1
+            ),
+            recipeType = "waxing"
+        ),
+        Recipe(
+            result = "clay",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "clay_ball" to 4
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "pink_bed",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "pink_wool" to 3,
+                "oak_planks" to 3
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "pink_bed",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "white_bed" to 1,
+                "pink_dye" to 1
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "terracotta",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "clay" to 1,
+                "fuel" to 1
+            ),
+            recipeType = "smelting"
+        ),
+        Recipe(
+            result = "iron_nugget",
+            resultQuantity = 9,
+            requirements = mapOf(
+                "iron_ingot" to 1
+            ),
+            recipeType = "crafting"
         ),
     )
 }
