@@ -48,7 +48,7 @@ Step-by-step instructions on how to build and set up the project.
 1. Clone the repository: `git clone https://github.com/fracta7/crafter.git`
 2. Navigate to the project directory: `cd crafter`
 3. Open with Android Studio.
-4. Build and Run
+4. Build and run.
 
 ## Usage
 
@@ -67,79 +67,144 @@ If you wish to contribute, feel free. Fork the project and do Pull Request, I wi
 
 In order to add new item and recipes, follow these steps:
 
-- add entry in `com.fracta7.crafter.data.repository.ItemInit.kt` for items
-- add entry in `com.fracta7.crafter.data.repository.RecipeInit.kt` for recipes
+- add entry in `com.fracta7.crafter.data.repository.ItemsInit.kt` for items
+- add entry in `com.fracta7.crafter.data.repository.RecipesInit.kt` for recipes
 
 Item data class is structured following way:
 
 ```kotlin
+typealias ItemID = String
+typealias TagID = String
+
+/**
+ * Minecraft Item.
+ * @property id string id of an item.
+ * @property name name of an item.
+ * @property stackSize stack size of an item.
+ * @property craftable indicates if it is craftable.
+ * @property tags contains tags for categories.
+ */
 data class Item(
-    val id: String,
-    val name: String,
-    val stackSize: Int,
-    val craftable: Boolean
+  val id: ItemID,
+  val name: String,
+  val stackSize: Int,
+  val craftable: Boolean,
+  val tags: List<TagID> = listOf("other")
 )
 ```
 
 Recipe is structured following way:
 
 ```kotlin
+typealias RecipeTypeID = String
+
+/**
+ * Data class to represent recipes
+ * @property result result of recipe
+ * @property resultQuantity quantity of resulting item
+ * @property requirements a map of required items mapped to their quantity.
+ * @property recipeType defines the recipe type (crafting, smelting etc.).
+ */
 data class Recipe(
-    val result: Item,
-    val resultQuantity: Int,
-    val requirements: Map<Item, Int>,
-    val recipeType: RecipeType
+  val result: ItemID,
+  val resultQuantity: Int,
+  val requirements: Map<ItemID, Int>,
+  val recipeType: RecipeTypeID
 )
 ```
 
 Recipe Types:
 
 ```kotlin
-sealed class RecipeType {
-  data object Crafting : RecipeType(name = "Crafting", item = "crafting_table")
-  data object Smelting : RecipeType(name = "Smelting", item = "furnace")
-  data object Stripping : RecipeType(name = "Stripping", item = "diamond_axe")
-  data object Watering : RecipeType(name = "Watering", item = "water_bucket")
-  data object Cutting : RecipeType(name = "Cutting", item = "stonecutter")
-  data object Oxidation : RecipeType(name = "Oxidation", item = "oxidized_copper")
-  data object Waxing : RecipeType(name = "Waxing", item = "honeycomb")
-  data object Smithing : RecipeType(name = "Smithing", item = "smithing_table")
-}
+typealias RecipeTypeID = String
+typealias RecipeTypeItemID = String
+
+/**
+ * data class to represent different recipe types.
+ * @property id represents the ID of recipe.
+ * @property name represents the name of recipe.
+ * @property item is the itemID of recipe representation
+ */
+data class RecipeType(
+  val id: RecipeTypeID,
+  val name: String,
+  val item: RecipeTypeItemID
+)
 ```
 
-To add new item to the registry, add a new line in `ItemInit.kt` with item properties in the function body inside the list:
+Category:
 
 ```kotlin
-fun itemInit(): List<Item> {
+/**
+ * Represents item category
+ * @property id is the ID of category
+ * @property name is the name of category
+ * @property item is the item ID of category
+*/
+data class Category(
+    val id: TagID,
+    val name: TagName,
+    val item: ItemID
+)
+```
+
+To add new item to the registry, add a new line in `ItemsInit.kt` with item properties in the function body inside the list:
+
+```kotlin
+fun itemsInit(): List<Item> {
     return listOf(
-        Item(id = "stone", name = "Stone", stackSize = 64, craftable = false),
-        Item(id = "diamond", name = "Diamond", stackSize = 64, craftable = false),
+        Item(id = "stone", name = "Stone", stackSize = 64, craftable = false, tags = listOf("natural")),
+        Item(id = "diamond", name = "Diamond", stackSize = 64, craftable = false, tags = listOf("ingredients")),
         //... add new items here
         )
 }
 ```
 
-To add new recipe to the registry, add a new line in `RecipeInit.kt` with recipe properties in the function body inside the list:
+To add new recipe to the registry, add a new line in `RecipesInit.kt` with recipe properties in the function body inside the list:
 
 ```kotlin
-fun recipeInit(itemRegistry: ItemRegistry): List<Recipe> {
+fun recipesInit(): List<Recipe> {
     return listOf(
         Recipe(
-            result = itemRegistry.getItem("polished_granite")!!,
+            result = "polished_granite",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("granite")!! to 1),
-            recipeType = RecipeType.Cutting
+            requirements = mapOf("granite" to 1),
+            recipeType = "cutting"
         ),
         Recipe(
-            result = itemRegistry.getItem("polished_diorite")!!,
+            result = "polished_diorite",
             resultQuantity = 1,
-            requirements = mapOf(itemRegistry.getItem("diorite")!! to 1),
-            recipeType = RecipeType.Cutting
+            requirements = mapOf("diorite" to 1),
+            recipeType = "cutting"
         ),
         //... add new recipes here
     )
 }
-```       
+```      
+
+To add new RecipeType, go to `RecipeTypesInit.kt` and add a new entry in `recipeTypesInit(): List<RecipeType>`
+
+```kotlin
+fun recipeTypesInit(): List<RecipeType> {
+    return listOf(
+        RecipeType(id = "crafting", name = "Crafting", item = "crafting_table"),
+        RecipeType(id = "smelting", name = "Smelting", item = "furnace"),
+        // new entries
+    )
+}
+```
+
+To add a new tag, go to `TagsInit.kt` and add new entry to a function `tagsInit()`:
+
+```kotlin
+fun tagsInit(): List<Category> {
+    return listOf(
+        Category(id = "building", name = "Building Blocks", item = "bricks"),
+        Category(id = "colored", name = "Colored Blocks", item = "cyan_wool"),
+        // new entry
+    )
+}
+```
 
 ## License
 MIT License

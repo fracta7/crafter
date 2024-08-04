@@ -12,9 +12,12 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.List
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Done
@@ -23,9 +26,10 @@ import androidx.compose.material3.Badge
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.BottomSheetDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Divider
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -46,6 +50,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.ui.elements.AddItemDialog
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
@@ -111,77 +116,116 @@ fun MainScreen(navController: NavController) {
                         }
                     })
 
+                    // Get categories from the ViewModel
+                    val categories = viewModel.getCategories()
+
+                    // Mutable state to track selected categories (all selected by default)
+                    var selectedCategories by remember {
+                        mutableStateOf(categories.map { it.id }.toSet())
+                    }
+
+                    // Display the chips
+                    LazyRow(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        categories.forEach { category ->
+                            item {
+                                FilterChip(
+                                    label = { Text(category.name) },
+                                    selected = selectedCategories.contains(category.id),
+                                    onClick = {
+                                        selectedCategories =
+                                            if (selectedCategories.contains(category.id)) {
+                                                selectedCategories - category.id
+                                            } else {
+                                                selectedCategories + category.id
+                                            }
+                                    },
+                                    leadingIcon = if (selectedCategories.contains(category.id)) {
+                                        {
+                                            Icon(Icons.Rounded.Check, contentDescription = null)
+                                        }
+                                    } else null,
+                                    modifier = Modifier.padding(4.dp)
+                                )
+                            }
+                        }
+                    }
+
                     LazyColumn(
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         viewModel.getCategories().forEach { (tagID, tagName, tagItem) ->
-                            item {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    DrawItem(
-                                        itemID = tagItem,
-                                        modifier = Modifier.padding(4.dp),
-                                        iconSize = 32.dp
-                                    )
-                                    Text(
-                                        text = tagName,
-                                        fontWeight = FontWeight.Bold,
-                                        modifier = Modifier.padding(4.dp)
-                                    )
-                                }
-                            }
-                            viewModel.state.itemRegistry.getAll()
-                                .filter {
-                                    it.value.name.contains(
-                                        search,
-                                        ignoreCase = true
-                                    ) && it.value.tags.contains(tagID)
-                                }
-                                .forEach { (_, item) ->
-                                    item(key = item.id) {
-                                        Row(
-                                            verticalAlignment = Alignment.CenterVertically,
-                                            horizontalArrangement = Arrangement.SpaceBetween,
-                                            modifier = Modifier.fillMaxWidth()
-                                        ) {
-                                            val spacing =
-                                                if (viewModel.items.contains(item)) 0.9f else 1f
-                                            Row(
-                                                verticalAlignment = Alignment.CenterVertically,
-                                                modifier = Modifier.fillMaxWidth(0.85f)
-                                            ) {
-                                                ItemElement(
-                                                    modifier = Modifier.fillMaxWidth(spacing),
-                                                    item = item
-                                                )
-                                                AnimatedVisibility(
-                                                    visible = viewModel.items.contains(item),
-                                                    enter = scaleIn(),
-                                                    exit = scaleOut()
-                                                ) {
-                                                    Badge(modifier = Modifier.padding(start = 4.dp)) {
-                                                        Text(text = viewModel.items[item].toString())
-                                                    }
-                                                }
-                                            }
-                                            IconButton(
-                                                onClick = {
-                                                    currentItemId = item.id
-                                                    showAddDialog = !showAddDialog
-                                                }, modifier = Modifier.padding(4.dp)
-                                            ) {
-                                                Icon(
-                                                    Icons.Rounded.Add,
-                                                    contentDescription = "Add the item"
-                                                )
-                                            }
-                                        }
-                                        Divider()
+                            // Check if the category is selected before displaying it
+                            if (selectedCategories.contains(tagID)) {
+                                item {
+                                    Row(verticalAlignment = Alignment.CenterVertically) {
+                                        DrawItem(
+                                            itemID = tagItem,
+                                            modifier = Modifier.padding(4.dp),
+                                            iconSize = 32.dp
+                                        )
+                                        Text(
+                                            text = tagName,
+                                            fontWeight = FontWeight.Bold,
+                                            modifier = Modifier.padding(4.dp)
+                                        )
                                     }
                                 }
-                            item {
-                                Spacer(modifier = Modifier.padding(10.dp))
+                                viewModel.state.itemRegistry.getAll()
+                                    .filter {
+                                        it.value.name.contains(search, ignoreCase = true) &&
+                                                it.value.tags.contains(tagID)
+                                    }
+                                    .forEach { (_, item) ->
+                                        item(key = item.id) {
+                                            Row(
+                                                verticalAlignment = Alignment.CenterVertically,
+                                                horizontalArrangement = Arrangement.SpaceBetween,
+                                                modifier = Modifier.fillMaxWidth()
+                                            ) {
+                                                val spacing =
+                                                    if (viewModel.items.contains(item)) 0.9f else 1f
+                                                Row(
+                                                    verticalAlignment = Alignment.CenterVertically,
+                                                    modifier = Modifier.fillMaxWidth(0.85f)
+                                                ) {
+                                                    ItemElement(
+                                                        modifier = Modifier.fillMaxWidth(spacing),
+                                                        item = item
+                                                    )
+                                                    AnimatedVisibility(
+                                                        visible = viewModel.items.contains(item),
+                                                        enter = scaleIn(),
+                                                        exit = scaleOut()
+                                                    ) {
+                                                        Badge(modifier = Modifier.padding(start = 4.dp)) {
+                                                            Text(text = viewModel.items[item].toString())
+                                                        }
+                                                    }
+                                                }
+                                                IconButton(
+                                                    onClick = {
+                                                        currentItemId = item.id
+                                                        showAddDialog = !showAddDialog
+                                                    }, modifier = Modifier.padding(4.dp)
+                                                ) {
+                                                    Icon(
+                                                        Icons.Rounded.Add,
+                                                        contentDescription = "Add the item"
+                                                    )
+                                                }
+                                            }
+                                            Divider()
+                                        }
+                                    }
+                                item {
+                                    Spacer(modifier = Modifier.padding(10.dp))
+                                }
                             }
                         }
+                    }
 
 //                        viewModel.state.itemRegistry.getAll()
 //                            .filter { it.value.name.contains(search, ignoreCase = true) }
@@ -227,7 +271,6 @@ fun MainScreen(navController: NavController) {
 //                                    Divider()
 //                                }
 //                            }
-                    }
 
                     if (showDrawer) {
                         ModalBottomSheet(
@@ -299,3 +342,20 @@ fun MainScreen(navController: NavController) {
         }
     }
 }
+
+//@Composable
+//fun FilterChip(
+//    category: Category,
+//    isSelected: Boolean,
+//    onSelectedChange: (Boolean) -> Unit
+//) {
+//    Chip(
+//        onClick = { onSelectedChange(!isSelected) },
+//        colors = ChipDefaults.chipColors(
+//            backgroundColor = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.secondary
+//        ),
+//        content = {
+//            Text(text = category.name)
+//        }
+//    )
+//}

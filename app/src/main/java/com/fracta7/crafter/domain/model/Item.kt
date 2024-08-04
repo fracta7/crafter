@@ -11,6 +11,7 @@ typealias TagName = String
  * @property name name of an item.
  * @property stackSize stack size of an item.
  * @property craftable indicates if it is craftable.
+ * @property tags contains tags for categories.
  */
 @Immutable
 data class Item(
