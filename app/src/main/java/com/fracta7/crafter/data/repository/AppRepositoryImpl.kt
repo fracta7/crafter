@@ -5,8 +5,6 @@ import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
 import com.fracta7.crafter.domain.model.RecipeTypeID
-import com.fracta7.crafter.domain.model.TagID
-import com.fracta7.crafter.domain.model.TagName
 import com.fracta7.crafter.domain.repository.AppRepository
 import javax.inject.Inject
 import javax.inject.Singleton

@@ -15,7 +15,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.List
-import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
@@ -50,7 +49,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.ui.elements.AddItemDialog
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
@@ -130,7 +128,7 @@ fun MainScreen(navController: NavController) {
                         modifier = Modifier.fillMaxWidth()
                     ) {
                         categories.forEach { category ->
-                            item {
+                            item(key = category.id + category.name) {
                                 FilterChip(
                                     label = { Text(category.name) },
                                     selected = selectedCategories.contains(category.id),
@@ -159,18 +157,27 @@ fun MainScreen(navController: NavController) {
                         viewModel.getCategories().forEach { (tagID, tagName, tagItem) ->
                             // Check if the category is selected before displaying it
                             if (selectedCategories.contains(tagID)) {
-                                item {
-                                    Row(verticalAlignment = Alignment.CenterVertically) {
-                                        DrawItem(
-                                            itemID = tagItem,
-                                            modifier = Modifier.padding(4.dp),
-                                            iconSize = 32.dp
-                                        )
-                                        Text(
-                                            text = tagName,
-                                            fontWeight = FontWeight.Bold,
-                                            modifier = Modifier.padding(4.dp)
-                                        )
+                                if (viewModel.state.itemRegistry.getAll().filter {
+                                        it.value.name.contains(
+                                            search,
+                                            ignoreCase = true
+                                        ) && it.value.tags.contains(tagID)
+                                    }.isNotEmpty()
+                                ) {
+                                    item(key = tagID) {
+                                        Row(verticalAlignment = Alignment.CenterVertically) {
+                                            Spacer(modifier = Modifier.padding(10.dp))
+                                            DrawItem(
+                                                itemID = tagItem,
+                                                modifier = Modifier.padding(4.dp),
+                                                iconSize = 32.dp
+                                            )
+                                            Text(
+                                                text = tagName,
+                                                fontWeight = FontWeight.Bold,
+                                                modifier = Modifier.padding(4.dp)
+                                            )
+                                        }
                                     }
                                 }
                                 viewModel.state.itemRegistry.getAll()
@@ -179,7 +186,7 @@ fun MainScreen(navController: NavController) {
                                                 it.value.tags.contains(tagID)
                                     }
                                     .forEach { (_, item) ->
-                                        item(key = item.id) {
+                                        item(key = tagID + item.id) {
                                             Row(
                                                 verticalAlignment = Alignment.CenterVertically,
                                                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -220,9 +227,6 @@ fun MainScreen(navController: NavController) {
                                             Divider()
                                         }
                                     }
-                                item {
-                                    Spacer(modifier = Modifier.padding(10.dp))
-                                }
                             }
                         }
                     }
@@ -342,20 +346,3 @@ fun MainScreen(navController: NavController) {
         }
     }
 }
-
-//@Composable
-//fun FilterChip(
-//    category: Category,
-//    isSelected: Boolean,
-//    onSelectedChange: (Boolean) -> Unit
-//) {
-//    Chip(
-//        onClick = { onSelectedChange(!isSelected) },
-//        colors = ChipDefaults.chipColors(
-//            backgroundColor = if (isSelected) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.secondary
-//        ),
-//        content = {
-//            Text(text = category.name)
-//        }
-//    )
-//}

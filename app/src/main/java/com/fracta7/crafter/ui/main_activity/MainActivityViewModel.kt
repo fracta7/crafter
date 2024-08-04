@@ -9,8 +9,6 @@ import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
-import com.fracta7.crafter.domain.model.TagID
-import com.fracta7.crafter.domain.model.TagName
 import com.fracta7.crafter.domain.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject

@@ -1,8 +1,6 @@
 package com.fracta7.crafter.data.repository
 
 import com.fracta7.crafter.domain.model.Category
-import com.fracta7.crafter.domain.model.TagID
-import com.fracta7.crafter.domain.model.TagName
 
 fun tagsInit(): List<Category> {
     return listOf(
