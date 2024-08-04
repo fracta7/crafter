@@ -7203,7 +7203,8 @@ fun recipesInit(): List<Recipe> {
             resultQuantity = 1,
             requirements = mapOf(
                 "armadillo_scute" to 6
-            )
+            ),
+            recipeType = "crafting"
         )
     )
 }
