@@ -4016,7 +4016,7 @@ fun recipesInit(): List<Recipe> {
             result = "turtle_helmet",
             resultQuantity = 1,
             requirements = mapOf(
-                "scute" to 5
+                "turtle_scute" to 5
             ),
             recipeType = "crafting"
         ),
@@ -7216,6 +7216,43 @@ fun recipesInit(): List<Recipe> {
                 "poppy" to 1
             ),
             recipeType = "crafting"
-        )
+        ),
+        Recipe(
+            result = "flower_banner_pattern",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "paper" to 1,
+                "oxeye_daisy" to 1
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "skull_banner_pattern",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "paper" to 1,
+                "wither_skeleton_skull" to 1
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "mojang_banner_pattern",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "paper" to 1,
+                "enchanted_golden_apple" to 1
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "enchanted_book",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "paper" to 3,
+                "leather" to 1
+            ),
+            recipeType = "crafting"
+        ),
+
     )
 }
