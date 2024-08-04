@@ -7253,6 +7253,53 @@ fun recipesInit(): List<Recipe> {
             ),
             recipeType = "crafting"
         ),
-
+        Recipe(
+            result = "fuel",
+            resultQuantity = 8,
+            requirements = mapOf(
+                "coal" to 1
+            ),
+            recipeType = "fuel"
+        ),
+        Recipe(
+            result = "fuel",
+            resultQuantity = 8,
+            requirements = mapOf(
+                "charcoal" to 1
+            ),
+            recipeType = "fuel"
+        ),
+        Recipe(
+            result = "fuel",
+            resultQuantity = 12,
+            requirements = mapOf(
+                "blaze_rod" to 1
+            ),
+            recipeType = "fuel"
+        ),
+        Recipe(
+            result = "fuel",
+            resultQuantity = 20,
+            requirements = mapOf(
+                "dried_kelp_block" to 1
+            ),
+            recipeType = "fuel"
+        ),
+        Recipe(
+            result = "fuel",
+            resultQuantity = 80,
+            requirements = mapOf(
+                "coal_block" to 1
+            ),
+            recipeType = "fuel"
+        ),
+        Recipe(
+            result = "fuel",
+            resultQuantity = 100,
+            requirements = mapOf(
+                "lava_bucket" to 1
+            ),
+            recipeType = "fuel"
+        ),
     )
 }
