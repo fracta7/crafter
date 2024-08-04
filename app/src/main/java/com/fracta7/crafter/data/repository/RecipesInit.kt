@@ -7205,6 +7205,17 @@ fun recipesInit(): List<Recipe> {
                 "armadillo_scute" to 6
             ),
             recipeType = "crafting"
+        ),
+        Recipe(
+            result = "suspicious_stew",
+            resultQuantity = 1,
+            requirements = mapOf(
+                "red_mushroom" to 1,
+                "brown_mushroom" to 1,
+                "bowl" to 1,
+                "poppy" to 1
+            ),
+            recipeType = "crafting"
         )
     )
 }
