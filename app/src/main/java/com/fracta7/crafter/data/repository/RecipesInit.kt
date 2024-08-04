@@ -7182,5 +7182,21 @@ fun recipesInit(): List<Recipe> {
             ),
             recipeType = "crafting"
         ),
-    )
+        Recipe(
+            result = "glass_pane",
+            resultQuantity = 16,
+            requirements = mapOf(
+                "glass" to 6
+            ),
+            recipeType = "crafting"
+        ),
+        Recipe(
+            result = "snow",
+            resultQuantity = 6,
+            requirements = mapOf(
+                "snow" to 3
+            ),
+            recipeType = "crafting"
+        ),
+        )
 }
