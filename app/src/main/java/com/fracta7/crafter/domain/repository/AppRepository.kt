@@ -1,5 +1,6 @@
 package com.fracta7.crafter.domain.repository
 
+import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
@@ -22,5 +23,5 @@ interface AppRepository {
 
     fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType
 
-    fun getTagName(tagID: TagID): TagName
+    fun getAllTags(): List<Category>
 }

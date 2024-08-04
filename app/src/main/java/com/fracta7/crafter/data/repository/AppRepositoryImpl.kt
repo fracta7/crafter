@@ -1,5 +1,6 @@
 package com.fracta7.crafter.data.repository
 
+import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
@@ -32,8 +33,8 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
         }
     }
 
-    override fun getTagName(tagID: TagID): TagName {
-        return tags[tagID]!!
+    override fun getAllTags(): List<Category> {
+        return tags
     }
 
 
