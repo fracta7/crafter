@@ -570,7 +570,8 @@ fun recipesInit(): List<Recipe> {
             result = "glass",
             resultQuantity = 1,
             requirements = mapOf(
-                "sand" to 1
+                "sand" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -938,7 +939,8 @@ fun recipesInit(): List<Recipe> {
             result = "smooth_quartz",
             resultQuantity = 1,
             requirements = mapOf(
-                "quartz_block" to 1
+                "quartz_block" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -946,7 +948,8 @@ fun recipesInit(): List<Recipe> {
             result = "smooth_red_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                "red_sandstone" to 1
+                "red_sandstone" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -954,7 +957,8 @@ fun recipesInit(): List<Recipe> {
             result = "smooth_sandstone",
             resultQuantity = 1,
             requirements = mapOf(
-                "sandstone" to 1
+                "sandstone" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -962,7 +966,8 @@ fun recipesInit(): List<Recipe> {
             result = "smooth_stone",
             resultQuantity = 1,
             requirements = mapOf(
-                "stone" to 1
+                "stone" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -1235,7 +1240,8 @@ fun recipesInit(): List<Recipe> {
             result = "cracked_stone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                "stone_bricks" to 1
+                "stone_bricks" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -1259,7 +1265,8 @@ fun recipesInit(): List<Recipe> {
             result = "cracked_deepslate_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                "deepslate_bricks" to 1
+                "deepslate_bricks" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -1275,7 +1282,8 @@ fun recipesInit(): List<Recipe> {
             result = "cracked_deepslate_tiles",
             resultQuantity = 1,
             requirements = mapOf(
-                "deepslate_tiles" to 1
+                "deepslate_tiles" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -1340,7 +1348,8 @@ fun recipesInit(): List<Recipe> {
             result = "cracked_nether_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                "nether_bricks" to 1
+                "nether_bricks" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2551,7 +2560,8 @@ fun recipesInit(): List<Recipe> {
             result = "white_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "white_terracotta" to 1
+                "white_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2559,7 +2569,8 @@ fun recipesInit(): List<Recipe> {
             result = "orange_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "orange_terracotta" to 1
+                "orange_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2567,7 +2578,8 @@ fun recipesInit(): List<Recipe> {
             result = "magenta_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "magenta_terracotta" to 1
+                "magenta_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2575,7 +2587,8 @@ fun recipesInit(): List<Recipe> {
             result = "light_blue_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "light_blue_terracotta" to 1
+                "light_blue_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2583,7 +2596,8 @@ fun recipesInit(): List<Recipe> {
             result = "yellow_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "yellow_terracotta" to 1
+                "yellow_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2591,7 +2605,8 @@ fun recipesInit(): List<Recipe> {
             result = "lime_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "lime_terracotta" to 1
+                "lime_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2599,7 +2614,8 @@ fun recipesInit(): List<Recipe> {
             result = "pink_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "pink_terracotta" to 1
+                "pink_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2607,7 +2623,8 @@ fun recipesInit(): List<Recipe> {
             result = "gray_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "gray_terracotta" to 1
+                "gray_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2615,7 +2632,8 @@ fun recipesInit(): List<Recipe> {
             result = "light_gray_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "light_gray_terracotta" to 1
+                "light_gray_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2623,7 +2641,8 @@ fun recipesInit(): List<Recipe> {
             result = "cyan_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "cyan_terracotta" to 1
+                "cyan_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2631,7 +2650,8 @@ fun recipesInit(): List<Recipe> {
             result = "purple_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "purple_terracotta" to 1
+                "purple_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2639,7 +2659,8 @@ fun recipesInit(): List<Recipe> {
             result = "blue_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "blue_terracotta" to 1
+                "blue_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2647,7 +2668,8 @@ fun recipesInit(): List<Recipe> {
             result = "brown_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "brown_terracotta" to 1
+                "brown_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2655,7 +2677,8 @@ fun recipesInit(): List<Recipe> {
             result = "green_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "green_terracotta" to 1
+                "green_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2663,7 +2686,8 @@ fun recipesInit(): List<Recipe> {
             result = "red_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "red_terracotta" to 1
+                "red_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -2671,7 +2695,8 @@ fun recipesInit(): List<Recipe> {
             result = "black_glazed_terracotta",
             resultQuantity = 1,
             requirements = mapOf(
-                "black_terracotta" to 1
+                "black_terracotta" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4052,7 +4077,8 @@ fun recipesInit(): List<Recipe> {
             result = "charcoal",
             resultQuantity = 1,
             requirements = mapOf(
-                "oak_log" to 1
+                "oak_log" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4069,7 +4095,8 @@ fun recipesInit(): List<Recipe> {
             result = "netherite_scrap",
             resultQuantity = 1,
             requirements = mapOf(
-                "ancient_debris" to 1
+                "ancient_debris" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4554,7 +4581,8 @@ fun recipesInit(): List<Recipe> {
             result = "cooked_porkchop",
             resultQuantity = 1,
             requirements = mapOf(
-                "porkchop" to 1
+                "porkchop" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4660,7 +4688,8 @@ fun recipesInit(): List<Recipe> {
             result = "brick",
             resultQuantity = 1,
             requirements = mapOf(
-                "clay_ball" to 1
+                "clay_ball" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4729,7 +4758,8 @@ fun recipesInit(): List<Recipe> {
             result = "cooked_cod",
             resultQuantity = 1,
             requirements = mapOf(
-                "cod" to 1
+                "cod" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4737,7 +4767,8 @@ fun recipesInit(): List<Recipe> {
             result = "cooked_salmon",
             resultQuantity = 1,
             requirements = mapOf(
-                "salmon" to 1
+                "salmon" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4785,7 +4816,8 @@ fun recipesInit(): List<Recipe> {
             result = "lime_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                "sea_pickle" to 1
+                "sea_pickle" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -4852,7 +4884,8 @@ fun recipesInit(): List<Recipe> {
             result = "green_dye",
             resultQuantity = 1,
             requirements = mapOf(
-                "cactus" to 1
+                "cactus" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5054,7 +5087,8 @@ fun recipesInit(): List<Recipe> {
             result = "dried_kelp",
             resultQuantity = 1,
             requirements = mapOf(
-                "kelp" to 1
+                "kelp" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5078,7 +5112,8 @@ fun recipesInit(): List<Recipe> {
             result = "cooked_beef",
             resultQuantity = 1,
             requirements = mapOf(
-                "beef" to 1
+                "beef" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5086,7 +5121,8 @@ fun recipesInit(): List<Recipe> {
             result = "cooked_chicken",
             resultQuantity = 1,
             requirements = mapOf(
-                "chicken" to 1
+                "chicken" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5218,7 +5254,8 @@ fun recipesInit(): List<Recipe> {
             result = "baked_potato",
             resultQuantity = 1,
             requirements = mapOf(
-                "potato" to 1
+                "potato" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5263,7 +5300,8 @@ fun recipesInit(): List<Recipe> {
             result = "nether_brick",
             resultQuantity = 1,
             requirements = mapOf(
-                "netherrack" to 1
+                "netherrack" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5471,7 +5509,8 @@ fun recipesInit(): List<Recipe> {
             result = "popped_chorus_fruit",
             resultQuantity = 1,
             requirements = mapOf(
-                "chorus_fruit" to 1
+                "chorus_fruit" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
@@ -5752,7 +5791,8 @@ fun recipesInit(): List<Recipe> {
             result = "cracked_polished_blackstone_bricks",
             resultQuantity = 1,
             requirements = mapOf(
-                "polished_blackstone_bricks" to 1
+                "polished_blackstone_bricks" to 1,
+                "fuel" to 1
             ),
             recipeType = "smelting"
         ),
