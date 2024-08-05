@@ -18,4 +18,10 @@ sealed class Route{
         val item: String,
         val amount: Int
     )
+
+    @Serializable
+    data class RecipeTree(
+        val item: String,
+        val amount: Int
+    )
 }

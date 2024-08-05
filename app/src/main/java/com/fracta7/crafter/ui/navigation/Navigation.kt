@@ -10,6 +10,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.fracta7.crafter.ui.crafting_screen.CraftingScreen
+import com.fracta7.crafter.ui.crafting_screen.tree.RecipeTreeScreen
 import com.fracta7.crafter.ui.main_activity.MainScreen
 import com.fracta7.crafter.ui.root_crafting_screen.RootCraftingScreen
 import com.fracta7.crafter.ui.theme.CrafterTheme
@@ -34,6 +35,14 @@ fun Navigation() {
                 composable<Route.Crafting> {
                     val args = it.toRoute<Route.Crafting>()
                     CraftingScreen(
+                        navController = navController,
+                        itemID = args.item,
+                        amount = args.amount
+                    )
+                }
+                composable<Route.RecipeTree> {
+                    val args = it.toRoute<Route.RecipeTree>()
+                    RecipeTreeScreen(
                         navController = navController,
                         itemID = args.item,
                         amount = args.amount

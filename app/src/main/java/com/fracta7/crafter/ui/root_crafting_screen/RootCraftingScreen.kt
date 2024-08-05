@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material.icons.automirrored.rounded.ArrowForward
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.KeyboardArrowUp
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -34,10 +35,12 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.fracta7.crafter.R
 import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.navigation.Route
@@ -232,26 +235,36 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                                 itemsMap.forEach { (itemID, amount) ->
                                     item {
                                         val item = viewModel.getItem(itemID)
-                                        ItemElement(
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .clickable {
+                                        Row(
+                                            verticalAlignment = Alignment.CenterVertically,
+                                            modifier = Modifier.fillMaxWidth()
+                                        ) {
+                                            ItemElement(
+                                                modifier = Modifier
+                                                    .fillMaxWidth(0.9f)
+                                                    .clickable {
 
-                                                    if (item.craftable) {
-                                                        //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
-                                                        navController.navigate(
-                                                            Route.Crafting(
-                                                                item = item.id,
-                                                                amount = amount
+                                                        if (item.craftable) {
+                                                            //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
+                                                            navController.navigate(
+                                                                Route.Crafting(
+                                                                    item = item.id,
+                                                                    amount = amount
+                                                                )
                                                             )
-                                                        )
-                                                    }
-                                                },
-                                            item = item,
-                                            amount = amount,
-                                            preview = false,
-                                            stackSize = item.stackSize
-                                        )
+                                                        }
+                                                    },
+                                                item = item,
+                                                amount = amount,
+                                                preview = false,
+                                                stackSize = item.stackSize
+                                            )
+                                            IconButton(onClick = {
+                                                navController.navigate(Route.RecipeTree(itemID, amount))
+                                            }) {
+                                                Icon(painter = painterResource(R.drawable.rounded_tree_24), contentDescription = "tree view")
+                                            }
+                                        }
                                         Divider(
                                             modifier = Modifier.padding(
                                                 horizontal = 4.dp
