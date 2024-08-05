@@ -1,6 +1,5 @@
 package com.fracta7.crafter.util
 
-import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
