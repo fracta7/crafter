@@ -23,25 +23,25 @@ class DataValidation {
     @Test
     fun validateRecipeAvailability() {
         val missingItems = validateRecipeAvailability(items, recipes)
-        assertTrue(missingItems.isEmpty())
+        assertTrue("Some craftable items are missing recipes.", missingItems.isEmpty())
     }
 
     @Test
     fun validateRecipeRequirements() {
         val invalidRequirements = validateRecipeRequirements(items, recipes)
-        assertTrue(invalidRequirements.isEmpty())
+        assertTrue("Some recipes have invalid item IDs in their requirements.", invalidRequirements.isEmpty())
     }
 
     @Test
     fun validateRecipeTypes() {
         val invalidRecipeTypes = validateRecipeTypes(recipeTypes, recipes)
-        assertTrue(invalidRecipeTypes.isEmpty())
+        assertTrue("Some recipes have invalid recipe type", invalidRecipeTypes.isEmpty())
     }
 
     @Test
     fun validateItemTags() {
         val invalidTags = validateItemTags(categories, items)
-        assertTrue(invalidTags.isEmpty())
+        assertTrue("Some items have invalid tags/categories.", invalidTags.isEmpty())
     }
 }
 
