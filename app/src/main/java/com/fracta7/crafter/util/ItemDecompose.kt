@@ -102,28 +102,19 @@ fun decomposeItems(
     for ((item, _) in itemsToRemove){
         rawMaterialsLeftOvers.remove(item)
     }
+    val zeroItems = mutableListOf<ItemID>()
+
+    // Iterate over the items map
+    rawMaterialsLeftOvers.forEach { (itemID, quantity) ->
+        if (quantity == 0) {
+            zeroItems.add(itemID)  // Add to list
+            // Increment the count in updatedMap
+            rawMaterials[itemID] = rawMaterials.getOrDefault(itemID, 0) + 1
+        }
+    }
+
     // Remove all entries with a value of 0
     rawMaterialsLeftOvers.entries.removeIf { it.value == 0 }
 // https://stackoverflow.com/questions/50032000/how-to-avoid-concurrentmodificationexception-kotlin
     return rawMaterials to rawMaterialsLeftOvers
-}
-
-/**
- * Function that will convert a map with item id to amount to item to amount.
- * @param itemsId a map containing item ids mapped to amounts.
- * @param itemRegistry an item registry to pull item data.
- * @return a map of item mapped to amounts.
- */
-fun convertIdMapToItemMap(
-    itemsId: Map<String, Int>,
-    itemRegistry: ItemRegistry
-): Map<Item, Int> {
-    val itemToAmountMap = mutableMapOf<Item, Int>()
-
-    for ((id, amount) in itemsId) {
-        val item = itemRegistry.getItem(id)!!
-        itemToAmountMap[item] = amount
-    }
-
-    return itemToAmountMap
 }
