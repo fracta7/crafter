@@ -102,6 +102,8 @@ fun decomposeItems(
     for ((item, _) in itemsToRemove){
         rawMaterialsLeftOvers.remove(item)
     }
+    // Remove all entries with a value of 0
+    rawMaterialsLeftOvers.entries.removeIf { it.value == 0 }
 // https://stackoverflow.com/questions/50032000/how-to-avoid-concurrentmodificationexception-kotlin
     return rawMaterials to rawMaterialsLeftOvers
 }

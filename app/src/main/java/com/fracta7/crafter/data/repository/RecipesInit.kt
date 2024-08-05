@@ -169,7 +169,7 @@ fun recipesInit(): List<Recipe> {
         ),
         Recipe(
             result = "cut_copper",
-            resultQuantity = 1,
+            resultQuantity = 4,
             requirements = mapOf("copper_block" to 1),
             recipeType = "cutting"
         ),
@@ -217,7 +217,7 @@ fun recipesInit(): List<Recipe> {
         ),
         Recipe(
             result = "cut_copper_slab",
-            resultQuantity = 2,
+            resultQuantity = 8,
             requirements = mapOf("copper_block" to 1),
             recipeType = "cutting"
         ),
