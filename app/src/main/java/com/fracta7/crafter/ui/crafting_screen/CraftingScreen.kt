@@ -1,7 +1,6 @@
 package com.fracta7.crafter.ui.crafting_screen
 
 import androidx.compose.foundation.basicMarquee
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +11,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -29,12 +27,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.fracta7.crafter.ui.elements.ItemElement
+import com.fracta7.crafter.ui.elements.CraftingElement
 import com.fracta7.crafter.ui.helper.DrawItem
-import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
 import com.fracta7.crafter.util.getStackText
-import com.fracta7.crafter.util.resourceAmount
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -79,13 +75,13 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         ) {
                             DrawItem(
                                 itemID = itemID,
-                                iconSize = 96.dp,
+                                iconSize = 64.dp,
                                 modifier = Modifier.padding(4.dp)
                             )
                             Column {
                                 Text(
                                     text = item.name,
-                                    fontSize = MaterialTheme.typography.titleLarge.fontSize,
+                                    fontSize = MaterialTheme.typography.titleMedium.fontSize,
                                     fontWeight = FontWeight.Bold,
                                     maxLines = 1,
                                     modifier = Modifier.basicMarquee()
@@ -102,31 +98,40 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         modifier = Modifier
                             .fillMaxWidth()
                     ) {
-                        recipe.requirements.forEach { (itemId, amountRecipeRequirement) ->
-                            val itemRequirement = viewModel.getItemById(itemId)
-                            item {
-                                val requiredAmount = amountRecipeRequirement * resourceAmount(
-                                    result = recipe.resultQuantity,
-                                    amountNeeded = amount
-                                )
-                                ItemElement(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .clickable {
-                                            if (itemRequirement.craftable) {
-                                                //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
-                                                navController.navigate(
-                                                    Route.Crafting(
-                                                        item = itemRequirement.id,
-                                                        amount = requiredAmount
-                                                    )
-                                                )
-                                            }
-                                        }, item = itemRequirement, amount = requiredAmount, preview = false
-                                )
-                                Divider(modifier = Modifier.padding(horizontal = 10.dp))
-                            }
+                        item {
+                            CraftingElement(
+                                modifier = Modifier
+                                    .fillMaxWidth(),
+                                item = item,
+                                amount = amount,
+                                appRepository = viewModel.getRepository()
+                            )
                         }
+//                        recipe.requirements.forEach { (itemId, amountRecipeRequirement) ->
+//                            val itemRequirement = viewModel.getItemById(itemId)
+//                            item {
+//                                val requiredAmount = amountRecipeRequirement * resourceAmount(
+//                                    result = recipe.resultQuantity,
+//                                    amountNeeded = amount
+//                                )
+//                                ItemElement(
+//                                    modifier = Modifier
+//                                        .fillMaxWidth()
+//                                        .clickable {
+//                                            if (itemRequirement.craftable) {
+//                                                //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
+//                                                navController.navigate(
+//                                                    Route.Crafting(
+//                                                        item = itemRequirement.id,
+//                                                        amount = requiredAmount
+//                                                    )
+//                                                )
+//                                            }
+//                                        }, item = itemRequirement, amount = requiredAmount, preview = false
+//                                )
+//                                Divider(modifier = Modifier.padding(horizontal = 10.dp))
+//                            }
+//                        }
                     }
                 }
             }

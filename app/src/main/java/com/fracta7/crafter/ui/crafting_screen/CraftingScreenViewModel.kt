@@ -25,4 +25,7 @@ class CraftingScreenViewModel @Inject constructor(
     fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType {
         return appRepository.getRecipeType(recipeTypeID)
     }
+    fun getRepository(): AppRepository {
+        return appRepository
+    }
 }

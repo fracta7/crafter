@@ -3,6 +3,7 @@ package com.fracta7.crafter
 import com.fracta7.crafter.data.repository.itemsInit
 import com.fracta7.crafter.data.repository.recipeTypesInit
 import com.fracta7.crafter.data.repository.recipesInit
+import com.fracta7.crafter.data.repository.specialRecipesInit
 import com.fracta7.crafter.data.repository.tagsInit
 import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.Item
@@ -16,7 +17,7 @@ import org.junit.Test
 
 class DataValidation {
     private val items = itemsInit()
-    private val recipes = recipesInit()
+    private val recipes = recipesInit() + specialRecipesInit()
     private val recipeTypes = recipeTypesInit()
     private val categories = tagsInit()
 
@@ -51,10 +52,7 @@ private fun validateRecipeAvailability(items: List<Item>, recipes: List<Recipe>)
 
     for (item in craftableItems) {
         val hasRecipe = recipes.any { it.result == item.id }
-        if (hasRecipe) {
-            println("\"${item.id}\" - OK")
-        } else {
-            println("\"${item.id}\" - FAIL")
+        if (!hasRecipe) {
             missingItems.add(item.id)
         }
     }
