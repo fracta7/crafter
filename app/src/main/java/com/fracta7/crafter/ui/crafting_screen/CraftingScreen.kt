@@ -1,7 +1,6 @@
 package com.fracta7.crafter.ui.crafting_screen
 
 import androidx.compose.foundation.basicMarquee
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -12,7 +11,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -30,12 +28,9 @@ import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.CraftingElement
-import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
-import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
 import com.fracta7.crafter.util.getStackText
-import com.fracta7.crafter.util.resourceAmount
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -103,7 +98,7 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         modifier = Modifier
                             .fillMaxWidth()
                     ) {
-                        item() {
+                        item {
                             CraftingElement(
                                 modifier = Modifier
                                     .fillMaxWidth(),

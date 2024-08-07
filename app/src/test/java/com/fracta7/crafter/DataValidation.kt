@@ -52,10 +52,7 @@ private fun validateRecipeAvailability(items: List<Item>, recipes: List<Recipe>)
 
     for (item in craftableItems) {
         val hasRecipe = recipes.any { it.result == item.id }
-        if (hasRecipe) {
-            println("\"${item.id}\" - OK")
-        } else {
-            println("\"${item.id}\" - FAIL")
+        if (!hasRecipe) {
             missingItems.add(item.id)
         }
     }

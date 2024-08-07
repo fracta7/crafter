@@ -45,7 +45,7 @@ fun decomposeItems(
         if (!itemObject.craftable) {
             action(item, amount)
         } else {
-            val recipes = recipeRegistry.getRecipesByResult(item)
+            val recipes = sortRecipesByEfficiency(recipeRegistry.getRecipesByResult(item))
             val recipe = recipes[0] // Assuming there's at least one recipe and using the first one.
             val multiplier = resourceAmount(
                 result = recipe.resultQuantity,
@@ -71,7 +71,7 @@ fun decomposeItems(
         if (!itemObject.craftable) {
             addRawMaterialLeftOver(item, amount)
         } else {
-            val recipe = recipeRegistry.getRecipesByResult(item)[0]
+            val recipe = sortRecipesByEfficiency(recipeRegistry.getRecipesByResult(item))[0]
             if (amount >= recipe.resultQuantity) {
                 val leftOver = amount % recipe.resultQuantity
                 val requiredAmount = amount - leftOver

@@ -18,6 +18,7 @@ import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -31,6 +32,7 @@ import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.repository.AppRepository
 import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.util.resourceAmount
+import com.fracta7.crafter.util.sortRecipesByEfficiency
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -41,7 +43,8 @@ fun CraftingElement(
     appRepository: AppRepository
 ) {
     var toggle by remember { mutableStateOf(false) }
-    val recipes = appRepository.recipeRegistryProvider().getRecipesByResult(item.id)
+    val recipes = sortRecipesByEfficiency(appRepository.recipeRegistryProvider().getRecipesByResult(item.id))
+    var recipeIndex by remember { mutableIntStateOf(0) }
     Column(modifier = Modifier
         .fillMaxWidth()
         .clickable { toggle = !toggle }
@@ -58,17 +61,19 @@ fun CraftingElement(
                 amount = amount,
                 preview = false
             )
-            if (recipes.size > 1) {
-                IconButton(onClick = { /*TODO*/ }) {
-                    Icon(
-                        painter = painterResource(id = R.drawable.tree_icon_24),
-                        contentDescription = "Recipe Selector Button"
-                    )
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                if (recipes.size > 1) {
+                    IconButton(onClick = { /*TODO*/ }) {
+                        Icon(
+                            painter = painterResource(id = R.drawable.tree_icon_24),
+                            contentDescription = "Recipe Selector Button"
+                        )
+                    }
                 }
+                val icon =
+                    if (toggle) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
+                if (item.craftable) Icon(icon, contentDescription = "dropdown")
             }
-            val icon =
-                if (toggle) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
-            if (item.craftable) Icon(icon, contentDescription = "dropdown")
         }
         AnimatedVisibility(visible = toggle && item.craftable) {
             Column(modifier = Modifier.fillMaxWidth()) {
@@ -90,7 +95,7 @@ fun CraftingElement(
                             .fillMaxWidth()
                             .padding(horizontal = 8.dp)
                     ) {
-                        recipes[0].requirements.forEach { (itemID, rAmount) ->
+                        recipes[recipeIndex].requirements.forEach { (itemID, rAmount) ->
                             val requirementItem =
                                 appRepository.itemRegistryProvider().getItem(itemID)!!
                             val requirementAmount =
