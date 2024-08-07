@@ -31,6 +31,8 @@ List of key features and functionalities of the project.
 - UI for recipe steps
 - List of raw materials for recipe list
 - Tracking leftovers
+- add multiple recipes for single item
+- add recipe switch between multiple recipes
 
 ## TODOs
 
@@ -38,8 +40,6 @@ List of features to do:
 
 - Using existing items from inventory
 - Recipe tree visualization
-- add multiple recipes for single item
-- add recipe switch between multiple recipes
 
 ## Building
 
@@ -187,7 +187,7 @@ To add new RecipeType, go to `RecipeTypesInit.kt` and add a new entry in `recipe
 ```kotlin
 fun recipeTypesInit(): List<RecipeType> {
     return listOf(
-        RecipeType(id = "crafting", name = "Crafting", item = "crafting_table"),
+        RecipeType(id = "crafting_shapeless", name = "Crafting", item = "crafting_table"),
         RecipeType(id = "smelting", name = "Smelting", item = "furnace"),
         // new entries
     )
@@ -231,4 +231,4 @@ SOFTWARE.
 
 ## Contact
 
-If you wish to contact me my Email: `fracta7@gmail.com`
+If you wish to contact me, my Email: `fracta7@gmail.com`
