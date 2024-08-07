@@ -43,6 +43,7 @@ fun CraftingElement(
     appRepository: AppRepository
 ) {
     var toggle by remember { mutableStateOf(false) }
+    var showDialog by remember { mutableStateOf(false) }
     val recipes = sortRecipesByEfficiency(appRepository.recipeRegistryProvider().getRecipesByResult(item.id))
     var recipeIndex by remember { mutableIntStateOf(0) }
     Column(modifier = Modifier
@@ -63,9 +64,20 @@ fun CraftingElement(
             )
             Row(verticalAlignment = Alignment.CenterVertically) {
                 if (recipes.size > 1) {
-                    IconButton(onClick = { /*TODO*/ }) {
+                    if (showDialog) {
+                        RecipeDialog(
+                            recipes = recipes,
+                            onDismissRequest = { showDialog = false },
+                            onItemSelected = { index ->
+                                recipeIndex = index
+                            },
+                            selected = recipeIndex,
+                            appRepository = appRepository
+                        )
+                    }
+                    IconButton(onClick = { showDialog = true }) {
                         Icon(
-                            painter = painterResource(id = R.drawable.tree_icon_24),
+                            painter = painterResource(id = R.drawable.baseline_swap_horiz_24),
                             contentDescription = "Recipe Selector Button"
                         )
                     }
@@ -75,7 +87,7 @@ fun CraftingElement(
                 if (item.craftable) Icon(icon, contentDescription = "dropdown")
             }
         }
-        AnimatedVisibility(visible = toggle && item.craftable) {
+        AnimatedVisibility(visible = toggle && recipes.isNotEmpty()) {
             Column(modifier = Modifier.fillMaxWidth()) {
                 Row(
                     modifier = Modifier

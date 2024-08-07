@@ -18,6 +18,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -45,7 +46,7 @@ fun AddItemDialog(
 ) {
     Dialog(onDismissRequest = { onDismissRequest() }) {
         var input by remember { mutableStateOf("") }
-        var itemAmount by remember { mutableStateOf(0) }
+        var itemAmount by remember { mutableIntStateOf(0) }
         var isError by remember { mutableStateOf(false) }
         var errorText by remember { mutableStateOf("") }
         // Draw a rectangle shape with rounded corners inside the dialog
