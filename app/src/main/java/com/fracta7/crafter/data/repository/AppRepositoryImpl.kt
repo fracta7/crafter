@@ -29,6 +29,9 @@ class AppRepositoryImpl @Inject constructor() : AppRepository {
         recipesInit().forEach {
             recipeRegistry.addRecipe(it)
         }
+        specialRecipesInit().forEach {
+            recipeRegistry.addRecipe(it)
+        }
     }
 
     override fun getAllTags(): List<Category> {

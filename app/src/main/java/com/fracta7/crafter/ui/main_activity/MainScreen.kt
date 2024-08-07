@@ -3,6 +3,7 @@ package com.fracta7.crafter.ui.main_activity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -190,13 +191,18 @@ fun MainScreen(navController: NavController) {
                                             Row(
                                                 verticalAlignment = Alignment.CenterVertically,
                                                 horizontalArrangement = Arrangement.SpaceBetween,
-                                                modifier = Modifier.fillMaxWidth()
+                                                modifier = Modifier
+                                                    .fillMaxWidth()
+                                                    .clickable {
+                                                        currentItemId = item.id
+                                                        showAddDialog = !showAddDialog
+                                                    }
                                             ) {
                                                 val spacing =
                                                     if (viewModel.items.contains(item)) 0.9f else 1f
                                                 Row(
                                                     verticalAlignment = Alignment.CenterVertically,
-                                                    modifier = Modifier.fillMaxWidth(0.85f)
+                                                    modifier = Modifier.fillMaxWidth(0.9f)
                                                 ) {
                                                     ItemElement(
                                                         modifier = Modifier.fillMaxWidth(spacing),
@@ -211,17 +217,6 @@ fun MainScreen(navController: NavController) {
                                                             Text(text = viewModel.items[item].toString())
                                                         }
                                                     }
-                                                }
-                                                IconButton(
-                                                    onClick = {
-                                                        currentItemId = item.id
-                                                        showAddDialog = !showAddDialog
-                                                    }, modifier = Modifier.padding(4.dp)
-                                                ) {
-                                                    Icon(
-                                                        Icons.Rounded.Add,
-                                                        contentDescription = "Add the item"
-                                                    )
                                                 }
                                             }
                                             Divider()

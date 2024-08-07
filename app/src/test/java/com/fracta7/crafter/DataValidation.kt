@@ -3,6 +3,7 @@ package com.fracta7.crafter
 import com.fracta7.crafter.data.repository.itemsInit
 import com.fracta7.crafter.data.repository.recipeTypesInit
 import com.fracta7.crafter.data.repository.recipesInit
+import com.fracta7.crafter.data.repository.specialRecipesInit
 import com.fracta7.crafter.data.repository.tagsInit
 import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.Item
@@ -16,7 +17,7 @@ import org.junit.Test
 
 class DataValidation {
     private val items = itemsInit()
-    private val recipes = recipesInit()
+    private val recipes = recipesInit() + specialRecipesInit()
     private val recipeTypes = recipeTypesInit()
     private val categories = tagsInit()
 

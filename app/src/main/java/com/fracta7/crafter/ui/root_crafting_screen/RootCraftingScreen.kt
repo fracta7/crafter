@@ -101,13 +101,6 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                             )
                         }
                         coroutineScope.launch {
-                            /**
-                            itemsConverted = convertIdMapToItemMap(
-                            itemsId = itemsMap,
-                            itemRegistry = viewModel.getItemRegistry()
-                            )
-                             */
-
                             val result = decomposeItems(
                                 itemsToDecompose = itemsMap,
                                 recipeRegistry = viewModel.getRecipeRegistry(),
@@ -115,7 +108,6 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                             )
                             rawItems = result.first
                             leftOvers = result.second
-
                         }
                         AnimatedVisibility(visible = rawItemsVisible) {
 
