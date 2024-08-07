@@ -29,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.fracta7.crafter.ui.elements.CraftingElement
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Route
@@ -79,13 +80,13 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         ) {
                             DrawItem(
                                 itemID = itemID,
-                                iconSize = 96.dp,
+                                iconSize = 64.dp,
                                 modifier = Modifier.padding(4.dp)
                             )
                             Column {
                                 Text(
                                     text = item.name,
-                                    fontSize = MaterialTheme.typography.titleLarge.fontSize,
+                                    fontSize = MaterialTheme.typography.titleMedium.fontSize,
                                     fontWeight = FontWeight.Bold,
                                     maxLines = 1,
                                     modifier = Modifier.basicMarquee()
@@ -102,31 +103,40 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                         modifier = Modifier
                             .fillMaxWidth()
                     ) {
-                        recipe.requirements.forEach { (itemId, amountRecipeRequirement) ->
-                            val itemRequirement = viewModel.getItemById(itemId)
-                            item {
-                                val requiredAmount = amountRecipeRequirement * resourceAmount(
-                                    result = recipe.resultQuantity,
-                                    amountNeeded = amount
-                                )
-                                ItemElement(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .clickable {
-                                            if (itemRequirement.craftable) {
-                                                //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
-                                                navController.navigate(
-                                                    Route.Crafting(
-                                                        item = itemRequirement.id,
-                                                        amount = requiredAmount
-                                                    )
-                                                )
-                                            }
-                                        }, item = itemRequirement, amount = requiredAmount, preview = false
-                                )
-                                Divider(modifier = Modifier.padding(horizontal = 10.dp))
-                            }
+                        item() {
+                            CraftingElement(
+                                modifier = Modifier
+                                    .fillMaxWidth(),
+                                item = item,
+                                amount = amount,
+                                appRepository = viewModel.getRepository()
+                            )
                         }
+//                        recipe.requirements.forEach { (itemId, amountRecipeRequirement) ->
+//                            val itemRequirement = viewModel.getItemById(itemId)
+//                            item {
+//                                val requiredAmount = amountRecipeRequirement * resourceAmount(
+//                                    result = recipe.resultQuantity,
+//                                    amountNeeded = amount
+//                                )
+//                                ItemElement(
+//                                    modifier = Modifier
+//                                        .fillMaxWidth()
+//                                        .clickable {
+//                                            if (itemRequirement.craftable) {
+//                                                //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
+//                                                navController.navigate(
+//                                                    Route.Crafting(
+//                                                        item = itemRequirement.id,
+//                                                        amount = requiredAmount
+//                                                    )
+//                                                )
+//                                            }
+//                                        }, item = itemRequirement, amount = requiredAmount, preview = false
+//                                )
+//                                Divider(modifier = Modifier.padding(horizontal = 10.dp))
+//                            }
+//                        }
                     }
                 }
             }
