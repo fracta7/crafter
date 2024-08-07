@@ -56,8 +56,8 @@ Simply search for items and them to you crafting list, then click `craft!`
 
 Screenshots:
 
-<img src="images/main_menu.png" alt="Main Menu"/>
-<img src="images/crafting_menu.png" alt="Crafting Menu"/>
+<img src="images/screen1.png" alt="Main Menu"/>
+<img src="images/screen2.png" alt="Crafting Menu"/>
 
 ## Contributing
 
