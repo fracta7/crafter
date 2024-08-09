@@ -94,10 +94,10 @@ fun CraftingElement(
                         .fillMaxWidth(),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    val recipeIcon = appRepository.getRecipeType(recipes[0].recipeType).item
+                    val recipeIcon = appRepository.getRecipeType(recipes[recipeIndex].recipeType).item
                     DrawItem(itemID = recipeIcon, iconSize = 48.dp)
                     Text(
-                        text = appRepository.getRecipeType(recipes[0].recipeType).name,
+                        text = appRepository.getRecipeType(recipes[recipeIndex].recipeType).name,
                         fontWeight = FontWeight.Bold
                     )
                 }
@@ -111,7 +111,7 @@ fun CraftingElement(
                             val requirementItem =
                                 appRepository.itemRegistryProvider().getItem(itemID)!!
                             val requirementAmount =
-                                rAmount * resourceAmount(recipes[0].resultQuantity, amount)
+                                rAmount * resourceAmount(recipes[recipeIndex].resultQuantity, amount)
                             CraftingElement(
                                 modifier = modifier,
                                 item = requirementItem,
