@@ -14,7 +14,7 @@ android {
     defaultConfig {
         applicationId = "com.fracta7.crafter"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 11
         versionName = "2.1"
 
