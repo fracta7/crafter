@@ -35,7 +35,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.core.text.isDigitsOnly
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.ui.helper.getItemIcon
+import com.fracta7.crafter.ui.helper.DrawItem
 
 @Composable
 fun AddItemDialog(
@@ -49,7 +49,6 @@ fun AddItemDialog(
         var itemAmount by remember { mutableIntStateOf(0) }
         var isError by remember { mutableStateOf(false) }
         var errorText by remember { mutableStateOf("") }
-        // Draw a rectangle shape with rounded corners inside the dialog
         Card(
             modifier = Modifier
                 .fillMaxWidth()
@@ -64,19 +63,7 @@ fun AddItemDialog(
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                val imageBitmap =
-                    ImageBitmap.imageResource(id = getItemIcon(item.id))
-                val bitmapPainter = BitmapPainter(
-                    image = imageBitmap,
-                    filterQuality = FilterQuality.None
-                )
-                Image(
-                    painter = bitmapPainter,
-                    contentDescription = "item icon",
-                    modifier = Modifier
-                        .size(72.dp)
-                        .padding(4.dp),
-                )
+                DrawItem(modifier = Modifier.padding(4.dp), itemID = item.id, iconSize = 72.dp)
                 Text(
                     text = item.name,
                     fontWeight = FontWeight.Bold,

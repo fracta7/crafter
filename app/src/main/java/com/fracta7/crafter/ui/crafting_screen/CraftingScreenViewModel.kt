@@ -2,9 +2,8 @@ package com.fracta7.crafter.ui.crafting_screen
 
 import androidx.lifecycle.ViewModel
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.domain.model.Recipe
-import com.fracta7.crafter.domain.model.RecipeType
-import com.fracta7.crafter.domain.model.RecipeTypeID
+import com.fracta7.crafter.domain.model.ItemRegistry
+import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.repository.AppRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
@@ -16,16 +15,19 @@ class CraftingScreenViewModel @Inject constructor(
     private val itemRegistry = appRepository.itemRegistryProvider()
     private val recipeRegistry = appRepository.recipeRegistryProvider()
 
-    fun getRecipe(itemID: String): Recipe {
-        return recipeRegistry.getRecipesByResult(itemID)[0]
+    fun getItem(itemID: String): Item {
+        return itemRegistry.getItem(itemID)!!
     }
-    fun getItemById(itemId: String): Item{
-        return itemRegistry.getItem(id = itemId)!!
+
+    fun getItemRegistry(): ItemRegistry{
+        return itemRegistry
     }
-    fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType {
-        return appRepository.getRecipeType(recipeTypeID)
+
+    fun getRecipeRegistry(): RecipeRegistry {
+        return recipeRegistry
     }
-    fun getRepository(): AppRepository {
+
+    fun getAppRepository(): AppRepository {
         return appRepository
     }
 }

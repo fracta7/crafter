@@ -57,8 +57,9 @@ fun CraftingElement(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
+            val size = if (recipes.size > 1 || item.craftable) 0.7f else 1f
             ItemElement(
-                modifier = Modifier.fillMaxWidth(0.7f),
+                modifier = Modifier.fillMaxWidth(size),
                 item = item,
                 amount = amount,
                 preview = false

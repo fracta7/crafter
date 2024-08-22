@@ -15,8 +15,8 @@ android {
         applicationId = "com.fracta7.crafter"
         minSdk = 24
         targetSdk = 34
-        versionCode = 10
-        versionName = "2.0"
+        versionCode = 11
+        versionName = "2.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -26,8 +26,8 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            isShrinkResources = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -85,7 +85,9 @@ dependencies {
     //retrofit
     implementation(libs.retrofit2)
     implementation(libs.converter.gson)
-//    implementation(libs.okhttp)
+
+    // coil
+    implementation(libs.coil.compose)
 }
 kapt {
     correctErrorTypes = true

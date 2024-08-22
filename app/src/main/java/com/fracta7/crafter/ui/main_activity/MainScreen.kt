@@ -16,7 +16,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.List
-import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
@@ -26,8 +25,10 @@ import androidx.compose.material3.Badge
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.BottomAppBarDefaults
 import androidx.compose.material3.BottomSheetDefaults
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Divider
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -41,6 +42,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -64,7 +66,7 @@ fun MainScreen(navController: NavController) {
     var showDrawer by remember { mutableStateOf(false) }
     var showAddDialog by remember { mutableStateOf(false) }
     var currentItemId by remember { mutableStateOf("") }
-    var currentItemAmount by remember { mutableStateOf(0) }
+    var currentItemAmount by remember { mutableIntStateOf(0) }
 
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -78,7 +80,7 @@ fun MainScreen(navController: NavController) {
                     AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
                         FloatingActionButton(onClick = {
                             navController.navigate(
-                                Route.RootCrafting(
+                                Route.Crafting(
                                     items = viewModel.items.keys.map { it.id }.toList(),
                                     amounts = viewModel.items.values.toList()
                                 )
@@ -202,7 +204,7 @@ fun MainScreen(navController: NavController) {
                                                     if (viewModel.items.contains(item)) 0.9f else 1f
                                                 Row(
                                                     verticalAlignment = Alignment.CenterVertically,
-                                                    modifier = Modifier.fillMaxWidth(0.9f)
+                                                    modifier = Modifier.fillMaxWidth()
                                                 ) {
                                                     ItemElement(
                                                         modifier = Modifier.fillMaxWidth(spacing),
@@ -213,7 +215,7 @@ fun MainScreen(navController: NavController) {
                                                         enter = scaleIn(),
                                                         exit = scaleOut()
                                                     ) {
-                                                        Badge(modifier = Modifier.padding(start = 4.dp)) {
+                                                        Badge(modifier = Modifier.padding(4.dp)) {
                                                             Text(text = viewModel.items[item].toString())
                                                         }
                                                     }
@@ -225,51 +227,6 @@ fun MainScreen(navController: NavController) {
                             }
                         }
                     }
-
-//                        viewModel.state.itemRegistry.getAll()
-//                            .filter { it.value.name.contains(search, ignoreCase = true) }
-//                            .forEach { (_, item) ->
-//                                item(key = item.id) {
-//                                    Row(
-//                                        verticalAlignment = Alignment.CenterVertically,
-//                                        horizontalArrangement = Arrangement.SpaceBetween,
-//                                        modifier = Modifier.fillMaxWidth()
-//                                    ) {
-//                                        val spacing =
-//                                            if (viewModel.items.contains(item)) 0.9f else 1f
-//                                        Row(
-//                                            verticalAlignment = Alignment.CenterVertically,
-//                                            modifier = Modifier.fillMaxWidth(0.85f)
-//                                        ) {
-//                                            ItemElement(
-//                                                modifier = Modifier.fillMaxWidth(spacing),
-//                                                item = item
-//                                            )
-//                                            AnimatedVisibility(
-//                                                visible = viewModel.items.contains(item),
-//                                                enter = scaleIn(),
-//                                                exit = scaleOut()
-//                                            ) {
-//                                                Badge(modifier = Modifier.padding(start = 4.dp)) {
-//                                                    Text(text = viewModel.items[item].toString())
-//                                                }
-//                                            }
-//                                        }
-//                                        IconButton(
-//                                            onClick = {
-//                                                currentItemId = item.id
-//                                                showAddDialog = !showAddDialog
-//                                            }, modifier = Modifier.padding(4.dp)
-//                                        ) {
-//                                            Icon(
-//                                                Icons.Rounded.Add,
-//                                                contentDescription = "Add the item"
-//                                            )
-//                                        }
-//                                    }
-//                                    Divider()
-//                                }
-//                            }
 
                     if (showDrawer) {
                         ModalBottomSheet(
@@ -305,6 +262,17 @@ fun MainScreen(navController: NavController) {
                                                 }
                                             }
                                             Divider()
+                                        }
+                                    }
+                                    item{
+                                        FilledTonalButton(
+                                            onClick = { viewModel.items.clear() },
+                                            modifier = Modifier
+                                                .fillMaxWidth()
+                                                .padding(4.dp),
+                                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.errorContainer)
+                                        ) {
+                                            Text("Clear all items")
                                         }
                                     }
                                 } else {

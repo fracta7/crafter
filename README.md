@@ -40,6 +40,7 @@ List of features to do:
 
 - Using existing items from inventory
 - Recipe tree visualization
+- Adding new items and recipes
 
 ## Building
 

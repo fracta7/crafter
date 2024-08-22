@@ -16,6 +16,7 @@ serialization = "1.6.3"
 daggerHilt = "2.51.1"
 lifecycleViewmodelAndroid = "2.8.4"
 retrofitVersion = "2.9.0"
+coil = "2.2.2"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
@@ -42,6 +43,7 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 androidx-lifecycle-viewmodel-android = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-android", version.ref = "lifecycleViewmodelAndroid" }
 retrofit2 = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
 converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

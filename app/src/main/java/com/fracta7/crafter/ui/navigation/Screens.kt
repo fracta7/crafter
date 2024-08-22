@@ -8,14 +8,8 @@ sealed class Route{
     data object Main : Route()
 
     @Serializable
-    data class RootCrafting(
+    data class Crafting(
         val items: List<String>,
         val amounts: List<Int>
-    )
-
-    @Serializable
-    data class Crafting(
-        val item: String,
-        val amount: Int
     )
 }
