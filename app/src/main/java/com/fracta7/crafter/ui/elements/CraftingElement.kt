@@ -1,6 +1,7 @@
 package com.fracta7.crafter.ui.elements
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -100,6 +101,14 @@ fun CraftingElement(
                         text = appRepository.getRecipeType(recipes[recipeIndex].recipeType).name,
                         fontWeight = FontWeight.Bold
                     )
+                    val leftOver = (resourceAmount(recipes[recipeIndex].resultQuantity, amount) * recipes[recipeIndex].resultQuantity) % amount
+                    if (leftOver > 0) {
+                        Text(
+                            text = "($leftOver leftovers)",
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.basicMarquee().padding(horizontal = 4.dp)
+                        )
+                    }
                 }
                 OutlinedCard(onClick = { }) {
                     Column(

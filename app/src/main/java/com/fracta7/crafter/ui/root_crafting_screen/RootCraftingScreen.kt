@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
@@ -39,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.domain.model.ItemID
+import com.fracta7.crafter.ui.elements.CraftingElement
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
@@ -56,7 +58,6 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
     var rawItemsVisible by remember { mutableStateOf(false) }
     var leftoversVisible by remember { mutableStateOf(false) }
     var craftingVisible by remember { mutableStateOf(true) }
-    //var itemsConverted by remember { mutableStateOf(mapOf<Item, Int>()) }
     val coroutineScope = rememberCoroutineScope()
 
     CrafterTheme(dynamicColor = true) {
@@ -133,7 +134,7 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                             }
                         }
                     }
-                    Spacer(modifier = Modifier.padding(10.dp))
+                    Spacer(modifier = Modifier.padding(4.dp))
                     if (leftOvers.isNotEmpty()) {
                         OutlinedCard(
                             modifier = Modifier
@@ -188,7 +189,7 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                             }
                         }
                     }
-                    if (leftOvers.isNotEmpty()) Spacer(modifier = Modifier.padding(10.dp))
+                    if (leftOvers.isNotEmpty()) Spacer(modifier = Modifier.padding(4.dp))
                     OutlinedCard(
                         modifier = Modifier
                             .padding(horizontal = 10.dp, vertical = 4.dp)
@@ -224,26 +225,27 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
                                 itemsMap.forEach { (itemID, amount) ->
                                     item {
                                         val item = viewModel.getItem(itemID)
-                                        ItemElement(
-                                            modifier = Modifier
-                                                .fillMaxWidth()
-                                                .clickable {
-
-                                                    if (item.craftable) {
-                                                        //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
-                                                        navController.navigate(
-                                                            Route.Crafting(
-                                                                item = item.id,
-                                                                amount = amount
-                                                            )
-                                                        )
-                                                    }
-                                                },
-                                            item = item,
-                                            amount = amount,
-                                            preview = false,
-                                            stackSize = item.stackSize
-                                        )
+                                        CraftingElement(item = item, amount = amount, appRepository = viewModel.getAppRepository())
+//                                        ItemElement(
+//                                            modifier = Modifier
+//                                                .fillMaxWidth()
+//                                                .clickable {
+//
+//                                                    if (item.craftable) {
+//                                                        //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
+//                                                        navController.navigate(
+//                                                            Route.Crafting(
+//                                                                item = item.id,
+//                                                                amount = amount
+//                                                            )
+//                                                        )
+//                                                    }
+//                                                },
+//                                            item = item,
+//                                            amount = amount,
+//                                            preview = false,
+//                                            stackSize = item.stackSize
+//                                        )
                                         Divider(
                                             modifier = Modifier.padding(
                                                 horizontal = 4.dp

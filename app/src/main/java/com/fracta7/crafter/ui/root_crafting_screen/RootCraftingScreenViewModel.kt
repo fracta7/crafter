@@ -10,7 +10,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class RootCraftingScreenViewModel @Inject constructor(
-    appRepository: AppRepository
+    private val appRepository: AppRepository
 ) : ViewModel() {
     private val itemRegistry = appRepository.itemRegistryProvider()
     private val recipeRegistry = appRepository.recipeRegistryProvider()
@@ -25,5 +25,9 @@ class RootCraftingScreenViewModel @Inject constructor(
 
     fun getRecipeRegistry(): RecipeRegistry {
         return recipeRegistry
+    }
+
+    fun getAppRepository(): AppRepository {
+        return appRepository
     }
 }
