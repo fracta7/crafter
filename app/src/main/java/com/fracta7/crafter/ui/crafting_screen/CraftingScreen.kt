@@ -223,27 +223,10 @@ fun CraftingScreen(navController: NavController, items: List<ItemID>, amounts: L
                                 itemsMap.forEach { (itemID, amount) ->
                                     item {
                                         val item = viewModel.getItem(itemID)
-                                        CraftingElement(item = item, amount = amount, appRepository = viewModel.getAppRepository())
-//                                        ItemElement(
-//                                            modifier = Modifier
-//                                                .fillMaxWidth()
-//                                                .clickable {
-//
-//                                                    if (item.craftable) {
-//                                                        //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
-//                                                        navController.navigate(
-//                                                            Route.Crafting(
-//                                                                item = item.id,
-//                                                                amount = amount
-//                                                            )
-//                                                        )
-//                                                    }
-//                                                },
-//                                            item = item,
-//                                            amount = amount,
-//                                            preview = false,
-//                                            stackSize = item.stackSize
-//                                        )
+                                        CraftingElement(
+                                            item = item,
+                                            amount = amount,
+                                            appRepository = viewModel.getAppRepository())
                                         Divider(
                                             modifier = Modifier.padding(
                                                 horizontal = 4.dp
