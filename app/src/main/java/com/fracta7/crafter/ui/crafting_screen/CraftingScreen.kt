@@ -107,31 +107,6 @@ fun CraftingScreen(navController: NavController, itemID: String, amount: Int) {
                                 appRepository = viewModel.getRepository()
                             )
                         }
-//                        recipe.requirements.forEach { (itemId, amountRecipeRequirement) ->
-//                            val itemRequirement = viewModel.getItemById(itemId)
-//                            item {
-//                                val requiredAmount = amountRecipeRequirement * resourceAmount(
-//                                    result = recipe.resultQuantity,
-//                                    amountNeeded = amount
-//                                )
-//                                ItemElement(
-//                                    modifier = Modifier
-//                                        .fillMaxWidth()
-//                                        .clickable {
-//                                            if (itemRequirement.craftable) {
-//                                                //navController.navigate(Screens.CraftingScreen.withArgs(item.id, requiredAmount.toString()))
-//                                                navController.navigate(
-//                                                    Route.Crafting(
-//                                                        item = itemRequirement.id,
-//                                                        amount = requiredAmount
-//                                                    )
-//                                                )
-//                                            }
-//                                        }, item = itemRequirement, amount = requiredAmount, preview = false
-//                                )
-//                                Divider(modifier = Modifier.padding(horizontal = 10.dp))
-//                            }
-//                        }
                     }
                 }
             }

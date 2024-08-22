@@ -55,7 +55,7 @@ fun RootCraftingScreen(navController: NavController, items: List<ItemID>, amount
     var leftOvers by remember { mutableStateOf(mapOf<ItemID, Int>()) }
     var rawItemsVisible by remember { mutableStateOf(false) }
     var leftoversVisible by remember { mutableStateOf(false) }
-    var craftingVisible by remember { mutableStateOf(false) }
+    var craftingVisible by remember { mutableStateOf(true) }
     //var itemsConverted by remember { mutableStateOf(mapOf<Item, Int>()) }
     val coroutineScope = rememberCoroutineScope()
 
