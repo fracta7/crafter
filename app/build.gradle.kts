@@ -15,8 +15,8 @@ android {
         applicationId = "com.fracta7.crafter"
         minSdk = 24
         targetSdk = 35
-        versionCode = 12
-        versionName = "2.2"
+        versionCode = 13
+        versionName = "2.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

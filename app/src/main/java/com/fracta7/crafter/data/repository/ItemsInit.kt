@@ -1235,6 +1235,7 @@ fun itemsInit(): List<Item> {
         Item(id = "ominous_trial_key", name = "Ominous Trial Key", stackSize = 64, craftable = false, tags = listOf("ingredients")),
         Item(id = "enchanted_book", name = "Enchanted Book", stackSize = 1, craftable = true, tags = listOf("ingredients")),
         Item(id = "fuel", name = "Fuel", stackSize = 64, craftable = true, tags = listOf("ingredients")),
+        Item(id = "brewing_fuel", name = "Brewing Fuel", stackSize = 64, craftable = true, tags = listOf("ingredients")),
 
         // potions
         Item(id = "awkward_potion", name = "Awkward Potion", stackSize = 1, craftable = true, tags = listOf("potions")),
