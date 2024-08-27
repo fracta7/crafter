@@ -28,19 +28,19 @@ Projects aims to assist with crafting long list of items for Minecraft. There ar
 
 List of key features and functionalities of the project.
 
-- UI for recipe steps
+- Crafting steps for multiple items
 - List of raw materials for recipe list
 - Tracking leftovers
-- add multiple recipes for single item
-- add recipe switch between multiple recipes
+- Recipe switch between multiple recipes
 
 ## TODOs
 
 List of features to do:
 
 - Using existing items from inventory
-- Recipe tree visualization
-- Adding new items and recipes
+- Adding custom items and recipes
+- Tipped Arrows
+- Online registry updates
 
 ## Building
 
@@ -70,6 +70,7 @@ In order to add new item and recipes, follow these steps:
 
 - add entry in `com.fracta7.crafter.data.repository.ItemsInit.kt` for items
 - add entry in `com.fracta7.crafter.data.repository.RecipesInit.kt` for recipes
+- add entry in `com.fracta7.crafter.data.repository.SpecialRecipes.kt` for special recipes
 
 Item data class is structured following way:
 
