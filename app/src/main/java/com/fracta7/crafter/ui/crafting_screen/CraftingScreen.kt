@@ -124,7 +124,6 @@ fun CraftingScreen(navController: NavController, items: List<ItemID>, amounts: L
                                             item = item,
                                             amount = amount,
                                             preview = false,
-                                            stackSize = item.stackSize
                                         )
                                         Divider(modifier = Modifier.padding(horizontal = 4.dp))
                                     }
@@ -174,7 +173,6 @@ fun CraftingScreen(navController: NavController, items: List<ItemID>, amounts: L
                                                 item = item,
                                                 amount = amount,
                                                 preview = false,
-                                                stackSize = item.stackSize
                                             )
                                             Divider(
                                                 modifier = Modifier.padding(

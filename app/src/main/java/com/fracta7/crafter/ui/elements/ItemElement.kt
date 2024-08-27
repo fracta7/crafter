@@ -24,7 +24,6 @@ fun ItemElement(
     modifier: Modifier,
     item: Item,
     amount: Int = 64,
-    stackSize: Int = 64,
     preview: Boolean = true,
     iconSize: Dp = 64.dp
 ) {
@@ -48,7 +47,7 @@ fun ItemElement(
                         }
                     }
                 } else {
-                    getStackText(amount = amount, stackSize = stackSize)
+                    getStackText(amount = amount, stackSize = item.stackSize)
                 }
 
             Text(
