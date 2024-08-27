@@ -2338,7 +2338,7 @@ fun specialRecipesInit(): List<Recipe> {
             requirements = mapOf(
                 "blaze_powder" to 1,
                 "awkward_potion" to 3,
-                "golden_carrot" to 1
+                "pufferfish" to 1
             ),
             recipeType = "brewing"
         ),
@@ -2408,6 +2408,76 @@ fun specialRecipesInit(): List<Recipe> {
             requirements = mapOf(
                 "blaze_powder" to 1,
                 "water_breathing_lingering_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "awkward_potion" to 3,
+                "golden_carrot" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_splash_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_potion" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_splash_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_potion_e" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_splash_potion" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "night_vision_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_lingering_potion" to 3,
                 "redstone" to 1
             ),
             recipeType = "brewing"
