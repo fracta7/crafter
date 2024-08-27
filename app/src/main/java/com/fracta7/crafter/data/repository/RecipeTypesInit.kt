@@ -16,6 +16,7 @@ fun recipeTypesInit(): List<RecipeType> {
         RecipeType(id = "oxidation", name = "Oxidation", item = "oxidized_copper"),
         RecipeType(id = "waxing", name = "Waxing", item = "honeycomb"),
         RecipeType(id = "smithing_transform", name = "Smithing", item = "smithing_table"),
-        RecipeType(id = "fuel", name = "Fuel", item = "coal")
+        RecipeType(id = "fuel", name = "Fuel", item = "coal"),
+        RecipeType(id = "brewing", name = "Brewing", item = "brewing_stand")
     )
 }
