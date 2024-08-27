@@ -9,6 +9,7 @@ import com.fracta7.crafter.domain.model.ItemID
 import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.junit.runner.RunWith
+import java.io.FileNotFoundException
 
 @RunWith(AndroidJUnit4::class)
 class ValidateResources {
@@ -27,8 +28,7 @@ private fun validateItemImages(items: List<Item>, context: Context): List<ItemID
     val missingImages = mutableListOf<ItemID>()
 
     for (item in items) {
-        val drawableResourceId = getDrawableId(context, item.id)
-        if (drawableResourceId == 0) {
+        if (!isImageFileInAssets(context, item.id)) {
             println("\"${item.id}\" - FAIL")
             missingImages.add(item.id)
         } else {
@@ -46,6 +46,10 @@ private fun validateItemImages(items: List<Item>, context: Context): List<ItemID
     return missingImages
 }
 
-private fun getDrawableId(context: Context, itemId: String): Int {
-    return context.resources.getIdentifier(itemId, "drawable", context.packageName)
+private fun isImageFileInAssets(context: Context, itemId: String): Boolean {
+    return try {
+        context.assets.open("items/$itemId.png").use { true }
+    } catch (e: FileNotFoundException) {
+        false
+    }
 }

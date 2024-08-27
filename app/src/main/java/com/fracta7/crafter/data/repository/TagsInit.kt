@@ -13,6 +13,7 @@ fun tagsInit(): List<Category> {
         Category(id = "combat", name = "Combat", item = "netherite_sword"),
         Category(id = "food", name = "Food & Drinks", item = "golden_apple"),
         Category(id = "ingredients", name = "Ingredients", item = "iron_ingot"),
+        Category(id = "potions", name = "Potions", item = "water_bottle"),
     )
 
 //    return mapOf(
