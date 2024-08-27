@@ -1992,5 +1992,135 @@ fun specialRecipesInit(): List<Recipe> {
             ),
             recipeType = "brewing"
         ),
+        Recipe(
+            result = "regeneration_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "awkward_potion" to 3,
+                "ghast_tear" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion" to 3,
+                "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_splash_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_splash_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion_2" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_splash_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_splash_potion" to 3,
+                "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion_e" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_splash_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_lingering_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion_2" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_lingering_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_lingering_potion" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_potion_e" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "regeneration_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "regeneration_lingering_potion" to 3,
+                "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
     )
 }
