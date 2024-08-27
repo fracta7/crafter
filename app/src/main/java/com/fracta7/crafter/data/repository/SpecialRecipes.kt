@@ -1128,7 +1128,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "swiftness_potion" to 3,
+                "swiftness_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1138,7 +1138,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "swiftness_potion_2" to 3,
+                "swiftness_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1158,7 +1158,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "swiftness_potion_e" to 3,
+                "swiftness_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1298,7 +1298,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "slowness_potion" to 3,
+                "slowness_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1308,7 +1308,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "slowness_potion_2" to 3,
+                "slowness_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1328,7 +1328,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "slowness_potion_e" to 3,
+                "slowness_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1428,7 +1428,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "leaping_potion" to 3,
+                "leaping_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1438,7 +1438,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "leaping_potion_2" to 3,
+                "leaping_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1458,7 +1458,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "leaping_potion_e" to 3,
+                "leaping_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1557,7 +1557,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "strength_potion" to 3,
+                "strength_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1567,7 +1567,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "strength_potion_2" to 3,
+                "strength_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1587,7 +1587,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "strength_potion_e" to 3,
+                "strength_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1657,7 +1657,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "healing_potion" to 3,
+                "healing_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1797,7 +1797,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "harming_potion" to 3,
+                "harming_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1837,7 +1837,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "harming_potion_2" to 3,
+                "harming_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1947,7 +1947,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "poison_potion" to 3,
+                "poison_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1957,7 +1957,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "poison_potion_2" to 3,
+                "poison_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -1977,7 +1977,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "poison_potion_e" to 3,
+                "poison_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2077,7 +2077,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "regeneration_potion" to 3,
+                "regeneration_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2087,7 +2087,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "regeneration_potion_2" to 3,
+                "regeneration_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2107,7 +2107,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "regeneration_potion_e" to 3,
+                "regeneration_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2207,7 +2207,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "turtle_master_potion" to 3,
+                "turtle_master_splash_potion" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2217,7 +2217,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "turtle_master_potion_2" to 3,
+                "turtle_master_splash_potion_2" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2237,7 +2237,7 @@ fun specialRecipesInit(): List<Recipe> {
             resultQuantity = 3,
             requirements = mapOf(
                 "blaze_powder" to 1,
-                "turtle_master_potion_e" to 3,
+                "turtle_master_splash_potion_e" to 3,
                 "dragon_breath" to 1
             ),
             recipeType = "brewing"
@@ -2249,6 +2249,86 @@ fun specialRecipesInit(): List<Recipe> {
                 "blaze_powder" to 1,
                 "turtle_master_lingering_potion" to 3,
                 "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "awkward_potion" to 3,
+                "magma_cream" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_splash_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_potion" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_potion_e" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_splash_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_splash_potion" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_splash_potion_e" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "fire_resistance_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "fire_resistance_lingering_potion" to 3,
+                "redstone" to 1
             ),
             recipeType = "brewing"
         ),
