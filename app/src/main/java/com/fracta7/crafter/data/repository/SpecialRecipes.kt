@@ -1862,5 +1862,135 @@ fun specialRecipesInit(): List<Recipe> {
             ),
             recipeType = "brewing"
         ),
+        Recipe(
+            result = "poison_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "awkward_potion" to 3,
+                "spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion" to 3,
+                "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_splash_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_splash_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion_2" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_splash_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_splash_potion" to 3,
+                "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion_e" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_splash_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_lingering_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion_2" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_lingering_potion_2",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_lingering_potion" to 3,
+                "glowstone_dust" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_potion_e" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "poison_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "poison_lingering_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
     )
 }
