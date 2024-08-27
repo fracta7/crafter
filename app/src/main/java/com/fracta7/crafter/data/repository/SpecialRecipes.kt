@@ -2412,5 +2412,115 @@ fun specialRecipesInit(): List<Recipe> {
             ),
             recipeType = "brewing"
         ),
+        Recipe(
+            result = "invisibility_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_potion" to 3,
+                "fermented_spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_potion_e" to 3,
+                "fermented_spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "invisibility_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_splash_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_splash_potion" to 3,
+                "fermented_spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_splash_potion_e" to 3,
+                "fermented_spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "invisibility_splash_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_lingering_potion" to 3,
+                "fermented_spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "invisibility_splash_potion" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "night_vision_lingering_potion_e" to 3,
+                "fermented_spider_eye" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "invisibility_lingering_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "invisibility_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "invisibility_splash_potion_e" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
     )
 }
