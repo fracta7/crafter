@@ -2522,5 +2522,75 @@ fun specialRecipesInit(): List<Recipe> {
             ),
             recipeType = "brewing"
         ),
+        Recipe(
+            result = "slow_falling_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "awkward_potion" to 3,
+                "phantom_membrane" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "slow_falling_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "slow_falling_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "slow_falling_splash_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "slow_falling_potion" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "slow_falling_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "slow_falling_splash_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "slow_falling_splash_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "slow_falling_potion_e" to 3,
+                "gunpowder" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "slow_falling_lingering_potion",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "slow_falling_splash_potion" to 3,
+                "dragon_breath" to 1
+            ),
+            recipeType = "brewing"
+        ),
+        Recipe(
+            result = "slow_falling_lingering_potion_e",
+            resultQuantity = 3,
+            requirements = mapOf(
+                "blaze_powder" to 1,
+                "slow_falling_lingering_potion" to 3,
+                "redstone" to 1
+            ),
+            recipeType = "brewing"
+        ),
     )
 }
