@@ -1,10 +1,10 @@
 package com.fracta7.crafter
 
-import com.fracta7.crafter.data.repository.itemsInit
-import com.fracta7.crafter.data.repository.recipeTypesInit
-import com.fracta7.crafter.data.repository.recipesInit
-import com.fracta7.crafter.data.repository.specialRecipesInit
-import com.fracta7.crafter.data.repository.tagsInit
+import com.fracta7.crafter.data.local.itemsInit
+import com.fracta7.crafter.data.local.recipeTypesInit
+import com.fracta7.crafter.data.local.recipesInit
+import com.fracta7.crafter.data.local.specialRecipesInit
+import com.fracta7.crafter.data.local.tagsInit
 import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemID

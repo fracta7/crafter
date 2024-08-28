@@ -19,5 +19,6 @@ data class Item(
     val name: String,
     val stackSize: Int,
     val craftable: Boolean,
-    val tags: List<TagID> = listOf("other")
+    val tags: List<TagID> = listOf("other"),
+    val custom: Boolean = false
 )
