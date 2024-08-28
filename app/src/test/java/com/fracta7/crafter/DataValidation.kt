@@ -8,10 +8,13 @@ import com.fracta7.crafter.data.repository.tagsInit
 import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemID
+import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.Recipe
+import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
 import com.fracta7.crafter.domain.model.RecipeTypeID
 import com.fracta7.crafter.domain.model.TagID
+import com.fracta7.crafter.util.decomposeItems
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
@@ -20,6 +23,17 @@ class DataValidation {
     private val recipes = recipesInit() + specialRecipesInit()
     private val recipeTypes = recipeTypesInit()
     private val categories = tagsInit()
+    private val itemRegistry = ItemRegistry()
+    private val recipeRegistry = RecipeRegistry()
+
+    init {
+        items.forEach {
+            itemRegistry.addItem(it)
+        }
+        recipes.forEach {
+            recipeRegistry.addRecipe(it)
+        }
+    }
 
     @Test
     fun validateRecipeAvailability() {
@@ -30,7 +44,10 @@ class DataValidation {
     @Test
     fun validateRecipeRequirements() {
         val invalidRequirements = validateRecipeRequirements(items, recipes)
-        assertTrue("Some recipes have invalid item IDs in their requirements.", invalidRequirements.isEmpty())
+        assertTrue(
+            "Some recipes have invalid item IDs in their requirements.",
+            invalidRequirements.isEmpty()
+        )
     }
 
     @Test
@@ -44,6 +61,40 @@ class DataValidation {
         val invalidTags = validateItemTags(categories, items)
         assertTrue("Some items have invalid tags/categories.", invalidTags.isEmpty())
     }
+
+    @Test
+    fun validateItemNonInfinity() {
+        val unsafeItems: MutableList<ItemID> = mutableListOf()
+        items.forEach {
+            val isSafe = isInfinite(it.id, 1, recipeRegistry, itemRegistry)
+            if (!isSafe)
+                unsafeItems.add(it.id)
+        }
+        if (unsafeItems.isEmpty()) {
+            println("All items are safe")
+        } else {
+            println("Unsafe items:")
+            unsafeItems.forEach {
+                println(it)
+            }
+        }
+    }
+}
+
+private fun isInfinite(
+    id: ItemID,
+    amount: Int,
+    recipeRegistry: RecipeRegistry,
+    itemRegistry: ItemRegistry
+): Boolean {
+    val item = mapOf(id to amount)
+    try {
+        decomposeItems(item, recipeRegistry, itemRegistry)
+    } catch (e: StackOverflowError) {
+        println("Infinite loop detected, problematic item: $id")
+        return false
+    }
+    return true
 }
 
 private fun validateRecipeAvailability(items: List<Item>, recipes: List<Recipe>): List<ItemID> {
