@@ -9,5 +9,6 @@ package com.fracta7.crafter.domain.model
 data class Category(
     val id: TagID,
     val name: TagName,
-    val item: ItemID
+    val item: ItemID,
+    val custom: Boolean = false
 )

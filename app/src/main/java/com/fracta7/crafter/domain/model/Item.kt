@@ -10,14 +10,16 @@ typealias TagName = String
  * @property id string id of an item.
  * @property name name of an item.
  * @property stackSize stack size of an item.
- * @property craftable indicates if it is craftable.
+ * @property decomposable indicates if it is decomposable by decomposition function.
  * @property tags contains tags for categories.
+ * @property custom indicates if item was custom added
  */
 @Immutable
 data class Item(
     val id: ItemID,
     val name: String,
     val stackSize: Int,
-    val craftable: Boolean,
-    val tags: List<TagID> = listOf("other")
+    val decomposable: Boolean,
+    val tags: List<TagID> = listOf("other"),
+    val custom: Boolean = false
 )

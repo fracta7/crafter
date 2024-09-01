@@ -3,7 +3,8 @@ package com.fracta7.crafter.ui.main_activity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -16,6 +17,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.List
+import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
@@ -45,51 +47,66 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.AddItemDialog
+import com.fracta7.crafter.ui.elements.AddNewDialog
+import com.fracta7.crafter.ui.elements.DrawItem
 import com.fracta7.crafter.ui.elements.ItemElement
-import com.fracta7.crafter.ui.helper.DrawItem
+import com.fracta7.crafter.ui.elements.ItemInfoDialog
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
+import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun MainScreen(navController: NavController) {
     val viewModel = hiltViewModel<MainActivityViewModel>()
     var search by remember { mutableStateOf("") }
     var showDrawer by remember { mutableStateOf(false) }
     var showAddDialog by remember { mutableStateOf(false) }
+    var showItemInfoDialog by remember { mutableStateOf(false) }
+    var showAddNewDialog by remember { mutableStateOf(false) }
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableIntStateOf(0) }
+    val haptics = LocalHapticFeedback.current
+    val scope = rememberCoroutineScope()
 
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Scaffold(bottomBar = {
-                BottomAppBar(actions = {
-                    IconButton(onClick = { showDrawer = !showDrawer }) {
-                        Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
-                    }
-                    Text(text = "Crafter")
-                }, floatingActionButton = {
-                    AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
-                        FloatingActionButton(onClick = {
-                            navController.navigate(
-                                Route.Crafting(
-                                    items = viewModel.items.keys.map { it.id }.toList(),
-                                    amounts = viewModel.items.values.toList()
-                                )
-                            )
-                        }) {
-                            Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
+                BottomAppBar(
+                    actions = {
+                        IconButton(onClick = { showDrawer = !showDrawer }) {
+                            Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
                         }
-                    }
-                }, windowInsets = BottomAppBarDefaults.windowInsets
+                        IconButton(onClick = { showAddNewDialog = !showAddNewDialog }) {
+                            Icon(Icons.Rounded.Add, contentDescription = "Add new")
+                        }
+                        Text(text = "Crafter")
+                    },
+                    floatingActionButton = {
+                        AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
+                            FloatingActionButton(onClick = {
+                                navController.navigate(
+                                    Route.Crafting(
+                                        items = viewModel.items.keys.map { it.id }.toList(),
+                                        amounts = viewModel.items.values.toList()
+                                    )
+                                )
+                            }) {
+                                Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
+                            }
+                        }
+                    }, windowInsets = BottomAppBarDefaults.windowInsets
                 )
             }) { paddingValues ->
                 Column(
@@ -97,25 +114,31 @@ fun MainScreen(navController: NavController) {
                         .fillMaxWidth()
                         .padding(paddingValues)
                 ) {
-                    OutlinedTextField(value = search, onValueChange = {
-                        search = it
-                    }, shape = ShapeDefaults.ExtraLarge, label = {
-                        Text(
-                            text = "Item name"
-                        )
-                    }, modifier = Modifier
-                        .padding(4.dp)
-                        .fillMaxWidth(), leadingIcon = {
-                        Icon(Icons.Rounded.Search, contentDescription = "Search icon")
-                    }, trailingIcon = {
-                        IconButton(onClick = {
-                            search = ""
-                        }) {
-                            Icon(
-                                Icons.Rounded.Clear, contentDescription = "Clear search query"
+                    OutlinedTextField(
+                        value = search,
+                        onValueChange = {
+                            search = it
+                        },
+                        shape = ShapeDefaults.ExtraLarge, label = {
+                            Text(
+                                text = "Item name"
                             )
-                        }
-                    })
+                        },
+                        modifier = Modifier
+                            .padding(4.dp)
+                            .fillMaxWidth(),
+                        leadingIcon = {
+                            Icon(Icons.Rounded.Search, contentDescription = "Search icon")
+                        },
+                        trailingIcon = {
+                            IconButton(onClick = {
+                                search = ""
+                            }) {
+                                Icon(
+                                    Icons.Rounded.Clear, contentDescription = "Clear search query"
+                                )
+                            }
+                        })
 
                     // Get categories from the ViewModel
                     val categories = viewModel.getCategories()
@@ -195,10 +218,20 @@ fun MainScreen(navController: NavController) {
                                                 horizontalArrangement = Arrangement.SpaceBetween,
                                                 modifier = Modifier
                                                     .fillMaxWidth()
-                                                    .clickable {
-                                                        currentItemId = item.id
-                                                        showAddDialog = !showAddDialog
-                                                    }
+                                                    .combinedClickable(
+                                                        onClick = {
+                                                            currentItemId = item.id
+                                                            showAddDialog = !showAddDialog
+                                                        },
+                                                        onLongClick = {
+                                                            haptics.performHapticFeedback(
+                                                                HapticFeedbackType.LongPress
+                                                            )
+                                                            currentItemId = item.id
+                                                            showItemInfoDialog = !showItemInfoDialog
+                                                        }
+                                                    )
+
                                             ) {
                                                 val spacing =
                                                     if (viewModel.items.contains(item)) 0.9f else 1f
@@ -264,13 +297,15 @@ fun MainScreen(navController: NavController) {
                                             Divider()
                                         }
                                     }
-                                    item{
+                                    item {
                                         FilledTonalButton(
                                             onClick = { viewModel.items.clear() },
                                             modifier = Modifier
                                                 .fillMaxWidth()
                                                 .padding(4.dp),
-                                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.errorContainer)
+                                            colors = ButtonDefaults.filledTonalButtonColors(
+                                                containerColor = MaterialTheme.colorScheme.errorContainer
+                                            )
                                         ) {
                                             Text("Clear all items")
                                         }
@@ -303,6 +338,29 @@ fun MainScreen(navController: NavController) {
                             },
                             item = viewModel.state.itemRegistry.getItem(currentItemId)!!,
                             onGetInput = { currentItemAmount = it })
+                    }
+                    AnimatedVisibility(showItemInfoDialog) {
+                        val item = viewModel.getItemById(currentItemId)
+                        ItemInfoDialog(
+                            item = item,
+                            onDismissRequest = { showItemInfoDialog = false },
+                            onDelete = {
+                                scope.launch {
+                                    viewModel.deleteItem(currentItemId)
+                                }
+                                showItemInfoDialog = false
+                            })
+                    }
+                    AnimatedVisibility(showAddNewDialog) {
+                        AddNewDialog(
+                            onDismissRequest = { showAddNewDialog = false },
+                            onAddNewItem = {
+                                showAddNewDialog = false
+                                navController.navigate(Route.AddCustomItem)
+                            },
+                            onAddNewRecipe = { showAddNewDialog = false },
+                            onAddNewRecipeType = { showAddNewDialog = false }
+                        )
                     }
                 }
             }

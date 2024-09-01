@@ -1,4 +1,4 @@
-package com.fracta7.crafter.data.repository
+package com.fracta7.crafter.data.local
 
 import com.fracta7.crafter.domain.model.RecipeType
 

@@ -41,7 +41,7 @@ fun decomposeItems(
      */
     fun processItem(item: ItemID, amount: Int, isLeftOver: Boolean, action: (ItemID, Int) -> Unit) {
         val itemObject = itemRegistry.getItem(item)!!
-        if (!itemObject.craftable) {
+        if (!itemObject.decomposable) {
             action(item, amount)
         } else {
             val recipes = sortRecipesByEfficiency(recipeRegistry.getRecipesByResult(item))
@@ -67,7 +67,7 @@ fun decomposeItems(
     //second, decomposition of leftovers
     for ((item, amount) in leftOvers) {
         val itemObject = itemRegistry.getItem(item)!!
-        if (!itemObject.craftable) {
+        if (!itemObject.decomposable) {
             addRawMaterialLeftOver(item, amount)
         } else {
             val recipe = sortRecipesByEfficiency(recipeRegistry.getRecipesByResult(item))[0]
@@ -90,7 +90,7 @@ fun decomposeItems(
     //remove raw materials from main raw material list and from leftover raw materials, leaving true leftover items
     for ((item, amount) in rawMaterialsLeftOvers){
         val itemObject = itemRegistry.getItem(item)!!
-        if (!itemObject.craftable && rawMaterials.containsKey(item)){
+        if (!itemObject.decomposable && rawMaterials.containsKey(item)){
             rawMaterials[item] = rawMaterials[item]!! - amount
             //rawMaterialsLeftOvers.remove(item)
             itemsToRemove[item] = itemsToRemove.getOrDefault(item,0) + amount

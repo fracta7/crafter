@@ -32,13 +32,13 @@ List of key features and functionalities of the project.
 - List of raw materials for recipe list
 - Tracking leftovers
 - Recipe switch between multiple recipes
+- Adding custom items and recipes
 
 ## TODOs
 
 List of features to do:
 
 - Using existing items from inventory
-- Adding custom items and recipes
 - Tipped Arrows
 - Online registry updates
 
@@ -83,15 +83,17 @@ typealias TagID = String
  * @property id string id of an item.
  * @property name name of an item.
  * @property stackSize stack size of an item.
- * @property craftable indicates if it is craftable.
+ * @property decomposable indicates if it can be decomposed by decomposition function.
  * @property tags contains tags for categories.
+ * @property custom indicates if item is custom added
  */
 data class Item(
   val id: ItemID,
   val name: String,
   val stackSize: Int,
-  val craftable: Boolean,
-  val tags: List<TagID> = listOf("other")
+  val decomposable: Boolean,
+  val tags: List<TagID> = listOf("other"),
+  val custom: Boolean = false
 )
 ```
 
@@ -106,12 +108,14 @@ typealias RecipeTypeID = String
  * @property resultQuantity quantity of resulting item
  * @property requirements a map of required items mapped to their quantity.
  * @property recipeType defines the recipe type (crafting, smelting etc.).
+ * @property custom indicates if item is custom added
  */
 data class Recipe(
   val result: ItemID,
   val resultQuantity: Int,
   val requirements: Map<ItemID, Int>,
-  val recipeType: RecipeTypeID
+  val recipeType: RecipeTypeID,
+  val custom: Boolean = false
 )
 ```
 
@@ -126,11 +130,13 @@ typealias RecipeTypeItemID = String
  * @property id represents the ID of recipe.
  * @property name represents the name of recipe.
  * @property item is the itemID of recipe representation
+ * @property custom indicates if item is custom added
  */
 data class RecipeType(
   val id: RecipeTypeID,
   val name: String,
-  val item: RecipeTypeItemID
+  val item: RecipeTypeItemID,
+  val custom: Boolean = false
 )
 ```
 
@@ -155,8 +161,8 @@ To add new item to the registry, add a new line in `ItemsInit.kt` with item prop
 ```kotlin
 fun itemsInit(): List<Item> {
     return listOf(
-        Item(id = "stone", name = "Stone", stackSize = 64, craftable = false, tags = listOf("natural")),
-        Item(id = "diamond", name = "Diamond", stackSize = 64, craftable = false, tags = listOf("ingredients")),
+        Item(id = "stone", name = "Stone", stackSize = 64, decomposable = false, tags = listOf("natural")),
+        Item(id = "diamond", name = "Diamond", stackSize = 64, decomposable = false, tags = listOf("ingredients")),
         //... add new items here
         )
 }

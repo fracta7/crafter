@@ -7,6 +7,7 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.Item
+import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.repository.AppRepository
@@ -42,5 +43,12 @@ class MainActivityViewModel @Inject constructor(
 
     fun getCategories(): List<Category> {
         return appRepository.getAllTags()
+    }
+
+    fun getItemById(itemID: ItemID): Item {
+        return itemRegistry.getItem(itemID)!!
+    }
+    suspend fun deleteItem(itemID: ItemID){
+        appRepository.removeItem(itemRegistry.getItem(itemID)!!)
     }
 }

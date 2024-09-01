@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    kotlin("kapt")// version "2.0.0"
+    alias(libs.plugins.ksp)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.dagger.hilt)
     alias(libs.plugins.compose.compiler)
@@ -15,8 +15,8 @@ android {
         applicationId = "com.fracta7.crafter"
         minSdk = 24
         targetSdk = 35
-        versionCode = 14
-        versionName = "2.4"
+        versionCode = 15
+        versionName = "2.5"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -70,25 +70,27 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    //hilt
+    // hilt
     implementation(libs.hilt.android)
-    kapt(libs.hilt.android.compiler)
-    kapt(libs.androidx.hilt.compiler)
+    ksp(libs.hilt.android.compiler)
+    ksp(libs.androidx.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
-    //viewmodel
+    // viewmodel
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
+    // navigation
     implementation(libs.androidx.navigation.compose)
     implementation(libs.kotlinx.serialization.json)
 
-    //retrofit
-    implementation(libs.retrofit2)
-    implementation(libs.converter.gson)
-
     // coil
     implementation(libs.coil.compose)
-}
-kapt {
-    correctErrorTypes = true
+
+    // room
+    implementation(libs.room.runtime)
+    ksp(libs.room.compiler)
+    implementation(libs.room.ktx)
+
+    // gson
+    implementation(libs.gson)
 }
