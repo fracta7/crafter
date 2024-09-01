@@ -17,10 +17,12 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.List
+import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Done
+import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BottomAppBar
@@ -57,6 +59,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.AddItemDialog
 import com.fracta7.crafter.ui.elements.ItemElement
+import com.fracta7.crafter.ui.elements.ItemInfoDialog
 import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
@@ -68,6 +71,7 @@ fun MainScreen(navController: NavController) {
     var search by remember { mutableStateOf("") }
     var showDrawer by remember { mutableStateOf(false) }
     var showAddDialog by remember { mutableStateOf(false) }
+    var showItemInfoDialog by remember { mutableStateOf(false) }
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableIntStateOf(0) }
     val haptics = LocalHapticFeedback.current
@@ -75,25 +79,30 @@ fun MainScreen(navController: NavController) {
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
             Scaffold(bottomBar = {
-                BottomAppBar(actions = {
-                    IconButton(onClick = { showDrawer = !showDrawer }) {
-                        Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
-                    }
-                    Text(text = "Crafter")
-                }, floatingActionButton = {
-                    AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
-                        FloatingActionButton(onClick = {
-                            navController.navigate(
-                                Route.Crafting(
-                                    items = viewModel.items.keys.map { it.id }.toList(),
-                                    amounts = viewModel.items.values.toList()
-                                )
-                            )
-                        }) {
-                            Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
+                BottomAppBar(
+                    actions = {
+                        IconButton(onClick = { showDrawer = !showDrawer }) {
+                            Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
                         }
-                    }
-                }, windowInsets = BottomAppBarDefaults.windowInsets
+                        IconButton(onClick = { /*TODO*/ }) {
+                            Icon(Icons.Rounded.Add, contentDescription = "App info")
+                        }
+                        Text(text = "Crafter")
+                    },
+                    floatingActionButton = {
+                        AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
+                            FloatingActionButton(onClick = {
+                                navController.navigate(
+                                    Route.Crafting(
+                                        items = viewModel.items.keys.map { it.id }.toList(),
+                                        amounts = viewModel.items.values.toList()
+                                    )
+                                )
+                            }) {
+                                Icon(Icons.Rounded.Done, contentDescription = "Icon Done")
+                            }
+                        }
+                    }, windowInsets = BottomAppBarDefaults.windowInsets
                 )
             }) { paddingValues ->
                 Column(
@@ -212,7 +221,10 @@ fun MainScreen(navController: NavController) {
                                                         },
                                                         onLongClick = {
                                                             haptics.performHapticFeedback(
-                                                                HapticFeedbackType.LongPress)
+                                                                HapticFeedbackType.LongPress
+                                                            )
+                                                            currentItemId = item.id
+                                                            showItemInfoDialog = !showItemInfoDialog
                                                         }
                                                     )
 
@@ -322,6 +334,12 @@ fun MainScreen(navController: NavController) {
                             },
                             item = viewModel.state.itemRegistry.getItem(currentItemId)!!,
                             onGetInput = { currentItemAmount = it })
+                    }
+                    AnimatedVisibility(showItemInfoDialog) {
+                        val item = viewModel.getItemById(currentItemId)
+                        ItemInfoDialog(item = item) {
+                            showItemInfoDialog = false
+                        }
                     }
                 }
             }

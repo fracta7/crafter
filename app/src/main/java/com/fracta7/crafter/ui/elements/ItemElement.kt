@@ -34,7 +34,7 @@ fun ItemElement(
                 text = item.name,
                 modifier = Modifier
                     .padding(4.dp)
-                    .basicMarquee(),
+                    .basicMarquee(iterations = 1000),
                 fontWeight = FontWeight.Bold,
                 maxLines = 1
             )
@@ -59,7 +59,7 @@ fun ItemElement(
                         bottom = 4.dp,
                         end = 4.dp
                     )
-                    .basicMarquee(),
+                    .basicMarquee(iterations = 1000),
                 maxLines = 1
             )
         }
