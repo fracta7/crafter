@@ -98,7 +98,7 @@ private fun isInfinite(
 }
 
 private fun validateRecipeAvailability(items: List<Item>, recipes: List<Recipe>): List<ItemID> {
-    val craftableItems = items.filter { it.craftable }
+    val craftableItems = items.filter { it.decomposable }
     val missingItems = mutableListOf<ItemID>()
 
     for (item in craftableItems) {

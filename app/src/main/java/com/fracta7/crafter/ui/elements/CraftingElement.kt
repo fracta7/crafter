@@ -31,7 +31,6 @@ import androidx.compose.ui.unit.dp
 import com.fracta7.crafter.R
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.repository.AppRepository
-import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.util.resourceAmount
 import com.fracta7.crafter.util.sortRecipesByEfficiency
 
@@ -57,9 +56,9 @@ fun CraftingElement(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            val size = if (recipes.size > 1 && item.craftable)
+            val size = if (recipes.size > 1 && item.decomposable)
                 0.7f
-            else if (item.craftable && recipes.size == 1 || !item.craftable && recipes.size > 1)
+            else if (item.decomposable && recipes.size == 1 || !item.decomposable && recipes.size > 1)
                 0.8f
             else
                 1.0f
@@ -91,7 +90,7 @@ fun CraftingElement(
                 }
                 val icon =
                     if (toggle) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
-                if (item.craftable) Icon(icon, contentDescription = "dropdown")
+                if (item.decomposable) Icon(icon, contentDescription = "dropdown")
             }
         }
         AnimatedVisibility(visible = toggle && recipes.isNotEmpty()) {

@@ -14,6 +14,7 @@ fun tagsInit(): List<Category> {
         Category(id = "food", name = "Food & Drinks", item = "golden_apple"),
         Category(id = "ingredients", name = "Ingredients", item = "iron_ingot"),
         Category(id = "potions", name = "Potions", item = "water_bottle"),
+        Category(id = "other", name = "Others", item = "structure_block")
     )
 
 //    return mapOf(

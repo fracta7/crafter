@@ -9,6 +9,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.fracta7.crafter.ui.add_custom.item.AddCustomItem
+import com.fracta7.crafter.ui.add_custom.recipe.AddCustomRecipe
+import com.fracta7.crafter.ui.add_custom.recipe.type.AddCustomRecipeType
 import com.fracta7.crafter.ui.main_activity.MainScreen
 import com.fracta7.crafter.ui.crafting_screen.CraftingScreen
 import com.fracta7.crafter.ui.theme.CrafterTheme
@@ -29,6 +32,15 @@ fun Navigation(modifier: Modifier = Modifier) {
                         items = args.items,
                         amounts = args.amounts
                     )
+                }
+                composable<Route.AddCustomItem> {
+                    AddCustomItem(navController = navController)
+                }
+                composable<Route.AddCustomRecipe> {
+                    AddCustomRecipe(navController = navController)
+                }
+                composable<Route.AddCustomRecipeType> {
+                    AddCustomRecipeType(navController = navController)
                 }
             }
         }

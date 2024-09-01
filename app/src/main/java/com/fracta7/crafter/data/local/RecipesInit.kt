@@ -1248,7 +1248,7 @@ fun recipesInit(): List<Recipe> {
         Recipe(result = "cyan_stained_glass_pane", resultQuantity = 16, requirements = mapOf("cyan_stained_glass" to 6), recipeType = "crafting_shaped"),
         Recipe(result = "lead", resultQuantity = 2, requirements = mapOf("string" to 4, "slime_ball" to 1), recipeType = "crafting_shaped"),
         Recipe(result = "emerald_block", resultQuantity = 1, requirements = mapOf("emerald" to 9), recipeType = "crafting_shaped"),
-        Recipe(result = "glass", resultQuantity = 1, requirements = mapOf("fuel" to 1), recipeType = "smelting"),
+        Recipe(result = "glass", resultQuantity = 1, requirements = mapOf("fuel" to 1, "sand" to 1), recipeType = "smelting"),
         Recipe(result = "gray_candle", resultQuantity = 1, requirements = mapOf("candle" to 1, "gray_dye" to 1), recipeType = "crafting_shapeless"),
         Recipe(result = "polished_tuff_stairs", resultQuantity = 1, requirements = mapOf("polished_tuff" to 1), recipeType = "stonecutting"),
         Recipe(result = "magenta_dye", resultQuantity = 4, requirements = mapOf("blue_dye" to 1, "red_dye" to 2, "white_dye" to 1), recipeType = "crafting_shapeless"),

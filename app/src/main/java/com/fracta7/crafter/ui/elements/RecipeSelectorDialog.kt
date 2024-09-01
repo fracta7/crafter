@@ -24,7 +24,6 @@ import androidx.compose.ui.window.Dialog
 import com.fracta7.crafter.R
 import com.fracta7.crafter.domain.model.Recipe
 import com.fracta7.crafter.domain.repository.AppRepository
-import com.fracta7.crafter.ui.helper.DrawItem
 
 @Composable
 fun RecipeDialog(

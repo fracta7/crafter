@@ -22,7 +22,6 @@ import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.icons.rounded.Done
-import androidx.compose.material.icons.rounded.Info
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Badge
 import androidx.compose.material3.BottomAppBar
@@ -58,9 +57,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.AddItemDialog
+import com.fracta7.crafter.ui.elements.AddNewDialog
+import com.fracta7.crafter.ui.elements.DrawItem
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.elements.ItemInfoDialog
-import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
 
@@ -72,6 +72,7 @@ fun MainScreen(navController: NavController) {
     var showDrawer by remember { mutableStateOf(false) }
     var showAddDialog by remember { mutableStateOf(false) }
     var showItemInfoDialog by remember { mutableStateOf(false) }
+    var showAddNewDialog by remember { mutableStateOf(false) }
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableIntStateOf(0) }
     val haptics = LocalHapticFeedback.current
@@ -84,8 +85,8 @@ fun MainScreen(navController: NavController) {
                         IconButton(onClick = { showDrawer = !showDrawer }) {
                             Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
                         }
-                        IconButton(onClick = { /*TODO*/ }) {
-                            Icon(Icons.Rounded.Add, contentDescription = "App info")
+                        IconButton(onClick = { showAddNewDialog = !showAddNewDialog }) {
+                            Icon(Icons.Rounded.Add, contentDescription = "Add new")
                         }
                         Text(text = "Crafter")
                     },
@@ -340,6 +341,17 @@ fun MainScreen(navController: NavController) {
                         ItemInfoDialog(item = item) {
                             showItemInfoDialog = false
                         }
+                    }
+                    AnimatedVisibility(showAddNewDialog) {
+                        AddNewDialog(
+                            onDismissRequest = { showAddNewDialog = false },
+                            onAddNewItem = {
+                                showAddNewDialog = false
+                                navController.navigate(Route.AddCustomItem)
+                            },
+                            onAddNewRecipe = { showAddNewDialog = false },
+                            onAddNewRecipeType = { showAddNewDialog = false }
+                        )
                     }
                 }
             }

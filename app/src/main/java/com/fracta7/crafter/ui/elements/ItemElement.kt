@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.util.getStackText
 
 @Composable
@@ -28,7 +27,7 @@ fun ItemElement(
     iconSize: Dp = 64.dp
 ) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier) {
-        DrawItem(itemID = item.id, iconSize = iconSize)
+        DrawItem(itemID = item.id, iconSize = iconSize, custom = item.custom)
         Column {
             Text(
                 text = item.name,

@@ -10,7 +10,7 @@ fun Item.toEntity(): ItemEntity {
         id = id,
         name = name,
         stackSize = stackSize,
-        craftable = craftable,
+        craftable = decomposable,
         tags = Converters().fromTagList(this.tags),
         custom = this.custom
     )
@@ -21,7 +21,7 @@ fun ItemEntity.toDomain(): Item {
         id = id!!,
         name = name!!,
         stackSize = stackSize!!,
-        craftable = craftable!!,
+        decomposable = craftable!!,
         tags = Converters().toTagList(tags!!),
         custom = custom!!
     )

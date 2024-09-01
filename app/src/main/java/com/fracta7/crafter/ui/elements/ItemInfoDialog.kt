@@ -16,10 +16,6 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -30,7 +26,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import com.fracta7.crafter.R
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.ui.helper.DrawItem
 
 data class Info(
     val iconID: Int,
@@ -136,7 +131,7 @@ fun getInfoList(item: Item): List<Info> {
         Info(
             iconID = R.drawable.round_device_hub_24,
             infoDescription = "Decomposable: ",
-            info = item.craftable.toString()
+            info = item.decomposable.toString()
         ),
         Info(
             iconID = R.drawable.round_tags_24,
@@ -154,7 +149,7 @@ fun ItemInfoDialogPreview() {
         id = "piston",
         name = "Piston",
         stackSize = 64,
-        craftable = true,
+        decomposable = true,
         tags = listOf("redstone")
     )
     MaterialTheme(darkColorScheme()) {

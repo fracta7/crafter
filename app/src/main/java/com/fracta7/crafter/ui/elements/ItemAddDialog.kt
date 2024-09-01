@@ -4,7 +4,6 @@ import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
@@ -29,7 +28,6 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.core.text.isDigitsOnly
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.ui.helper.DrawItem
 
 @Composable
 fun AddItemDialog(
@@ -38,22 +36,22 @@ fun AddItemDialog(
     item: Item,
     onGetInput: (Int) -> Unit
 ) {
+    var input by remember { mutableStateOf("") }
+    var itemAmount by remember { mutableIntStateOf(0) }
+    var isError by remember { mutableStateOf(false) }
+    var errorText by remember { mutableStateOf("") }
     Dialog(onDismissRequest = { onDismissRequest() }) {
-        var input by remember { mutableStateOf("") }
-        var itemAmount by remember { mutableIntStateOf(0) }
-        var isError by remember { mutableStateOf(false) }
-        var errorText by remember { mutableStateOf("") }
         Surface(shape = ShapeDefaults.ExtraLarge) {
             Column(
                 modifier = Modifier
-                    .fillMaxSize()
+                    .fillMaxWidth()
                     .padding(16.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
-                LazyColumn {
+                LazyColumn(horizontalAlignment = Alignment.CenterHorizontally) {
                     item {
-                        DrawItem(modifier = Modifier.padding(4.dp), itemID = item.id, iconSize = 72.dp)
+                        DrawItem(modifier = Modifier.padding(4.dp), itemID = item.id, iconSize = 72.dp, custom = item.custom)
                     }
                     item {
                         Text(
