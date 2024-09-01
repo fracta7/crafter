@@ -52,21 +52,21 @@ fun AddNewDialog(
                         AddNewOptionListItem(
                             onClick = { onAddNewItem() },
                             iconID = R.drawable.rounded_cube_24,
-                            text = "Add a new item"
+                            text = "Add a new item (Experimental)"
                         )
                     }
                     item {
                         AddNewOptionListItem(
                             onClick = { onAddNewRecipe() },
                             iconID = R.drawable.round_device_hub_24,
-                            text = "Add a new recipe"
+                            text = "Add a new recipe (Coming soon)"
                         )
                     }
                     item {
                         AddNewOptionListItem(
                             onClick = { onAddNewRecipeType() },
                             iconID = R.drawable.baseline_swap_horiz_24,
-                            text = "Add a new recipe type"
+                            text = "Add a new recipe type (Coming soon)"
                         )
                     }
                 }

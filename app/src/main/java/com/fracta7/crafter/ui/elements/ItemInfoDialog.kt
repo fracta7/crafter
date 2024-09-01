@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -35,7 +36,12 @@ data class Info(
 )
 
 @Composable
-fun ItemInfoDialog(item: Item, modifier: Modifier = Modifier, onDismissRequest: () -> Unit, onDelete: () -> Unit) {
+fun ItemInfoDialog(
+    item: Item,
+    modifier: Modifier = Modifier,
+    onDismissRequest: () -> Unit,
+    onDelete: () -> Unit
+) {
     Dialog(onDismissRequest = { onDismissRequest() }) {
         Surface(shape = ShapeDefaults.ExtraLarge) {
             Column(
@@ -73,13 +79,19 @@ fun ItemInfoDialog(item: Item, modifier: Modifier = Modifier, onDismissRequest: 
                     }
                     item {
                         Row {
-                            TextButton(onClick = { onDismissRequest() }) {
-                                Text(text = "Dismiss")
-                            }
                             if (item.custom) {
-                                FilledTonalButton(onClick = { onDelete() }) {
+                                FilledTonalButton(
+                                    onClick = { onDelete() },
+                                    colors = ButtonDefaults
+                                        .filledTonalButtonColors(
+                                            containerColor = MaterialTheme.colorScheme.errorContainer
+                                        )
+                                ) {
                                     Text(text = "Delete")
                                 }
+                            }
+                            TextButton(onClick = { onDismissRequest() }) {
+                                Text(text = "Dismiss")
                             }
                         }
                     }
@@ -106,7 +118,12 @@ fun InfoRow(iconID: Int, infoDescription: String, info: String) {
             )
             Text(text = infoDescription)
         }
-        Text(text = info, fontWeight = FontWeight.Bold, maxLines = 1, modifier = Modifier.basicMarquee(iterations = 1000))
+        Text(
+            text = info,
+            fontWeight = FontWeight.Bold,
+            maxLines = 1,
+            modifier = Modifier.basicMarquee(iterations = 1000)
+        )
     }
 }
 
