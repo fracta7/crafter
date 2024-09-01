@@ -12,10 +12,10 @@ interface CategoryDao {
     suspend fun getAll(): List<CategoryEntity>
 
     @Insert
-    suspend fun insertAll(vararg answers: CategoryEntity)
+    suspend fun insertAll(vararg categories: CategoryEntity)
 
     @Delete
-    suspend fun delete(answers: CategoryEntity)
+    suspend fun delete(category: CategoryEntity)
 
     @Query("DELETE FROM categories")
     suspend fun deleteTable()

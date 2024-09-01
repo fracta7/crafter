@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material3.FilledTonalButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ShapeDefaults
@@ -34,7 +35,7 @@ data class Info(
 )
 
 @Composable
-fun ItemInfoDialog(item: Item, modifier: Modifier = Modifier, onDismissRequest: () -> Unit) {
+fun ItemInfoDialog(item: Item, modifier: Modifier = Modifier, onDismissRequest: () -> Unit, onDelete: () -> Unit) {
     Dialog(onDismissRequest = { onDismissRequest() }) {
         Surface(shape = ShapeDefaults.ExtraLarge) {
             Column(
@@ -47,7 +48,7 @@ fun ItemInfoDialog(item: Item, modifier: Modifier = Modifier, onDismissRequest: 
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     item {
-                        DrawItem(itemID = item.id)
+                        DrawItem(itemID = item.id, custom = item.custom)
                         Text(text = item.name, fontWeight = FontWeight.Bold, fontSize = 21.sp)
                     }
                     item {
@@ -71,8 +72,15 @@ fun ItemInfoDialog(item: Item, modifier: Modifier = Modifier, onDismissRequest: 
                         }
                     }
                     item {
-                        TextButton(onClick = { onDismissRequest() }) {
-                            Text(text = "Dismiss")
+                        Row {
+                            TextButton(onClick = { onDismissRequest() }) {
+                                Text(text = "Dismiss")
+                            }
+                            if (item.custom) {
+                                FilledTonalButton(onClick = { onDelete() }) {
+                                    Text(text = "Delete")
+                                }
+                            }
                         }
                     }
                 }
@@ -154,7 +162,7 @@ fun ItemInfoDialogPreview() {
     )
     MaterialTheme(darkColorScheme()) {
         Surface(color = MaterialTheme.colorScheme.background) {
-            ItemInfoDialog(item = item, onDismissRequest = {})
+            ItemInfoDialog(item = item, onDismissRequest = {}, onDelete = {})
         }
     }
 }

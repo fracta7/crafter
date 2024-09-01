@@ -5,6 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import com.fracta7.crafter.data.local.db.entity.ItemEntity
+import com.fracta7.crafter.domain.model.ItemID
 
 @Dao
 interface ItemDao {
@@ -12,10 +13,10 @@ interface ItemDao {
     suspend fun getAll(): List<ItemEntity>
 
     @Insert
-    suspend fun insertAll(vararg answers: ItemEntity)
+    suspend fun insertAll(vararg items: ItemEntity)
 
-    @Delete
-    suspend fun delete(answers: ItemEntity)
+    @Query("DELETE FROM items WHERE id = :itemID")
+    suspend fun delete(itemID: ItemID)
 
     @Query("DELETE FROM items")
     suspend fun deleteTable()

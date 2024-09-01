@@ -15,6 +15,7 @@ fun DrawItem(modifier: Modifier = Modifier, itemID: String, iconSize: Dp = 64.dp
         AsyncImage(
             model = "file:///android_asset/items/$itemID.png",
             placeholder = painterResource(id = R.drawable.rounded_cube_24),
+            fallback = painterResource(id = R.drawable.rounded_cube_24),
             contentDescription = "item image",
             modifier = modifier.size(iconSize)
         )

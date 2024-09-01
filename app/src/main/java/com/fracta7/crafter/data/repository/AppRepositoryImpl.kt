@@ -106,7 +106,7 @@ class AppRepositoryImpl @Inject constructor(
     }
 
     override suspend fun removeItem(item: Item) {
-        itemsDao.delete(item.toEntity())
+        itemsDao.delete(item.id)
     }
 
     override suspend fun addRecipe(recipe: Recipe) {

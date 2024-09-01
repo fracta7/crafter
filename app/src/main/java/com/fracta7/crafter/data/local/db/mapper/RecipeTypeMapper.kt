@@ -5,7 +5,6 @@ import com.fracta7.crafter.domain.model.RecipeType
 
 fun RecipeType.toEntity(): RecipeTypeEntity {
     return RecipeTypeEntity(
-        key = null,
         id = id,
         name = name,
         item = item,

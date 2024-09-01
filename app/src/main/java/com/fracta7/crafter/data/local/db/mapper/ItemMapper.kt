@@ -6,7 +6,6 @@ import com.fracta7.crafter.domain.model.Item
 
 fun Item.toEntity(): ItemEntity {
     return ItemEntity(
-        key = null,
         id = id,
         name = name,
         stackSize = stackSize,

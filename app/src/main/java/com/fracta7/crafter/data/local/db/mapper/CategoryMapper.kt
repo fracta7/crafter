@@ -5,7 +5,6 @@ import com.fracta7.crafter.domain.model.Category
 
 fun Category.toEntity(): CategoryEntity {
     return CategoryEntity(
-        key = null,
         id = id,
         name = name,
         item = item,

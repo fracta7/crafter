@@ -12,10 +12,10 @@ interface RecipeDao {
     suspend fun getAll(): List<RecipeEntity>
 
     @Insert
-    suspend fun insertAll(vararg answers: RecipeEntity)
+    suspend fun insertAll(vararg recipes: RecipeEntity)
 
     @Delete
-    suspend fun delete(answers: RecipeEntity)
+    suspend fun delete(recipe: RecipeEntity)
 
     @Query("DELETE FROM recipes")
     suspend fun deleteTable()

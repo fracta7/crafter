@@ -48,4 +48,7 @@ class MainActivityViewModel @Inject constructor(
     fun getItemById(itemID: ItemID): Item {
         return itemRegistry.getItem(itemID)!!
     }
+    suspend fun deleteItem(itemID: ItemID){
+        appRepository.removeItem(itemRegistry.getItem(itemID)!!)
+    }
 }

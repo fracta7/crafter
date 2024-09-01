@@ -6,7 +6,6 @@ import com.fracta7.crafter.domain.model.Recipe
 
 fun Recipe.toEntity(): RecipeEntity {
     return RecipeEntity(
-        id = null,
         result = result,
         resultQuantity = resultQuantity,
         requirements = Converters().fromRequirementsMap(requirements),

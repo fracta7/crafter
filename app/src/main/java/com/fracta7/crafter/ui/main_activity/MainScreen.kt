@@ -47,6 +47,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -63,6 +64,7 @@ import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.elements.ItemInfoDialog
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
+import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
@@ -76,6 +78,7 @@ fun MainScreen(navController: NavController) {
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableIntStateOf(0) }
     val haptics = LocalHapticFeedback.current
+    val scope = rememberCoroutineScope()
 
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -338,9 +341,15 @@ fun MainScreen(navController: NavController) {
                     }
                     AnimatedVisibility(showItemInfoDialog) {
                         val item = viewModel.getItemById(currentItemId)
-                        ItemInfoDialog(item = item) {
-                            showItemInfoDialog = false
-                        }
+                        ItemInfoDialog(
+                            item = item,
+                            onDismissRequest = { showItemInfoDialog = false },
+                            onDelete = {
+                                scope.launch {
+                                    viewModel.deleteItem(currentItemId)
+                                }
+                                showItemInfoDialog = false
+                            })
                     }
                     AnimatedVisibility(showAddNewDialog) {
                         AddNewDialog(
