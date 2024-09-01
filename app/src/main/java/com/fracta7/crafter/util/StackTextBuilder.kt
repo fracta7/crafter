@@ -15,7 +15,7 @@ import androidx.compose.ui.text.withStyle
 fun getStackText(amount: Int, stackSize: Int): AnnotatedString{
     return buildAnnotatedString {
         val stack = getStackAmount(amount = amount, stackSize = stackSize)
-        val stackText = if (stack.first <= stackSize) "stack" else "stacks"
+        val stackText = if (stack.first * stackSize <= stackSize) "stack" else "stacks"
         append("Amount: ")
         withStyle(style = SpanStyle(fontWeight = FontWeight.Bold)) {
             append(amount.toString())

@@ -10,11 +10,20 @@ import coil.compose.AsyncImage
 import com.fracta7.crafter.R
 
 @Composable
-fun DrawItem(modifier: Modifier = Modifier, itemID: String, iconSize: Dp = 64.dp) {
-    AsyncImage(
-        model = "file:///android_asset/items/$itemID.png",
-        placeholder = painterResource(id = R.drawable.rounded_cube_24),
-        contentDescription = "item image",
-        modifier = modifier.size(iconSize)
-    )
+fun DrawItem(modifier: Modifier = Modifier, itemID: String, iconSize: Dp = 64.dp, custom: Boolean = false) {
+    if (!custom) {
+        AsyncImage(
+            model = "file:///android_asset/items/$itemID.png",
+            placeholder = painterResource(id = R.drawable.rounded_cube_24),
+            contentDescription = "item image",
+            modifier = modifier.size(iconSize)
+        )
+    } else {
+        AsyncImage(
+            model = "file:///android_asset/items/structure_void.png",
+            placeholder = painterResource(id = R.drawable.rounded_cube_24),
+            contentDescription = "item image",
+            modifier = modifier.size(iconSize)
+        )
+    }
 }

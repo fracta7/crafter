@@ -3,7 +3,8 @@ package com.fracta7.crafter.ui.main_activity
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -48,6 +49,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -58,7 +61,7 @@ import com.fracta7.crafter.ui.helper.DrawItem
 import com.fracta7.crafter.ui.navigation.Route
 import com.fracta7.crafter.ui.theme.CrafterTheme
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun MainScreen(navController: NavController) {
     val viewModel = hiltViewModel<MainActivityViewModel>()
@@ -67,6 +70,7 @@ fun MainScreen(navController: NavController) {
     var showAddDialog by remember { mutableStateOf(false) }
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableIntStateOf(0) }
+    val haptics = LocalHapticFeedback.current
 
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -97,25 +101,31 @@ fun MainScreen(navController: NavController) {
                         .fillMaxWidth()
                         .padding(paddingValues)
                 ) {
-                    OutlinedTextField(value = search, onValueChange = {
-                        search = it
-                    }, shape = ShapeDefaults.ExtraLarge, label = {
-                        Text(
-                            text = "Item name"
-                        )
-                    }, modifier = Modifier
-                        .padding(4.dp)
-                        .fillMaxWidth(), leadingIcon = {
-                        Icon(Icons.Rounded.Search, contentDescription = "Search icon")
-                    }, trailingIcon = {
-                        IconButton(onClick = {
-                            search = ""
-                        }) {
-                            Icon(
-                                Icons.Rounded.Clear, contentDescription = "Clear search query"
+                    OutlinedTextField(
+                        value = search,
+                        onValueChange = {
+                            search = it
+                        },
+                        shape = ShapeDefaults.ExtraLarge, label = {
+                            Text(
+                                text = "Item name"
                             )
-                        }
-                    })
+                        },
+                        modifier = Modifier
+                            .padding(4.dp)
+                            .fillMaxWidth(),
+                        leadingIcon = {
+                            Icon(Icons.Rounded.Search, contentDescription = "Search icon")
+                        },
+                        trailingIcon = {
+                            IconButton(onClick = {
+                                search = ""
+                            }) {
+                                Icon(
+                                    Icons.Rounded.Clear, contentDescription = "Clear search query"
+                                )
+                            }
+                        })
 
                     // Get categories from the ViewModel
                     val categories = viewModel.getCategories()
@@ -195,10 +205,17 @@ fun MainScreen(navController: NavController) {
                                                 horizontalArrangement = Arrangement.SpaceBetween,
                                                 modifier = Modifier
                                                     .fillMaxWidth()
-                                                    .clickable {
-                                                        currentItemId = item.id
-                                                        showAddDialog = !showAddDialog
-                                                    }
+                                                    .combinedClickable(
+                                                        onClick = {
+                                                            currentItemId = item.id
+                                                            showAddDialog = !showAddDialog
+                                                        },
+                                                        onLongClick = {
+                                                            haptics.performHapticFeedback(
+                                                                HapticFeedbackType.LongPress)
+                                                        }
+                                                    )
+
                                             ) {
                                                 val spacing =
                                                     if (viewModel.items.contains(item)) 0.9f else 1f
@@ -264,13 +281,15 @@ fun MainScreen(navController: NavController) {
                                             Divider()
                                         }
                                     }
-                                    item{
+                                    item {
                                         FilledTonalButton(
                                             onClick = { viewModel.items.clear() },
                                             modifier = Modifier
                                                 .fillMaxWidth()
                                                 .padding(4.dp),
-                                            colors = ButtonDefaults.filledTonalButtonColors(containerColor = MaterialTheme.colorScheme.errorContainer)
+                                            colors = ButtonDefaults.filledTonalButtonColors(
+                                                containerColor = MaterialTheme.colorScheme.errorContainer
+                                            )
                                         ) {
                                             Text("Clear all items")
                                         }
