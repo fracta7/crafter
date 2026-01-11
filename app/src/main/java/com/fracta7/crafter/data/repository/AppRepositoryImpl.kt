@@ -2,16 +2,13 @@ package com.fracta7.crafter.data.repository
 
 import com.fracta7.crafter.data.local.db.AppDatabase
 import com.fracta7.crafter.data.local.db.mapper.toDomain
-import com.fracta7.crafter.data.local.db.mapper.toEntity
-import com.fracta7.crafter.data.local.itemsInit
+import com.fracta7.crafter.data.local.items.itemsInit
 import com.fracta7.crafter.data.local.recipeTypesInit
 import com.fracta7.crafter.data.local.recipesInit
 import com.fracta7.crafter.data.local.specialRecipesInit
 import com.fracta7.crafter.data.local.tagsInit
 import com.fracta7.crafter.domain.model.Category
-import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemRegistry
-import com.fracta7.crafter.domain.model.Recipe
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
 import com.fracta7.crafter.domain.model.RecipeTypeID
@@ -99,44 +96,5 @@ class AppRepositoryImpl @Inject constructor(
 
     override fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType {
         return recipeTypes.first { it.id == recipeTypeID }
-    }
-
-    override suspend fun addItem(item: Item) {
-        itemsDao.insertAll(item.toEntity())
-    }
-
-    override suspend fun removeItem(item: Item) {
-        itemsDao.delete(item.id)
-    }
-
-    override suspend fun addRecipe(recipe: Recipe) {
-        recipeDao.insertAll(recipe.toEntity())
-    }
-
-    override suspend fun removeRecipe(recipe: Recipe) {
-        recipeDao.delete(recipe.toEntity())
-    }
-
-    override suspend fun addCategory(category: Category) {
-        categoryDao.insertAll(category.toEntity())
-    }
-
-    override suspend fun removeCategory(category: Category) {
-        categoryDao.delete(category.toEntity())
-    }
-
-    override suspend fun addRecipeType(recipeType: RecipeType) {
-        recipeTypeDao.insertAll(recipeType.toEntity())
-    }
-
-    override suspend fun removeRecipeType(recipeType: RecipeType) {
-        recipeTypeDao.delete(recipeType.toEntity())
-    }
-
-    override suspend fun deleteAll() {
-        itemsDao.deleteTable()
-        recipeDao.deleteTable()
-        recipeTypeDao.deleteTable()
-        categoryDao.deleteTable()
     }
 }

@@ -24,22 +24,4 @@ interface AppRepository {
     fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType
 
     fun getAllTags(): List<Category>
-
-    suspend fun addItem(item: Item)
-
-    suspend fun removeItem(item: Item)
-
-    suspend fun addRecipe(recipe: Recipe)
-
-    suspend fun removeRecipe(recipe: Recipe)
-
-    suspend fun addCategory(category: Category)
-
-    suspend fun removeCategory(category: Category)
-
-    suspend fun addRecipeType(recipeType: RecipeType)
-
-    suspend fun removeRecipeType(recipeType: RecipeType)
-
-    suspend fun deleteAll()
 }

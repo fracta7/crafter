@@ -8,7 +8,7 @@ import com.fracta7.crafter.domain.model.Recipe
  */
 fun calculateEfficiency(recipe: Recipe): Double {
     val totalRequirements = recipe.requirements.values.sum()
-    return recipe.resultQuantity.toDouble() / totalRequirements
+    return recipe.amount.toDouble() / totalRequirements
 }
 
 /**

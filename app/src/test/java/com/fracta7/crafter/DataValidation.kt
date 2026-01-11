@@ -1,6 +1,6 @@
 package com.fracta7.crafter
 
-import com.fracta7.crafter.data.local.itemsInit
+import com.fracta7.crafter.data.local.items.itemsInit
 import com.fracta7.crafter.data.local.recipeTypesInit
 import com.fracta7.crafter.data.local.recipesInit
 import com.fracta7.crafter.data.local.specialRecipesInit

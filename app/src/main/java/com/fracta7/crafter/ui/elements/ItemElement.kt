@@ -27,7 +27,7 @@ fun ItemElement(
     iconSize: Dp = 64.dp
 ) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = modifier) {
-        DrawItem(itemID = item.id, iconSize = iconSize, custom = item.custom)
+        DrawItem(itemID = item.id, iconSize = iconSize)
         Column {
             Text(
                 text = item.name,

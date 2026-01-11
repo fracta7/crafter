@@ -51,7 +51,7 @@ fun AddItemDialog(
             ) {
                 LazyColumn(horizontalAlignment = Alignment.CenterHorizontally) {
                     item {
-                        DrawItem(modifier = Modifier.padding(4.dp), itemID = item.id, iconSize = 72.dp, custom = item.custom)
+                        DrawItem(modifier = Modifier.padding(4.dp), itemID = item.id, iconSize = 72.dp)
                     }
                     item {
                         Text(

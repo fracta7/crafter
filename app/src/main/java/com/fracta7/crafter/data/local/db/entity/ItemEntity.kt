@@ -11,5 +11,4 @@ data class ItemEntity(
     val stackSize: Int?,
     val craftable: Boolean?,
     val tags: String?, // Will store the JSON representation of the list
-    val custom: Boolean?
 )

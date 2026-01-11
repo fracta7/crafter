@@ -3,7 +3,7 @@ package com.fracta7.crafter
 import android.content.Context
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.fracta7.crafter.data.local.itemsInit
+import com.fracta7.crafter.data.local.items.itemsInit
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemID
 import org.junit.Assert.assertTrue
@@ -31,8 +31,6 @@ private fun validateItemImages(items: List<Item>, context: Context): List<ItemID
         if (!isImageFileInAssets(context, item.id)) {
             println("\"${item.id}\" - FAIL")
             missingImages.add(item.id)
-        } else {
-            println("\"${item.id}\" - OK")
         }
     }
 

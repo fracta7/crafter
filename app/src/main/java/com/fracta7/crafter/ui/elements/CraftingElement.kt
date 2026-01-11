@@ -106,7 +106,7 @@ fun CraftingElement(
                         text = appRepository.getRecipeType(recipes[recipeIndex].recipeType).name,
                         fontWeight = FontWeight.Bold
                     )
-                    val leftOver = (resourceAmount(recipes[recipeIndex].resultQuantity, amount) * recipes[recipeIndex].resultQuantity) % amount
+                    val leftOver = (resourceAmount(recipes[recipeIndex].amount, amount) * recipes[recipeIndex].amount) % amount
                     if (leftOver > 0) {
                         Text(
                             text = "($leftOver leftovers)",
@@ -125,7 +125,7 @@ fun CraftingElement(
                             val requirementItem =
                                 appRepository.itemRegistryProvider().getItem(itemID)!!
                             val requirementAmount =
-                                rAmount * resourceAmount(recipes[recipeIndex].resultQuantity, amount)
+                                rAmount * resourceAmount(recipes[recipeIndex].amount, amount)
                             CraftingElement(
                                 modifier = modifier,
                                 item = requirementItem,

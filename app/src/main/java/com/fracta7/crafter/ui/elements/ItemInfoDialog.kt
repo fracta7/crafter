@@ -39,8 +39,7 @@ data class Info(
 fun ItemInfoDialog(
     item: Item,
     modifier: Modifier = Modifier,
-    onDismissRequest: () -> Unit,
-    onDelete: () -> Unit
+    onDismissRequest: () -> Unit
 ) {
     Dialog(onDismissRequest = { onDismissRequest() }) {
         Surface(shape = ShapeDefaults.ExtraLarge) {
@@ -54,7 +53,7 @@ fun ItemInfoDialog(
                     modifier = Modifier.fillMaxWidth()
                 ) {
                     item {
-                        DrawItem(itemID = item.id, custom = item.custom)
+                        DrawItem(itemID = item.id)
                         Text(text = item.name, fontWeight = FontWeight.Bold, fontSize = 21.sp)
                     }
                     item {
@@ -79,17 +78,6 @@ fun ItemInfoDialog(
                     }
                     item {
                         Row {
-                            if (item.custom) {
-                                FilledTonalButton(
-                                    onClick = { onDelete() },
-                                    colors = ButtonDefaults
-                                        .filledTonalButtonColors(
-                                            containerColor = MaterialTheme.colorScheme.errorContainer
-                                        )
-                                ) {
-                                    Text(text = "Delete")
-                                }
-                            }
                             TextButton(onClick = { onDismissRequest() }) {
                                 Text(text = "Dismiss")
                             }
@@ -179,7 +167,7 @@ fun ItemInfoDialogPreview() {
     )
     MaterialTheme(darkColorScheme()) {
         Surface(color = MaterialTheme.colorScheme.background) {
-            ItemInfoDialog(item = item, onDismissRequest = {}, onDelete = {})
+            ItemInfoDialog(item = item, onDismissRequest = {})
         }
     }
 }

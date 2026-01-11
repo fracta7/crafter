@@ -1,0 +1,48 @@
+package com.fracta7.crafter.data.local.items
+
+import com.fracta7.crafter.domain.model.Item
+
+fun getConsumableItems(): List<Item> {
+    return listOf(
+        Item(id = "apple", name = "Apple", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "golden_apple", name = "Golden Apple", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "enchanted_golden_apple", name = "Enchanted Golden Apple", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "melon_slice", name = "Melon Slice", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "chorus_fruit", name = "Chorus Fruit", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "carrot", name = "Carrot", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "golden_carrot", name = "Golden Carrot", stackSize = 64, decomposable = true, tags = listOf("food", "ingredients")),
+        Item(id = "potato", name = "Potato", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "baked_potato", name = "Baked Potato", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "poisonous_potato", name = "Poisonous Potato", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "beetroot", name = "Beetroot", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "dried_kelp", name = "Dried Kelp", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "beef", name = "Raw Beef", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_beef", name = "Cooked Beef", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "porkchop", name = "Raw Porkchop", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_porkchop", name = "Cooked Porkchop", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "mutton", name = "Raw Mutton", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_mutton", name = "Cooked Mutton", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "chicken", name = "Raw Chicken", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_chicken", name = "Cooked Chicken", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "rabbit", name = "Raw Rabbit", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_rabbit", name = "Cooked Rabbit", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "cod", name = "Raw Cod", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_cod", name = "Cooked Cod", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "salmon", name = "Raw Salmon", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "cooked_salmon", name = "Cooked Salmon", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "tropical_fish", name = "Tropical Fish", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "pufferfish", name = "Pufferfish", stackSize = 64, decomposable = false, tags = listOf("food", "ingredients")),
+        Item(id = "bread", name = "Bread", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "cookie", name = "Cookie", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "cake", name = "Cake", stackSize = 1, decomposable = true, tags = listOf("food")),
+        Item(id = "pumpkin_pie", name = "Pumpkin Pie", stackSize = 64, decomposable = true, tags = listOf("food")),
+        Item(id = "rotten_flesh", name = "Rotten Flesh", stackSize = 64, decomposable = false, tags = listOf("food")),
+        Item(id = "spider_eye", name = "Spider Eye", stackSize = 64, decomposable = false, tags = listOf("food", "ingredients")),
+        Item(id = "mushroom_stew", name = "Mushroom Stew", stackSize = 1, decomposable = true, tags = listOf("food")),
+        Item(id = "beetroot_soup", name = "Beetroot Soup", stackSize = 1, decomposable = true, tags = listOf("food")),
+        Item(id = "rabbit_stew", name = "Rabbit Stew", stackSize = 1, decomposable = true, tags = listOf("food")),
+        Item(id = "suspicious_stew", name = "Suspicious Stew", stackSize = 1, decomposable = true, tags = listOf("food")),
+        Item(id = "honey_bottle", name = "Honey Bottle", stackSize = 16, decomposable = false, tags = listOf("food")),
+        Item(id = "water_bottle", name = "Water Bottle", stackSize = 64, decomposable = false, tags = listOf("food")),
+    )
+}

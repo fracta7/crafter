@@ -47,11 +47,11 @@ fun decomposeItems(
             val recipes = sortRecipesByEfficiency(recipeRegistry.getRecipesByResult(item))
             val recipe = recipes[0] // Assuming there's at least one recipe and using the first one.
             val multiplier = resourceAmount(
-                result = recipe.resultQuantity,
+                result = recipe.amount,
                 amountNeeded = amount
-            )//amount / recipe.resultQuantity
+            )//amount / recipe.amount
             val leftOver =
-                if (amount < recipe.resultQuantity) recipe.resultQuantity - amount else (recipe.resultQuantity * multiplier) - amount
+                if (amount < recipe.amount) recipe.amount - amount else (recipe.amount * multiplier) - amount
             if (leftOver > 0 && !isLeftOver) addLeftOver(item, leftOver)
             for ((requiredItem, requiredAmount) in recipe.requirements) {
                 processItem(requiredItem, requiredAmount * multiplier, isLeftOver, action)
@@ -71,8 +71,8 @@ fun decomposeItems(
             addRawMaterialLeftOver(item, amount)
         } else {
             val recipe = sortRecipesByEfficiency(recipeRegistry.getRecipesByResult(item))[0]
-            if (amount >= recipe.resultQuantity) {
-                val leftOver = amount % recipe.resultQuantity
+            if (amount >= recipe.amount) {
+                val leftOver = amount % recipe.amount
                 val requiredAmount = amount - leftOver
                 addRawMaterialLeftOver(item,leftOver)
                 processItem(item, requiredAmount, true) { pItem, pAmount ->

@@ -14,7 +14,7 @@ import com.fracta7.crafter.data.local.db.entity.RecipeTypeEntity
 
 @Database(
     entities = [CategoryEntity::class, ItemEntity::class, RecipeEntity::class, RecipeTypeEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 @TypeConverters(Converters::class)

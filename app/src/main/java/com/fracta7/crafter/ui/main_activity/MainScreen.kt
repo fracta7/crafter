@@ -17,7 +17,6 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.List
-import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Clear
 import androidx.compose.material.icons.rounded.Delete
@@ -58,7 +57,6 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.fracta7.crafter.ui.elements.AddItemDialog
-import com.fracta7.crafter.ui.elements.AddNewDialog
 import com.fracta7.crafter.ui.elements.DrawItem
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.elements.ItemInfoDialog
@@ -74,11 +72,11 @@ fun MainScreen(navController: NavController) {
     var showDrawer by remember { mutableStateOf(false) }
     var showAddDialog by remember { mutableStateOf(false) }
     var showItemInfoDialog by remember { mutableStateOf(false) }
-    var showAddNewDialog by remember { mutableStateOf(false) }
     var currentItemId by remember { mutableStateOf("") }
     var currentItemAmount by remember { mutableIntStateOf(0) }
     val haptics = LocalHapticFeedback.current
     val scope = rememberCoroutineScope()
+    val version = "1.21.11"
 
     CrafterTheme(dynamicColor = true) {
         Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
@@ -88,10 +86,7 @@ fun MainScreen(navController: NavController) {
                         IconButton(onClick = { showDrawer = !showDrawer }) {
                             Icon(Icons.AutoMirrored.Rounded.List, contentDescription = "Icon List")
                         }
-                        IconButton(onClick = { showAddNewDialog = !showAddNewDialog }) {
-                            Icon(Icons.Rounded.Add, contentDescription = "Add new")
-                        }
-                        Text(text = "Crafter")
+                        Text(text = "Crafter $version")
                     },
                     floatingActionButton = {
                         AnimatedVisibility(visible = viewModel.items.isNotEmpty()) {
@@ -343,24 +338,7 @@ fun MainScreen(navController: NavController) {
                         val item = viewModel.getItemById(currentItemId)
                         ItemInfoDialog(
                             item = item,
-                            onDismissRequest = { showItemInfoDialog = false },
-                            onDelete = {
-                                scope.launch {
-                                    viewModel.deleteItem(currentItemId)
-                                }
-                                showItemInfoDialog = false
-                            })
-                    }
-                    AnimatedVisibility(showAddNewDialog) {
-                        AddNewDialog(
-                            onDismissRequest = { showAddNewDialog = false },
-                            onAddNewItem = {
-                                showAddNewDialog = false
-                                navController.navigate(Route.AddCustomItem)
-                            },
-                            onAddNewRecipe = { showAddNewDialog = false },
-                            onAddNewRecipeType = { showAddNewDialog = false }
-                        )
+                            onDismissRequest = { showItemInfoDialog = false })
                     }
                 }
             }
