@@ -16,7 +16,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.util.getStackText
+import com.fracta7.crafter.domain.usecases.getStackText
 
 @Composable
 fun ItemElement(

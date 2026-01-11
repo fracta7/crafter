@@ -1,4 +1,4 @@
-package com.fracta7.crafter.util
+package com.fracta7.crafter.domain.usecases
 
 /**
  * Converts number of items to stacks and items

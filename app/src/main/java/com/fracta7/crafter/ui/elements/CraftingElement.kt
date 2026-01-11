@@ -31,8 +31,8 @@ import androidx.compose.ui.unit.dp
 import com.fracta7.crafter.R
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.repository.AppRepository
-import com.fracta7.crafter.util.resourceAmount
-import com.fracta7.crafter.util.sortRecipesByEfficiency
+import com.fracta7.crafter.domain.usecases.resourceAmount
+import com.fracta7.crafter.domain.usecases.sortRecipesByEfficiency
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

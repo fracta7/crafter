@@ -42,7 +42,7 @@ import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.ui.elements.CraftingElement
 import com.fracta7.crafter.ui.elements.ItemElement
 import com.fracta7.crafter.ui.theme.CrafterTheme
-import com.fracta7.crafter.util.decomposeItems
+import com.fracta7.crafter.domain.usecases.decomposeItems
 import kotlinx.coroutines.launch
 
 @SuppressLint("CoroutineCreationDuringComposition")

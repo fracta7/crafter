@@ -1,4 +1,4 @@
-package com.fracta7.crafter.util
+package com.fracta7.crafter.domain.usecases
 
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle

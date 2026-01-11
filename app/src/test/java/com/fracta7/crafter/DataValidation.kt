@@ -14,7 +14,7 @@ import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
 import com.fracta7.crafter.domain.model.RecipeTypeID
 import com.fracta7.crafter.domain.model.TagID
-import com.fracta7.crafter.util.decomposeItems
+import com.fracta7.crafter.domain.usecases.decomposeItems
 import org.junit.Assert.assertTrue
 import org.junit.Test
 
