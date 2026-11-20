@@ -12,6 +12,5 @@ typealias RecipeTypeItemID = String
 data class RecipeType(
     val id: RecipeTypeID,
     val name: String,
-    val item: RecipeTypeItemID,
-    val custom: Boolean = false
+    val item: RecipeTypeItemID
 )

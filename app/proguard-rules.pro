@@ -19,8 +19,6 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
--keep class com.google.gson.** { *; }
--dontwarn com.google.gson.**
 -keep class com.fracta7.crafter.ui.navigation.** { *; }
 -keepattributes *Annotation*
 -dontwarn retrofit2.Platform$Java8

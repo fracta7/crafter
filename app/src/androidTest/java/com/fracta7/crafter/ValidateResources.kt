@@ -3,7 +3,7 @@ package com.fracta7.crafter
 import android.content.Context
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.fracta7.crafter.data.local.items.itemsInit
+import com.fracta7.crafter.data.local.registry.RegistryLoader
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.model.ItemID
 import org.junit.Assert.assertTrue
@@ -16,11 +16,12 @@ class ValidateResources {
 
     @Test
     fun validateItemImages() {
-        val items = itemsInit()
         val context = InstrumentationRegistry.getInstrumentation().targetContext
+        val snapshot = RegistryLoader().loadFromAssets(context.assets)
+        val items = snapshot.itemRegistry.getAll().values.toList()
         val missingImages = validateItemImages(items, context)
 
-        assertTrue("Some items are missing images.", missingImages.isEmpty())
+        assertTrue("Some items are missing images: $missingImages", missingImages.isEmpty())
     }
 }
 
@@ -29,16 +30,8 @@ private fun validateItemImages(items: List<Item>, context: Context): List<ItemID
 
     for (item in items) {
         if (!isImageFileInAssets(context, item.id)) {
-            println("\"${item.id}\" - FAIL")
             missingImages.add(item.id)
         }
-    }
-
-    if (missingImages.isNotEmpty()) {
-        println("=== LIST OF ITEMS WITH MISSING IMAGES ===")
-        missingImages.forEach { println("\"$it\"") }
-    } else {
-        println("All items have associated images.")
     }
 
     return missingImages

@@ -1,11 +1,9 @@
 package com.fracta7.crafter.ui.theme
 
 import androidx.compose.material3.Typography
-import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.sp
-import androidx.compose.ui.text.font.Font
 import com.fracta7.crafter.R
 
 val AppFontFamily = FontFamily(
@@ -14,27 +12,22 @@ val AppFontFamily = FontFamily(
     Font(R.font.mojangles, FontWeight.Bold)
 )
 
+private val DefaultTypography = Typography()
 
 val AppTypography = Typography(
-    bodyLarge = Typography().bodyLarge.copy(
-        fontFamily = AppFontFamily
-    ),
-    bodyMedium = Typography().bodyMedium.copy(
-        fontFamily = AppFontFamily
-    ),
-    bodySmall = Typography().bodySmall.copy(
-        fontFamily = AppFontFamily
-    ),
-    titleLarge = Typography().titleLarge.copy(
-        fontFamily = AppFontFamily
-    ),
-    titleMedium = Typography().titleMedium.copy(
-        fontFamily = AppFontFamily
-    ),
-    titleSmall = Typography().titleSmall.copy(
-        fontFamily = AppFontFamily
-    ),
-    labelLarge = Typography().labelLarge.copy(
-        fontFamily = AppFontFamily
-    )
+    displayLarge = DefaultTypography.displayLarge.copy(fontFamily = AppFontFamily),
+    displayMedium = DefaultTypography.displayMedium.copy(fontFamily = AppFontFamily),
+    displaySmall = DefaultTypography.displaySmall.copy(fontFamily = AppFontFamily),
+    headlineLarge = DefaultTypography.headlineLarge.copy(fontFamily = AppFontFamily),
+    headlineMedium = DefaultTypography.headlineMedium.copy(fontFamily = AppFontFamily),
+    headlineSmall = DefaultTypography.headlineSmall.copy(fontFamily = AppFontFamily),
+    titleLarge = DefaultTypography.titleLarge.copy(fontFamily = AppFontFamily),
+    titleMedium = DefaultTypography.titleMedium.copy(fontFamily = AppFontFamily),
+    titleSmall = DefaultTypography.titleSmall.copy(fontFamily = AppFontFamily),
+    bodyLarge = DefaultTypography.bodyLarge.copy(fontFamily = AppFontFamily),
+    bodyMedium = DefaultTypography.bodyMedium.copy(fontFamily = AppFontFamily),
+    bodySmall = DefaultTypography.bodySmall.copy(fontFamily = AppFontFamily),
+    labelLarge = DefaultTypography.labelLarge.copy(fontFamily = AppFontFamily),
+    labelMedium = DefaultTypography.labelMedium.copy(fontFamily = AppFontFamily),
+    labelSmall = DefaultTypography.labelSmall.copy(fontFamily = AppFontFamily)
 )

@@ -1,32 +1,36 @@
 package com.fracta7.crafter.ui.crafting_screen
 
-import android.annotation.SuppressLint
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
-import androidx.compose.material.icons.rounded.KeyboardArrowDown
-import androidx.compose.material.icons.rounded.KeyboardArrowUp
+import androidx.compose.material.icons.rounded.Refresh
+import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.Divider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.PrimaryTabRow
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Tab
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -34,209 +38,222 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.fracta7.crafter.domain.model.ItemID
-import com.fracta7.crafter.ui.elements.CraftingElement
-import com.fracta7.crafter.ui.elements.ItemElement
-import com.fracta7.crafter.ui.theme.CrafterTheme
-import com.fracta7.crafter.domain.usecases.decomposeItems
+import com.fracta7.crafter.domain.usecases.CraftingProgress
+import com.fracta7.crafter.ui.crafting_screen.components.MaterialsTab
+import com.fracta7.crafter.ui.crafting_screen.components.StepsTab
+import com.fracta7.crafter.ui.crafting_screen.components.TreeTab
+import com.fracta7.crafter.ui.crafting_screen.components.TreeViewMode
+import com.fracta7.crafter.ui.elements.ProjectNameDialog
+import com.fracta7.crafter.ui.projects_screen.ExportMaterialListDialog
 import kotlinx.coroutines.launch
 
-@SuppressLint("CoroutineCreationDuringComposition")
+private enum class CraftingTab(val title: String) {
+    MATERIALS("Materials"),
+    STEPS("Steps"),
+    TREE("Tree")
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun CraftingScreen(navController: NavController, items: List<ItemID>, amounts: List<Int>) {
+fun CraftingScreen(navController: NavController, projectId: Long) {
     val viewModel = hiltViewModel<CraftingScreenViewModel>()
-    val itemsMap = items.zip(amounts).toMap()
-    var rawItems by remember { mutableStateOf(mapOf<ItemID, Int>()) }
-    var leftOvers by remember { mutableStateOf(mapOf<ItemID, Int>()) }
-    var rawItemsVisible by remember { mutableStateOf(false) }
-    var leftoversVisible by remember { mutableStateOf(false) }
-    var craftingVisible by remember { mutableStateOf(true) }
-    val coroutineScope = rememberCoroutineScope()
+    LaunchedEffect(projectId) {
+        viewModel.loadProject(projectId)
+    }
 
-    CrafterTheme(dynamicColor = true) {
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
-            Scaffold(topBar = {
-                TopAppBar(title = { Text(text = "Crafter") },
+    val uiState by viewModel.uiState.collectAsState()
+    val tabs = CraftingTab.entries
+    val pagerState = rememberPagerState(pageCount = { tabs.size })
+    val scope = rememberCoroutineScope()
+
+    var showSaveDialog by remember { mutableStateOf(false) }
+    var showExportDialog by remember { mutableStateOf(false) }
+    var treeViewMode by remember { mutableStateOf(TreeViewMode.DIAGRAM) }
+
+    val view = LocalView.current
+    DisposableEffect(uiState.keepScreenOn) {
+        view.keepScreenOn = uiState.keepScreenOn
+        onDispose {
+            view.keepScreenOn = false
+        }
+    }
+
+    Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        Scaffold(
+            topBar = {
+                TopAppBar(
+                    title = {
+                        Text(
+                            text = uiState.projectName.ifBlank { "Crafter" },
+                            maxLines = 1,
+                            modifier = Modifier.basicMarquee()
+                        )
+                    },
                     navigationIcon = {
                         IconButton(onClick = { navController.navigateUp() }) {
-                            Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back")
+                            Icon(
+                                Icons.AutoMirrored.Rounded.ArrowBack,
+                                contentDescription = "Back"
+                            )
                         }
-                    })
+                    },
+                    actions = {
+                        if (uiState.isDraft && uiState.targets.isNotEmpty()) {
+                            TextButton(onClick = { showSaveDialog = true }) {
+                                Text("Save")
+                            }
+                        }
+                        if (uiState.targets.isNotEmpty()) {
+                            IconButton(onClick = { showExportDialog = true }) {
+                                Icon(
+                                    imageVector = Icons.Rounded.Share,
+                                    contentDescription = "Export material list"
+                                )
+                            }
+                        }
+                        if (uiState.hasOwnedItems) {
+                            IconButton(onClick = viewModel::resetOwnedInventory) {
+                                Icon(
+                                    imageVector = Icons.Rounded.Refresh,
+                                    contentDescription = "Reset progress"
+                                )
+                            }
+                        }
+                    }
+                )
             }
-            ) { padding ->
-                Column(
+        ) { padding ->
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(padding)
+            ) {
+                ProgressHeader(
+                    progress = uiState.progress,
+                    leftoverCount = uiState.plan.leftovers.size
+                )
+
+                PrimaryTabRow(selectedTabIndex = pagerState.currentPage) {
+                    tabs.forEachIndexed { index, tab ->
+                        Tab(
+                            selected = pagerState.currentPage == index,
+                            onClick = {
+                                scope.launch { pagerState.animateScrollToPage(index) }
+                            },
+                            text = { Text(text = tab.title) }
+                        )
+                    }
+                }
+
+                HorizontalPager(
+                    state = pagerState,
+                    beyondViewportPageCount = 2,
+                    userScrollEnabled = !(tabs[pagerState.currentPage] == CraftingTab.TREE &&
+                        treeViewMode == TreeViewMode.DIAGRAM),
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(padding)
-                ) {
-                    OutlinedCard(
-                        modifier = Modifier
-                            .padding(horizontal = 10.dp, vertical = 4.dp)
-                            .fillMaxWidth()
-                            .clickable { rawItemsVisible = !rawItemsVisible }
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            modifier = Modifier.fillMaxWidth()
-                        ) {
-                            Text(
-                                text = "Raw Items",
-                                modifier = Modifier
-                                    .padding(10.dp),
-                                fontWeight = FontWeight.Bold
-                            )
-                            val icon =
-                                if (rawItemsVisible) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
-                            Icon(
-                                icon,
-                                contentDescription = null,
-                                modifier = Modifier.padding(10.dp)
-                            )
-                        }
-                        coroutineScope.launch {
-                            val result = decomposeItems(
-                                itemsToDecompose = itemsMap,
-                                recipeRegistry = viewModel.getRecipeRegistry(),
-                                itemRegistry = viewModel.getItemRegistry()
-                            )
-                            rawItems = result.first
-                            leftOvers = result.second
-                        }
-                        AnimatedVisibility(visible = rawItemsVisible) {
+                        .weight(1f)
+                ) { page ->
+                    when (tabs[page]) {
+                        CraftingTab.MATERIALS -> MaterialsTab(
+                            materialRows = uiState.materialRows,
+                            leftovers = uiState.plan.leftovers,
+                            resolveItem = viewModel::getItem,
+                            onToggleComplete = viewModel::toggleItemComplete,
+                            onSetOwnedAmount = viewModel::setOwnedAmount
+                        )
 
-                            LazyColumn(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .fillMaxHeight(0.4f)
-                                    .padding(10.dp, 4.dp)
-                            ) {
-                                rawItems.forEach { (itemID, amount) ->
-                                    val item = viewModel.getItem(itemID)
-                                    item {
-                                        ItemElement(
-                                            modifier = Modifier.fillMaxWidth(),
-                                            item = item,
-                                            amount = amount,
-                                            preview = false,
-                                        )
-                                        Divider(modifier = Modifier.padding(horizontal = 4.dp))
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    Spacer(modifier = Modifier.padding(4.dp))
-                    if (leftOvers.isNotEmpty()) {
-                        OutlinedCard(
-                            modifier = Modifier
-                                .padding(horizontal = 10.dp, vertical = 4.dp)
-                                .fillMaxWidth()
-                                .clickable { leftoversVisible = !leftoversVisible }
-                        ) {
-                            Row(
-                                verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.SpaceBetween,
-                                modifier = Modifier.fillMaxWidth()
-                            ) {
-                                Text(
-                                    text = "Left-overs",
-                                    modifier = Modifier
-                                        .padding(10.dp),
-                                    fontWeight = FontWeight.Bold
-                                )
-                                val icon =
-                                    if (leftoversVisible) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
-                                Icon(
-                                    icon,
-                                    contentDescription = null,
-                                    modifier = Modifier.padding(10.dp)
-                                )
-                            }
-                            AnimatedVisibility(visible = leftoversVisible) {
-                                LazyColumn(
-                                    modifier = Modifier
-                                        .fillMaxWidth()
-                                        .fillMaxHeight(0.4f)
-                                        .padding(10.dp, 4.dp)
-                                ) {
-                                    leftOvers.forEach { (itemID, amount) ->
-                                        item {
-                                            val item = viewModel.getItem(itemID)
-                                            ItemElement(
-                                                modifier = Modifier.fillMaxWidth(),
-                                                item = item,
-                                                amount = amount,
-                                                preview = false,
-                                            )
-                                            Divider(
-                                                modifier = Modifier.padding(
-                                                    horizontal = 4.dp
-                                                )
-                                            )
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    if (leftOvers.isNotEmpty()) Spacer(modifier = Modifier.padding(4.dp))
-                    OutlinedCard(
-                        modifier = Modifier
-                            .padding(horizontal = 10.dp, vertical = 4.dp)
-                            .fillMaxWidth()
-                    ) {
-                        Row(
-                            verticalAlignment = Alignment.CenterVertically,
-                            horizontalArrangement = Arrangement.SpaceBetween,
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .clickable { craftingVisible = !craftingVisible }
-                        ) {
-                            Text(
-                                text = "Crafting List",
-                                modifier = Modifier
-                                    .padding(10.dp),
-                                fontWeight = FontWeight.Bold
-                            )
-                            val icon =
-                                if (craftingVisible) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
-                            Icon(
-                                icon,
-                                contentDescription = null,
-                                modifier = Modifier.padding(10.dp)
-                            )
-                        }
-                        AnimatedVisibility(visible = craftingVisible) {
-                            LazyColumn(
-                                modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(10.dp, 4.dp)
-                            ) {
-                                itemsMap.forEach { (itemID, amount) ->
-                                    item {
-                                        val item = viewModel.getItem(itemID)
-                                        CraftingElement(
-                                            item = item,
-                                            amount = amount,
-                                            appRepository = viewModel.getAppRepository())
-                                        Divider(
-                                            modifier = Modifier.padding(
-                                                horizontal = 4.dp
-                                            )
-                                        )
-                                    }
-                                }
-                            }
-                        }
+                        CraftingTab.STEPS -> StepsTab(
+                            stepRows = uiState.stepRows,
+                            resolveItem = viewModel::getItem,
+                            resolveRecipeType = viewModel::getRecipeType,
+                            getRecipesForResult = viewModel::getRecipesForResult,
+                            resolveIngredientRef = viewModel::resolveIngredientRef,
+                            preferredFuelItemId = uiState.recipePreferences.preferredFuelItemId ?: "coal",
+                            onSelectRecipe = viewModel::selectRecipe,
+                            onToggleComplete = viewModel::toggleItemComplete,
+                            onSetOwnedAmount = viewModel::setOwnedAmount
+                        )
+
+                        CraftingTab.TREE -> TreeTab(
+                            targets = uiState.targets,
+                            materialRows = uiState.materialRows,
+                            stepRows = uiState.stepRows,
+                            ownedInventory = uiState.ownedInventory,
+                            treeNodes = uiState.plan.tree,
+                            viewMode = treeViewMode,
+                            onViewModeChange = { treeViewMode = it },
+                            resolveItem = viewModel::getItem,
+                            resolveRecipeType = viewModel::getRecipeType,
+                            getRecipesForResult = viewModel::getRecipesForResult,
+                            onSelectRecipe = viewModel::selectRecipe,
+                            onSetOwnedAmount = viewModel::setOwnedAmount
+                        )
                     }
                 }
             }
         }
+    }
+
+    if (showSaveDialog) {
+        ProjectNameDialog(
+            title = "Save as Project",
+            confirmLabel = "Save",
+            onDismissRequest = { showSaveDialog = false },
+            onConfirm = { name ->
+                showSaveDialog = false
+                viewModel.saveDraftAsProject(name)
+            }
+        )
+    }
+
+    if (showExportDialog) {
+        ExportMaterialListDialog(
+            projectName = uiState.projectName,
+            formatContent = viewModel::formatExport,
+            onDismissRequest = { showExportDialog = false }
+        )
+    }
+}
+
+@Composable
+private fun ProgressHeader(
+    progress: CraftingProgress,
+    leftoverCount: Int
+) {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 16.dp, vertical = 8.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            val percent = (progress.fraction * 100).toInt()
+            Text(
+                text = "$percent% ready",
+                style = MaterialTheme.typography.labelLarge,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
+            )
+            val leftoverSuffix = if (leftoverCount > 0) " • $leftoverCount leftovers" else ""
+            Text(
+                text = "${progress.completedMaterials}/${progress.totalMaterials} materials • ${progress.completedSteps}/${progress.totalSteps} steps$leftoverSuffix",
+                style = MaterialTheme.typography.bodySmall,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+        }
+        Spacer(modifier = Modifier.height(6.dp))
+        LinearProgressIndicator(
+            progress = { progress.fraction },
+            modifier = Modifier.fillMaxWidth()
+        )
     }
 }

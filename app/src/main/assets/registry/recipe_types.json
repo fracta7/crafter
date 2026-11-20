@@ -1,0 +1,72 @@
+[
+  {
+    "id": "crafting_shapeless",
+    "name": "Crafting",
+    "item": "crafting_table"
+  },
+  {
+    "id": "crafting_shaped",
+    "name": "Crafting",
+    "item": "crafting_table"
+  },
+  {
+    "id": "smelting",
+    "name": "Smelting",
+    "item": "furnace"
+  },
+  {
+    "id": "smoking",
+    "name": "Smoking",
+    "item": "smoker"
+  },
+  {
+    "id": "blasting",
+    "name": "Blasting",
+    "item": "blast_furnace"
+  },
+  {
+    "id": "campfire_cooking",
+    "name": "Campfire Cooking",
+    "item": "campfire"
+  },
+  {
+    "id": "stripping",
+    "name": "Stripping",
+    "item": "diamond_axe"
+  },
+  {
+    "id": "watering",
+    "name": "Watering",
+    "item": "water_bucket"
+  },
+  {
+    "id": "stonecutting",
+    "name": "Stonecutting",
+    "item": "stonecutter"
+  },
+  {
+    "id": "oxidation",
+    "name": "Oxidation",
+    "item": "oxidized_copper"
+  },
+  {
+    "id": "waxing",
+    "name": "Waxing",
+    "item": "honeycomb"
+  },
+  {
+    "id": "smithing_transform",
+    "name": "Smithing",
+    "item": "smithing_table"
+  },
+  {
+    "id": "fuel",
+    "name": "Fuel",
+    "item": "coal"
+  },
+  {
+    "id": "brewing",
+    "name": "Brewing",
+    "item": "brewing_stand"
+  }
+]

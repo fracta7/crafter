@@ -5,20 +5,14 @@ import kotlinx.serialization.Serializable
 @Serializable
 sealed class Route {
     @Serializable
-    data object Main : Route()
+    data object Catalog : Route()
 
     @Serializable
-    data class Crafting(
-        val items: List<String>,
-        val amounts: List<Int>
-    )
+    data object Projects : Route()
 
     @Serializable
-    data object AddCustomItem : Route()
+    data object Settings : Route()
 
     @Serializable
-    data object AddCustomRecipe : Route()
-
-    @Serializable
-    data object AddCustomRecipeType : Route()
+    data class Crafting(val projectId: Long) : Route()
 }

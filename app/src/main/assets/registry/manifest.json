@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "mcVersion": "26.3",
+  "registryVersion": 1,
+  "generatedAt": "2026-11-20T09:00:17Z",
+  "iconBaseUrl": "https://raw.githubusercontent.com/fracta7/crafter/master/app/src/main/assets/items/",
+  "files": {
+    "items.json": {
+      "sha256": "e14800c85abfc52905517c8d7ab99d652a274226ee60a4e4db663fe11f5dce78",
+      "bytes": 268999
+    },
+    "recipes.json": {
+      "sha256": "bab5957847d7e0bcfda446aa1ff7e49b888f3a595a94030fcc1fdbe77eef230f",
+      "bytes": 851838
+    },
+    "item_tags.json": {
+      "sha256": "e6109da4426347e6017c5815c06ee641852ce3619072432c5479b24cb0e8adc3",
+      "bytes": 75652
+    },
+    "categories.json": {
+      "sha256": "0d62a2d4ced73a15828e535d53589bf10af101ae898c490e005c51a6204eb41b",
+      "bytes": 931
+    },
+    "recipe_types.json": {
+      "sha256": "0de9cc4d6377a4bc20185679bc526f7600f1b2e62ac6c3c5bc705480062a1187",
+      "bytes": 1173
+    }
+  }
+}

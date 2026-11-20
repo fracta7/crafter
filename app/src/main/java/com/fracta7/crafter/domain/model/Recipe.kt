@@ -17,5 +17,6 @@ data class Recipe(
     val amount: Int,
     val requirements: Map<ItemID, Int>,
     val recipeType: RecipeTypeID,
-    val custom: Boolean = false
+    val tagRequirements: Map<TagID, Int> = emptyMap(),
+    val layout: RecipeLayout? = null
 )

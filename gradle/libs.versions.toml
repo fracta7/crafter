@@ -1,8 +1,8 @@
 [versions]
-agp = "8.5.1"
+agp = "8.6.1"
 kotlin = "2.0.0"
 activityCompose = "1.9.1"
-composeBom = "2024.01.00"
+composeBom = "2024.10.01"
 coreKtx = "1.13.1"
 espressoCore = "3.6.1"
 hiltAndroid = "2.51.1"
@@ -10,14 +10,14 @@ hiltCompiler = "1.2.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 lifecycleRuntimeKtx = "2.8.4"
-navigationCompose = "2.8.0-rc01"
+navigationCompose = "2.8.9"
 serialization = "1.7.1"
 daggerHilt = "2.51.1"
 lifecycleViewmodelAndroid = "2.8.4"
 coil = "2.2.2"
 room = "2.6.1"
-databindingAdapters = "8.5.2"
-gson = "2.10.1"
+datastore = "1.1.1"
+coroutinesTest = "1.8.1"
 ksp = "2.0.0-1.0.24"
 
 [libraries]
@@ -47,7 +47,9 @@ coil-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coi
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
-gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+room-testing = { group = "androidx.room", name = "room-testing", version.ref = "room" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

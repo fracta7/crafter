@@ -1,0 +1,57 @@
+[
+  {
+    "id": "building",
+    "name": "Building Blocks",
+    "item": "bricks"
+  },
+  {
+    "id": "colored",
+    "name": "Colored Blocks",
+    "item": "cyan_wool"
+  },
+  {
+    "id": "natural",
+    "name": "Natural Blocks",
+    "item": "grass_block"
+  },
+  {
+    "id": "functional",
+    "name": "Functional Blocks",
+    "item": "oak_sign"
+  },
+  {
+    "id": "redstone",
+    "name": "Redstone Blocks",
+    "item": "redstone"
+  },
+  {
+    "id": "tools",
+    "name": "Tools & Utilities",
+    "item": "diamond_pickaxe"
+  },
+  {
+    "id": "combat",
+    "name": "Combat",
+    "item": "netherite_sword"
+  },
+  {
+    "id": "food",
+    "name": "Food & Drinks",
+    "item": "golden_apple"
+  },
+  {
+    "id": "ingredients",
+    "name": "Ingredients",
+    "item": "iron_ingot"
+  },
+  {
+    "id": "potions",
+    "name": "Potions",
+    "item": "water_bottle"
+  },
+  {
+    "id": "other",
+    "name": "Others",
+    "item": "structure_block"
+  }
+]

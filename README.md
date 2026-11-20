@@ -32,7 +32,6 @@ List of key features and functionalities of the project.
 - List of raw materials for recipe list
 - Tracking leftovers
 - Recipe switch between multiple recipes
-- Adding custom items and recipes
 
 ## TODOs
 
@@ -85,15 +84,13 @@ typealias TagID = String
  * @property stackSize stack size of an item.
  * @property decomposable indicates if it can be decomposed by decomposition function.
  * @property tags contains tags for categories.
- * @property custom indicates if item is custom added
  */
 data class Item(
   val id: ItemID,
   val name: String,
   val stackSize: Int,
   val decomposable: Boolean,
-  val tags: List<TagID> = listOf("other"),
-  val custom: Boolean = false
+  val tags: List<TagID> = listOf("other")
 )
 ```
 
@@ -108,14 +105,12 @@ typealias RecipeTypeID = String
  * @property resultQuantity quantity of resulting item
  * @property requirements a map of required items mapped to their quantity.
  * @property recipeType defines the recipe type (crafting, smelting etc.).
- * @property custom indicates if item is custom added
  */
 data class Recipe(
   val result: ItemID,
   val resultQuantity: Int,
   val requirements: Map<ItemID, Int>,
-  val recipeType: RecipeTypeID,
-  val custom: Boolean = false
+  val recipeType: RecipeTypeID
 )
 ```
 
@@ -130,13 +125,11 @@ typealias RecipeTypeItemID = String
  * @property id represents the ID of recipe.
  * @property name represents the name of recipe.
  * @property item is the itemID of recipe representation
- * @property custom indicates if item is custom added
  */
 data class RecipeType(
   val id: RecipeTypeID,
   val name: String,
-  val item: RecipeTypeItemID,
-  val custom: Boolean = false
+  val item: RecipeTypeItemID
 )
 ```
 

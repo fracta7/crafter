@@ -1,100 +1,54 @@
 package com.fracta7.crafter.data.repository
 
-import com.fracta7.crafter.data.local.db.AppDatabase
-import com.fracta7.crafter.data.local.db.mapper.toDomain
-import com.fracta7.crafter.data.local.items.itemsInit
-import com.fracta7.crafter.data.local.recipeTypesInit
-import com.fracta7.crafter.data.local.recipesInit
-import com.fracta7.crafter.data.local.specialRecipesInit
-import com.fracta7.crafter.data.local.tagsInit
+import android.app.Application
+import com.fracta7.crafter.data.local.registry.RegistryLoader
 import com.fracta7.crafter.domain.model.Category
 import com.fracta7.crafter.domain.model.ItemRegistry
 import com.fracta7.crafter.domain.model.RecipeRegistry
 import com.fracta7.crafter.domain.model.RecipeType
 import com.fracta7.crafter.domain.model.RecipeTypeID
+import com.fracta7.crafter.domain.model.RegistrySnapshot
+import com.fracta7.crafter.domain.model.TagRegistry
 import com.fracta7.crafter.domain.repository.AppRepository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import java.io.File
 import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
 class AppRepositoryImpl @Inject constructor(
-    db: AppDatabase
+    app: Application,
+    registryLoader: RegistryLoader
 ) : AppRepository {
-    private val itemRegistry = ItemRegistry()
-    private val recipeRegistry = RecipeRegistry()
-    private val recipeTypes: MutableList<RecipeType> = recipeTypesInit().toMutableList()
-    private val tags: MutableList<Category> = tagsInit().toMutableList()
-    private val itemsDao = db.itemDao()
-    private val categoryDao = db.categoryDao()
-    private val recipeDao = db.recipeDao()
-    private val recipeTypeDao = db.recipeTypeDao()
-    private val job = Job()
-    private val scope = CoroutineScope(Dispatchers.IO + job)
 
-    /**
-     * first we need to initialize all items and recipes
-     * the order is important as RecipeRegistry requires
-     * initialized and populated ItemRegistry instance for
-     * recipes.
-     */
-    init {
-        itemsInit().forEach {
-            itemRegistry.addItem(it)
-        }
-        recipesInit().forEach {
-            recipeRegistry.addRecipe(it)
-        }
-        specialRecipesInit().forEach {
-            recipeRegistry.addRecipe(it)
-        }
+    private val _registryState = MutableStateFlow(
+        registryLoader.loadStartupSnapshot(
+            assetManager = app.assets,
+            cacheDir = File(app.filesDir, "registry_cache")
+        )
+    )
+    override val registryState: StateFlow<RegistrySnapshot> = _registryState.asStateFlow()
 
-        // get custom data
-        scope.launch {
-            try {
-                val customItems = itemsDao.getAll()
-                if (customItems.isNotEmpty())
-                    customItems.map { it.toDomain() }.forEach {
-                        itemRegistry.addItem(it)
-                    }
-                val customRecipes = recipeDao.getAll()
-                if (customRecipes.isNotEmpty())
-                    customRecipes.map { it.toDomain() }.forEach {
-                        recipeRegistry.addRecipe(it)
-                    }
-                val customRecipeTypes = recipeTypeDao.getAll()
-                if (customRecipeTypes.isNotEmpty())
-                    customRecipeTypes.map { it.toDomain() }.forEach {
-                        recipeTypes.add(it)
-                    }
-                val customTags = categoryDao.getAll()
-                if (customTags.isNotEmpty())
-                    customTags.map { it.toDomain() }.forEach {
-                        tags.add(it)
-                    }
-            } finally {
-                job.complete()
-            }
-        }
-    }
+    override fun getAllTags(): List<Category> = _registryState.value.categories
 
-    override fun getAllTags(): List<Category> {
-        return tags
-    }
+    override fun itemRegistryProvider(): ItemRegistry = _registryState.value.itemRegistry
 
+    override fun recipeRegistryProvider(): RecipeRegistry = _registryState.value.recipeRegistry
 
-    override fun itemRegistryProvider(): ItemRegistry {
-        return itemRegistry
-    }
-
-    override fun recipeRegistryProvider(): RecipeRegistry {
-        return recipeRegistry
-    }
+    override fun tagRegistryProvider(): TagRegistry = _registryState.value.tagRegistry
 
     override fun getRecipeType(recipeTypeID: RecipeTypeID): RecipeType {
-        return recipeTypes.first { it.id == recipeTypeID }
+        return _registryState.value.recipeTypes[recipeTypeID]
+            ?: RecipeType(
+                id = recipeTypeID,
+                name = recipeTypeID.replace('_', ' ').replaceFirstChar { it.uppercase() },
+                item = "crafting_table"
+            )
+    }
+
+    override fun updateSnapshot(snapshot: RegistrySnapshot) {
+        _registryState.value = snapshot
     }
 }

@@ -22,8 +22,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import com.fracta7.crafter.R
+import com.fracta7.crafter.domain.model.Item
+import com.fracta7.crafter.domain.model.ItemID
 import com.fracta7.crafter.domain.model.Recipe
-import com.fracta7.crafter.domain.repository.AppRepository
+import com.fracta7.crafter.domain.model.RecipeType
+import com.fracta7.crafter.domain.model.RecipeTypeID
 
 @Composable
 fun RecipeDialog(
@@ -31,7 +34,8 @@ fun RecipeDialog(
     onDismissRequest: () -> Unit,
     onItemSelected: (Int) -> Unit,
     selected: Int,
-    appRepository: AppRepository
+    resolveItem: (ItemID) -> Item?,
+    resolveRecipeType: (RecipeTypeID) -> RecipeType
 ) {
     val size = 40.dp
     Dialog(onDismissRequest = onDismissRequest) {
@@ -60,8 +64,8 @@ fun RecipeDialog(
                                     onDismissRequest()
                                 }
                         ) {
-                            val recipeType = appRepository.getRecipeType(recipe.recipeType)
-                            val item = appRepository.itemRegistryProvider().getItem(recipe.result)!!
+                            val recipeType = resolveRecipeType(recipe.recipeType)
+                            val resultItemId = resolveItem(recipe.result)?.id ?: recipe.result
                             recipe.requirements.forEach { (rItemID, _) ->
                                 Column {
                                     DrawItem(itemID = rItemID, iconSize = size)
@@ -73,7 +77,7 @@ fun RecipeDialog(
                                 contentDescription = "pointing arrow"
                             )
 
-                            DrawItem(itemID = item.id, iconSize = size)
+                            DrawItem(itemID = resultItemId, iconSize = size)
 
                             Icon(
                                 painter = painterResource(id = R.drawable.rounded_arrow_range_24),
@@ -87,7 +91,8 @@ fun RecipeDialog(
                                     onClick = {
                                         onItemSelected(index)
                                         onDismissRequest()
-                                    })
+                                    }
+                                )
                             }
                         }
                     }

@@ -3,11 +3,16 @@ package com.fracta7.crafter.ui.elements
 import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.AssistChip
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Surface
@@ -28,30 +33,65 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.core.text.isDigitsOnly
 import com.fracta7.crafter.domain.model.Item
+import com.fracta7.crafter.domain.usecases.SLOTS_PER_SHULKER
+
+private const val MAX_ITEM_AMOUNT = 999_999
 
 @Composable
 fun AddItemDialog(
     onDismissRequest: () -> Unit,
-    onConfirmation: () -> Unit,
+    onConfirmation: (Int) -> Unit,
     item: Item,
-    onGetInput: (Int) -> Unit
+    initialAmount: Int = 0,
+    existingAmountInQueue: Int = 0,
+    confirmLabel: String = "Add"
 ) {
-    var input by remember { mutableStateOf("") }
-    var itemAmount by remember { mutableIntStateOf(0) }
-    var isError by remember { mutableStateOf(false) }
-    var errorText by remember { mutableStateOf("") }
-    Dialog(onDismissRequest = { onDismissRequest() }) {
+    val startAmount = initialAmount.coerceIn(0, MAX_ITEM_AMOUNT)
+    var input by remember(item.id, startAmount) {
+        mutableStateOf(if (startAmount > 0) startAmount.toString() else "")
+    }
+    var itemAmount by remember(item.id, startAmount) { mutableIntStateOf(startAmount) }
+    var isError by remember(item.id, startAmount) { mutableStateOf(false) }
+    var errorText by remember(item.id, startAmount) { mutableStateOf("") }
+
+    val quickChips = remember(item.stackSize) {
+        when {
+            item.stackSize >= 64 -> listOf(
+                "+1" to 1,
+                "+16" to 16,
+                "+64" to 64,
+                "+1 shulker" to (SLOTS_PER_SHULKER * item.stackSize)
+            )
+            item.stackSize == 16 -> listOf(
+                "+1" to 1,
+                "+4" to 4,
+                "+16" to 16,
+                "+1 shulker" to (SLOTS_PER_SHULKER * item.stackSize)
+            )
+            else -> listOf(
+                "+1" to 1,
+                "+9" to 9,
+                "+27" to 27
+            )
+        }
+    }
+
+    Dialog(onDismissRequest = onDismissRequest) {
         Surface(shape = ShapeDefaults.ExtraLarge) {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(16.dp),
                 verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally,
+                horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 LazyColumn(horizontalAlignment = Alignment.CenterHorizontally) {
                     item {
-                        DrawItem(modifier = Modifier.padding(4.dp), itemID = item.id, iconSize = 72.dp)
+                        DrawItem(
+                            modifier = Modifier.padding(4.dp),
+                            itemID = item.id,
+                            iconSize = 72.dp
+                        )
                     }
                     item {
                         Text(
@@ -61,34 +101,52 @@ fun AddItemDialog(
                             modifier = Modifier.basicMarquee(),
                             maxLines = 1
                         )
+                        val subtitle = when {
+                            startAmount > 0 -> "Update item quantity"
+                            existingAmountInQueue > 0 -> "Currently in list: $existingAmountInQueue"
+                            else -> "Add this item to the crafting list"
+                        }
                         Text(
-                            text = "Add this item to the crafting list",
-                            modifier = Modifier.padding(16.dp),
+                            text = subtitle,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier.padding(vertical = 8.dp)
                         )
                     }
                     item {
                         OutlinedTextField(
                             value = input,
-                            onValueChange = {
-                                if (it.isBlank()) {
-                                    input = it
+                            onValueChange = { next ->
+                                if (next.isBlank()) {
+                                    input = next
                                     isError = true
                                     errorText = "(Amount cannot be empty)"
                                     itemAmount = 0
-                                } else if (it.isDigitsOnly()) {
-                                    input = it
-                                    isError = false
-                                    errorText = ""
-                                    itemAmount = input.toInt()
-                                    onGetInput(itemAmount)
+                                } else if (next.isDigitsOnly()) {
+                                    input = next
+                                    val parsed = next.toIntOrNull()
+                                    if (parsed == null || parsed > MAX_ITEM_AMOUNT) {
+                                        isError = true
+                                        errorText = "(Max 999,999)"
+                                        itemAmount = 0
+                                    } else if (parsed == 0) {
+                                        isError = true
+                                        errorText = "(Must be > 0)"
+                                        itemAmount = 0
+                                    } else {
+                                        isError = false
+                                        errorText = ""
+                                        itemAmount = parsed
+                                    }
                                 } else {
-                                    input = it
+                                    input = next
                                     itemAmount = 0
                                     isError = true
                                     errorText = "(Invalid amount)"
                                 }
                             },
                             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                            singleLine = true,
                             shape = ShapeDefaults.ExtraLarge,
                             label = {
                                 Text(text = "Amount$errorText")
@@ -97,23 +155,49 @@ fun AddItemDialog(
                         )
                     }
                     item {
+                        LazyRow(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(top = 8.dp),
+                            contentPadding = PaddingValues(horizontal = 4.dp),
+                            horizontalArrangement = Arrangement.spacedBy(
+                                6.dp,
+                                Alignment.CenterHorizontally
+                            )
+                        ) {
+                            items(quickChips) { (label, delta) ->
+                                AssistChip(
+                                    onClick = {
+                                        val next = (itemAmount + delta).coerceAtMost(MAX_ITEM_AMOUNT)
+                                        itemAmount = next
+                                        input = next.toString()
+                                        isError = false
+                                        errorText = ""
+                                    },
+                                    label = { Text(label) }
+                                )
+                            }
+                        }
+                    }
+                    item {
                         Row(
                             modifier = Modifier
-                                .fillMaxWidth(),
-                            horizontalArrangement = Arrangement.Center,
+                                .fillMaxWidth()
+                                .padding(top = 8.dp),
+                            horizontalArrangement = Arrangement.Center
                         ) {
                             TextButton(
-                                onClick = { onDismissRequest() },
-                                modifier = Modifier.padding(8.dp),
+                                onClick = onDismissRequest,
+                                modifier = Modifier.padding(8.dp)
                             ) {
                                 Text("Cancel")
                             }
                             TextButton(
-                                onClick = { onConfirmation() },
+                                onClick = { onConfirmation(itemAmount) },
                                 modifier = Modifier.padding(8.dp),
                                 enabled = itemAmount > 0
                             ) {
-                                Text("Add")
+                                Text(confirmLabel)
                             }
                         }
                     }

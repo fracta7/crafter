@@ -17,6 +17,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.fracta7.crafter.domain.model.Item
 import com.fracta7.crafter.domain.usecases.getStackText
+import com.fracta7.crafter.ui.theme.LocalShowShulkerUnits
 
 @Composable
 fun ItemElement(
@@ -46,7 +47,11 @@ fun ItemElement(
                         }
                     }
                 } else {
-                    getStackText(amount = amount, stackSize = item.stackSize)
+                    getStackText(
+                        amount = amount,
+                        stackSize = item.stackSize,
+                        showShulkerUnits = LocalShowShulkerUnits.current
+                    )
                 }
 
             Text(

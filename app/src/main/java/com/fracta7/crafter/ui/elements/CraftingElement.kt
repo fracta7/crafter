@@ -11,15 +11,13 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.KeyboardArrowUp
-import androidx.compose.material3.Divider
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.OutlinedCard
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
@@ -30,42 +28,40 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.fracta7.crafter.R
 import com.fracta7.crafter.domain.model.Item
-import com.fracta7.crafter.domain.repository.AppRepository
-import com.fracta7.crafter.domain.usecases.resourceAmount
-import com.fracta7.crafter.domain.usecases.sortRecipesByEfficiency
+import com.fracta7.crafter.domain.model.ItemID
+import com.fracta7.crafter.domain.model.RecipeType
+import com.fracta7.crafter.domain.model.RecipeTypeID
+import com.fracta7.crafter.domain.usecases.CraftingNode
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CraftingElement(
     modifier: Modifier = Modifier,
-    item: Item,
-    amount: Int,
-    appRepository: AppRepository
+    node: CraftingNode,
+    resolveItem: (ItemID) -> Item?,
+    resolveRecipeType: (RecipeTypeID) -> RecipeType,
+    onSelectRecipe: (ItemID, Int) -> Unit
 ) {
-    var toggle by remember { mutableStateOf(false) }
-    var showDialog by remember { mutableStateOf(false) }
-    val recipes = sortRecipesByEfficiency(appRepository.recipeRegistryProvider().getRecipesByResult(item.id))
-    var recipeIndex by remember { mutableIntStateOf(0) }
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .clickable { toggle = !toggle }
-        .padding(4.dp)) {
+    val item = resolveItem(node.itemId) ?: return
+    var toggle by remember(node.itemId) { mutableStateOf(false) }
+    var showDialog by remember(node.itemId) { mutableStateOf(false) }
+    val selectedRecipe = node.selectedRecipe
+    val recipes = node.availableRecipes
+
+    Column(
+        modifier = modifier
+            .fillMaxWidth()
+            .clickable(enabled = selectedRecipe != null) { toggle = !toggle }
+            .padding(4.dp)
+    ) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            val size = if (recipes.size > 1 && item.decomposable)
-                0.7f
-            else if (item.decomposable && recipes.size == 1 || !item.decomposable && recipes.size > 1)
-                0.8f
-            else
-                1.0f
             ItemElement(
-                modifier = Modifier.fillMaxWidth(size),
+                modifier = Modifier.weight(1f),
                 item = item,
-                amount = amount,
+                amount = node.requiredAmount,
                 preview = false
             )
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -75,10 +71,11 @@ fun CraftingElement(
                             recipes = recipes,
                             onDismissRequest = { showDialog = false },
                             onItemSelected = { index ->
-                                recipeIndex = index
+                                onSelectRecipe(node.itemId, index)
                             },
-                            selected = recipeIndex,
-                            appRepository = appRepository
+                            selected = node.selectedRecipeIndex,
+                            resolveItem = resolveItem,
+                            resolveRecipeType = resolveRecipeType
                         )
                     }
                     IconButton(onClick = { showDialog = true }) {
@@ -88,51 +85,51 @@ fun CraftingElement(
                         )
                     }
                 }
-                val icon =
-                    if (toggle) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
-                if (item.decomposable) Icon(icon, contentDescription = "dropdown")
+                if (selectedRecipe != null) {
+                    val icon =
+                        if (toggle) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown
+                    Icon(icon, contentDescription = "dropdown")
+                }
             }
         }
-        AnimatedVisibility(visible = toggle && recipes.isNotEmpty()) {
-            Column(modifier = Modifier.fillMaxWidth()) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth(),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    val recipeIcon = appRepository.getRecipeType(recipes[recipeIndex].recipeType).item
-                    DrawItem(itemID = recipeIcon, iconSize = 48.dp)
-                    Text(
-                        text = appRepository.getRecipeType(recipes[recipeIndex].recipeType).name,
-                        fontWeight = FontWeight.Bold
-                    )
-                    val leftOver = (resourceAmount(recipes[recipeIndex].amount, amount) * recipes[recipeIndex].amount) % amount
-                    if (leftOver > 0) {
-                        Text(
-                            text = "($leftOver leftovers)",
-                            fontWeight = FontWeight.Bold,
-                            modifier = Modifier.basicMarquee().padding(horizontal = 4.dp)
-                        )
-                    }
-                }
-                OutlinedCard(onClick = { }) {
-                    Column(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 8.dp)
+        AnimatedVisibility(visible = toggle && selectedRecipe != null) {
+            if (selectedRecipe != null) {
+                val recipeType = resolveRecipeType(selectedRecipe.recipeType)
+                Column(modifier = Modifier.fillMaxWidth()) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
-                        recipes[recipeIndex].requirements.forEach { (itemID, rAmount) ->
-                            val requirementItem =
-                                appRepository.itemRegistryProvider().getItem(itemID)!!
-                            val requirementAmount =
-                                rAmount * resourceAmount(recipes[recipeIndex].amount, amount)
-                            CraftingElement(
-                                modifier = modifier,
-                                item = requirementItem,
-                                amount = requirementAmount,
-                                appRepository = appRepository
+                        DrawItem(itemID = recipeType.item, iconSize = 48.dp)
+                        Text(
+                            text = recipeType.name,
+                            fontWeight = FontWeight.Bold
+                        )
+                        if (node.leftover > 0) {
+                            Text(
+                                text = "(${node.leftover} leftovers)",
+                                fontWeight = FontWeight.Bold,
+                                modifier = Modifier
+                                    .basicMarquee()
+                                    .padding(horizontal = 4.dp)
                             )
-                            Divider()
+                        }
+                    }
+                    OutlinedCard {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 8.dp)
+                        ) {
+                            node.children.forEach { childNode ->
+                                CraftingElement(
+                                    node = childNode,
+                                    resolveItem = resolveItem,
+                                    resolveRecipeType = resolveRecipeType,
+                                    onSelectRecipe = onSelectRecipe
+                                )
+                                HorizontalDivider()
+                            }
                         }
                     }
                 }

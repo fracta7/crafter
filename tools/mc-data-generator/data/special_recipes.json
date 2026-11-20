@@ -1,0 +1,6863 @@
+{
+  "categories": [
+    {
+      "id": "building",
+      "name": "Building Blocks",
+      "item": "bricks"
+    },
+    {
+      "id": "colored",
+      "name": "Colored Blocks",
+      "item": "cyan_wool"
+    },
+    {
+      "id": "natural",
+      "name": "Natural Blocks",
+      "item": "grass_block"
+    },
+    {
+      "id": "functional",
+      "name": "Functional Blocks",
+      "item": "oak_sign"
+    },
+    {
+      "id": "redstone",
+      "name": "Redstone Blocks",
+      "item": "redstone"
+    },
+    {
+      "id": "tools",
+      "name": "Tools & Utilities",
+      "item": "diamond_pickaxe"
+    },
+    {
+      "id": "combat",
+      "name": "Combat",
+      "item": "netherite_sword"
+    },
+    {
+      "id": "food",
+      "name": "Food & Drinks",
+      "item": "golden_apple"
+    },
+    {
+      "id": "ingredients",
+      "name": "Ingredients",
+      "item": "iron_ingot"
+    },
+    {
+      "id": "potions",
+      "name": "Potions",
+      "item": "water_bottle"
+    },
+    {
+      "id": "other",
+      "name": "Others",
+      "item": "structure_block"
+    }
+  ],
+  "recipe_types": [
+    {
+      "id": "crafting_shapeless",
+      "name": "Crafting",
+      "item": "crafting_table"
+    },
+    {
+      "id": "crafting_shaped",
+      "name": "Crafting",
+      "item": "crafting_table"
+    },
+    {
+      "id": "smelting",
+      "name": "Smelting",
+      "item": "furnace"
+    },
+    {
+      "id": "smoking",
+      "name": "Smoking",
+      "item": "smoker"
+    },
+    {
+      "id": "blasting",
+      "name": "Blasting",
+      "item": "blast_furnace"
+    },
+    {
+      "id": "campfire_cooking",
+      "name": "Campfire Cooking",
+      "item": "campfire"
+    },
+    {
+      "id": "stripping",
+      "name": "Stripping",
+      "item": "diamond_axe"
+    },
+    {
+      "id": "watering",
+      "name": "Watering",
+      "item": "water_bucket"
+    },
+    {
+      "id": "stonecutting",
+      "name": "Stonecutting",
+      "item": "stonecutter"
+    },
+    {
+      "id": "oxidation",
+      "name": "Oxidation",
+      "item": "oxidized_copper"
+    },
+    {
+      "id": "waxing",
+      "name": "Waxing",
+      "item": "honeycomb"
+    },
+    {
+      "id": "smithing_transform",
+      "name": "Smithing",
+      "item": "smithing_table"
+    },
+    {
+      "id": "fuel",
+      "name": "Fuel",
+      "item": "coal"
+    },
+    {
+      "id": "brewing",
+      "name": "Brewing",
+      "item": "brewing_stand"
+    }
+  ],
+  "special_recipes": [
+    {
+      "result": "exposed_copper",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_block": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_block"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_block": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_block"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_block": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_block"
+        }
+      }
+    },
+    {
+      "result": "exposed_cut_copper",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper"
+        }
+      }
+    },
+    {
+      "result": "weathered_cut_copper",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper"
+        }
+      }
+    },
+    {
+      "result": "oxidized_cut_copper",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper"
+        }
+      }
+    },
+    {
+      "result": "exposed_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper_stairs": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_stairs"
+        }
+      }
+    },
+    {
+      "result": "weathered_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper_stairs": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_stairs"
+        }
+      }
+    },
+    {
+      "result": "oxidized_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper_stairs": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_stairs"
+        }
+      }
+    },
+    {
+      "result": "exposed_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper_slab": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_slab"
+        }
+      }
+    },
+    {
+      "result": "weathered_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper_slab": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_slab"
+        }
+      }
+    },
+    {
+      "result": "oxidized_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "cut_copper_slab": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_slab"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_bulb",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_bulb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_bulb"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_bulb",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_bulb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_bulb"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_bulb",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_bulb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_bulb"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_trapdoor": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_trapdoor"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_trapdoor": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_trapdoor"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_trapdoor": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_trapdoor"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_grate",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_grate": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_grate"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_door",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_door": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_door"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_grate",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_grate": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_grate"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_door",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_door": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_door"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_grate",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_grate": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_grate"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_door",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_door": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_door"
+        }
+      }
+    },
+    {
+      "result": "stripped_oak_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "oak_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oak_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_spruce_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "spruce_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "spruce_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_birch_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "birch_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "birch_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_jungle_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "jungle_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "jungle_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_acacia_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "acacia_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "acacia_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_dark_oak_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "dark_oak_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "dark_oak_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_crimson_stem",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "crimson_stem": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "crimson_stem"
+        }
+      }
+    },
+    {
+      "result": "stripped_warped_stem",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "warped_stem": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "warped_stem"
+        }
+      }
+    },
+    {
+      "result": "stripped_oak_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "oak_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oak_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_spruce_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "spruce_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "spruce_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_birch_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "birch_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "birch_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_jungle_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "jungle_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "jungle_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_acacia_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "acacia_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "acacia_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_dark_oak_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "dark_oak_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "dark_oak_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_crimson_hyphae",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "crimson_hyphae": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "crimson_hyphae"
+        }
+      }
+    },
+    {
+      "result": "stripped_warped_hyphae",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "warped_hyphae": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "warped_hyphae"
+        }
+      }
+    },
+    {
+      "result": "carved_pumpkin",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "pumpkin": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "pumpkin"
+        }
+      }
+    },
+    {
+      "result": "stripped_mangrove_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "mangrove_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "mangrove_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_mangrove_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "mangrove_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "mangrove_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_cherry_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "cherry_log": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cherry_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_bamboo_block",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "bamboo_block": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "bamboo_block"
+        }
+      }
+    },
+    {
+      "result": "stripped_cherry_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "cherry_wood": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cherry_wood"
+        }
+      }
+    },
+    {
+      "result": "white_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "white_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "white_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "orange_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "orange_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "orange_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "magenta_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "magenta_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "magenta_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "light_blue_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "light_blue_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "light_blue_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "yellow_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "yellow_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "yellow_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "lime_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "lime_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "lime_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "pink_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "pink_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "pink_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "gray_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "gray_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "gray_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "light_gray_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "light_gray_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "light_gray_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "cyan_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "cyan_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cyan_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "purple_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "purple_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "purple_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "blue_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "blue_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "blue_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "brown_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "brown_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "brown_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "green_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "green_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "green_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "red_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "red_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "red_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "black_concrete",
+      "amount": 1,
+      "recipeType": "watering",
+      "requirements": {
+        "black_concrete_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "black_concrete_powder"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "water_bucket"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_bulb",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_bulb": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_bulb"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_bulb",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_bulb": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_bulb"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_bulb",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_bulb": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_bulb"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_bulb",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_bulb": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_bulb"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_chiseled_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "chiseled_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "chiseled_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_chiseled_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_chiseled_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_chiseled_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_chiseled_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_chiseled_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_chiseled_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_chiseled_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_chiseled_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_chiseled_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_trapdoor": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_trapdoor"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_trapdoor": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_trapdoor"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_trapdoor": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_trapdoor"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_trapdoor",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_trapdoor": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_trapdoor"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_grate",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_grate": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_grate"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_grate",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_grate": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_grate"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "cut_copper_slab": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_slab"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_door",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_door": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_door"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_door",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_door": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_door"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_grate",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_grate": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_grate"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_door",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_door": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_door"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_grate",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_grate": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_grate"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_door",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_door": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_door"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_block",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_block": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_block"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_cut_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "cut_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_cut_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_cut_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_cut_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_cut_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_cut_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_cut_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_cut_copper",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_cut_copper": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_cut_copper"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "cut_copper_stairs": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "cut_copper_stairs"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_cut_copper_stairs": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_cut_copper_stairs"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_cut_copper_stairs": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_cut_copper_stairs"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_cut_copper_stairs",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_cut_copper_stairs": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_cut_copper_stairs"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_cut_copper_slab": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_cut_copper_slab"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_cut_copper_slab": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_cut_copper_slab"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_cut_copper_slab",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_cut_copper_slab": 1,
+        "honeycomb": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_cut_copper_slab"
+        },
+        "catalyst": {
+          "type": "item",
+          "id": "honeycomb"
+        }
+      }
+    },
+    {
+      "result": "fuel",
+      "amount": 8,
+      "recipeType": "fuel",
+      "requirements": {
+        "coal": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "coal"
+        }
+      }
+    },
+    {
+      "result": "fuel",
+      "amount": 8,
+      "recipeType": "fuel",
+      "requirements": {
+        "charcoal": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "charcoal"
+        }
+      }
+    },
+    {
+      "result": "fuel",
+      "amount": 12,
+      "recipeType": "fuel",
+      "requirements": {
+        "blaze_rod": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "blaze_rod"
+        }
+      }
+    },
+    {
+      "result": "fuel",
+      "amount": 20,
+      "recipeType": "fuel",
+      "requirements": {
+        "dried_kelp_block": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "dried_kelp_block"
+        }
+      }
+    },
+    {
+      "result": "fuel",
+      "amount": 80,
+      "recipeType": "fuel",
+      "requirements": {
+        "coal_block": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "coal_block"
+        }
+      }
+    },
+    {
+      "result": "fuel",
+      "amount": 100,
+      "recipeType": "fuel",
+      "requirements": {
+        "lava_bucket": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "lava_bucket"
+        }
+      }
+    },
+    {
+      "result": "white_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "white_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "white_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "light_gray_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "light_gray_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "light_gray_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "gray_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "gray_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "gray_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "black_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "black_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "black_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "brown_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "brown_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "brown_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "red_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "red_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "red_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "orange_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "orange_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "orange_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "yellow_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "yellow_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "yellow_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "lime_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "lime_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "lime_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "green_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "green_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "green_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "cyan_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "cyan_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "cyan_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "light_blue_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "light_blue_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "light_blue_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "blue_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "blue_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "blue_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "purple_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "purple_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "purple_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "magenta_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "magenta_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "magenta_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "pink_shulker_box",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "shulker_box": 1,
+        "pink_dye": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "shulker_box"
+          },
+          {
+            "type": "item",
+            "id": "pink_dye"
+          }
+        ]
+      }
+    },
+    {
+      "result": "suspicious_stew",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "red_mushroom": 1,
+        "brown_mushroom": 1,
+        "poppy": 1,
+        "bowl": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "red_mushroom"
+          },
+          {
+            "type": "item",
+            "id": "brown_mushroom"
+          },
+          {
+            "type": "item",
+            "id": "poppy"
+          },
+          {
+            "type": "item",
+            "id": "bowl"
+          }
+        ]
+      }
+    },
+    {
+      "result": "enchanted_book",
+      "amount": 1,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "paper": 3,
+        "leather": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "paper"
+          },
+          {
+            "type": "item",
+            "id": "paper"
+          },
+          {
+            "type": "item",
+            "id": "paper"
+          },
+          {
+            "type": "item",
+            "id": "leather"
+          }
+        ]
+      }
+    },
+    {
+      "result": "awkward_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_bottle": 3,
+        "nether_wart": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_bottle"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "weakness_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_bottle": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_bottle"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "weakness_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "weakness_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "weakness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "sugar": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_lingering_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "swiftness_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "swiftness_splash_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "swiftness_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_splash_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_lingering_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slowness_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slowness_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slowness_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "rabbit_foot": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_lingering_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "leaping_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "leaping_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "leaping_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "blaze_powder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_lingering_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "strength_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "strength_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "strength_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "glistering_melon_slice": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "healing_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_potion_2": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion_2": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_splash_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_splash_potion_2": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion_2": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_lingering_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_lingering_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "harming_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "harming_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "healing_lingering_potion_2": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "healing_lingering_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "harming_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_lingering_potion_2": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_lingering_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "poison_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "poison_lingering_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "poison_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "ghast_tear": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_lingering_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "regeneration_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "regeneration_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "regeneration_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "turtle_helmet": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_potion_2": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_splash_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_splash_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_splash_potion_2": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_splash_potion_2"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_lingering_potion_2",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_lingering_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "turtle_master_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "turtle_master_lingering_potion": 3,
+        "glowstone_dust": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "turtle_master_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "magma_cream": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "fire_resistance_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "fire_resistance_lingering_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "fire_resistance_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "pufferfish": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "water_breathing_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "water_breathing_lingering_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "water_breathing_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "golden_carrot": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "night_vision_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_lingering_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "invisibility_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "invisibility_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_splash_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_splash_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "invisibility_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "invisibility_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_lingering_potion": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "invisibility_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "invisibility_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "night_vision_lingering_potion_e": 3,
+        "fermented_spider_eye": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "night_vision_lingering_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "invisibility_lingering_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "invisibility_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "invisibility_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "invisibility_splash_potion_e": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "invisibility_splash_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "phantom_membrane": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slow_falling_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slow_falling_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slow_falling_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slow_falling_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slow_falling_splash_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slow_falling_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_splash_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slow_falling_potion_e": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slow_falling_potion_e"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slow_falling_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slow_falling_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "slow_falling_lingering_potion_e",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "slow_falling_lingering_potion": 3,
+        "redstone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "slow_falling_lingering_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "wind_charging_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "breeze_rod": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "wind_charging_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "wind_charging_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "wind_charging_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "wind_charging_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "wind_charging_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "wind_charging_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "weaving_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "cobweb": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "weaving_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "weaving_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "weaving_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "weaving_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "weaving_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "weaving_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "oozing_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "slime_block": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "oozing_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "oozing_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "oozing_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "oozing_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "oozing_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "oozing_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "infestation_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "awkward_potion": 3,
+        "stone": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "awkward_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "infestation_splash_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "infestation_potion": 3,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "infestation_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "infestation_lingering_potion",
+      "amount": 3,
+      "recipeType": "brewing",
+      "requirements": {
+        "brewing_fuel": 1,
+        "infestation_splash_potion": 3,
+        "dragon_breath": 1
+      },
+      "layout": {
+        "type": "brewing",
+        "base": {
+          "type": "item",
+          "id": "infestation_splash_potion"
+        },
+        "reagent": {
+          "type": "item",
+          "id": "brewing_fuel"
+        }
+      }
+    },
+    {
+      "result": "brewing_fuel",
+      "amount": 20,
+      "recipeType": "fuel",
+      "requirements": {
+        "blaze_powder": 1
+      },
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "blaze_powder"
+        }
+      }
+    },
+    {
+      "result": "decorated_pot",
+      "amount": 1,
+      "recipeType": "crafting_shaped",
+      "requirements": {
+        "brick": 4
+      },
+      "layout": {
+        "type": "shaped",
+        "pattern": [
+          " B ",
+          "B B",
+          " B "
+        ],
+        "key": {
+          "B": {
+            "type": "item",
+            "id": "brick"
+          }
+        }
+      }
+    },
+    {
+      "result": "firework_rocket",
+      "amount": 3,
+      "recipeType": "crafting_shapeless",
+      "requirements": {
+        "paper": 1,
+        "gunpowder": 1
+      },
+      "layout": {
+        "type": "shapeless",
+        "ingredients": [
+          {
+            "type": "item",
+            "id": "paper"
+          },
+          {
+            "type": "item",
+            "id": "gunpowder"
+          }
+        ]
+      }
+    },
+    {
+      "result": "stripped_pale_oak_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "pale_oak_log": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "pale_oak_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_pale_oak_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "pale_oak_wood": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "pale_oak_wood"
+        }
+      }
+    },
+    {
+      "result": "stripped_poplar_log",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "poplar_log": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "poplar_log"
+        }
+      }
+    },
+    {
+      "result": "stripped_poplar_wood",
+      "amount": 1,
+      "recipeType": "stripping",
+      "requirements": {
+        "poplar_wood": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "poplar_wood"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_bars",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_bars"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_bars",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_bars"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_bars",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_bars"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_bars",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_bars"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_bars",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_bars"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_bars",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_bars"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_bars",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_bars": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_bars"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_chain",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_chain"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_chain",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_chain"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_chain",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_chain"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_chain",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_chain"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_chain",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_chain"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_chain",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_chain"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_chain",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_chain": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_chain"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_chest",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_chest"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_chest",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_chest"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_chest",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_chest"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_chest",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_chest"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_chest",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_chest"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_chest",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_chest"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_chest",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_chest": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_chest"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_lantern",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_lantern",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_lantern",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_lantern",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_lantern",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_lantern",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_lantern",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_lantern": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_lantern"
+        }
+      }
+    },
+    {
+      "result": "exposed_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "weathered_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "oxidized_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "waxed_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_copper_golem_statue",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_copper_golem_statue": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_copper_golem_statue"
+        }
+      }
+    },
+    {
+      "result": "exposed_lightning_rod",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "lightning_rod"
+        }
+      }
+    },
+    {
+      "result": "weathered_lightning_rod",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "exposed_lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_lightning_rod"
+        }
+      }
+    },
+    {
+      "result": "oxidized_lightning_rod",
+      "amount": 1,
+      "recipeType": "oxidation",
+      "requirements": {
+        "weathered_lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_lightning_rod"
+        }
+      }
+    },
+    {
+      "result": "waxed_lightning_rod",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "lightning_rod"
+        }
+      }
+    },
+    {
+      "result": "waxed_exposed_lightning_rod",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "exposed_lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "exposed_lightning_rod"
+        }
+      }
+    },
+    {
+      "result": "waxed_weathered_lightning_rod",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "weathered_lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "weathered_lightning_rod"
+        }
+      }
+    },
+    {
+      "result": "waxed_oxidized_lightning_rod",
+      "amount": 1,
+      "recipeType": "waxing",
+      "requirements": {
+        "oxidized_lightning_rod": 1
+      },
+      "tagRequirements": {},
+      "layout": {
+        "type": "single",
+        "input": {
+          "type": "item",
+          "id": "oxidized_lightning_rod"
+        }
+      }
+    }
+  ]
+}
